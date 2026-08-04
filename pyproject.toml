@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proxy-node-collector"
+version = "0.1.0"
+description = "Collect public proxy nodes, verify availability, and publish tested outputs daily."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Proxy Node Collector Maintainers" }
+]
+dependencies = [
+  "httpx>=0.28,<0.29",
+  "httpx-socks[asyncio]>=0.10,<1",
+  "PyYAML>=6.0.1,<7"
+]
+
+[project.scripts]
+proxy-node-collector = "proxy_node_collector.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
