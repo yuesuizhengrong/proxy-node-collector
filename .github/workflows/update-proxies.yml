@@ -60,7 +60,7 @@ jobs:
           out.write_bytes(gzip.decompress(compressed))
           out.chmod(out.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
           with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as fp:
-              fp.write(f"MIHOMO_BIN={out.resolve()}\\n")
+              fp.write(f"MIHOMO_BIN={out.resolve()}\n")
           PY
 
       - name: Collect and test subscriptions
