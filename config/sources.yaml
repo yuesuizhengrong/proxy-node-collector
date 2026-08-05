@@ -1,47 +1,48 @@
 settings:
-  source_timeout_seconds: 20
+  source_timeout_seconds: 40
+  source_concurrency: 3
+  source_retry_count: 1
   test_timeout_seconds: 8
-  concurrency: 120
-  max_candidates_per_source: 5000
-  max_alive: 1000
-  user_agent: "proxy-node-collector/0.1"
-  test_urls:
-    - "https://www.gstatic.com/generate_204"
-    - "http://www.gstatic.com/generate_204"
+  controller_start_timeout_seconds: 12
+  mihomo_batch_size: 30
+  max_candidates_per_source: 3000
+  max_tested_nodes: 500
+  probe_concurrency: 20
+  user_agent: "proxy-node-collector/0.2"
+  test_url: "https://www.gstatic.com/generate_204"
 
 sources:
-  - name: "monosans-http"
-    url: "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt"
-    scheme: "http"
+  - name: "v2ray-aggregator-uri"
+    url: "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt"
+    format: "uri"
     enabled: true
 
-  - name: "monosans-socks4"
-    url: "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks4.txt"
-    scheme: "socks4"
+  - name: "v2ray-aggregator-base64"
+    url: "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_base64.txt"
+    format: "base64"
     enabled: true
 
-  - name: "monosans-socks5"
-    url: "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks5.txt"
-    scheme: "socks5"
+  - name: "v2ray-aggregator-clash"
+    url: "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_yaml.yml"
+    format: "clash"
     enabled: true
 
-  - name: "thespeedx-http"
-    url: "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt"
-    scheme: "http"
+  - name: "awesome-vpn-base64"
+    url: "https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/all"
+    format: "base64"
     enabled: true
 
-  - name: "thespeedx-socks4"
-    url: "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt"
-    scheme: "socks4"
+  - name: "awesome-vpn-clash"
+    url: "https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/clash.yaml"
+    format: "clash"
     enabled: true
 
-  - name: "thespeedx-socks5"
-    url: "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt"
-    scheme: "socks5"
+  - name: "vless-reality-uri"
+    url: "https://raw.githubusercontent.com/vless-reality/vless-reality.github.io/main/.github/links/v2.txt"
+    format: "uri"
     enabled: true
 
-  - name: "proxifly-all"
-    url: "https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.txt"
-    scheme: "auto"
+  - name: "vless-reality-clash"
+    url: "https://raw.githubusercontent.com/vless-reality/vless-reality.github.io/main/.github/links/clash.yaml"
+    format: "clash"
     enabled: true
-

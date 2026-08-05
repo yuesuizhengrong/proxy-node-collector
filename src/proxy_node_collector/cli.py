@@ -2,104 +2,60 @@ from __future__ import annotations
 
 import argparse
 import asyncio
-import ipaddress
+import base64
 import json
-import re
+import os
 import sys
-from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from time import perf_counter
 from typing import Any
 
-SUPPORTED_SCHEMES = {"http", "https", "socks4", "socks4a", "socks5", "socks5h"}
+from .formats import (
+    dedupe_nodes,
+    parse_source_content,
+    uri_for_node,
+)
+from .mihomo import test_nodes_with_mihomo
+from .models import Node, Source, SourceResult, TestedNode
+
+
 DEFAULT_SETTINGS: dict[str, Any] = {
-    "source_timeout_seconds": 20,
+    "source_timeout_seconds": 40,
+    "source_concurrency": 3,
+    "source_retry_count": 1,
     "test_timeout_seconds": 8,
-    "concurrency": 120,
-    "max_candidates_per_source": 5000,
-    "max_alive": 1000,
-    "user_agent": "proxy-node-collector/0.1",
-    "test_urls": ["https://www.gstatic.com/generate_204"],
+    "controller_start_timeout_seconds": 12,
+    "mihomo_batch_size": 30,
+    "max_candidates_per_source": 3000,
+    "max_tested_nodes": 500,
+    "probe_concurrency": 20,
+    "user_agent": "proxy-node-collector/0.2",
+    "test_url": "https://www.gstatic.com/generate_204",
 }
 
-CANDIDATE_RE = re.compile(
-    r"(?:(?P<scheme>https?|socks4a?|socks5h?)://)?"
-    r"(?P<host>\[[0-9a-fA-F:.]+\]|(?:\d{1,3}\.){3}\d{1,3}|[A-Za-z0-9][A-Za-z0-9.-]{0,253}[A-Za-z0-9])"
-    r":(?P<port>\d{2,5})",
-    re.IGNORECASE,
-)
-
-
-@dataclass(slots=True)
-class Source:
-    name: str
-    url: str
-    scheme: str = "auto"
-    enabled: bool = True
-
-
-@dataclass(slots=True)
-class ProxyCandidate:
-    scheme: str
-    host: str
-    port: int
-    sources: set[str] = field(default_factory=set)
-
-    @property
-    def key(self) -> tuple[str, str, int]:
-        return (self.scheme, self.host, self.port)
-
-    @property
-    def url(self) -> str:
-        host = self.host
-        if ":" in host and not host.startswith("["):
-            host = f"[{host}]"
-        return f"{self.scheme}://{host}:{self.port}"
-
-
-@dataclass(slots=True)
-class SourceResult:
-    source: Source
-    ok: bool
-    parsed: int = 0
-    error: str | None = None
-
-
-@dataclass(slots=True)
-class AliveProxy:
-    candidate: ProxyCandidate
-    latency_ms: int
-    status_code: int
-    test_url: str
-    checked_at: str
+OUTPUT_FORMATS = ("ssr", "shadowrocket", "clash", "v2ray")
+OUTPUT_FILES = {
+    "subscription": "subscription.txt",
+    "ssr": "ssr.txt",
+    "shadowrocket": "shadowrocket.txt",
+    "clash": "clash.yaml",
+    "v2ray": "v2ray.txt",
+}
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Collect public proxy nodes and publish only tested working proxies."
+        description="Collect SSR/Shadowrocket/Clash/V2Ray nodes, test them, and publish subscriptions."
     )
+    parser.add_argument("--config", default="config/sources.yaml", help="Path to source YAML configuration.")
+    parser.add_argument("--out-dir", default="data", help="Directory for generated subscription files.")
     parser.add_argument(
-        "--config",
-        default="config/sources.yaml",
-        help="Path to source YAML configuration.",
+        "--mihomo-bin",
+        default=os.environ.get("MIHOMO_BIN", ""),
+        help="Path to the Mihomo binary used for node testing. Falls back to MIHOMO_BIN.",
     )
-    parser.add_argument(
-        "--out-dir",
-        default="data",
-        help="Directory for proxies.txt, proxies.json, and summary.md.",
-    )
-    parser.add_argument(
-        "--skip-test",
-        action="store_true",
-        help="Only fetch and parse candidates; do not test availability.",
-    )
-    parser.add_argument(
-        "--limit",
-        type=int,
-        default=None,
-        help="Override settings.max_alive.",
-    )
+    parser.add_argument("--skip-test", action="store_true", help="Only parse and write subscriptions.")
+    parser.add_argument("--limit", type=int, default=None, help="Override settings.max_tested_nodes.")
     return parser.parse_args(argv)
 
 
@@ -107,7 +63,7 @@ def load_config(path: Path) -> tuple[dict[str, Any], list[Source]]:
     try:
         import yaml
     except ImportError as exc:
-        raise RuntimeError("PyYAML is required to load config files. Run: python -m pip install -e .") from exc
+        raise RuntimeError("PyYAML is required. Run: python -m pip install -e .") from exc
 
     with path.open("r", encoding="utf-8") as fp:
         raw = yaml.safe_load(fp) or {}
@@ -117,348 +73,263 @@ def load_config(path: Path) -> tuple[dict[str, Any], list[Source]]:
         Source(
             name=str(item["name"]),
             url=str(item["url"]),
-            scheme=str(item.get("scheme", "auto")).lower(),
+            format=str(item.get("format", "auto")).lower(),
             enabled=bool(item.get("enabled", True)),
         )
         for item in raw.get("sources", [])
     ]
-
     if not sources:
         raise ValueError(f"No sources configured in {path}")
-
-    bad_schemes = [
-        source.scheme
-        for source in sources
-        if source.scheme != "auto" and source.scheme not in SUPPORTED_SCHEMES
-    ]
-    if bad_schemes:
-        raise ValueError(f"Unsupported source schemes: {', '.join(sorted(set(bad_schemes)))}")
-
-    if not settings["test_urls"]:
-        raise ValueError("settings.test_urls must contain at least one URL")
-
+    if not settings.get("test_url"):
+        raise ValueError("settings.test_url must be set")
     return settings, sources
 
 
-def parse_candidates(text: str, source: Source, max_candidates: int) -> list[ProxyCandidate]:
-    candidates: list[ProxyCandidate] = []
-    seen: set[tuple[str, str, int]] = set()
-
-    for raw_line in text.splitlines():
-        line = raw_line.strip()
-        if not line or line.startswith("#") or "@" in line:
-            continue
-
-        for match in CANDIDATE_RE.finditer(line):
-            scheme = (match.group("scheme") or source.scheme or "http").lower()
-            if scheme == "auto":
-                scheme = "http"
-            if scheme not in SUPPORTED_SCHEMES:
-                continue
-
-            host = clean_host(match.group("host"))
-            if host is None:
-                continue
-
-            port = int(match.group("port"))
-            if not 1 <= port <= 65535:
-                continue
-
-            candidate = ProxyCandidate(scheme=scheme, host=host, port=port, sources={source.name})
-            if candidate.key in seen:
-                continue
-            seen.add(candidate.key)
-            candidates.append(candidate)
-
-            if len(candidates) >= max_candidates:
-                return candidates
-
-    return candidates
-
-
-def clean_host(raw_host: str) -> str | None:
-    host = raw_host.strip().strip("[]").lower()
-    if not host or len(host) > 255:
-        return None
-
+async def fetch_sources(
+    sources: list[Source],
+    settings: dict[str, Any],
+) -> tuple[list[Node], list[SourceResult]]:
     try:
-        ipaddress.ip_address(host)
-        return host
-    except ValueError:
-        pass
+        import httpx
+    except ImportError as exc:
+        raise RuntimeError("httpx is required. Run: python -m pip install -e .") from exc
 
-    if not re.fullmatch(r"[a-z0-9.-]+", host):
-        return None
-    if "." not in host:
-        return None
-    if ".." in host or host.startswith(".") or host.endswith("."):
-        return None
+    headers = {"User-Agent": str(settings["user_agent"])}
+    timeout = httpx.Timeout(float(settings["source_timeout_seconds"]))
+    enabled_sources = [source for source in sources if source.enabled]
+    semaphore = asyncio.Semaphore(int(settings["source_concurrency"]))
 
-    return host
+    async with httpx.AsyncClient(headers=headers, timeout=timeout, follow_redirects=True, trust_env=False) as client:
+        async def fetch_limited(source: Source) -> tuple[SourceResult, list[Node]]:
+            async with semaphore:
+                return await fetch_source(client, source, settings)
+
+        results = await asyncio.gather(*(fetch_limited(source) for source in enabled_sources))
+
+    nodes: list[Node] = []
+    source_results: list[SourceResult] = []
+    for result, parsed_nodes in results:
+        source_results.append(result)
+        nodes.extend(parsed_nodes)
+    return dedupe_nodes(nodes), source_results
 
 
 async def fetch_source(
     client: Any,
     source: Source,
     settings: dict[str, Any],
-) -> tuple[SourceResult, list[ProxyCandidate]]:
+) -> tuple[SourceResult, list[Node]]:
+    attempts = int(settings["source_retry_count"]) + 1
+    response: Any | None = None
+    error: str | None = None
+    for attempt in range(attempts):
+        try:
+            response = await client.get(source.url)
+            response.raise_for_status()
+            break
+        except Exception as exc:
+            detail = str(exc).strip()
+            error = f"{type(exc).__name__}: {detail}" if detail else type(exc).__name__
+            response = None
+            if attempt + 1 < attempts:
+                await asyncio.sleep(1.5 * (attempt + 1))
+    if response is None:
+        return SourceResult(source=source, ok=False, error=error), []
+
     try:
-        response = await client.get(source.url)
-        response.raise_for_status()
+        parsed = parse_source_content(
+            response.text,
+            source.name,
+            source.format,
+            int(settings["max_candidates_per_source"]),
+        )
     except Exception as exc:
         return SourceResult(source=source, ok=False, error=str(exc)), []
 
-    candidates = parse_candidates(
-        response.text,
-        source,
-        max_candidates=int(settings["max_candidates_per_source"]),
-    )
-    return SourceResult(source=source, ok=True, parsed=len(candidates)), candidates
+    return SourceResult(source=source, ok=True, parsed=len(parsed)), parsed
 
 
-async def collect_candidates(
-    sources: list[Source],
-    settings: dict[str, Any],
-) -> tuple[list[ProxyCandidate], list[SourceResult]]:
+def build_subscriptions(nodes: list[Node]) -> dict[str, str]:
+    return {
+        OUTPUT_FILES["subscription"]: render_base64_subscription(nodes),
+        OUTPUT_FILES["ssr"]: render_ssr(nodes),
+        OUTPUT_FILES["shadowrocket"]: render_shadowrocket(nodes),
+        OUTPUT_FILES["clash"]: render_clash(nodes),
+        OUTPUT_FILES["v2ray"]: render_v2ray(nodes),
+    }
+
+
+def render_base64_subscription(nodes: list[Node]) -> str:
+    raw = render_uri_lines(nodes)
+    if not raw:
+        return ""
+    return base64.b64encode(raw.encode("utf-8")).decode("ascii") + "\n"
+
+
+def render_clash(nodes: list[Node]) -> str:
     try:
-        import httpx
+        import yaml
     except ImportError as exc:
-        raise RuntimeError("httpx is required to fetch source URLs. Run: python -m pip install -e .") from exc
+        raise RuntimeError("PyYAML is required. Run: python -m pip install -e .") from exc
 
-    headers = {"User-Agent": str(settings["user_agent"])}
-    timeout = httpx.Timeout(float(settings["source_timeout_seconds"]))
-    enabled_sources = [source for source in sources if source.enabled]
-
-    async with httpx.AsyncClient(headers=headers, timeout=timeout, follow_redirects=True) as client:
-        results = await asyncio.gather(
-            *(fetch_source(client, source, settings) for source in enabled_sources)
-        )
-
-    merged: dict[tuple[str, str, int], ProxyCandidate] = {}
-    source_results: list[SourceResult] = []
-
-    for source_result, candidates in results:
-        source_results.append(source_result)
-        for candidate in candidates:
-            existing = merged.get(candidate.key)
-            if existing is None:
-                merged[candidate.key] = candidate
-            else:
-                existing.sources.update(candidate.sources)
-
-    return list(merged.values()), source_results
-
-
-async def test_proxy(
-    candidate: ProxyCandidate,
-    test_urls: list[str],
-    settings: dict[str, Any],
-    semaphore: asyncio.Semaphore,
-) -> AliveProxy | None:
-    try:
-        import httpx
-        from httpx_socks import AsyncProxyTransport
-    except ImportError as exc:
-        raise RuntimeError("httpx and httpx-socks are required to test proxies. Run: python -m pip install -e .") from exc
-
-    timeout = httpx.Timeout(float(settings["test_timeout_seconds"]))
-    headers = {"User-Agent": str(settings["user_agent"])}
-
-    async with semaphore:
-        start = perf_counter()
-        try:
-            client_options: dict[str, Any] = {
-                "timeout": timeout,
-                "follow_redirects": True,
-                "trust_env": False,
-                "headers": headers,
+    proxies = []
+    used_names: set[str] = set()
+    for node in nodes:
+        proxy = json.loads(json.dumps(node.proxy, ensure_ascii=False))
+        base_name = node.label
+        name = base_name
+        suffix = 2
+        while name in used_names:
+            name = f"{base_name} {suffix}"
+            suffix += 1
+        used_names.add(name)
+        proxy["name"] = name
+        proxies.append(proxy)
+    document = {
+        "mixed-port": 7890,
+        "mode": "rule",
+        "proxies": proxies,
+        "proxy-groups": [
+            {
+                "name": "AUTO",
+                "type": "select",
+                "proxies": [proxy["name"] for proxy in proxies] or ["DIRECT"],
             }
-            if candidate.scheme.startswith("socks"):
-                client_options["transport"] = AsyncProxyTransport.from_url(candidate.url)
-            else:
-                client_options["proxy"] = candidate.url
-
-            async with httpx.AsyncClient(**client_options) as client:
-                for test_url in test_urls:
-                    response = await client.get(test_url)
-                    if response.status_code < 400:
-                        return AliveProxy(
-                            candidate=candidate,
-                            latency_ms=max(1, round((perf_counter() - start) * 1000)),
-                            status_code=response.status_code,
-                            test_url=test_url,
-                            checked_at=utc_now(),
-                        )
-        except Exception:
-            return None
-
-    return None
+        ],
+        "rules": ["MATCH,AUTO"],
+    }
+    return yaml.safe_dump(document, allow_unicode=True, sort_keys=False)
 
 
-async def test_candidates(
-    candidates: list[ProxyCandidate],
-    settings: dict[str, Any],
-    max_alive: int,
-) -> list[AliveProxy]:
-    semaphore = asyncio.Semaphore(int(settings["concurrency"]))
-    test_urls = [str(url) for url in settings["test_urls"]]
-    alive: list[AliveProxy] = []
-
-    tasks = [
-        asyncio.create_task(test_proxy(candidate, test_urls, settings, semaphore))
-        for candidate in candidates
-    ]
-
-    try:
-        for task in asyncio.as_completed(tasks):
-            result = await task
-            if result is not None:
-                alive.append(result)
-                if len(alive) >= max_alive:
-                    for pending in tasks:
-                        pending.cancel()
-                    break
-    finally:
-        await asyncio.gather(*tasks, return_exceptions=True)
-
-    alive.sort(key=lambda item: item.latency_ms)
-    return alive
+def render_shadowrocket(nodes: list[Node]) -> str:
+    return render_base64_subscription(nodes)
 
 
-def utc_now() -> str:
-    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+def render_uri_lines(nodes: list[Node]) -> str:
+    lines = []
+    for node in nodes:
+        uri = uri_for_node(node)
+        if uri:
+            lines.append(uri)
+    return "\n".join(lines) + ("\n" if lines else "")
+
+
+def render_v2ray(nodes: list[Node]) -> str:
+    return render_base64_subscription(
+        [node for node in nodes if node.protocol in {"vmess", "vless", "trojan"}]
+    )
+
+
+def render_ssr(nodes: list[Node]) -> str:
+    return render_base64_subscription([node for node in nodes if node.protocol == "ssr"])
 
 
 def write_outputs(
     out_dir: Path,
-    alive: list[AliveProxy],
-    candidates: list[ProxyCandidate],
+    tested_nodes: list[TestedNode],
+    all_nodes: list[Node],
     source_results: list[SourceResult],
     settings: dict[str, Any],
     skip_test: bool,
 ) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     generated_at = utc_now()
+    selected_nodes = [item.node for item in tested_nodes] if not skip_test else all_nodes
+    subs = build_subscriptions(selected_nodes)
+    for name, content in subs.items():
+        (out_dir / name).write_text(content, encoding="utf-8")
 
-    if skip_test:
-        proxy_urls = sorted(candidate.url for candidate in candidates)
-    else:
-        proxy_urls = [item.candidate.url for item in alive]
-
-    (out_dir / "proxies.txt").write_text("\n".join(proxy_urls) + ("\n" if proxy_urls else ""), encoding="utf-8")
-
-    payload = {
+    metadata = {
         "generated_at": generated_at,
         "tested": not skip_test,
-        "candidate_count": len(candidates),
-        "alive_count": len(proxy_urls),
-        "test_urls": settings["test_urls"],
+        "candidate_count": len(all_nodes),
+        "tested_count": len(tested_nodes),
+        "formats": OUTPUT_FORMATS,
         "sources": [
             {
                 "name": result.source.name,
                 "url": result.source.url,
+                "format": result.source.format,
                 "ok": result.ok,
                 "parsed": result.parsed,
                 "error": result.error,
             }
             for result in source_results
         ],
-        "proxies": [
+        "nodes": [
             {
-                "url": item.candidate.url,
-                "scheme": item.candidate.scheme,
-                "host": item.candidate.host,
-                "port": item.candidate.port,
-                "sources": sorted(item.candidate.sources),
+                "identity": node.identity,
+                "protocol": node.protocol,
+                "label": node.label,
+                "sources": sorted(node.sources),
+                "uri": uri_for_node(node),
+            }
+            for node in selected_nodes
+        ],
+        "tested_nodes": [
+            {
+                "identity": item.node.identity,
+                "protocol": item.node.protocol,
+                "label": item.node.label,
+                "sources": sorted(item.node.sources),
                 "latency_ms": item.latency_ms,
-                "status_code": item.status_code,
-                "test_url": item.test_url,
                 "checked_at": item.checked_at,
+                "uri": uri_for_node(item.node),
             }
-            for item in alive
-        ]
-        if not skip_test
-        else [
-            {
-                "url": candidate.url,
-                "scheme": candidate.scheme,
-                "host": candidate.host,
-                "port": candidate.port,
-                "sources": sorted(candidate.sources),
-            }
-            for candidate in sorted(candidates, key=lambda item: item.url)
+            for item in tested_nodes
         ],
     }
-    (out_dir / "proxies.json").write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+    (out_dir / "subscription.json").write_text(
+        json.dumps(metadata, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-
-    summary = build_summary(generated_at, alive, candidates, source_results, skip_test)
-    (out_dir / "summary.md").write_text(summary, encoding="utf-8")
+    (out_dir / "subscription-link.txt").write_text(subscription_links_text(), encoding="utf-8")
 
 
-def build_summary(
-    generated_at: str,
-    alive: list[AliveProxy],
-    candidates: list[ProxyCandidate],
-    source_results: list[SourceResult],
-    skip_test: bool,
-) -> str:
+def subscription_links_text() -> str:
+    base_url = os.environ.get("SUBSCRIPTION_BASE_URL", "").rstrip("/")
+    repo = os.environ.get("GITHUB_REPOSITORY", "").strip()
+    if not base_url and repo:
+        branch = os.environ.get("GITHUB_REF_NAME", "main").strip() or "main"
+        base_url = f"https://raw.githubusercontent.com/{repo}/{branch}/data"
+    if not base_url:
+        base_url = "."
+
     lines = [
-        "# Proxy Node Summary",
-        "",
-        f"- Generated at: `{generated_at}`",
-        f"- Candidate count: `{len(candidates)}`",
-        f"- Tested: `{'no' if skip_test else 'yes'}`",
-        f"- Published proxy count: `{len(candidates) if skip_test else len(alive)}`",
-        "",
-        "## Sources",
-        "",
-        "| Source | Status | Parsed |",
-        "| --- | --- | ---: |",
+        f"main={base_url}/{OUTPUT_FILES['subscription']}",
+        f"ssr={base_url}/{OUTPUT_FILES['ssr']}",
+        f"shadowrocket={base_url}/{OUTPUT_FILES['shadowrocket']}",
+        f"clash={base_url}/{OUTPUT_FILES['clash']}",
+        f"v2ray={base_url}/{OUTPUT_FILES['v2ray']}",
     ]
-
-    for result in source_results:
-        status = "ok" if result.ok else f"failed: {result.error}"
-        lines.append(f"| {result.source.name} | {status} | {result.parsed} |")
-
-    if not skip_test:
-        lines.extend(
-            [
-                "",
-                "## Fastest Proxies",
-                "",
-                "| Proxy | Latency | Status |",
-                "| --- | ---: | ---: |",
-            ]
-        )
-        for item in alive[:20]:
-            lines.append(f"| `{item.candidate.url}` | {item.latency_ms} ms | {item.status_code} |")
-
     return "\n".join(lines) + "\n"
 
 
 async def run(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
-    config_path = Path(args.config)
-    out_dir = Path(args.out_dir)
-    settings, sources = load_config(config_path)
-    max_alive = int(args.limit if args.limit is not None else settings["max_alive"])
-
-    print(f"Loading sources from {config_path}", file=sys.stderr)
-    candidates, source_results = await collect_candidates(sources, settings)
-    print(f"Collected {len(candidates)} unique candidates", file=sys.stderr)
+    settings, sources = load_config(Path(args.config))
+    max_nodes = int(args.limit if args.limit is not None else settings["max_tested_nodes"])
+    settings["max_tested_nodes"] = max_nodes
+    print(f"Loading sources from {args.config}", file=sys.stderr)
+    nodes, source_results = await fetch_sources(sources, settings)
+    print(f"Parsed {len(nodes)} unique nodes", file=sys.stderr)
 
     if args.skip_test:
-        alive: list[AliveProxy] = []
+        tested_nodes: list[TestedNode] = []
     else:
-        alive = await test_candidates(candidates, settings, max_alive=max_alive)
-        print(f"Found {len(alive)} working proxies", file=sys.stderr)
+        if not args.mihomo_bin:
+            raise RuntimeError("mihomo binary path is required. Set --mihomo-bin or MIHOMO_BIN.")
+        mihomo_bin = Path(args.mihomo_bin).expanduser()
+        tested_nodes = await test_nodes_with_mihomo(nodes, mihomo_bin, settings)
+        print(f"Tested {len(tested_nodes)} working nodes", file=sys.stderr)
 
-    write_outputs(out_dir, alive, candidates, source_results, settings, args.skip_test)
-    print(f"Wrote outputs to {out_dir}", file=sys.stderr)
+    write_outputs(Path(args.out_dir), tested_nodes, nodes, source_results, settings, args.skip_test)
+    print(f"Wrote outputs to {args.out_dir}", file=sys.stderr)
     return 0
+
+
+def utc_now() -> str:
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
 def main(argv: list[str] | None = None) -> int:

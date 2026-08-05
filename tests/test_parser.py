@@ -1,39 +1,112 @@
+import base64
+import importlib.util
 import unittest
 
-from proxy_node_collector.cli import Source, parse_candidates
+from proxy_node_collector.cli import OUTPUT_FILES, build_subscriptions
+from proxy_node_collector.formats import (
+    parse_source_content,
+    parse_uri,
+    ssr_uri_from_proxy,
+    uri_for_node,
+    vmess_uri_from_proxy,
+)
 
 
-class ParserTest(unittest.TestCase):
-    def test_parse_plain_host_port_uses_source_scheme(self):
-        source = Source(name="plain", url="https://example.com/plain.txt", scheme="socks5")
+SSR_PROXY = {
+    "type": "ssr",
+    "server": "ssr.example.com",
+    "port": 443,
+    "cipher": "aes-256-cfb",
+    "password": "test-password",
+    "protocol": "auth_aes128_sha1",
+    "obfs": "plain",
+    "udp": True,
+}
 
-        result = parse_candidates("127.0.0.1:1080\n", source, max_candidates=10)
+VMESS_PROXY = {
+    "type": "vmess",
+    "server": "vmess.example.com",
+    "port": 443,
+    "uuid": "11111111-1111-1111-1111-111111111111",
+    "alterId": 0,
+    "cipher": "auto",
+    "udp": True,
+    "network": "ws",
+    "tls": True,
+    "servername": "cdn.example.com",
+    "ws-opts": {"path": "/socket", "headers": {"Host": "cdn.example.com"}},
+}
 
-        self.assertEqual([item.url for item in result], ["socks5://127.0.0.1:1080"])
 
-    def test_parse_url_keeps_declared_scheme(self):
-        source = Source(name="mixed", url="https://example.com/mixed.txt", scheme="http")
+class SubscriptionFormatTest(unittest.TestCase):
+    def test_ssr_uri_round_trip(self):
+        uri = ssr_uri_from_proxy(SSR_PROXY, "SSR test")
 
-        result = parse_candidates(
-            "socks4://10.0.0.1:9050\nhttp://10.0.0.2:8080\n",
-            source,
-            max_candidates=10,
+        node = parse_uri(uri, "unit")
+
+        self.assertIsNotNone(node)
+        self.assertEqual(node.protocol, "ssr")
+        self.assertEqual(node.proxy["server"], "ssr.example.com")
+        self.assertEqual(node.proxy["password"], "test-password")
+
+    def test_vmess_uri_round_trip(self):
+        uri = vmess_uri_from_proxy(VMESS_PROXY, "VMess test")
+
+        node = parse_uri(uri, "unit")
+
+        self.assertIsNotNone(node)
+        self.assertEqual(node.protocol, "vmess")
+        self.assertEqual(node.proxy["uuid"], VMESS_PROXY["uuid"])
+        self.assertEqual(node.proxy["ws-opts"]["path"], "/socket")
+
+    def test_parses_base64_subscription(self):
+        uri = (
+            "vless://22222222-2222-2222-2222-222222222222@vless.example.com:443"
+            "?security=tls&type=ws&path=%2Fws&sni=cdn.example.com#VLESS%20test"
         )
+        content = base64.b64encode(f"{uri}\n".encode("utf-8")).decode("ascii")
+
+        nodes = parse_source_content(content, "unit", "base64", 10)
+
+        self.assertEqual(len(nodes), 1)
+        self.assertEqual(nodes[0].protocol, "vless")
+        self.assertEqual(uri_for_node(nodes[0]).split("://", 1)[0], "vless")
+
+    @unittest.skipUnless(importlib.util.find_spec("yaml"), "PyYAML is not installed")
+    def test_builds_client_subscription_outputs(self):
+        ssr = parse_uri(ssr_uri_from_proxy(SSR_PROXY, "duplicate"), "unit")
+        vmess = parse_uri(vmess_uri_from_proxy(VMESS_PROXY, "duplicate"), "unit")
+        self.assertIsNotNone(ssr)
+        self.assertIsNotNone(vmess)
+
+        outputs = build_subscriptions([ssr, vmess])
 
         self.assertEqual(
-            [item.url for item in result],
-            [
-                "socks4://10.0.0.1:9050",
-                "http://10.0.0.2:8080",
-            ],
+            set(outputs),
+            {
+                OUTPUT_FILES["subscription"],
+                OUTPUT_FILES["ssr"],
+                OUTPUT_FILES["shadowrocket"],
+                OUTPUT_FILES["clash"],
+                OUTPUT_FILES["v2ray"],
+            },
         )
+        main = base64.b64decode(outputs["subscription.txt"]).decode("utf-8")
+        ssr_only = base64.b64decode(outputs["ssr.txt"]).decode("utf-8")
+        v2ray_only = base64.b64decode(outputs["v2ray.txt"]).decode("utf-8")
+        self.assertIn("ssr://", main)
+        self.assertIn("vmess://", main)
+        self.assertIn("ssr://", ssr_only)
+        self.assertNotIn("vmess://", ssr_only)
+        self.assertIn("vmess://", v2ray_only)
+        self.assertNotIn("ssr://", v2ray_only)
 
-    def test_skip_authenticated_proxy_lines(self):
-        source = Source(name="auth", url="https://example.com/auth.txt", scheme="http")
+        import yaml
 
-        result = parse_candidates("http://user:pass@example.com:8080\n", source, max_candidates=10)
-
-        self.assertEqual(result, [])
+        clash = yaml.safe_load(outputs["clash.yaml"])
+        names = [proxy["name"] for proxy in clash["proxies"]]
+        self.assertEqual(len(names), len(set(names)))
+        self.assertEqual(clash["proxy-groups"][0]["proxies"], names)
 
 
 if __name__ == "__main__":

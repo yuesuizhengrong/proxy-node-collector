@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "proxy-node-collector"
-version = "0.1.0"
-description = "Collect public proxy nodes, verify availability, and publish tested outputs daily."
+version = "0.2.0"
+description = "Collect public SSR, Shadowrocket, Clash, and V2Ray subscriptions and publish tested nodes."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -14,7 +14,6 @@ authors = [
 ]
 dependencies = [
   "httpx>=0.28,<0.29",
-  "httpx-socks[asyncio]>=0.10,<1",
   "PyYAML>=6.0.1,<7"
 ]
 
