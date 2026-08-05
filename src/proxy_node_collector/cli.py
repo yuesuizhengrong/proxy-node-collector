@@ -233,6 +233,7 @@ def write_outputs(
     skip_test: bool,
 ) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
+    remove_obsolete_outputs(out_dir)
     generated_at = utc_now()
     selected_nodes = [item.node for item in tested_nodes] if not skip_test else all_nodes
     subs = build_subscriptions(selected_nodes)
@@ -284,6 +285,13 @@ def write_outputs(
         encoding="utf-8",
     )
     (out_dir / "subscription-link.txt").write_text(subscription_links_text(), encoding="utf-8")
+
+
+def remove_obsolete_outputs(out_dir: Path) -> None:
+    for name in ("proxies.txt", "proxies.json", "summary.md"):
+        path = out_dir / name
+        if path.exists():
+            path.unlink()
 
 
 def subscription_links_text() -> str:
