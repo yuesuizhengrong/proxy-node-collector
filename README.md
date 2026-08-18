@@ -30,7 +30,7 @@ Shadowrocket is a client, not a protocol. Its subscription includes the supporte
 
 ## Schedule
 
-The workflow runs four times daily at `00:15`, `06:15`, `12:15`, and `18:15` UTC. In China Standard Time (UTC+8), this is `08:15`, `14:15`, `20:15`, and `02:15` the following day.
+The workflow runs every two hours at 15 minutes past the hour in UTC (`00:15`, `02:15`, `04:15`, and so on). In China Standard Time (UTC+8), the schedule is also every two hours at 15 minutes past the hour, with the UTC day boundary shifted accordingly.
 
 Manual updates are available from the repository Actions page under `Update tested subscriptions`.
 
