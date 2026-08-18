@@ -1,0 +1,79 @@
+name: Update tested subscriptions
+
+on:
+  schedule:
+    # Runs every two hours at 15 minutes past the hour (UTC).
+    - cron: "15 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: python -m pip install -e .
+
+      - name: Install Mihomo
+        run: |
+          python - <<'PY'
+          import gzip
+          import json
+          import os
+          import stat
+          import urllib.request
+          from pathlib import Path
+
+          api = "https://api.github.com/repos/MetaCubeX/mihomo/releases/latest"
+          headers = {"User-Agent": "proxy-node-collector"}
+          with urllib.request.urlopen(urllib.request.Request(api, headers=headers), timeout=60) as response:
+              release = json.load(response)
+
+          assets = release["assets"]
+          candidates = [
+              asset for asset in assets
+              if asset["name"].startswith("mihomo-linux-amd64-compatible-")
+              and asset["name"].endswith(".gz")
+          ]
+          if not candidates:
+              raise SystemExit("No compatible linux-amd64 Mihomo asset found")
+
+          asset = candidates[0]
+          print(f"Downloading {asset['name']}")
+          with urllib.request.urlopen(urllib.request.Request(asset["browser_download_url"], headers=headers), timeout=180) as response:
+              compressed = response.read()
+
+          out = Path("mihomo")
+          out.write_bytes(gzip.decompress(compressed))
+          out.chmod(out.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as fp:
+              fp.write(f"MIHOMO_BIN={out.resolve()}\n")
+          PY
+
+      - name: Collect and test subscriptions
+        run: python -m proxy_node_collector --config config/sources.yaml --out-dir data --mihomo-bin "$MIHOMO_BIN"
+
+      - name: Commit updated proxy data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/
+          if git diff --cached --quiet; then
+            echo "No subscription changes to commit."
+          else
+            git commit -m "chore: update tested subscriptions"
+            git push
+          fi
