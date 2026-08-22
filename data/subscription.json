@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-21T22:47:24+00:00",
+  "generated_at": "2026-08-22T01:56:12+00:00",
   "tested": true,
-  "candidate_count": 6087,
-  "tested_count": 85,
+  "candidate_count": 6084,
+  "tested_count": 81,
   "formats": [
     "ssr",
     "shadowrocket",
@@ -39,7 +39,7 @@
       "url": "https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/all",
       "format": "base64",
       "ok": true,
-      "parsed": 71,
+      "parsed": 52,
       "error": null
     },
     {
@@ -47,7 +47,7 @@
       "url": "https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/clash.yaml",
       "format": "clash",
       "ok": true,
-      "parsed": 133,
+      "parsed": 139,
       "error": null
     },
     {
@@ -69,31 +69,77 @@
   ],
   "nodes": [
     {
-      "identity": "4842aa1dcdfaa19126d39d9e45ebc553b06ec9da355caf2b7af0e580e1a302b4",
+      "identity": "f3c05cc562bf4abca1f445adbe2c6b1ba1baedbe1f2e205a151322403817fa65",
       "protocol": "vless",
-      "label": "美国/San Francisco/United States/San Francisco-7",
+      "label": "美国/San Francisco/United States/San Francisco-12",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.79.73:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=musiclovers85%3Fed%3D512%2Fmtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-7"
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.117.43:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=musiclovers85&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-12"
     },
     {
-      "identity": "b27b2e976e6326299987028edf75e09a81390502e193ebd118c9f6fe7468f99a",
+      "identity": "05af258c7ebc3071aa34197ecedc00e554a5cf0c22dfb935b93f05d8b7250efe",
+      "protocol": "ss",
+      "label": "🇺🇸US-108.181.0.177-0074",
+      "sources": [
+        "awesome-vpn-clash",
+        "v2ray-aggregator-clash"
+      ],
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHNXA2d3c0bzY3SEI@108.181.0.177:8388#%F0%9F%87%BA%F0%9F%87%B8US-108.181.0.177-0074"
+    },
+    {
+      "identity": "aba96898be101bab4f4d657cf0fc639db733ce249ab662c4eaacd45245f381e6",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-5",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@188.114.97.6:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2Fsg-melbi&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-5"
+    },
+    {
+      "identity": "6cb36114fb50966bbaea6d3075b27a2d1eb80743a6077f79f20d0f54c853a35a",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.18.37.228:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2F%3FTELEGRAM-NexVexo_NexVexo_NexVexo_NexVexo_NexVexo&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-2"
+    },
+    {
+      "identity": "83f9968ea64277c5320e3ac10f4d095f6795edb66a5509f8f083b74195189f29",
       "protocol": "vless",
       "label": "美国/San Francisco/United States/San Francisco",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@172.66.44.97:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=musiclovers85_musiclovers85&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco"
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.79.73:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2F&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco"
     },
     {
-      "identity": "e8448899b2029ecce0b8c66aa57ff58c07483643e13aca54e4ab484f5f753d33",
+      "identity": "facb168f6842c913f81353e04f1a8c082a396fa64be368f33da6fbd15b2bb05f",
       "protocol": "vless",
-      "label": "美国/San Francisco/United States/San Francisco-4",
+      "label": "美国/San Francisco/United States/San Francisco-15",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.18.37.228:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2Fsg-melbi&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-4"
+      "uri": "vless://23187ddc-16a5-432d-bf4e-dd42a7ae39f7@104.16.98.215:8880?security=none&type=ws&encryption=none&path=%2F&host=steep-thunder-97fa.108-d10.workers.dev#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-15"
+    },
+    {
+      "identity": "cff515a490fdc28b9452ba3818348d9526d7729d1e9d7bd16434de30642e661b",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-6",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@172.66.44.97:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2Fsg-melbi%2FTelegram-MTMVPN-Telegram-MTMVPN-Telegram-Telegram-MTMVPN-Telegram-MTMVPN-Telegram-MTMVPN-Telegram-MTMVPN-Telegram-MTMVPNMTMVPN-Telegram-MTMVPN-Telegram-MTMVPN-%3D512&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-6"
+    },
+    {
+      "identity": "f4f057985f9be518035985d9e74dc730f13de4999591644f0e1e62cd37b74dec",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-8",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://667a035b-6656-4a4f-a74c-8cd6a679f8d4@172.65.90.52:8880?security=none&type=ws&encryption=none&path=%2Fpyip&host=winter-mode-7f4e.89-136.workers.dev#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-8"
     },
     {
       "identity": "0940c1208f74cca842dc48ac12d934bbc6bcb6429a10a52b8bc16fffa97290c3",
@@ -106,6 +152,42 @@
       "uri": "ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@37.19.198.160:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.160-0082"
     },
     {
+      "identity": "05c16dd3e9fc1218cadf8cff4fc545942231dd23576e95998b06bc520ed3fddc",
+      "protocol": "ss",
+      "label": "🇨🇦CA-51.222.155.113-0407",
+      "sources": [
+        "v2ray-aggregator-clash"
+      ],
+      "uri": "ss://YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M@51.222.155.113:5601#%F0%9F%87%A8%F0%9F%87%A6CA-51.222.155.113-0407"
+    },
+    {
+      "identity": "7f7184eb91a985f6940bf7025f125fb21ad4e9eb78c92b6e562e6a765f7fd2f6",
+      "protocol": "vless",
+      "label": "美国/亚特兰大/United States/Atlanta",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://83c18ff2-0565-4b53-89ad-57357fef153b@rssm-1btto92.joxenly.com:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=chrome&pbk=bHGC7iI4Q50nxoYStP3TjBaRXih6O0bmuemexki0aXY&sid=29ff8963a9fe281c#%E7%BE%8E%E5%9B%BD%2F%E4%BA%9A%E7%89%B9%E5%85%B0%E5%A4%A7%2FUnited%20States%2FAtlanta"
+    },
+    {
+      "identity": "28b0039d9ab9d1dd8adb1693489f8773daf1bb9f110028f797fae0d90d5a83b8",
+      "protocol": "vless",
+      "label": "美国/United States",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://055a1ce8-2a16-4a0d-a2c2-22826c9b2413@47.253.226.114:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc#%E7%BE%8E%E5%9B%BD%2FUnited%20States"
+    },
+    {
+      "identity": "d1ca14caa59e88bc6d8b191e543b5217fa22f34f98490091a3140096d0bec950",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-7",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@cf.levikogjgfdd.ir:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2Fed%3D512&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-7"
+    },
+    {
       "identity": "087c7785b51d050b3af324bc73d6de4748ae662a829818e44e7dd92e69d61633",
       "protocol": "vless",
       "label": "美国/北伯根/United States/North Bergen",
@@ -113,24 +195,6 @@
         "awesome-vpn-clash"
       ],
       "uri": "vless://c9fd0fb1-8251-4106-b09a-f4b426736f67@137.184.218.169:36925?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0#%E7%BE%8E%E5%9B%BD%2F%E5%8C%97%E4%BC%AF%E6%A0%B9%2FUnited%20States%2FNorth%20Bergen"
-    },
-    {
-      "identity": "cca162615565d9e09fbbcc60c73c33c961f1df211628a52b571cf2254a0192e1",
-      "protocol": "vless",
-      "label": "美国/北伯根/United States/North Bergen",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "uri": "vless://c9fd0fb1-8251-4106-b09a-f4b426736f67@137.184.218.169:36925?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0#%E7%BE%8E%E5%9B%BD%2F%E5%8C%97%E4%BC%AF%E6%A0%B9%2FUnited%20States%2FNorth%20Bergen"
-    },
-    {
-      "identity": "7819b1bb440ce6bee969e69a4ef2efe7ed80cf4cc1677ef28d1261e6116232a4",
-      "protocol": "vless",
-      "label": "美国/United States-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://6680846a-8a57-4dfd-9a0e-63209cfc8535@170.114.46.6:443?security=tls&type=ws&encryption=none&sni=support.zoom.us.yxls.eu.cc&path=%2Fsg-amz&host=support.zoom.us.yxls.eu.cc#%E7%BE%8E%E5%9B%BD%2FUnited%20States-2"
     },
     {
       "identity": "bd3f297a3a7436a509589b3995d0b46c1939786d580f12208ee50597d697c5a3",
@@ -142,440 +206,40 @@
       "uri": "vless://661f395d-b153-4199-a04b-693f5fe7f261@158.69.112.254:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.speedtest.net&fp=chrome&pbk=wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y&sid=3d3c1e645f763ee3#%E5%8A%A0%E6%8B%BF%E5%A4%A7%2F%E8%92%99%E7%89%B9%E5%88%A9%E5%B0%94%2FCanada%2FMontreal-2"
     },
     {
-      "identity": "5366fa334a08d541e50352f73eb93e8f28a36a8e947e993d806ec8ddfd05426e",
+      "identity": "0fb171674b0193eac2aede5ed2ca4a4667c3c23b3c60a5a0e1d870c9bfe8ec73",
       "protocol": "vless",
-      "label": "德国/Germany-2",
+      "label": "罗马尼亚/Romania",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.212:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=chrome&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%E5%BE%B7%E5%9B%BD%2FGermany-2"
+      "uri": "vless://20df893e-dcf4-491d-8261-6dbb24f9566b@76.164.200.172:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=global-video.ruvps.pro&fp=firefox&pbk=rCipfShXDNFO3P-H78EkGj53JoqWgt6JeMq6wztvH08#%E7%BD%97%E9%A9%AC%E5%B0%BC%E4%BA%9A%2FRomania"
     },
     {
-      "identity": "2a2f8a0af9e9d09d8eaf092637ef3f5474dc2572267d89476d53b214e522f52a",
-      "protocol": "vless",
-      "label": "美国/United States-3",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://431fe973-a43a-4fac-bf83-2a772e0d0625@180.178.60.253:10000?security=none&type=tcp&encryption=none#%E7%BE%8E%E5%9B%BD%2FUnited%20States-3"
-    },
-    {
-      "identity": "05af258c7ebc3071aa34197ecedc00e554a5cf0c22dfb935b93f05d8b7250efe",
-      "protocol": "ss",
-      "label": "🇺🇸US-108.181.0.177-0137",
-      "sources": [
-        "awesome-vpn-clash",
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHNXA2d3c0bzY3SEI@108.181.0.177:8388#%F0%9F%87%BA%F0%9F%87%B8US-108.181.0.177-0137"
-    },
-    {
-      "identity": "a4797ba9bdce5b5c096d43b486dc210c4929e9e924fd36b786142065286f8e75",
-      "protocol": "vless",
-      "label": "美国/United States",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://b98d4c6e-6770-4a31-8256-a4750cdea0e7@66.175.217.170:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.amazon.com&fp=chrome&pbk=0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo&sid=1a#%E7%BE%8E%E5%9B%BD%2FUnited%20States"
-    },
-    {
-      "identity": "f1ce195df8e85caa426d46566f22d42b710a015ab3242783cf64a012ab6a38c7",
-      "protocol": "vless",
-      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://7e8f7489-e65f-4be6-93ed-867a74ec6759@95.85.228.161:8443?security=none&type=grpc&encryption=none&serviceName=grpc#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam-2"
-    },
-    {
-      "identity": "067369cc79955ee3edcc49ca122b33abdef3ea029dfa271229ded7e758771f01",
-      "protocol": "ss",
-      "label": "🇬🇧GB-82.38.31.35-0090",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.35:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.35-0090"
-    },
-    {
-      "identity": "09b864c47f8fc212e9b82370cecbaa7d40fea9bccae483bb5a9e3f844dceb55a",
-      "protocol": "ss",
-      "label": "🇬🇧GB-82.38.31.57-0118",
-      "sources": [
-        "awesome-vpn-clash",
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.57:443#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.57-0118"
-    },
-    {
-      "identity": "08d9bce3f48342fc96b72df4158d9d0f5d0b78a1f2e3bed7f0387aedcbccd1d7",
-      "protocol": "ss",
-      "label": "🇩🇪DE-209.46.102.22-0138",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxaGhycXJva2ozYWc@209.46.102.22:8388#%F0%9F%87%A9%F0%9F%87%AADE-209.46.102.22-0138"
-    },
-    {
-      "identity": "eef2bc17e416bef7861de5928226a8040303f90e2ae04cd0811916fbf320e623",
-      "protocol": "vless",
-      "label": "英国/United Kingdom-5",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://bae47c97-9bc1-48f6-a133-a383ee71c12e@95.154.196.63:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=foodnetwork.com&fp=chrome&pbk=o3OWFYnKad6q2C-eo6-rA74OCbjQoZfaUFYZsNqJJz0&sid=1e977d0b52eab755#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-5"
-    },
-    {
-      "identity": "98337400b42e0eeec21f4b0ceacfaa05872266602bb11eb0ace5981ae3c61934",
-      "protocol": "vless",
-      "label": "英国/United Kingdom-7",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://be5b6ad6-8184-4b63-82ac-3bc00c09c98c@5.152.223.97:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=strapi.io&fp=ios&pbk=IFEZmwpGK7VCuDj3kmVdyMn7vUIG8Sntc6TG4eIS3xs&sid=1aa9f3c9021280c0#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-7"
-    },
-    {
-      "identity": "2b51748676e10345cbc4c12c1ad584f36583f549300ae125e653a7f6c732756e",
-      "protocol": "vless",
-      "label": "荷兰/哈勒姆/The Netherlands/Haarlem",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.96:23576?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#%E8%8D%B7%E5%85%B0%2F%E5%93%88%E5%8B%92%E5%A7%86%2FThe%20Netherlands%2FHaarlem"
-    },
-    {
-      "identity": "2e03db1bdc8adee0c23d26daa655873b3a83a628ffd46d55cb669674b2dba8c4",
-      "protocol": "vless",
-      "label": "荷兰/The Netherlands",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://39c42b0a-b823-4c93-bb99-74b4183e518d@85.155.226.140:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=getsavesafe.net&fp=chrome&pbk=5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs&sid=82f5d3a1e9c0b661#%E8%8D%B7%E5%85%B0%2FThe%20Netherlands"
-    },
-    {
-      "identity": "0fc8ddf074860d6e3ad4e683cbe3f768a3e86397fd9d654da6d4352073cc98d1",
-      "protocol": "trojan",
-      "label": "🇳🇱NL-193.169.239.160-0158",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "uri": "trojan://AE62539071@thorough-falcon.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%B3%F0%9F%87%B1NL-193.169.239.160-0158"
-    },
-    {
-      "identity": "1730a47b91328d49be096404a4c9a45b20053f95ac25c8f4883e7ca362e9c4e8",
-      "protocol": "trojan",
-      "label": "🇳🇱NL-89.39.70.120-0162",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "uri": "trojan://FH72359861@pro-crane.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%B3%F0%9F%87%B1NL-89.39.70.120-0162"
-    },
-    {
-      "identity": "0cec8f8301982fa73b4cf8a02a9ff5cffd055e054dc905afe3ec641f72659ae6",
-      "protocol": "vmess",
-      "label": "加拿大/蒙特利尔/Canada/Montreal",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi5Yqg5ou_5aSnL-iSmeeJueWIqeWwlC9DYW5hZGEvTW9udHJlYWwiLCJhZGQiOiIxMzQuMTk1LjE5OC4xNDciLCJwb3J0IjoiNDQzIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0IjoidmsuY29tIiwicGF0aCI6Ii9saW5rdndzIiwidGxzIjoidGxzIiwic25pIjoidmsuY29tIn0"
-    },
-    {
-      "identity": "ca33882a255e1a92e2f9fe1dd51de57dd535722f33bcd4f1e95806dbd2f809fd",
-      "protocol": "vless",
-      "label": "德国/法兰克福/Germany/Frankfurt am Main-3",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://56971dae-1974-4ebe-a903-00e310828dd5@163.53.244.247:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=firefox&pbk=KdveJDEjZkGpf3Ymw3Ptu0cjDQ9geOY3ueMniWuWa2E&sid=2694d28edfdd2c38#%E5%BE%B7%E5%9B%BD%2F%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8F%2FGermany%2FFrankfurt%20am%20Main-3"
-    },
-    {
-      "identity": "f64d66698c458627e08699532c77e40d9dfb895d73df81f247bc6d5887d1f544",
-      "protocol": "vless",
-      "label": "意大利/Italy",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://9f0285ee-20ca-4953-bcdb-86a920652923@204.216.216.23:10086?security=none&type=tcp&encryption=none#%E6%84%8F%E5%A4%A7%E5%88%A9%2FItaly"
-    },
-    {
-      "identity": "15ca84785e5c3db39d05c7de100e7109589d267503a77fa75598848aef6b655f",
-      "protocol": "vless",
-      "label": "荷兰/The Netherlands-3",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://9500cf8b-020a-4a70-906c-e14bb5375875@144.31.237.206:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.sciencedirect.com&fp=chrome&pbk=cNWgfJHerzIEb0RXxncP8R9Ex8-FkALOtbhneEIHpR0&sid=a1b2c4d4a1b2c5d5#%E8%8D%B7%E5%85%B0%2FThe%20Netherlands-3"
-    },
-    {
-      "identity": "59b0ccf49508f716c19ee996b314d317fdc44250649e364b396b55d977b3cc2e",
-      "protocol": "vless",
-      "label": "荷兰/The Netherlands-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@195.184.247.222:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=savesafe.co&fp=chrome&pbk=6z3YcVP0f2pK3iANKIkBUZOgNeErDjxY83mHZG5jrnI&sid=f63805c3ecc7a483#%E8%8D%B7%E5%85%B0%2FThe%20Netherlands-2"
-    },
-    {
-      "identity": "ecadf4b084dbd0db0a8682c5c45695a6d64eb49121f0d510f2b64409aadf55ab",
-      "protocol": "vless",
-      "label": "意大利/Italy",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "uri": "vless://9f0285ee-20ca-4953-bcdb-86a920652923@204.216.216.23:10086?security=none&type=tcp&encryption=none#%E6%84%8F%E5%A4%A7%E5%88%A9%2FItaly"
-    },
-    {
-      "identity": "62f29e047222155892176196c0ee138d29d87783887c7c1ed19a02989b8c7667",
-      "protocol": "vless",
-      "label": "美国/United States-11",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://d51ed55c-d6dd-400b-aaf6-017c33969bfe@47.89.186.170:55861?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.intel.com&fp=firefox&pbk=t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs&sid=7551ed1b#%E7%BE%8E%E5%9B%BD%2FUnited%20States-11"
-    },
-    {
-      "identity": "058a8485364f1416711645cea50b2e25915002dc602df4f8c10d5e05cf0a6e28",
-      "protocol": "vless",
-      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam-8",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://4480161e-2c59-4d37-8736-675c9af32bf1@72.56.92.177:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=chrome&pbk=fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y&sid=01d1bf2d4755d40c#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam-8"
-    },
-    {
-      "identity": "d804745ee8e81fa8da4573fe82317554dca3a20453bf4f9180825402c0bdef50",
-      "protocol": "vless",
-      "label": "日本/Japan-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://2942bae7-9dcf-4a2e-f928-933c0ab3eab0@139.180.198.220:52143?security=none&type=tcp&encryption=none#%E6%97%A5%E6%9C%AC%2FJapan-2"
-    },
-    {
-      "identity": "2ea8a004053460a8bb45905f6c6b37f832e318edb73943a1091180fbeede375d",
-      "protocol": "vless",
-      "label": "法国/France-4",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://e8b1500b-e9e8-5492-8312-f4eadf7d0767@nasnet-162191099-direct.mbghalibaf.com:443?security=tls&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=nasnet-162191099-direct.mbghalibaf.com#%E6%B3%95%E5%9B%BD%2FFrance-4"
-    },
-    {
-      "identity": "508fd4e0945e48be898c9ffc058e9e6025412fc787166c3b1447b0463ee80d56",
-      "protocol": "vless",
-      "label": "日本/东京/Japan/Tokyo",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "uri": "vless://2942bae7-9dcf-4a2e-f928-933c0ab3eab0@139.180.198.220:52143?security=none&type=tcp&encryption=none#%E6%97%A5%E6%9C%AC%2F%E4%B8%9C%E4%BA%AC%2FJapan%2FTokyo"
-    },
-    {
-      "identity": "ee8fed0529a9ecadff8c4d5a4bf089118758e1f998068c96a4dcab48e93e5501",
-      "protocol": "vless",
-      "label": "芬兰/赫尔辛基/Finland/Helsinki-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://0b0915d7-6800-4580-a44b-77d84f105e6a@185.79.138.71:448?security=reality&type=tcp&encryption=none&sni=www.samsung.com&fp=chrome&pbk=CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8&sid=cd21e552537c7c0b#%E8%8A%AC%E5%85%B0%2F%E8%B5%AB%E5%B0%94%E8%BE%9B%E5%9F%BA%2FFinland%2FHelsinki-2"
-    },
-    {
-      "identity": "a4d95b1643dbab1264eefaad7c7fa10e57d40112362d265850f1a5b6898dda33",
-      "protocol": "vless",
-      "label": "瑞士/苏黎世/Switzerland/Zurich",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://f04037b7-125e-4666-841f-4b6bdbc9823d@jhmq-16fdqod.henghesoft.net:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=cFmHbKSQO1BQnCBGd26-EA0CU-zYmduwk0Wqu0fhuT0&sid=7e8d2954eb836947#%E7%91%9E%E5%A3%AB%2F%E8%8B%8F%E9%BB%8E%E4%B8%96%2FSwitzerland%2FZurich"
-    },
-    {
-      "identity": "09468ddf536e3ed71bad4c1dc7c98698ca6c8eae824b2b1f4bfe013a75ae32c5",
-      "protocol": "trojan",
-      "label": "🇵🇱PL-202.78.163.164-0165",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "trojan://EQ30679154@pretty-mollusk.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.164-0165"
-    },
-    {
-      "identity": "c1d7ee446f845d30adb61919db818c67b51867e984af4a4ce0aa1f90dcc46912",
-      "protocol": "vless",
-      "label": "瑞典/斯德哥尔摩/Sweden/Stockholm",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://423b1d79-08c4-403f-9d5e-c541f791b55f@2.26.101.64:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=nordic.cendora.ru&fp=firefox&pbk=YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU&sid=2186a755ed67b034#%E7%91%9E%E5%85%B8%2F%E6%96%AF%E5%BE%B7%E5%93%A5%E5%B0%94%E6%91%A9%2FSweden%2FStockholm"
-    },
-    {
-      "identity": "0c2f648c23136c09065960f0a689f345c0caa9b4cd3aaf0072bba11eeda9ca37",
-      "protocol": "trojan",
-      "label": "🇵🇱PL-202.78.163.132-0168",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "trojan://AE62539071@relative-locust.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.132-0168"
-    },
-    {
-      "identity": "333196918b5477729f4847a67f42e356be72ae32d616bae89791490ac40a0861",
-      "protocol": "vless",
-      "label": "比利时/布鲁塞尔/Belgium/Brussels",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "uri": "vless://08f84d53-e262-459c-a15a-26213e7a07c9@be2.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=be2.wba-pn.ru&path=%2F#%E6%AF%94%E5%88%A9%E6%97%B6%2F%E5%B8%83%E9%B2%81%E5%A1%9E%E5%B0%94%2FBelgium%2FBrussels"
-    },
-    {
-      "identity": "5da81e8da55134fffeeebaf698c38c911a669b28fa31b26fd3c96e660ce6301e",
-      "protocol": "vless",
-      "label": "英国/United Kingdom-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://f6190ff2-864c-46cf-ac16-93908c069b75@129.121.95.159:443?security=tls&type=ws&encryption=none&sni=129.121.95.159&path=%2Fconnect&host=129.121.95.159#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-2"
-    },
-    {
-      "identity": "15202758154ea5040baab26960e3c22b3b1fa23d7003564a3f3456592e7360d3",
-      "protocol": "trojan",
-      "label": "🇵🇱PL-202.78.163.248-0163",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "uri": "trojan://ND91608427@relaxed-gull.rooster465.autos:443?security=tls&type=tcp&sni=relaxed-gull.rooster465.autos#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.248-0163"
-    },
-    {
-      "identity": "e28aae6265990b1a7755acb7a29f42adeee47bf5d7fc583e86603a2c909e520b",
-      "protocol": "vless",
-      "label": "比利时/布鲁塞尔/Belgium/Brussels",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://08f84d53-e262-459c-a15a-26213e7a07c9@be2.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=be2.wba-pn.ru&path=%2F&host=be2.wba-pn.ru#%E6%AF%94%E5%88%A9%E6%97%B6%2F%E5%B8%83%E9%B2%81%E5%A1%9E%E5%B0%94%2FBelgium%2FBrussels"
-    },
-    {
-      "identity": "0f38435d91e9f8a2f56791d84e16b0f06971aa71b54be0d04e4d8e6d4bb371a1",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-54.249.34.120-0201",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "trojan://ND91608427@54.249.34.120:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-54.249.34.120-0201"
-    },
-    {
-      "identity": "1873983bfd3b786c516b2162b743ecd2972f09360ad3082dda28988b6f0e12bb",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-57.180.13.78-0221",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "trojan://ND91608427@57.180.13.78:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-57.180.13.78-0221"
-    },
-    {
-      "identity": "1248264c89a385f91513dcf035a5bc8965e46bb1a6dc3352e8dba2c477ca06cf",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-54.249.34.120-0178",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "uri": "trojan://ND91608427@social-mutt.rooster465.autos:443?security=tls&type=tcp&sni=social-mutt.rooster465.autos#%F0%9F%87%AF%F0%9F%87%B5JP-54.249.34.120-0178"
-    },
-    {
-      "identity": "1e7cea0fc26e7bcb5228971be90f6535049401f7472066e7a8d67633a467cf1a",
+      "identity": "178a19a1e7632dff814efa13267464419c8e8e3287625126dac44a6ec1523f27",
       "protocol": "vless",
       "label": "日本/东京/Japan/Tokyo-6",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://0b772594-d6b9-4f4f-849b-8a6f92f594fe@43.165.177.82:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=ZuN9nc78h4Ccb19eb9NpTCs0jZkhJB8L0i1ZoAhu0XU&sid=b2f4518cf979889d#%E6%97%A5%E6%9C%AC%2F%E4%B8%9C%E4%BA%AC%2FJapan%2FTokyo-6"
+      "uri": "vless://048a61f8-b236-4082-b1c3-c22a85693c12@162.128.181.182:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=firefox&pbk=gcqSfWJ1yR5Aa2fsBYZ3vyaC0yQnil4qqNMZN4weZlE&sid=674a07ea4d1c4255#%E6%97%A5%E6%9C%AC%2F%E4%B8%9C%E4%BA%AC%2FJapan%2FTokyo-6"
     },
     {
-      "identity": "06e4b4fc2aa5bfbcf5d43328a0b1364e7c12586308829c0776906a1e4da53562",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-52.195.2.92-0276",
+      "identity": "2a2f8a0af9e9d09d8eaf092637ef3f5474dc2572267d89476d53b214e522f52a",
+      "protocol": "vless",
+      "label": "美国/United States-9",
       "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
+        "awesome-vpn-clash"
       ],
-      "uri": "trojan://FH72359861@adapted-quetzal.rooster465.autos:443?security=tls&type=tcp&sni=adapted-quetzal.rooster465.autos#%F0%9F%87%AF%F0%9F%87%B5JP-52.195.2.92-0276"
+      "uri": "vless://431fe973-a43a-4fac-bf83-2a772e0d0625@180.178.60.253:10000?security=none&type=tcp&encryption=none#%E7%BE%8E%E5%9B%BD%2FUnited%20States-9"
     },
     {
-      "identity": "0c18b1344f3465e604bfe0a05fc64cf3e05c1a9f434f6c91d1424b0ea0996bfa",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-3.113.21.187-0251",
+      "identity": "4c0c5edd73026836f72e88b8ca225d3d5747bdbcd671647a18c3f69aac3357b2",
+      "protocol": "vless",
+      "label": "日本/东京/Japan/Tokyo-5",
       "sources": [
-        "v2ray-aggregator-clash"
+        "awesome-vpn-clash"
       ],
-      "uri": "trojan://AE62539071@awaited-lark.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-3.113.21.187-0251"
-    },
-    {
-      "identity": "176a66927d3a979aee83803d8489dd4bc04cda498a026b70acc8ffd4138437df",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-3.113.21.187-0251",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "uri": "trojan://AE62539071@awaited-lark.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-3.113.21.187-0251"
-    },
-    {
-      "identity": "171203461f51a1b927ea76c67a63503e78002297f448e5155bb910c249614ac0",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-3.113.1.131-0205",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "uri": "trojan://ND91608427@perfect-slug.rooster465.autos:443?security=tls&type=tcp&sni=perfect-slug.rooster465.autos#%F0%9F%87%AF%F0%9F%87%B5JP-3.113.1.131-0205"
-    },
-    {
-      "identity": "06d47f660824c15bd20e3cf692e19b473b31e78e2d92c5641780ae1763a05fee",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-54.248.184.74-0274",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "uri": "trojan://HC04361579@exact-sawfish.rooster465.autos:443?security=tls&type=tcp&sni=exact-sawfish.rooster465.autos#%F0%9F%87%AF%F0%9F%87%B5JP-54.248.184.74-0274"
-    },
-    {
-      "identity": "0fbad88f7f2a183d5607aa9b9f3781dc8a976f7da46a72d835c5cf6340ded762",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-52.194.250.73-0213",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "trojan://AE62539071@frank-frog.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-52.194.250.73-0213"
-    },
-    {
-      "identity": "1137570149b81b497e2b259e6d0646512f4633aebe9b2aba4be8d23e041b3f98",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-57.180.27.225-0195",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "trojan://ND91608427@picked-guinea.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-57.180.27.225-0195"
-    },
-    {
-      "identity": "0dbec8b8f72ff0ff7b6bf1a11b40e98653505b26083b1aabe76409e504ab4715",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-18.183.135.94-0196",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "uri": "trojan://AE62539071@central-jawfish.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-18.183.135.94-0196"
-    },
-    {
-      "identity": "0dca6daf284aadca7aee9418cd9a6caf6e7021dac54e1116c8c57024181fe13d",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-18.183.178.158-0224",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "trojan://AE62539071@inviting-burro.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-18.183.178.158-0224"
+      "uri": "vless://309b0ce3-09a8-4883-bfe4-bd56e215be44@31.76.91.138:2087?security=reality&type=grpc&encryption=none&sni=ads.x5.ru&fp=firefox&pbk=JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4&sid=c226283c4de5b1ad&serviceName=grpc#%E6%97%A5%E6%9C%AC%2F%E4%B8%9C%E4%BA%AC%2FJapan%2FTokyo-5"
     },
     {
       "identity": "0dbdcb1d3f34e73ba794b74a7af92c4c180412468b3dc55aafa87914d9f90af6",
@@ -588,121 +252,215 @@
       "uri": "trojan://PQ05174892@evolving-kangaroo.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-52.194.186.154-0209"
     },
     {
-      "identity": "00bc9e77c22f3963628492b846c99e8e8367c2606675fd9efa56434100afdfbd",
-      "protocol": "vmess",
-      "label": "美国/San Francisco/United States/San Francisco-5",
+      "identity": "48500974e5787bc28f2a5e0cb7183dfc4881f434c8625f0ae9fbadd97fa24ea6",
+      "protocol": "vless",
+      "label": "德国/Germany",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi576O5Zu9L1NhbiBGcmFuY2lzY28vVW5pdGVkIFN0YXRlcy9TYW4gRnJhbmNpc2NvLTUiLCJhZGQiOiIxNzIuNjcuMTYxLjE0NCIsInBvcnQiOiI4NDQzIiwiaWQiOiI2MDQ0MTU0OC1iNjhlLTQzYjItODE5MS1lM2I4ODRiZTRiM2MiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0IjoidjJyYXkxLmRvemFwcC54eXoiLCJwYXRoIjoiL2xNbnNaVU40LyIsInRscyI6InRscyIsInNuaSI6InYycmF5MS5kb3phcHAueHl6In0"
+      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.232:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=chrome&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%E5%BE%B7%E5%9B%BD%2FGermany"
     },
     {
-      "identity": "16abab61d952c0591dd29b4a0bc9ef6b96185bd97b5693074b7390a3c8972562",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-52.196.34.5-0177",
+      "identity": "8868f477e882fce2d98a46680808945466f8a9879fd3cf8799ffbb0eabf96088",
+      "protocol": "vless",
+      "label": "美国/United States-3",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@us20.levikogjgfdd.ir:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=savesafe.run&fp=chrome&pbk=wx4B5IBeGc_0h6XZW6714G7951zLUYILv6eNRSgPDl8&sid=e4f6a3446ac34a24#%E7%BE%8E%E5%9B%BD%2FUnited%20States-3"
+    },
+    {
+      "identity": "f1ce195df8e85caa426d46566f22d42b710a015ab3242783cf64a012ab6a38c7",
+      "protocol": "vless",
+      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam-5",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://7e8f7489-e65f-4be6-93ed-867a74ec6759@95.85.228.161:8443?security=none&type=grpc&encryption=none&serviceName=grpc#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam-5"
+    },
+    {
+      "identity": "09b864c47f8fc212e9b82370cecbaa7d40fea9bccae483bb5a9e3f844dceb55a",
+      "protocol": "ss",
+      "label": "🇬🇧GB-82.38.31.57-0083",
       "sources": [
         "v2ray-aggregator-clash"
       ],
-      "uri": "trojan://FH72359861@welcome-owl.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-52.196.34.5-0177"
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.57:443#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.57-0083"
     },
     {
-      "identity": "d28a114f85e638f3ced140ec329a33f891f6443ef53fa0658fa85b0e0987f334",
+      "identity": "067369cc79955ee3edcc49ca122b33abdef3ea029dfa271229ded7e758771f01",
+      "protocol": "ss",
+      "label": "🇬🇧GB-82.38.31.35-0090",
+      "sources": [
+        "v2ray-aggregator-base64",
+        "v2ray-aggregator-uri"
+      ],
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.35:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.35-0090"
+    },
+    {
+      "identity": "f186a0e8402fcdf9e2e13820a8a7cbe86112243326843c8a704cb57cdf20cdff",
       "protocol": "vless",
-      "label": "英国/United Kingdom-8",
+      "label": "加拿大/Canada-3",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://4bc8ff7a-20b4-41b2-9751-dfca869f0553@gb1.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=gb1.wba-pn.ru&path=%2F&host=gb1.wba-pn.ru#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-8"
+      "uri": "vless://716426fa-bcb7-4eb9-b460-36399ebf740d@lizca2.footballfantasyforum.com:443?security=tls&type=tcp&encryption=none&sni=lizca2.footballfantasyforum.com#%E5%8A%A0%E6%8B%BF%E5%A4%A7%2FCanada-3"
     },
     {
-      "identity": "0fd175c8096d052b03759e52f50ba497ab5f54b6c9e4533f4178c63ed1694b3e",
+      "identity": "2dc133ad940545490138242756ac8958fb8b694f07f99cc2353e36483016147f",
       "protocol": "vless",
-      "label": "美国/San Francisco/United States/San Francisco-11",
+      "label": "芬兰/赫尔辛基/Finland/Helsinki-4",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://03707fb7-0990-440f-88f6-b0e0f7242a38@104.18.139.67:443?security=tls&type=ws&encryption=none&sni=de-new.ariyuz.org&path=%2F&host=de-new.ariyuz.org#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-11"
+      "uri": "vless://0de36006-3fab-40a6-ac2b-b9663b815a17@65.109.211.136:24854?security=none&type=tcp&encryption=none#%E8%8A%AC%E5%85%B0%2F%E8%B5%AB%E5%B0%94%E8%BE%9B%E5%9F%BA%2FFinland%2FHelsinki-4"
     },
     {
-      "identity": "28b0039d9ab9d1dd8adb1693489f8773daf1bb9f110028f797fae0d90d5a83b8",
+      "identity": "62f29e047222155892176196c0ee138d29d87783887c7c1ed19a02989b8c7667",
       "protocol": "vless",
-      "label": "美国/United States-9",
+      "label": "美国/United States-11",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://055a1ce8-2a16-4a0d-a2c2-22826c9b2413@47.253.226.114:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc#%E7%BE%8E%E5%9B%BD%2FUnited%20States-9"
+      "uri": "vless://d51ed55c-d6dd-400b-aaf6-017c33969bfe@47.89.186.170:55861?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.intel.com&fp=firefox&pbk=t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs&sid=7551ed1b#%E7%BE%8E%E5%9B%BD%2FUnited%20States-11"
     },
     {
-      "identity": "b487607ab0f41f7a7093cb73f4c5346e2f1a70408dc4baa465da78c4ea88ee1b",
+      "identity": "f969f2b56c69546bb6291f10b74dc8d5f6e47889bab24be88a4a9c7659d4f2a3",
+      "protocol": "vless",
+      "label": "荷兰/哈勒姆/The Netherlands/Haarlem-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.98:23576?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#%E8%8D%B7%E5%85%B0%2F%E5%93%88%E5%8B%92%E5%A7%86%2FThe%20Netherlands%2FHaarlem-2"
+    },
+    {
+      "identity": "c05d4dff2be40ae9662dff6fddc37fc19f6c494cc0c022e1341967203a8c0463",
+      "protocol": "vless",
+      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://4bf5a71c-d726-4585-b095-7396675706d5@72.56.81.165:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=chrome&pbk=D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU&sid=c84f#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam"
+    },
+    {
+      "identity": "7ee8805aaf7112c286eb1459d948f71da29abf11d1d95bf108cddafbd3a25ff5",
+      "protocol": "vless",
+      "label": "美国/United States-4",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://14da77da-4fb3-4e49-ac4f-7881ea19b267@177.3.212.127:8443?security=tls&type=tcp&encryption=none&sni=neth6.lckdwn.ru#%E7%BE%8E%E5%9B%BD%2FUnited%20States-4"
+    },
+    {
+      "identity": "058a8485364f1416711645cea50b2e25915002dc602df4f8c10d5e05cf0a6e28",
+      "protocol": "vless",
+      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam-6",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://4480161e-2c59-4d37-8736-675c9af32bf1@72.56.92.177:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=chrome&pbk=fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y&sid=01d1bf2d4755d40c#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam-6"
+    },
+    {
+      "identity": "98337400b42e0eeec21f4b0ceacfaa05872266602bb11eb0ace5981ae3c61934",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-5",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://be5b6ad6-8184-4b63-82ac-3bc00c09c98c@5.152.223.97:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=strapi.io&fp=ios&pbk=IFEZmwpGK7VCuDj3kmVdyMn7vUIG8Sntc6TG4eIS3xs&sid=1aa9f3c9021280c0#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-5"
+    },
+    {
+      "identity": "1730a47b91328d49be096404a4c9a45b20053f95ac25c8f4883e7ca362e9c4e8",
+      "protocol": "trojan",
+      "label": "🇳🇱NL-89.39.70.120-0162",
+      "sources": [
+        "v2ray-aggregator-base64",
+        "v2ray-aggregator-uri"
+      ],
+      "uri": "trojan://FH72359861@pro-crane.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%B3%F0%9F%87%B1NL-89.39.70.120-0162"
+    },
+    {
+      "identity": "eef2bc17e416bef7861de5928226a8040303f90e2ae04cd0811916fbf320e623",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-6",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://bae47c97-9bc1-48f6-a133-a383ee71c12e@95.154.196.63:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=foodnetwork.com&fp=chrome&pbk=o3OWFYnKad6q2C-eo6-rA74OCbjQoZfaUFYZsNqJJz0&sid=1e977d0b52eab755#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-6"
+    },
+    {
+      "identity": "0fc8ddf074860d6e3ad4e683cbe3f768a3e86397fd9d654da6d4352073cc98d1",
+      "protocol": "trojan",
+      "label": "🇳🇱NL-193.169.239.160-0158",
+      "sources": [
+        "v2ray-aggregator-base64",
+        "v2ray-aggregator-uri"
+      ],
+      "uri": "trojan://AE62539071@thorough-falcon.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%B3%F0%9F%87%B1NL-193.169.239.160-0158"
+    },
+    {
+      "identity": "cc487b92c6b0c00afe1ce54e0babd55f0da0ac96083d24a967d6b0ccbd49aab0",
       "protocol": "vless",
       "label": "塞浦路斯/Cyprus",
       "sources": [
-        "awesome-vpn-base64"
-      ],
-      "uri": "vless://9f0baff8-bdee-4de9-9515-bcc4932b41fa@194.76.154.31:40443?security=reality&type=tcp&encryption=none&sni=deepl.com&fp=qq&pbk=MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ&sid=a8ae#%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%2FCyprus"
-    },
-    {
-      "identity": "068a1621f7a7dc0595a0b9b0699262c55ef91960044f92c9e0e88f4fa95b08c8",
-      "protocol": "vmess",
-      "label": "香港/香港/Hong Kong/Hong Kong-4",
-      "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi6aaZ5rivL-mmmea4ry9Ib25nIEtvbmcvSG9uZyBLb25nLTQiLCJhZGQiOiI0Ny4yNDQuMTIwLjE5NyIsInBvcnQiOiIzNjcwMyIsImlkIjoiNDViODM1MTktOWM0Zi00MDUyLWExMWItMDJlMDE3YjYzNmQ0IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6IiIsInBhdGgiOiIvYXJraSIsInRscyI6IiJ9"
+      "uri": "vless://9f0baff8-bdee-4de9-9515-bcc4932b41fa@194.76.154.31:40443?security=reality&type=tcp&encryption=none&sni=deepl.com&fp=chrome&pbk=MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ&sid=a8ae#%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%2FCyprus"
     },
     {
-      "identity": "1432497f0d65e1e826454e9bf3523004d75717e20f15ed235c15409e4002bd1f",
-      "protocol": "trojan",
-      "label": "香港/Hong Kong",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "trojan://BxceQaOe@119.246.1.143:443?security=none&type=tcp&allowInsecure=1#%E9%A6%99%E6%B8%AF%2FHong%20Kong"
-    },
-    {
-      "identity": "5321e5597a30c80179c677f6ae9f4365d6d6367a1711a86c1d27f4436c50caa9",
+      "identity": "bb665be8e3121d4bae2e38e88fe1f4e8e98218807d8d0a0304cece8f55e55150",
       "protocol": "vless",
-      "label": "德国/Germany-3",
+      "label": "英国/伦敦/United Kingdom/London",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@81.95.4.189:443?security=tls&type=ws&encryption=none&sni=bab-6.site&path=%2Fvws%2F&host=bab-6.site#%E5%BE%B7%E5%9B%BD%2FGermany-3"
+      "uri": "vless://32ed7262-74d2-40ea-a038-6bf074bc463e@185.168.195.211:21527?security=reality&type=tcp&encryption=none&sni=www.apple.com&fp=chrome&pbk=SsIiRnSI27T6_EU71nUXgFfE0NmJhsA2UwhR5WC25UY&sid=823ec0b7b5084ffe#%E8%8B%B1%E5%9B%BD%2F%E4%BC%A6%E6%95%A6%2FUnited%20Kingdom%2FLondon"
     },
     {
-      "identity": "b1beb6d3e3b109b25da5a1b5f1c038e699a8fde3671c975b990902fa3d00ca9d",
+      "identity": "2e03db1bdc8adee0c23d26daa655873b3a83a628ffd46d55cb669674b2dba8c4",
       "protocol": "vless",
-      "label": "美国/水牛城/United States/Buffalo",
+      "label": "荷兰/The Netherlands-3",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://17d29827-7cf1-4115-b40d-548e10ec355d@billing.netraidly.ru:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=qq&pbk=bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM&sid=aa3c#%E7%BE%8E%E5%9B%BD%2F%E6%B0%B4%E7%89%9B%E5%9F%8E%2FUnited%20States%2FBuffalo"
+      "uri": "vless://39c42b0a-b823-4c93-bb99-74b4183e518d@85.155.226.140:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=getsavesafe.net&fp=chrome&pbk=5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs&sid=82f5d3a1e9c0b661#%E8%8D%B7%E5%85%B0%2FThe%20Netherlands-3"
     },
     {
-      "identity": "eb43cb95854f5212d1ce6e71d4753735d146f6fef5fb1b41d3aead7ab0da5019",
+      "identity": "f9e6fb7e8a646332e7f40e77f119762c3921d0c1a4eb42e06d4cb4114f422dcf",
       "protocol": "vless",
-      "label": "新加坡/新加坡/Singapore/Singapore-2",
+      "label": "法国/France",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://9206ae06-88ee-49b1-a558-531ade80fcaa@178.128.112.70:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.amazon.com&fp=chrome&pbk=-O8QFkqeMAc6TzQp6eY1s38my_8jhBd7HDHxNki6QlY&sid=7f7f#%E6%96%B0%E5%8A%A0%E5%9D%A1%2F%E6%96%B0%E5%8A%A0%E5%9D%A1%2FSingapore%2FSingapore-2"
+      "uri": "vless://e8b1500b-e9e8-5492-8312-f4eadf7d0767@162.19.10.99:443?security=tls&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=nasnet-162191099-direct.mbghalibaf.com#%E6%B3%95%E5%9B%BD%2FFrance"
     },
     {
-      "identity": "d37d685140e691ec647a5ca238fc04c2216c91c2a45c9f5b54a8c4be61894883",
+      "identity": "08d9bce3f48342fc96b72df4158d9d0f5d0b78a1f2e3bed7f0387aedcbccd1d7",
+      "protocol": "ss",
+      "label": "🇩🇪DE-209.46.102.22-0138",
+      "sources": [
+        "v2ray-aggregator-base64",
+        "v2ray-aggregator-uri"
+      ],
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxaGhycXJva2ozYWc@209.46.102.22:8388#%F0%9F%87%A9%F0%9F%87%AADE-209.46.102.22-0138"
+    },
+    {
+      "identity": "ca33882a255e1a92e2f9fe1dd51de57dd535722f33bcd4f1e95806dbd2f809fd",
       "protocol": "vless",
-      "label": "新加坡/新加坡/Singapore/Singapore-3",
+      "label": "德国/法兰克福/Germany/Frankfurt am Main-4",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://607801ac-dbdd-4938-a167-129015d9978e@91.192.81.214:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=bMcyxNueltQhz5Kuxcf8odDStWHowYfLhKNdCbUweDc&sid=d1742269#%E6%96%B0%E5%8A%A0%E5%9D%A1%2F%E6%96%B0%E5%8A%A0%E5%9D%A1%2FSingapore%2FSingapore-3"
+      "uri": "vless://56971dae-1974-4ebe-a903-00e310828dd5@163.53.244.247:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=firefox&pbk=KdveJDEjZkGpf3Ymw3Ptu0cjDQ9geOY3ueMniWuWa2E&sid=2694d28edfdd2c38#%E5%BE%B7%E5%9B%BD%2F%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8F%2FGermany%2FFrankfurt%20am%20Main-4"
     },
     {
-      "identity": "00579f0fa206a8d785114dfa999b70a68b60c4bd05bc319b882e19ac265b296b",
+      "identity": "925bef581e6e3f313367eb255eb854202a98fd8b4c0154f82164ddf48ba113a7",
       "protocol": "vless",
-      "label": "英国/United Kingdom",
+      "label": "香港/香港/Hong Kong/Hong Kong-2",
       "sources": [
-        "awesome-vpn-base64"
+        "awesome-vpn-clash"
       ],
-      "uri": "vless://4bc8ff7a-20b4-41b2-9751-dfca869f0553@gb1.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=gb1.wba-pn.ru&fp=qq&path=%2F&host=gb1.wba-pn.ru#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom"
+      "uri": "vless://daf0c4cb-3541-4f20-bc71-cc9d94bb17bc@hk10.levikogjgfdd.ir:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=chrome&pbk=BF9aCRIeWaFADnCRCeEKsX1SSRaqAPrXttdD9eFCl0k&sid=96b6483bfb4ac526#%E9%A6%99%E6%B8%AF%2F%E9%A6%99%E6%B8%AF%2FHong%20Kong%2FHong%20Kong-2"
     },
     {
       "identity": "083312fcc11413c34c5c9642f5f69959e6cbb8796c091b5b23c440295c192943",
@@ -715,6 +473,232 @@
       "uri": "trojan://AE62539071@together-dingo.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%A6%F0%9F%87%BAAU-87.121.33.162-1031"
     },
     {
+      "identity": "8b08be02c1346cd6324c4e305f996c6a4c0e9493461fa38ad3745ff3d3ececda",
+      "protocol": "vless",
+      "label": "德国/法兰克福/Germany/Frankfurt am Main-7",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://f82332b2-dc8c-eac4-ac12-f276e37e278a@s1.test.anti-zapret.com:8443?security=reality&type=tcp&encryption=none&sni=s1.test.anti-zapret.com&fp=chrome&pbk=0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY&sid=58fbcddfaae3ade9#%E5%BE%B7%E5%9B%BD%2F%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8F%2FGermany%2FFrankfurt%20am%20Main-7"
+    },
+    {
+      "identity": "eb43cb95854f5212d1ce6e71d4753735d146f6fef5fb1b41d3aead7ab0da5019",
+      "protocol": "vless",
+      "label": "新加坡/新加坡/Singapore/Singapore-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://9206ae06-88ee-49b1-a558-531ade80fcaa@178.128.112.70:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.amazon.com&fp=chrome&pbk=-O8QFkqeMAc6TzQp6eY1s38my_8jhBd7HDHxNki6QlY&sid=7f7f#%E6%96%B0%E5%8A%A0%E5%9D%A1%2F%E6%96%B0%E5%8A%A0%E5%9D%A1%2FSingapore%2FSingapore-2"
+    },
+    {
+      "identity": "af49baa4cea327b2853ab9a4835329867599958011228cd58762f3925565c116",
+      "protocol": "vless",
+      "label": "新加坡/新加坡/Singapore/Singapore-3",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://690ad3be-991b-4a2c-b351-42dd06789d03@162.128.71.118:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=chrome&pbk=3ZKNZEktRaPxt-XoWmx68EGsFwglnICVkvIl96973iA&sid=4014ce9b0d82ad9d#%E6%96%B0%E5%8A%A0%E5%9D%A1%2F%E6%96%B0%E5%8A%A0%E5%9D%A1%2FSingapore%2FSingapore-3"
+    },
+    {
+      "identity": "5da81e8da55134fffeeebaf698c38c911a669b28fa31b26fd3c96e660ce6301e",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://f6190ff2-864c-46cf-ac16-93908c069b75@129.121.95.159:443?security=tls&type=ws&encryption=none&sni=129.121.95.159&path=%2Fconnect&host=129.121.95.159#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-2"
+    },
+    {
+      "identity": "ee8fed0529a9ecadff8c4d5a4bf089118758e1f998068c96a4dcab48e93e5501",
+      "protocol": "vless",
+      "label": "芬兰/赫尔辛基/Finland/Helsinki",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://0b0915d7-6800-4580-a44b-77d84f105e6a@185.79.138.71:448?security=reality&type=tcp&encryption=none&sni=www.samsung.com&fp=chrome&pbk=CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8&sid=cd21e552537c7c0b#%E8%8A%AC%E5%85%B0%2F%E8%B5%AB%E5%B0%94%E8%BE%9B%E5%9F%BA%2FFinland%2FHelsinki"
+    },
+    {
+      "identity": "b925835961f4da7f7a0dd4bab87c102bc063ab5cb4b37214807b3e1040bf2661",
+      "protocol": "vless",
+      "label": "巴西/圣保罗/Brazil/São Paulo",
+      "sources": [
+        "awesome-vpn-base64"
+      ],
+      "uri": "vless://9638a83e-f1f7-4cc8-a602-924965d9534f@23.251.56.78:443?security=reality&type=raw&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=firefox&pbk=E6Y9lNizCXo8tJ6EXwLYQIjyIwmxIs4foyRlY2MgkjA&sid=59ccabb0a1483c4b#%E5%B7%B4%E8%A5%BF%2F%E5%9C%A3%E4%BF%9D%E7%BD%97%2FBrazil%2FS%C3%A3o%20Paulo"
+    },
+    {
+      "identity": "0c2f648c23136c09065960f0a689f345c0caa9b4cd3aaf0072bba11eeda9ca37",
+      "protocol": "trojan",
+      "label": "🇵🇱PL-202.78.163.132-0251",
+      "sources": [
+        "v2ray-aggregator-clash"
+      ],
+      "uri": "trojan://AE62539071@relative-locust.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.132-0251"
+    },
+    {
+      "identity": "6e9fa9068b2cfbe0b4ec7b6b85d35221187271da3c6b9fe1ef8905e378d2c2b1",
+      "protocol": "vless",
+      "label": "巴西/圣保罗/Brazil/São Paulo",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://9638a83e-f1f7-4cc8-a602-924965d9534f@23.251.56.78:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=firefox&pbk=E6Y9lNizCXo8tJ6EXwLYQIjyIwmxIs4foyRlY2MgkjA&sid=59ccabb0a1483c4b#%E5%B7%B4%E8%A5%BF%2F%E5%9C%A3%E4%BF%9D%E7%BD%97%2FBrazil%2FS%C3%A3o%20Paulo"
+    },
+    {
+      "identity": "15202758154ea5040baab26960e3c22b3b1fa23d7003564a3f3456592e7360d3",
+      "protocol": "trojan",
+      "label": "🇵🇱PL-202.78.163.248-0163",
+      "sources": [
+        "v2ray-aggregator-base64",
+        "v2ray-aggregator-uri"
+      ],
+      "uri": "trojan://ND91608427@relaxed-gull.rooster465.autos:443?security=tls&type=tcp&sni=relaxed-gull.rooster465.autos#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.248-0163"
+    },
+    {
+      "identity": "09468ddf536e3ed71bad4c1dc7c98698ca6c8eae824b2b1f4bfe013a75ae32c5",
+      "protocol": "trojan",
+      "label": "🇵🇱PL-202.78.163.164-0252",
+      "sources": [
+        "v2ray-aggregator-clash"
+      ],
+      "uri": "trojan://EQ30679154@pretty-mollusk.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.164-0252"
+    },
+    {
+      "identity": "1517c19715f8f871ee22b635a0e554102ceb66a8aee32103ee88b7e68ce0d7c2",
+      "protocol": "trojan",
+      "label": "🇭🇰HK-185.14.47.238-4876",
+      "sources": [
+        "v2ray-aggregator-clash"
+      ],
+      "uri": "trojan://AE62539071@magical-kodiak.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AD%F0%9F%87%B0HK-185.14.47.238-4876"
+    },
+    {
+      "identity": "e76a3e08480b308019e3dae9b4df6c4047572fdbcbb084b0040dc23e24bcbf55",
+      "protocol": "vless",
+      "label": "香港/香港/Hong Kong/Hong Kong-4",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://cdc86ade-9bc3-41eb-a7b9-879130378820@hk11.levikogjgfdd.ir:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=chrome&pbk=-Ngz1wsLiTc5fP1MdkFMS2oor1jRoFLAYD8oOgybGFw&sid=e6d2c443d8f7702a#%E9%A6%99%E6%B8%AF%2F%E9%A6%99%E6%B8%AF%2FHong%20Kong%2FHong%20Kong-4"
+    },
+    {
+      "identity": "3c0721649717c25058561d8d8b8a1763a14abdef2270b23d56e979aa3bd5e387",
+      "protocol": "vless",
+      "label": "荷兰/The Netherlands-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://1f619326-cd93-4d6b-aebe-e0b5f8831d02@relay.meshbeat.online:8444?security=tls&type=ws&encryption=none&sni=relay.meshbeat.online&path=%2Fapi%2Fv1%2Fdevices%2F2545c190a7%2Ftelemetry&host=relay.meshbeat.online#%E8%8D%B7%E5%85%B0%2FThe%20Netherlands-2"
+    },
+    {
+      "identity": "6c041ebc4648e8e17e1cc05ce021b5cb833fe6f5641fc8fffb23841dd81aeb78",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-7",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://b052df40-d51c-456c-9bd6-57af01a87e4e@cdn.pinecloud.net:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=cdn.pinecloud.net&fp=chrome&pbk=vWSgdMDirb9aDZLWijSXXXl-NCTrtBgEe9MQqcgV6h8&sid=6a2e3af684799b19#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-7"
+    },
+    {
+      "identity": "45858f1db0c963ceab18a7aefe00b275b2cd655553985aeb577580327ed724b2",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-3",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://423b1d79-08c4-403f-9d5e-c541f791b55f@144.31.213.188:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=eu-west.cendora.ru&fp=chrome&pbk=m6RDw1b8R4lCaRUIzhHpy6TtX2Dhk6nyby8dWzeQqA0&sid=dd3ff38418d29d22#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-3"
+    },
+    {
+      "identity": "b8ea1be5495b83098892c838c3bbbea04b99991699f3a89a2883e8356722c21c",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-13",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://b2f6aa3a-2550-4a1c-b2c0-1c94b1207217@one-for-all.levikogjgfdd.ir:443?security=tls&type=ws&encryption=none&sni=terazhediii.info&path=%2Fhdgrbws&host=terazhediii.info#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-13"
+    },
+    {
+      "identity": "5aee90dc0b001e1f457a961c6dee6a2a0ee56595235d4eac8bc3ff4b6961d982",
+      "protocol": "vless",
+      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam-3",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://ae2e0637-5c9d-422b-93ac-70bd3fceeb81@hys40.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=hys40.wba-pn.ru&path=%2F&host=hys40.wba-pn.ru#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam-3"
+    },
+    {
+      "identity": "5321e5597a30c80179c677f6ae9f4365d6d6367a1711a86c1d27f4436c50caa9",
+      "protocol": "vless",
+      "label": "德国/Germany-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@81.95.4.189:443?security=tls&type=ws&encryption=none&sni=bab-6.site&path=%2Fvws%2F&host=bab-6.site#%E5%BE%B7%E5%9B%BD%2FGermany-2"
+    },
+    {
+      "identity": "422c97b6134b1d19bf3aa4dadb4173b303f51091537695d7c4221736f7a4378e",
+      "protocol": "vless",
+      "label": "德国/法兰克福/Germany/Frankfurt am Main-6",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@87.120.84.32:33843?security=tls&type=tcp&encryption=none&sni=deproxy2.lckdwn.ru#%E5%BE%B7%E5%9B%BD%2F%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8F%2FGermany%2FFrankfurt%20am%20Main-6"
+    },
+    {
+      "identity": "c102c4cc5586c876a8f3e6c7f84b4a63dc34897535dd6e9330440615186544dd",
+      "protocol": "vless",
+      "label": "塞浦路斯/Cyprus-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://511c1563-2cb6-4064-abc6-a59ee49818a8@in1.levikogjgfdd.ir:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=qq&pbk=cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0&sid=88b6#%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%2FCyprus-2"
+    },
+    {
+      "identity": "d28a114f85e638f3ced140ec329a33f891f6443ef53fa0658fa85b0e0987f334",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-4",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://4bc8ff7a-20b4-41b2-9751-dfca869f0553@gb1.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=gb1.wba-pn.ru&path=%2F&host=gb1.wba-pn.ru#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-4"
+    },
+    {
+      "identity": "2bb12eed96d2371f97a80346be0081723cf10604f006b0eed1d66648e6a4bf13",
+      "protocol": "vless",
+      "label": "新加坡/Singapore-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://8d1e0577-bfcb-4cbd-91c0-1f8788d4ba44@sg10.levikogjgfdd.ir:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=rJ-aDop3jUC-FzyETfI2uDSXQ659PFlehr7XWm5Cm0A&sid=fe1a104caf309f5a#%E6%96%B0%E5%8A%A0%E5%9D%A1%2FSingapore-2"
+    },
+    {
+      "identity": "eb222ea9ecdc80f153ac0681cf91c9332608228588564f7cb64c7db9ccb6796a",
+      "protocol": "vless",
+      "label": "荷兰/哈勒姆/The Netherlands/Haarlem",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://c7e9c591-2764-423a-afca-efbd010fd396@51.15.127.20:2053?security=tls&type=ws&encryption=none&sni=forfreeuse.rtqa.ru&allowInsecure=1&path=%2F&host=forfreeuse.rtqa.ru#%E8%8D%B7%E5%85%B0%2F%E5%93%88%E5%8B%92%E5%A7%86%2FThe%20Netherlands%2FHaarlem"
+    },
+    {
+      "identity": "bd39d7ff2271fb6e45e698acf7b5722a041b6a3630172039de4a2e72a42a0cfd",
+      "protocol": "vless",
+      "label": "塞浦路斯/Cyprus",
+      "sources": [
+        "awesome-vpn-base64"
+      ],
+      "uri": "vless://511c1563-2cb6-4064-abc6-a59ee49818a8@in1.levikogjgfdd.ir:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=qq&pbk=cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0&sid=88b6#%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%2FCyprus"
+    },
+    {
+      "identity": "52403d1c573e46f96ce93f4865d4b18a4c7e42eafffbdef95fbe32c5d3551af7",
+      "protocol": "vless",
+      "label": "阿联酋/United Arab Emirates",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://9b18ccef-b9e0-41d1-8990-9d970569e142@185.112.249.201:8443?security=tls&type=ws&encryption=none&sni=web-socket.tgdaosheng.ggff.net&path=%2Fproxyip%3Dbpb.yousef.isegaro.comfp%3Dchrome&host=web-socket.tgdaosheng.ggff.net#%E9%98%BF%E8%81%94%E9%85%8B%2FUnited%20Arab%20Emirates"
+    },
+    {
       "identity": "d270e8aa379438bc6a99a2d693ff4c6c709a4952c55ad77f8149fb84dd07f9b3",
       "protocol": "vless",
       "label": "俄罗斯联邦/Russia",
@@ -724,165 +708,194 @@
       "uri": "vless://03707fb7-0990-440f-88f6-b0e0f7242a38@45.8.211.57:443?security=tls&type=ws&encryption=none&sni=de-new-1.ariyuz.org&path=%2F&host=de-new-1.ariyuz.org#%E4%BF%84%E7%BD%97%E6%96%AF%E8%81%94%E9%82%A6%2FRussia"
     },
     {
-      "identity": "a54357f10822afd9ff93d5f8a7d73403c54f4c3a0deb2e45e54264b4846d6a1b",
+      "identity": "533022bc7f4966d8a97a1eefbe2ffb66dedb8607c69bb05f09147c1afb8fff8e",
       "protocol": "vless",
-      "label": "美国/水牛城/United States/Buffalo",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "uri": "vless://17d29827-7cf1-4115-b40d-548e10ec355d@billing.netraidly.ru:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=qq&pbk=bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM&sid=aa3c#%E7%BE%8E%E5%9B%BD%2F%E6%B0%B4%E7%89%9B%E5%9F%8E%2FUnited%20States%2FBuffalo"
-    },
-    {
-      "identity": "5710c6e2934685324b496aa25569374aa8269b0d3139332d0b1ea380aa49c97a",
-      "protocol": "vless",
-      "label": "荷兰/哈勒姆/The Netherlands/Haarlem",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "uri": "vless://05caca6c-9e97-4c0f-8edf-7b88a6e572c5@mypanel.unixzone.us:12068?security=none&type=ws&encryption=none&path=%2F&host=mypanel.unixzone.us#%E8%8D%B7%E5%85%B0%2F%E5%93%88%E5%8B%92%E5%A7%86%2FThe%20Netherlands%2FHaarlem"
-    },
-    {
-      "identity": "189d99b8bba78bb38afe12d93078f1f16c4a2f1126a8c7e906db82b51c533f85",
-      "protocol": "vless",
-      "label": "荷兰/哈勒姆/The Netherlands/Haarlem-2",
+      "label": "美国/San Francisco/United States/San Francisco-16",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://05caca6c-9e97-4c0f-8edf-7b88a6e572c5@mypanel.unixzone.us:12068?security=none&type=ws&encryption=none&path=%2F&host=mypanel.unixzone.us#%E8%8D%B7%E5%85%B0%2F%E5%93%88%E5%8B%92%E5%A7%86%2FThe%20Netherlands%2FHaarlem-2"
+      "uri": "vless://dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51@104.16.72.41:80?security=none&type=ws&encryption=none&path=%2Fhttp&host=de.vpnbase.net#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-16"
     },
     {
-      "identity": "e999189166b9a5712f4ed2608a33b7a35c41a726ce25fa51941ed5d8faf59feb",
+      "identity": "c053cc84fafe99562a5028b88aa9369530f365ebabc743c8ca4273b7a94c6874",
       "protocol": "vless",
-      "label": "美国/San Francisco/United States/San Francisco-12",
+      "label": "美国/San Francisco/United States/San Francisco-10",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://65c56e1f-5c41-40bc-b0b5-9346772476ca@172.64.53.89:8443?security=tls&type=ws&encryption=none&sni=hongkong.11459178.xyz&path=%2Fcdn%2Fpackages%2Fruntime-core.tar.gz&host=hongkong.11459178.xyz#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-12"
+      "uri": "vless://e7961655-9674-4cbd-a36f-ec0d5d7d660c@one-for-all.levikogjgfdd.ir:2053?security=tls&type=ws&encryption=none&sni=po.fastbrokencompony.com&path=%2F&host=po.fastbrokencompony.com#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-10"
     },
     {
-      "identity": "6c041ebc4648e8e17e1cc05ce021b5cb833fe6f5641fc8fffb23841dd81aeb78",
+      "identity": "983e467c7af3a21216b02084162364e2a3a9b495cc9ac670174c88ac41fd7032",
       "protocol": "vless",
-      "label": "英国/United Kingdom-6",
+      "label": "芬兰/赫尔辛基/Finland/Helsinki-2",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://b052df40-d51c-456c-9bd6-57af01a87e4e@cdn.pinecloud.net:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=cdn.pinecloud.net&fp=chrome&pbk=vWSgdMDirb9aDZLWijSXXXl-NCTrtBgEe9MQqcgV6h8&sid=6a2e3af684799b19#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-6"
+      "uri": "vless://fbb74aa8-b89a-4f20-9504-6b25aadf6681@fi1.levikogjgfdd.ir:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fin2.freeinternat.com&fp=firefox&pbk=bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk&sid=ff776ff77be48b88#%E8%8A%AC%E5%85%B0%2F%E8%B5%AB%E5%B0%94%E8%BE%9B%E5%9F%BA%2FFinland%2FHelsinki-2"
     },
     {
-      "identity": "8ba4cda7d9e8e5a02db915fa4a0ecb00914d31b91c5b9c35fcc45436cd3580d4",
+      "identity": "a98524d00087b2ccf13d94e1662adedd5c3d79337fbd14c69c13a4624a420eb1",
       "protocol": "vless",
-      "label": "塞浦路斯/Cyprus",
+      "label": "德国/法兰克福/Germany/Frankfurt am Main-8",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://9f0baff8-bdee-4de9-9515-bcc4932b41fa@194.76.154.31:40443?security=reality&type=tcp&encryption=none&sni=deepl.com&fp=qq&pbk=MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ&sid=a8ae#%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%2FCyprus"
+      "uri": "vless://70e20b2e-3b1f-4c25-9a3d-9240570391bb@derman.neobo-tooth.ru:2096?security=none&type=ws&encryption=none&path=%2F&host=derman.neobo-tooth.ru#%E5%BE%B7%E5%9B%BD%2F%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8F%2FGermany%2FFrankfurt%20am%20Main-8"
     },
     {
-      "identity": "35952e0ae4e56aed24a013592751945ce83d622db418a65b9006bba1860fafda",
+      "identity": "d24a638a03a4480ff76ece8538551b22e8a6552b8e294faf93c420de059ed528",
       "protocol": "vless",
-      "label": "瑞典/斯德哥尔摩/Sweden/Stockholm",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "uri": "vless://423b1d79-08c4-403f-9d5e-c541f791b55f@2.26.101.64:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=nordic.cendora.ru&fp=firefox&pbk=YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU&sid=2186a755ed67b034#%E7%91%9E%E5%85%B8%2F%E6%96%AF%E5%BE%B7%E5%93%A5%E5%B0%94%E6%91%A9%2FSweden%2FStockholm"
-    },
-    {
-      "identity": "b577a2e3a52b51f58c758e634098a2df6726b73f725d39f1b423c6de03a11f03",
-      "protocol": "vless",
-      "label": "美国/洛杉矶/United States/Los Angeles-2",
+      "label": "美国/United States-6",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://8212a50b-25bf-4739-bba1-aaffb5ffc84c@194.55.189.249:40443?security=reality&type=tcp&encryption=none&sni=deepl.com&fp=chrome&pbk=KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo&sid=aae8#%E7%BE%8E%E5%9B%BD%2F%E6%B4%9B%E6%9D%89%E7%9F%B6%2FUnited%20States%2FLos%20Angeles-2"
-    },
-    {
-      "identity": "4a72c6255e7052c3bd8bb8a243c2be185840fcd00bacf72e9606a365ce92c19f",
-      "protocol": "vless",
-      "label": "美国/San Francisco/United States/San Francisco-8",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://05cf7b0e-ad1a-42bb-80e7-73ae45b1019a@104.21.66.61:8443?security=tls&type=ws&encryption=none&sni=france.io-com-de-dev.org&path=%2Fapi%2Fvoip%2Fupdates%2Fstatic%2Fx9i2&host=france.io-com-de-dev.org#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-8"
-    },
-    {
-      "identity": "d0c23c3404b17419f33f100073f3c30e51bd07c93aed172e8982e64fdcabad17",
-      "protocol": "vless",
-      "label": "加拿大/Canada-3",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "uri": "vless://716426fa-bcb7-4eb9-b460-36399ebf740d@lizca2.footballfantasyforum.com:443?security=tls&type=tcp&encryption=none#%E5%8A%A0%E6%8B%BF%E5%A4%A7%2FCanada-3"
-    },
-    {
-      "identity": "f961b399a978669594e9985f6397bbbc342f696c52274c1b81571b10d9f85760",
-      "protocol": "vless",
-      "label": "台湾/Taiwan",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "uri": "vless://47a97b7f-044d-43d6-86b0-8b256873d1b5@45.121.50.241:50159?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=E9gCs_C_mSDcHmlCZSMk1kSXpmua48DhgsT_aDpZ1WE&sid=4c3f80051030ba1b#%E5%8F%B0%E6%B9%BE%2FTaiwan"
+      "uri": "vless://60cf6ea2-7a3c-4a97-b7db-92f4de0be0cc@198.62.62.171:443?security=tls&type=ws&encryption=none&sni=639222734213747055.forester-homaxe.info&path=%2Fafpmrsws&host=639222734213747055.forester-homaxe.info#%E7%BE%8E%E5%9B%BD%2FUnited%20States-6"
     },
     {
       "identity": "5e66b7072561cebefe3fa634f60d42b61c213bd5b4b4144d934e6bee46ea7d5c",
       "protocol": "vless",
-      "label": "香港/Hong Kong-2",
+      "label": "香港/Hong Kong",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://928e6cce-8ced-4243-9a48-a6642edd09b0@103.149.183.198:13779?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=tesla.com&fp=chrome&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&sid=af1bdd293097b664#%E9%A6%99%E6%B8%AF%2FHong%20Kong-2"
+      "uri": "vless://928e6cce-8ced-4243-9a48-a6642edd09b0@103.149.183.198:13779?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=tesla.com&fp=chrome&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&sid=af1bdd293097b664#%E9%A6%99%E6%B8%AF%2FHong%20Kong"
+    },
+    {
+      "identity": "71abcb2b165eb962b0b6f4c98dc6528f9ad64f9d48d659d082af3d4d7f4d9b24",
+      "protocol": "vless",
+      "label": "俄罗斯联邦/Russia-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://2c634977-584e-4e1f-b501-1b70c77a6743@78.159.245.75:9002?security=reality&type=grpc&encryption=none&sni=api-maps.yandex.ru&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&serviceName=grpc-reality#%E4%BF%84%E7%BD%97%E6%96%AF%E8%81%94%E9%82%A6%2FRussia-2"
+    },
+    {
+      "identity": "b577a2e3a52b51f58c758e634098a2df6726b73f725d39f1b423c6de03a11f03",
+      "protocol": "vless",
+      "label": "美国/洛杉矶/United States/Los Angeles-3",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://8212a50b-25bf-4739-bba1-aaffb5ffc84c@194.55.189.249:40443?security=reality&type=tcp&encryption=none&sni=deepl.com&fp=chrome&pbk=KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo&sid=aae8#%E7%BE%8E%E5%9B%BD%2F%E6%B4%9B%E6%9D%89%E7%9F%B6%2FUnited%20States%2FLos%20Angeles-3"
+    },
+    {
+      "identity": "967cfbaab8b39cf9c67da02f24849249d1fc1faa56b363ea8f6e7b566ad00456",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-4",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "uri": "vless://03707fb7-0990-440f-88f6-b0e0f7242a38@104.16.118.43:443?security=tls&type=ws&encryption=none&sni=de-new.ariyuz.org&path=%2F&host=de-new.ariyuz.org#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-4"
+    },
+    {
+      "identity": "a1a544ce53e364bc504c8f750722931d52f9c52796e335209dbb8cc55993b6ac",
+      "protocol": "vless",
+      "label": "芬兰/赫尔辛基/Finland/Helsinki",
+      "sources": [
+        "awesome-vpn-base64"
+      ],
+      "uri": "vless://2c634977-584e-4e1f-b501-1b70c77a6743@78.159.245.75:9002?security=reality&type=grpc&encryption=none&sni=api-maps.yandex.ru&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&serviceName=grpc-reality#%E8%8A%AC%E5%85%B0%2F%E8%B5%AB%E5%B0%94%E8%BE%9B%E5%9F%BA%2FFinland%2FHelsinki"
     },
     {
       "identity": "1e2077f9704a32c7ade9d03b3bddcf3a51a2116787eefa2ee087f7b7a6aeb763",
       "protocol": "vless",
-      "label": "法国/France",
+      "label": "法国/France-2",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "uri": "vless://25f3beef-a4b6-40bc-aa74-17a0f89f683c@gr2.levikogjgfdd.ir:443?security=tls&type=ws&encryption=none&sni=finite-node.rtxconfigz.com&path=%2F&host=telegram.us#%E6%B3%95%E5%9B%BD%2FFrance"
-    },
-    {
-      "identity": "acd1e29fde971ac661a7e3fba9c73061b78f112a25d8a05f52b2050cda37dab8",
-      "protocol": "vless",
-      "label": "加拿大/Canada",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "uri": "vless://716426fa-bcb7-4eb9-b460-36399ebf740d@lizca2.footballfantasyforum.com:443?security=tls&type=tcp&encryption=none#%E5%8A%A0%E6%8B%BF%E5%A4%A7%2FCanada"
+      "uri": "vless://25f3beef-a4b6-40bc-aa74-17a0f89f683c@gr2.levikogjgfdd.ir:443?security=tls&type=ws&encryption=none&sni=finite-node.rtxconfigz.com&path=%2F&host=telegram.us#%E6%B3%95%E5%9B%BD%2FFrance-2"
     }
   ],
   "tested_nodes": [
     {
-      "identity": "4842aa1dcdfaa19126d39d9e45ebc553b06ec9da355caf2b7af0e580e1a302b4",
+      "identity": "f3c05cc562bf4abca1f445adbe2c6b1ba1baedbe1f2e205a151322403817fa65",
       "protocol": "vless",
-      "label": "美国/San Francisco/United States/San Francisco-7",
+      "label": "美国/San Francisco/United States/San Francisco-12",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 62,
-      "checked_at": "2026-08-21T22:42:03+00:00",
-      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.79.73:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=musiclovers85%3Fed%3D512%2Fmtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn-mtmvpn&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-7"
+      "latency_ms": 47,
+      "checked_at": "2026-08-22T01:55:30+00:00",
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.117.43:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=musiclovers85&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-12"
     },
     {
-      "identity": "b27b2e976e6326299987028edf75e09a81390502e193ebd118c9f6fe7468f99a",
+      "identity": "05af258c7ebc3071aa34197ecedc00e554a5cf0c22dfb935b93f05d8b7250efe",
+      "protocol": "ss",
+      "label": "🇺🇸US-108.181.0.177-0074",
+      "sources": [
+        "awesome-vpn-clash",
+        "v2ray-aggregator-clash"
+      ],
+      "latency_ms": 48,
+      "checked_at": "2026-08-22T01:51:40+00:00",
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHNXA2d3c0bzY3SEI@108.181.0.177:8388#%F0%9F%87%BA%F0%9F%87%B8US-108.181.0.177-0074"
+    },
+    {
+      "identity": "aba96898be101bab4f4d657cf0fc639db733ce249ab662c4eaacd45245f381e6",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-5",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 48,
+      "checked_at": "2026-08-22T01:51:40+00:00",
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@188.114.97.6:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2Fsg-melbi&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-5"
+    },
+    {
+      "identity": "6cb36114fb50966bbaea6d3075b27a2d1eb80743a6077f79f20d0f54c853a35a",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 51,
+      "checked_at": "2026-08-22T01:51:14+00:00",
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.18.37.228:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2F%3FTELEGRAM-NexVexo_NexVexo_NexVexo_NexVexo_NexVexo&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-2"
+    },
+    {
+      "identity": "83f9968ea64277c5320e3ac10f4d095f6795edb66a5509f8f083b74195189f29",
       "protocol": "vless",
       "label": "美国/San Francisco/United States/San Francisco",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 62,
-      "checked_at": "2026-08-21T22:44:24+00:00",
-      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@172.66.44.97:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=musiclovers85_musiclovers85&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco"
+      "latency_ms": 53,
+      "checked_at": "2026-08-22T01:51:23+00:00",
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.79.73:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2F&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco"
     },
     {
-      "identity": "e8448899b2029ecce0b8c66aa57ff58c07483643e13aca54e4ab484f5f753d33",
+      "identity": "facb168f6842c913f81353e04f1a8c082a396fa64be368f33da6fbd15b2bb05f",
       "protocol": "vless",
-      "label": "美国/San Francisco/United States/San Francisco-4",
+      "label": "美国/San Francisco/United States/San Francisco-15",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 63,
-      "checked_at": "2026-08-21T22:46:34+00:00",
-      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.18.37.228:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2Fsg-melbi&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-4"
+      "latency_ms": 54,
+      "checked_at": "2026-08-22T01:55:38+00:00",
+      "uri": "vless://23187ddc-16a5-432d-bf4e-dd42a7ae39f7@104.16.98.215:8880?security=none&type=ws&encryption=none&path=%2F&host=steep-thunder-97fa.108-d10.workers.dev#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-15"
+    },
+    {
+      "identity": "cff515a490fdc28b9452ba3818348d9526d7729d1e9d7bd16434de30642e661b",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-6",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 55,
+      "checked_at": "2026-08-22T01:55:13+00:00",
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@172.66.44.97:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2Fsg-melbi%2FTelegram-MTMVPN-Telegram-MTMVPN-Telegram-Telegram-MTMVPN-Telegram-MTMVPN-Telegram-MTMVPN-Telegram-MTMVPN-Telegram-MTMVPNMTMVPN-Telegram-MTMVPN-Telegram-MTMVPN-%3D512&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-6"
+    },
+    {
+      "identity": "f4f057985f9be518035985d9e74dc730f13de4999591644f0e1e62cd37b74dec",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-8",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 74,
+      "checked_at": "2026-08-22T01:55:30+00:00",
+      "uri": "vless://667a035b-6656-4a4f-a74c-8cd6a679f8d4@172.65.90.52:8880?security=none&type=ws&encryption=none&path=%2Fpyip&host=winter-mode-7f4e.89-136.workers.dev#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-8"
     },
     {
       "identity": "0940c1208f74cca842dc48ac12d934bbc6bcb6429a10a52b8bc16fffa97290c3",
@@ -892,9 +905,53 @@
         "v2ray-aggregator-base64",
         "v2ray-aggregator-uri"
       ],
-      "latency_ms": 72,
-      "checked_at": "2026-08-21T22:46:59+00:00",
+      "latency_ms": 228,
+      "checked_at": "2026-08-22T01:55:47+00:00",
       "uri": "ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@37.19.198.160:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.160-0082"
+    },
+    {
+      "identity": "05c16dd3e9fc1218cadf8cff4fc545942231dd23576e95998b06bc520ed3fddc",
+      "protocol": "ss",
+      "label": "🇨🇦CA-51.222.155.113-0407",
+      "sources": [
+        "v2ray-aggregator-clash"
+      ],
+      "latency_ms": 241,
+      "checked_at": "2026-08-22T01:51:40+00:00",
+      "uri": "ss://YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M@51.222.155.113:5601#%F0%9F%87%A8%F0%9F%87%A6CA-51.222.155.113-0407"
+    },
+    {
+      "identity": "7f7184eb91a985f6940bf7025f125fb21ad4e9eb78c92b6e562e6a765f7fd2f6",
+      "protocol": "vless",
+      "label": "美国/亚特兰大/United States/Atlanta",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 268,
+      "checked_at": "2026-08-22T01:51:23+00:00",
+      "uri": "vless://83c18ff2-0565-4b53-89ad-57357fef153b@rssm-1btto92.joxenly.com:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=chrome&pbk=bHGC7iI4Q50nxoYStP3TjBaRXih6O0bmuemexki0aXY&sid=29ff8963a9fe281c#%E7%BE%8E%E5%9B%BD%2F%E4%BA%9A%E7%89%B9%E5%85%B0%E5%A4%A7%2FUnited%20States%2FAtlanta"
+    },
+    {
+      "identity": "28b0039d9ab9d1dd8adb1693489f8773daf1bb9f110028f797fae0d90d5a83b8",
+      "protocol": "vless",
+      "label": "美国/United States",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 270,
+      "checked_at": "2026-08-22T01:50:49+00:00",
+      "uri": "vless://055a1ce8-2a16-4a0d-a2c2-22826c9b2413@47.253.226.114:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc#%E7%BE%8E%E5%9B%BD%2FUnited%20States"
+    },
+    {
+      "identity": "d1ca14caa59e88bc6d8b191e543b5217fa22f34f98490091a3140096d0bec950",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-7",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 286,
+      "checked_at": "2026-08-22T01:55:13+00:00",
+      "uri": "vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@cf.levikogjgfdd.ir:443?security=tls&type=ws&encryption=none&sni=josni.hoyes.cloudns.ch&path=%2Fed%3D512&host=josni.hoyes.cloudns.ch#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-7"
     },
     {
       "identity": "087c7785b51d050b3af324bc73d6de4748ae662a829818e44e7dd92e69d61633",
@@ -903,31 +960,9 @@
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 94,
-      "checked_at": "2026-08-21T22:41:37+00:00",
+      "latency_ms": 299,
+      "checked_at": "2026-08-22T01:50:41+00:00",
       "uri": "vless://c9fd0fb1-8251-4106-b09a-f4b426736f67@137.184.218.169:36925?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0#%E7%BE%8E%E5%9B%BD%2F%E5%8C%97%E4%BC%AF%E6%A0%B9%2FUnited%20States%2FNorth%20Bergen"
-    },
-    {
-      "identity": "cca162615565d9e09fbbcc60c73c33c961f1df211628a52b571cf2254a0192e1",
-      "protocol": "vless",
-      "label": "美国/北伯根/United States/North Bergen",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "latency_ms": 98,
-      "checked_at": "2026-08-21T22:46:17+00:00",
-      "uri": "vless://c9fd0fb1-8251-4106-b09a-f4b426736f67@137.184.218.169:36925?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0#%E7%BE%8E%E5%9B%BD%2F%E5%8C%97%E4%BC%AF%E6%A0%B9%2FUnited%20States%2FNorth%20Bergen"
-    },
-    {
-      "identity": "7819b1bb440ce6bee969e69a4ef2efe7ed80cf4cc1677ef28d1261e6116232a4",
-      "protocol": "vless",
-      "label": "美国/United States-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 159,
-      "checked_at": "2026-08-21T22:42:29+00:00",
-      "uri": "vless://6680846a-8a57-4dfd-9a0e-63209cfc8535@170.114.46.6:443?security=tls&type=ws&encryption=none&sni=support.zoom.us.yxls.eu.cc&path=%2Fsg-amz&host=support.zoom.us.yxls.eu.cc#%E7%BE%8E%E5%9B%BD%2FUnited%20States-2"
     },
     {
       "identity": "bd3f297a3a7436a509589b3995d0b46c1939786d580f12208ee50597d697c5a3",
@@ -936,539 +971,53 @@
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 174,
-      "checked_at": "2026-08-21T22:44:32+00:00",
+      "latency_ms": 378,
+      "checked_at": "2026-08-22T01:53:40+00:00",
       "uri": "vless://661f395d-b153-4199-a04b-693f5fe7f261@158.69.112.254:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.speedtest.net&fp=chrome&pbk=wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y&sid=3d3c1e645f763ee3#%E5%8A%A0%E6%8B%BF%E5%A4%A7%2F%E8%92%99%E7%89%B9%E5%88%A9%E5%B0%94%2FCanada%2FMontreal-2"
     },
     {
-      "identity": "5366fa334a08d541e50352f73eb93e8f28a36a8e947e993d806ec8ddfd05426e",
+      "identity": "0fb171674b0193eac2aede5ed2ca4a4667c3c23b3c60a5a0e1d870c9bfe8ec73",
       "protocol": "vless",
-      "label": "德国/Germany-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 199,
-      "checked_at": "2026-08-21T22:42:12+00:00",
-      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.212:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=chrome&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%E5%BE%B7%E5%9B%BD%2FGermany-2"
-    },
-    {
-      "identity": "2a2f8a0af9e9d09d8eaf092637ef3f5474dc2572267d89476d53b214e522f52a",
-      "protocol": "vless",
-      "label": "美国/United States-3",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 206,
-      "checked_at": "2026-08-21T22:41:55+00:00",
-      "uri": "vless://431fe973-a43a-4fac-bf83-2a772e0d0625@180.178.60.253:10000?security=none&type=tcp&encryption=none#%E7%BE%8E%E5%9B%BD%2FUnited%20States-3"
-    },
-    {
-      "identity": "05af258c7ebc3071aa34197ecedc00e554a5cf0c22dfb935b93f05d8b7250efe",
-      "protocol": "ss",
-      "label": "🇺🇸US-108.181.0.177-0137",
-      "sources": [
-        "awesome-vpn-clash",
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 215,
-      "checked_at": "2026-08-21T22:42:38+00:00",
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHNXA2d3c0bzY3SEI@108.181.0.177:8388#%F0%9F%87%BA%F0%9F%87%B8US-108.181.0.177-0137"
-    },
-    {
-      "identity": "a4797ba9bdce5b5c096d43b486dc210c4929e9e924fd36b786142065286f8e75",
-      "protocol": "vless",
-      "label": "美国/United States",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 309,
-      "checked_at": "2026-08-21T22:42:38+00:00",
-      "uri": "vless://b98d4c6e-6770-4a31-8256-a4750cdea0e7@66.175.217.170:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.amazon.com&fp=chrome&pbk=0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo&sid=1a#%E7%BE%8E%E5%9B%BD%2FUnited%20States"
-    },
-    {
-      "identity": "f1ce195df8e85caa426d46566f22d42b710a015ab3242783cf64a012ab6a38c7",
-      "protocol": "vless",
-      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 309,
-      "checked_at": "2026-08-21T22:46:43+00:00",
-      "uri": "vless://7e8f7489-e65f-4be6-93ed-867a74ec6759@95.85.228.161:8443?security=none&type=grpc&encryption=none&serviceName=grpc#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam-2"
-    },
-    {
-      "identity": "067369cc79955ee3edcc49ca122b33abdef3ea029dfa271229ded7e758771f01",
-      "protocol": "ss",
-      "label": "🇬🇧GB-82.38.31.35-0090",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "latency_ms": 318,
-      "checked_at": "2026-08-21T22:44:24+00:00",
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.35:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.35-0090"
-    },
-    {
-      "identity": "09b864c47f8fc212e9b82370cecbaa7d40fea9bccae483bb5a9e3f844dceb55a",
-      "protocol": "ss",
-      "label": "🇬🇧GB-82.38.31.57-0118",
-      "sources": [
-        "awesome-vpn-clash",
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 326,
-      "checked_at": "2026-08-21T22:47:00+00:00",
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.57:443#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.57-0118"
-    },
-    {
-      "identity": "08d9bce3f48342fc96b72df4158d9d0f5d0b78a1f2e3bed7f0387aedcbccd1d7",
-      "protocol": "ss",
-      "label": "🇩🇪DE-209.46.102.22-0138",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "latency_ms": 352,
-      "checked_at": "2026-08-21T22:46:51+00:00",
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxaGhycXJva2ozYWc@209.46.102.22:8388#%F0%9F%87%A9%F0%9F%87%AADE-209.46.102.22-0138"
-    },
-    {
-      "identity": "eef2bc17e416bef7861de5928226a8040303f90e2ae04cd0811916fbf320e623",
-      "protocol": "vless",
-      "label": "英国/United Kingdom-5",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 367,
-      "checked_at": "2026-08-21T22:46:42+00:00",
-      "uri": "vless://bae47c97-9bc1-48f6-a133-a383ee71c12e@95.154.196.63:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=foodnetwork.com&fp=chrome&pbk=o3OWFYnKad6q2C-eo6-rA74OCbjQoZfaUFYZsNqJJz0&sid=1e977d0b52eab755#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-5"
-    },
-    {
-      "identity": "98337400b42e0eeec21f4b0ceacfaa05872266602bb11eb0ace5981ae3c61934",
-      "protocol": "vless",
-      "label": "英国/United Kingdom-7",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 368,
-      "checked_at": "2026-08-21T22:42:29+00:00",
-      "uri": "vless://be5b6ad6-8184-4b63-82ac-3bc00c09c98c@5.152.223.97:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=strapi.io&fp=ios&pbk=IFEZmwpGK7VCuDj3kmVdyMn7vUIG8Sntc6TG4eIS3xs&sid=1aa9f3c9021280c0#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-7"
-    },
-    {
-      "identity": "2b51748676e10345cbc4c12c1ad584f36583f549300ae125e653a7f6c732756e",
-      "protocol": "vless",
-      "label": "荷兰/哈勒姆/The Netherlands/Haarlem",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 376,
-      "checked_at": "2026-08-21T22:41:55+00:00",
-      "uri": "vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.96:23576?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#%E8%8D%B7%E5%85%B0%2F%E5%93%88%E5%8B%92%E5%A7%86%2FThe%20Netherlands%2FHaarlem"
-    },
-    {
-      "identity": "2e03db1bdc8adee0c23d26daa655873b3a83a628ffd46d55cb669674b2dba8c4",
-      "protocol": "vless",
-      "label": "荷兰/The Netherlands",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 389,
-      "checked_at": "2026-08-21T22:41:55+00:00",
-      "uri": "vless://39c42b0a-b823-4c93-bb99-74b4183e518d@85.155.226.140:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=getsavesafe.net&fp=chrome&pbk=5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs&sid=82f5d3a1e9c0b661#%E8%8D%B7%E5%85%B0%2FThe%20Netherlands"
-    },
-    {
-      "identity": "0fc8ddf074860d6e3ad4e683cbe3f768a3e86397fd9d654da6d4352073cc98d1",
-      "protocol": "trojan",
-      "label": "🇳🇱NL-193.169.239.160-0158",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "latency_ms": 395,
-      "checked_at": "2026-08-21T22:44:33+00:00",
-      "uri": "trojan://AE62539071@thorough-falcon.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%B3%F0%9F%87%B1NL-193.169.239.160-0158"
-    },
-    {
-      "identity": "1730a47b91328d49be096404a4c9a45b20053f95ac25c8f4883e7ca362e9c4e8",
-      "protocol": "trojan",
-      "label": "🇳🇱NL-89.39.70.120-0162",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "latency_ms": 399,
-      "checked_at": "2026-08-21T22:47:08+00:00",
-      "uri": "trojan://FH72359861@pro-crane.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%B3%F0%9F%87%B1NL-89.39.70.120-0162"
-    },
-    {
-      "identity": "0cec8f8301982fa73b4cf8a02a9ff5cffd055e054dc905afe3ec641f72659ae6",
-      "protocol": "vmess",
-      "label": "加拿大/蒙特利尔/Canada/Montreal",
+      "label": "罗马尼亚/Romania",
       "sources": [
         "awesome-vpn-clash"
       ],
       "latency_ms": 404,
-      "checked_at": "2026-08-21T22:47:08+00:00",
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi5Yqg5ou_5aSnL-iSmeeJueWIqeWwlC9DYW5hZGEvTW9udHJlYWwiLCJhZGQiOiIxMzQuMTk1LjE5OC4xNDciLCJwb3J0IjoiNDQzIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0IjoidmsuY29tIiwicGF0aCI6Ii9saW5rdndzIiwidGxzIjoidGxzIiwic25pIjoidmsuY29tIn0"
+      "checked_at": "2026-08-22T01:50:41+00:00",
+      "uri": "vless://20df893e-dcf4-491d-8261-6dbb24f9566b@76.164.200.172:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=global-video.ruvps.pro&fp=firefox&pbk=rCipfShXDNFO3P-H78EkGj53JoqWgt6JeMq6wztvH08#%E7%BD%97%E9%A9%AC%E5%B0%BC%E4%BA%9A%2FRomania"
     },
     {
-      "identity": "ca33882a255e1a92e2f9fe1dd51de57dd535722f33bcd4f1e95806dbd2f809fd",
-      "protocol": "vless",
-      "label": "德国/法兰克福/Germany/Frankfurt am Main-3",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 407,
-      "checked_at": "2026-08-21T22:46:18+00:00",
-      "uri": "vless://56971dae-1974-4ebe-a903-00e310828dd5@163.53.244.247:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=firefox&pbk=KdveJDEjZkGpf3Ymw3Ptu0cjDQ9geOY3ueMniWuWa2E&sid=2694d28edfdd2c38#%E5%BE%B7%E5%9B%BD%2F%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8F%2FGermany%2FFrankfurt%20am%20Main-3"
-    },
-    {
-      "identity": "f64d66698c458627e08699532c77e40d9dfb895d73df81f247bc6d5887d1f544",
-      "protocol": "vless",
-      "label": "意大利/Italy",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 410,
-      "checked_at": "2026-08-21T22:46:43+00:00",
-      "uri": "vless://9f0285ee-20ca-4953-bcdb-86a920652923@204.216.216.23:10086?security=none&type=tcp&encryption=none#%E6%84%8F%E5%A4%A7%E5%88%A9%2FItaly"
-    },
-    {
-      "identity": "15ca84785e5c3db39d05c7de100e7109589d267503a77fa75598848aef6b655f",
-      "protocol": "vless",
-      "label": "荷兰/The Netherlands-3",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 415,
-      "checked_at": "2026-08-21T22:41:38+00:00",
-      "uri": "vless://9500cf8b-020a-4a70-906c-e14bb5375875@144.31.237.206:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.sciencedirect.com&fp=chrome&pbk=cNWgfJHerzIEb0RXxncP8R9Ex8-FkALOtbhneEIHpR0&sid=a1b2c4d4a1b2c5d5#%E8%8D%B7%E5%85%B0%2FThe%20Netherlands-3"
-    },
-    {
-      "identity": "59b0ccf49508f716c19ee996b314d317fdc44250649e364b396b55d977b3cc2e",
-      "protocol": "vless",
-      "label": "荷兰/The Netherlands-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 425,
-      "checked_at": "2026-08-21T22:42:12+00:00",
-      "uri": "vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@195.184.247.222:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=savesafe.co&fp=chrome&pbk=6z3YcVP0f2pK3iANKIkBUZOgNeErDjxY83mHZG5jrnI&sid=f63805c3ecc7a483#%E8%8D%B7%E5%85%B0%2FThe%20Netherlands-2"
-    },
-    {
-      "identity": "ecadf4b084dbd0db0a8682c5c45695a6d64eb49121f0d510f2b64409aadf55ab",
-      "protocol": "vless",
-      "label": "意大利/Italy",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "latency_ms": 427,
-      "checked_at": "2026-08-21T22:46:42+00:00",
-      "uri": "vless://9f0285ee-20ca-4953-bcdb-86a920652923@204.216.216.23:10086?security=none&type=tcp&encryption=none#%E6%84%8F%E5%A4%A7%E5%88%A9%2FItaly"
-    },
-    {
-      "identity": "62f29e047222155892176196c0ee138d29d87783887c7c1ed19a02989b8c7667",
-      "protocol": "vless",
-      "label": "美国/United States-11",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 443,
-      "checked_at": "2026-08-21T22:42:21+00:00",
-      "uri": "vless://d51ed55c-d6dd-400b-aaf6-017c33969bfe@47.89.186.170:55861?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.intel.com&fp=firefox&pbk=t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs&sid=7551ed1b#%E7%BE%8E%E5%9B%BD%2FUnited%20States-11"
-    },
-    {
-      "identity": "058a8485364f1416711645cea50b2e25915002dc602df4f8c10d5e05cf0a6e28",
-      "protocol": "vless",
-      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam-8",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 469,
-      "checked_at": "2026-08-21T22:41:38+00:00",
-      "uri": "vless://4480161e-2c59-4d37-8736-675c9af32bf1@72.56.92.177:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=chrome&pbk=fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y&sid=01d1bf2d4755d40c#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam-8"
-    },
-    {
-      "identity": "d804745ee8e81fa8da4573fe82317554dca3a20453bf4f9180825402c0bdef50",
-      "protocol": "vless",
-      "label": "日本/Japan-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 478,
-      "checked_at": "2026-08-21T22:46:34+00:00",
-      "uri": "vless://2942bae7-9dcf-4a2e-f928-933c0ab3eab0@139.180.198.220:52143?security=none&type=tcp&encryption=none#%E6%97%A5%E6%9C%AC%2FJapan-2"
-    },
-    {
-      "identity": "2ea8a004053460a8bb45905f6c6b37f832e318edb73943a1091180fbeede375d",
-      "protocol": "vless",
-      "label": "法国/France-4",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 479,
-      "checked_at": "2026-08-21T22:41:55+00:00",
-      "uri": "vless://e8b1500b-e9e8-5492-8312-f4eadf7d0767@nasnet-162191099-direct.mbghalibaf.com:443?security=tls&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=nasnet-162191099-direct.mbghalibaf.com#%E6%B3%95%E5%9B%BD%2FFrance-4"
-    },
-    {
-      "identity": "508fd4e0945e48be898c9ffc058e9e6025412fc787166c3b1447b0463ee80d56",
-      "protocol": "vless",
-      "label": "日本/东京/Japan/Tokyo",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "latency_ms": 481,
-      "checked_at": "2026-08-21T22:42:04+00:00",
-      "uri": "vless://2942bae7-9dcf-4a2e-f928-933c0ab3eab0@139.180.198.220:52143?security=none&type=tcp&encryption=none#%E6%97%A5%E6%9C%AC%2F%E4%B8%9C%E4%BA%AC%2FJapan%2FTokyo"
-    },
-    {
-      "identity": "ee8fed0529a9ecadff8c4d5a4bf089118758e1f998068c96a4dcab48e93e5501",
-      "protocol": "vless",
-      "label": "芬兰/赫尔辛基/Finland/Helsinki-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 506,
-      "checked_at": "2026-08-21T22:46:42+00:00",
-      "uri": "vless://0b0915d7-6800-4580-a44b-77d84f105e6a@185.79.138.71:448?security=reality&type=tcp&encryption=none&sni=www.samsung.com&fp=chrome&pbk=CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8&sid=cd21e552537c7c0b#%E8%8A%AC%E5%85%B0%2F%E8%B5%AB%E5%B0%94%E8%BE%9B%E5%9F%BA%2FFinland%2FHelsinki-2"
-    },
-    {
-      "identity": "a4d95b1643dbab1264eefaad7c7fa10e57d40112362d265850f1a5b6898dda33",
-      "protocol": "vless",
-      "label": "瑞士/苏黎世/Switzerland/Zurich",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 532,
-      "checked_at": "2026-08-21T22:42:38+00:00",
-      "uri": "vless://f04037b7-125e-4666-841f-4b6bdbc9823d@jhmq-16fdqod.henghesoft.net:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=cFmHbKSQO1BQnCBGd26-EA0CU-zYmduwk0Wqu0fhuT0&sid=7e8d2954eb836947#%E7%91%9E%E5%A3%AB%2F%E8%8B%8F%E9%BB%8E%E4%B8%96%2FSwitzerland%2FZurich"
-    },
-    {
-      "identity": "09468ddf536e3ed71bad4c1dc7c98698ca6c8eae824b2b1f4bfe013a75ae32c5",
-      "protocol": "trojan",
-      "label": "🇵🇱PL-202.78.163.164-0165",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 545,
-      "checked_at": "2026-08-21T22:42:29+00:00",
-      "uri": "trojan://EQ30679154@pretty-mollusk.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.164-0165"
-    },
-    {
-      "identity": "c1d7ee446f845d30adb61919db818c67b51867e984af4a4ce0aa1f90dcc46912",
-      "protocol": "vless",
-      "label": "瑞典/斯德哥尔摩/Sweden/Stockholm",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 550,
-      "checked_at": "2026-08-21T22:44:33+00:00",
-      "uri": "vless://423b1d79-08c4-403f-9d5e-c541f791b55f@2.26.101.64:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=nordic.cendora.ru&fp=firefox&pbk=YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU&sid=2186a755ed67b034#%E7%91%9E%E5%85%B8%2F%E6%96%AF%E5%BE%B7%E5%93%A5%E5%B0%94%E6%91%A9%2FSweden%2FStockholm"
-    },
-    {
-      "identity": "0c2f648c23136c09065960f0a689f345c0caa9b4cd3aaf0072bba11eeda9ca37",
-      "protocol": "trojan",
-      "label": "🇵🇱PL-202.78.163.132-0168",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 555,
-      "checked_at": "2026-08-21T22:42:38+00:00",
-      "uri": "trojan://AE62539071@relative-locust.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.132-0168"
-    },
-    {
-      "identity": "333196918b5477729f4847a67f42e356be72ae32d616bae89791490ac40a0861",
-      "protocol": "vless",
-      "label": "比利时/布鲁塞尔/Belgium/Brussels",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "latency_ms": 558,
-      "checked_at": "2026-08-21T22:41:55+00:00",
-      "uri": "vless://08f84d53-e262-459c-a15a-26213e7a07c9@be2.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=be2.wba-pn.ru&path=%2F#%E6%AF%94%E5%88%A9%E6%97%B6%2F%E5%B8%83%E9%B2%81%E5%A1%9E%E5%B0%94%2FBelgium%2FBrussels"
-    },
-    {
-      "identity": "5da81e8da55134fffeeebaf698c38c911a669b28fa31b26fd3c96e660ce6301e",
-      "protocol": "vless",
-      "label": "英国/United Kingdom-2",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 571,
-      "checked_at": "2026-08-21T22:42:12+00:00",
-      "uri": "vless://f6190ff2-864c-46cf-ac16-93908c069b75@129.121.95.159:443?security=tls&type=ws&encryption=none&sni=129.121.95.159&path=%2Fconnect&host=129.121.95.159#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-2"
-    },
-    {
-      "identity": "15202758154ea5040baab26960e3c22b3b1fa23d7003564a3f3456592e7360d3",
-      "protocol": "trojan",
-      "label": "🇵🇱PL-202.78.163.248-0163",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "latency_ms": 583,
-      "checked_at": "2026-08-21T22:47:00+00:00",
-      "uri": "trojan://ND91608427@relaxed-gull.rooster465.autos:443?security=tls&type=tcp&sni=relaxed-gull.rooster465.autos#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.248-0163"
-    },
-    {
-      "identity": "e28aae6265990b1a7755acb7a29f42adeee47bf5d7fc583e86603a2c909e520b",
-      "protocol": "vless",
-      "label": "比利时/布鲁塞尔/Belgium/Brussels",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 642,
-      "checked_at": "2026-08-21T22:46:34+00:00",
-      "uri": "vless://08f84d53-e262-459c-a15a-26213e7a07c9@be2.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=be2.wba-pn.ru&path=%2F&host=be2.wba-pn.ru#%E6%AF%94%E5%88%A9%E6%97%B6%2F%E5%B8%83%E9%B2%81%E5%A1%9E%E5%B0%94%2FBelgium%2FBrussels"
-    },
-    {
-      "identity": "0f38435d91e9f8a2f56791d84e16b0f06971aa71b54be0d04e4d8e6d4bb371a1",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-54.249.34.120-0201",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 644,
-      "checked_at": "2026-08-21T22:44:32+00:00",
-      "uri": "trojan://ND91608427@54.249.34.120:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-54.249.34.120-0201"
-    },
-    {
-      "identity": "1873983bfd3b786c516b2162b743ecd2972f09360ad3082dda28988b6f0e12bb",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-57.180.13.78-0221",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 646,
-      "checked_at": "2026-08-21T22:47:09+00:00",
-      "uri": "trojan://ND91608427@57.180.13.78:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-57.180.13.78-0221"
-    },
-    {
-      "identity": "1248264c89a385f91513dcf035a5bc8965e46bb1a6dc3352e8dba2c477ca06cf",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-54.249.34.120-0178",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "latency_ms": 650,
-      "checked_at": "2026-08-21T22:46:43+00:00",
-      "uri": "trojan://ND91608427@social-mutt.rooster465.autos:443?security=tls&type=tcp&sni=social-mutt.rooster465.autos#%F0%9F%87%AF%F0%9F%87%B5JP-54.249.34.120-0178"
-    },
-    {
-      "identity": "1e7cea0fc26e7bcb5228971be90f6535049401f7472066e7a8d67633a467cf1a",
+      "identity": "178a19a1e7632dff814efa13267464419c8e8e3287625126dac44a6ec1523f27",
       "protocol": "vless",
       "label": "日本/东京/Japan/Tokyo-6",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 654,
-      "checked_at": "2026-08-21T22:41:46+00:00",
-      "uri": "vless://0b772594-d6b9-4f4f-849b-8a6f92f594fe@43.165.177.82:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=ZuN9nc78h4Ccb19eb9NpTCs0jZkhJB8L0i1ZoAhu0XU&sid=b2f4518cf979889d#%E6%97%A5%E6%9C%AC%2F%E4%B8%9C%E4%BA%AC%2FJapan%2FTokyo-6"
+      "latency_ms": 432,
+      "checked_at": "2026-08-22T01:50:41+00:00",
+      "uri": "vless://048a61f8-b236-4082-b1c3-c22a85693c12@162.128.181.182:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=firefox&pbk=gcqSfWJ1yR5Aa2fsBYZ3vyaC0yQnil4qqNMZN4weZlE&sid=674a07ea4d1c4255#%E6%97%A5%E6%9C%AC%2F%E4%B8%9C%E4%BA%AC%2FJapan%2FTokyo-6"
     },
     {
-      "identity": "06e4b4fc2aa5bfbcf5d43328a0b1364e7c12586308829c0776906a1e4da53562",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-52.195.2.92-0276",
+      "identity": "2a2f8a0af9e9d09d8eaf092637ef3f5474dc2572267d89476d53b214e522f52a",
+      "protocol": "vless",
+      "label": "美国/United States-9",
       "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
+        "awesome-vpn-clash"
       ],
-      "latency_ms": 659,
-      "checked_at": "2026-08-21T22:42:12+00:00",
-      "uri": "trojan://FH72359861@adapted-quetzal.rooster465.autos:443?security=tls&type=tcp&sni=adapted-quetzal.rooster465.autos#%F0%9F%87%AF%F0%9F%87%B5JP-52.195.2.92-0276"
+      "latency_ms": 434,
+      "checked_at": "2026-08-22T01:50:49+00:00",
+      "uri": "vless://431fe973-a43a-4fac-bf83-2a772e0d0625@180.178.60.253:10000?security=none&type=tcp&encryption=none#%E7%BE%8E%E5%9B%BD%2FUnited%20States-9"
     },
     {
-      "identity": "0c18b1344f3465e604bfe0a05fc64cf3e05c1a9f434f6c91d1424b0ea0996bfa",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-3.113.21.187-0251",
+      "identity": "4c0c5edd73026836f72e88b8ca225d3d5747bdbcd671647a18c3f69aac3357b2",
+      "protocol": "vless",
+      "label": "日本/东京/Japan/Tokyo-5",
       "sources": [
-        "v2ray-aggregator-clash"
+        "awesome-vpn-clash"
       ],
-      "latency_ms": 669,
-      "checked_at": "2026-08-21T22:42:38+00:00",
-      "uri": "trojan://AE62539071@awaited-lark.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-3.113.21.187-0251"
-    },
-    {
-      "identity": "176a66927d3a979aee83803d8489dd4bc04cda498a026b70acc8ffd4138437df",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-3.113.21.187-0251",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "latency_ms": 669,
-      "checked_at": "2026-08-21T22:47:08+00:00",
-      "uri": "trojan://AE62539071@awaited-lark.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-3.113.21.187-0251"
-    },
-    {
-      "identity": "171203461f51a1b927ea76c67a63503e78002297f448e5155bb910c249614ac0",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-3.113.1.131-0205",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "latency_ms": 673,
-      "checked_at": "2026-08-21T22:47:08+00:00",
-      "uri": "trojan://ND91608427@perfect-slug.rooster465.autos:443?security=tls&type=tcp&sni=perfect-slug.rooster465.autos#%F0%9F%87%AF%F0%9F%87%B5JP-3.113.1.131-0205"
-    },
-    {
-      "identity": "06d47f660824c15bd20e3cf692e19b473b31e78e2d92c5641780ae1763a05fee",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-54.248.184.74-0274",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "latency_ms": 675,
-      "checked_at": "2026-08-21T22:42:04+00:00",
-      "uri": "trojan://HC04361579@exact-sawfish.rooster465.autos:443?security=tls&type=tcp&sni=exact-sawfish.rooster465.autos#%F0%9F%87%AF%F0%9F%87%B5JP-54.248.184.74-0274"
-    },
-    {
-      "identity": "0fbad88f7f2a183d5607aa9b9f3781dc8a976f7da46a72d835c5cf6340ded762",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-52.194.250.73-0213",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 675,
-      "checked_at": "2026-08-21T22:44:33+00:00",
-      "uri": "trojan://AE62539071@frank-frog.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-52.194.250.73-0213"
-    },
-    {
-      "identity": "1137570149b81b497e2b259e6d0646512f4633aebe9b2aba4be8d23e041b3f98",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-57.180.27.225-0195",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 675,
-      "checked_at": "2026-08-21T22:46:34+00:00",
-      "uri": "trojan://ND91608427@picked-guinea.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-57.180.27.225-0195"
-    },
-    {
-      "identity": "0dbec8b8f72ff0ff7b6bf1a11b40e98653505b26083b1aabe76409e504ab4715",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-18.183.135.94-0196",
-      "sources": [
-        "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri"
-      ],
-      "latency_ms": 676,
-      "checked_at": "2026-08-21T22:44:24+00:00",
-      "uri": "trojan://AE62539071@central-jawfish.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-18.183.135.94-0196"
-    },
-    {
-      "identity": "0dca6daf284aadca7aee9418cd9a6caf6e7021dac54e1116c8c57024181fe13d",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-18.183.178.158-0224",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 680,
-      "checked_at": "2026-08-21T22:44:24+00:00",
-      "uri": "trojan://AE62539071@inviting-burro.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-18.183.178.158-0224"
+      "latency_ms": 440,
+      "checked_at": "2026-08-22T01:50:58+00:00",
+      "uri": "vless://309b0ce3-09a8-4883-bfe4-bd56e215be44@31.76.91.138:2087?security=reality&type=grpc&encryption=none&sni=ads.x5.ru&fp=firefox&pbk=JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4&sid=c226283c4de5b1ad&serviceName=grpc#%E6%97%A5%E6%9C%AC%2F%E4%B8%9C%E4%BA%AC%2FJapan%2FTokyo-5"
     },
     {
       "identity": "0dbdcb1d3f34e73ba794b74a7af92c4c180412468b3dc55aafa87914d9f90af6",
@@ -1478,152 +1027,266 @@
         "v2ray-aggregator-base64",
         "v2ray-aggregator-uri"
       ],
-      "latency_ms": 681,
-      "checked_at": "2026-08-21T22:44:24+00:00",
+      "latency_ms": 445,
+      "checked_at": "2026-08-22T01:53:20+00:00",
       "uri": "trojan://PQ05174892@evolving-kangaroo.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-52.194.186.154-0209"
     },
     {
-      "identity": "00bc9e77c22f3963628492b846c99e8e8367c2606675fd9efa56434100afdfbd",
-      "protocol": "vmess",
-      "label": "美国/San Francisco/United States/San Francisco-5",
+      "identity": "48500974e5787bc28f2a5e0cb7183dfc4881f434c8625f0ae9fbadd97fa24ea6",
+      "protocol": "vless",
+      "label": "德国/Germany",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 690,
-      "checked_at": "2026-08-21T22:41:47+00:00",
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi576O5Zu9L1NhbiBGcmFuY2lzY28vVW5pdGVkIFN0YXRlcy9TYW4gRnJhbmNpc2NvLTUiLCJhZGQiOiIxNzIuNjcuMTYxLjE0NCIsInBvcnQiOiI4NDQzIiwiaWQiOiI2MDQ0MTU0OC1iNjhlLTQzYjItODE5MS1lM2I4ODRiZTRiM2MiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0IjoidjJyYXkxLmRvemFwcC54eXoiLCJwYXRoIjoiL2xNbnNaVU40LyIsInRscyI6InRscyIsInNuaSI6InYycmF5MS5kb3phcHAueHl6In0"
+      "latency_ms": 454,
+      "checked_at": "2026-08-22T01:50:58+00:00",
+      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.232:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=chrome&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%E5%BE%B7%E5%9B%BD%2FGermany"
     },
     {
-      "identity": "16abab61d952c0591dd29b4a0bc9ef6b96185bd97b5693074b7390a3c8972562",
-      "protocol": "trojan",
-      "label": "🇯🇵JP-52.196.34.5-0177",
+      "identity": "8868f477e882fce2d98a46680808945466f8a9879fd3cf8799ffbb0eabf96088",
+      "protocol": "vless",
+      "label": "美国/United States-3",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 454,
+      "checked_at": "2026-08-22T01:51:24+00:00",
+      "uri": "vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@us20.levikogjgfdd.ir:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=savesafe.run&fp=chrome&pbk=wx4B5IBeGc_0h6XZW6714G7951zLUYILv6eNRSgPDl8&sid=e4f6a3446ac34a24#%E7%BE%8E%E5%9B%BD%2FUnited%20States-3"
+    },
+    {
+      "identity": "f1ce195df8e85caa426d46566f22d42b710a015ab3242783cf64a012ab6a38c7",
+      "protocol": "vless",
+      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam-5",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 470,
+      "checked_at": "2026-08-22T01:55:30+00:00",
+      "uri": "vless://7e8f7489-e65f-4be6-93ed-867a74ec6759@95.85.228.161:8443?security=none&type=grpc&encryption=none&serviceName=grpc#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam-5"
+    },
+    {
+      "identity": "09b864c47f8fc212e9b82370cecbaa7d40fea9bccae483bb5a9e3f844dceb55a",
+      "protocol": "ss",
+      "label": "🇬🇧GB-82.38.31.57-0083",
       "sources": [
         "v2ray-aggregator-clash"
       ],
-      "latency_ms": 690,
-      "checked_at": "2026-08-21T22:47:00+00:00",
-      "uri": "trojan://FH72359861@welcome-owl.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AF%F0%9F%87%B5JP-52.196.34.5-0177"
+      "latency_ms": 478,
+      "checked_at": "2026-08-22T01:55:47+00:00",
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.57:443#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.57-0083"
     },
     {
-      "identity": "d28a114f85e638f3ced140ec329a33f891f6443ef53fa0658fa85b0e0987f334",
+      "identity": "067369cc79955ee3edcc49ca122b33abdef3ea029dfa271229ded7e758771f01",
+      "protocol": "ss",
+      "label": "🇬🇧GB-82.38.31.35-0090",
+      "sources": [
+        "v2ray-aggregator-base64",
+        "v2ray-aggregator-uri"
+      ],
+      "latency_ms": 489,
+      "checked_at": "2026-08-22T01:53:20+00:00",
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.35:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.35-0090"
+    },
+    {
+      "identity": "f186a0e8402fcdf9e2e13820a8a7cbe86112243326843c8a704cb57cdf20cdff",
       "protocol": "vless",
-      "label": "英国/United Kingdom-8",
+      "label": "加拿大/Canada-3",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 720,
-      "checked_at": "2026-08-21T22:46:26+00:00",
-      "uri": "vless://4bc8ff7a-20b4-41b2-9751-dfca869f0553@gb1.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=gb1.wba-pn.ru&path=%2F&host=gb1.wba-pn.ru#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-8"
+      "latency_ms": 540,
+      "checked_at": "2026-08-22T01:55:30+00:00",
+      "uri": "vless://716426fa-bcb7-4eb9-b460-36399ebf740d@lizca2.footballfantasyforum.com:443?security=tls&type=tcp&encryption=none&sni=lizca2.footballfantasyforum.com#%E5%8A%A0%E6%8B%BF%E5%A4%A7%2FCanada-3"
     },
     {
-      "identity": "0fd175c8096d052b03759e52f50ba497ab5f54b6c9e4533f4178c63ed1694b3e",
+      "identity": "2dc133ad940545490138242756ac8958fb8b694f07f99cc2353e36483016147f",
       "protocol": "vless",
-      "label": "美国/San Francisco/United States/San Francisco-11",
+      "label": "芬兰/赫尔辛基/Finland/Helsinki-4",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 762,
-      "checked_at": "2026-08-21T22:41:38+00:00",
-      "uri": "vless://03707fb7-0990-440f-88f6-b0e0f7242a38@104.18.139.67:443?security=tls&type=ws&encryption=none&sni=de-new.ariyuz.org&path=%2F&host=de-new.ariyuz.org#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-11"
+      "latency_ms": 543,
+      "checked_at": "2026-08-22T01:50:50+00:00",
+      "uri": "vless://0de36006-3fab-40a6-ac2b-b9663b815a17@65.109.211.136:24854?security=none&type=tcp&encryption=none#%E8%8A%AC%E5%85%B0%2F%E8%B5%AB%E5%B0%94%E8%BE%9B%E5%9F%BA%2FFinland%2FHelsinki-4"
     },
     {
-      "identity": "28b0039d9ab9d1dd8adb1693489f8773daf1bb9f110028f797fae0d90d5a83b8",
+      "identity": "62f29e047222155892176196c0ee138d29d87783887c7c1ed19a02989b8c7667",
       "protocol": "vless",
-      "label": "美国/United States-9",
+      "label": "美国/United States-11",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 789,
-      "checked_at": "2026-08-21T22:41:55+00:00",
-      "uri": "vless://055a1ce8-2a16-4a0d-a2c2-22826c9b2413@47.253.226.114:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc#%E7%BE%8E%E5%9B%BD%2FUnited%20States-9"
+      "latency_ms": 581,
+      "checked_at": "2026-08-22T01:51:15+00:00",
+      "uri": "vless://d51ed55c-d6dd-400b-aaf6-017c33969bfe@47.89.186.170:55861?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.intel.com&fp=firefox&pbk=t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs&sid=7551ed1b#%E7%BE%8E%E5%9B%BD%2FUnited%20States-11"
     },
     {
-      "identity": "b487607ab0f41f7a7093cb73f4c5346e2f1a70408dc4baa465da78c4ea88ee1b",
+      "identity": "f969f2b56c69546bb6291f10b74dc8d5f6e47889bab24be88a4a9c7659d4f2a3",
+      "protocol": "vless",
+      "label": "荷兰/哈勒姆/The Netherlands/Haarlem-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 597,
+      "checked_at": "2026-08-22T01:55:30+00:00",
+      "uri": "vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.98:23576?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#%E8%8D%B7%E5%85%B0%2F%E5%93%88%E5%8B%92%E5%A7%86%2FThe%20Netherlands%2FHaarlem-2"
+    },
+    {
+      "identity": "c05d4dff2be40ae9662dff6fddc37fc19f6c494cc0c022e1341967203a8c0463",
+      "protocol": "vless",
+      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 598,
+      "checked_at": "2026-08-22T01:54:00+00:00",
+      "uri": "vless://4bf5a71c-d726-4585-b095-7396675706d5@72.56.81.165:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=chrome&pbk=D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU&sid=c84f#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam"
+    },
+    {
+      "identity": "7ee8805aaf7112c286eb1459d948f71da29abf11d1d95bf108cddafbd3a25ff5",
+      "protocol": "vless",
+      "label": "美国/United States-4",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 601,
+      "checked_at": "2026-08-22T01:51:24+00:00",
+      "uri": "vless://14da77da-4fb3-4e49-ac4f-7881ea19b267@177.3.212.127:8443?security=tls&type=tcp&encryption=none&sni=neth6.lckdwn.ru#%E7%BE%8E%E5%9B%BD%2FUnited%20States-4"
+    },
+    {
+      "identity": "058a8485364f1416711645cea50b2e25915002dc602df4f8c10d5e05cf0a6e28",
+      "protocol": "vless",
+      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam-6",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 606,
+      "checked_at": "2026-08-22T01:50:41+00:00",
+      "uri": "vless://4480161e-2c59-4d37-8736-675c9af32bf1@72.56.92.177:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=chrome&pbk=fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y&sid=01d1bf2d4755d40c#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam-6"
+    },
+    {
+      "identity": "98337400b42e0eeec21f4b0ceacfaa05872266602bb11eb0ace5981ae3c61934",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-5",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 607,
+      "checked_at": "2026-08-22T01:51:41+00:00",
+      "uri": "vless://be5b6ad6-8184-4b63-82ac-3bc00c09c98c@5.152.223.97:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=strapi.io&fp=ios&pbk=IFEZmwpGK7VCuDj3kmVdyMn7vUIG8Sntc6TG4eIS3xs&sid=1aa9f3c9021280c0#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-5"
+    },
+    {
+      "identity": "1730a47b91328d49be096404a4c9a45b20053f95ac25c8f4883e7ca362e9c4e8",
+      "protocol": "trojan",
+      "label": "🇳🇱NL-89.39.70.120-0162",
+      "sources": [
+        "v2ray-aggregator-base64",
+        "v2ray-aggregator-uri"
+      ],
+      "latency_ms": 608,
+      "checked_at": "2026-08-22T01:55:56+00:00",
+      "uri": "trojan://FH72359861@pro-crane.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%B3%F0%9F%87%B1NL-89.39.70.120-0162"
+    },
+    {
+      "identity": "eef2bc17e416bef7861de5928226a8040303f90e2ae04cd0811916fbf320e623",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-6",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 609,
+      "checked_at": "2026-08-22T01:55:22+00:00",
+      "uri": "vless://bae47c97-9bc1-48f6-a133-a383ee71c12e@95.154.196.63:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=foodnetwork.com&fp=chrome&pbk=o3OWFYnKad6q2C-eo6-rA74OCbjQoZfaUFYZsNqJJz0&sid=1e977d0b52eab755#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-6"
+    },
+    {
+      "identity": "0fc8ddf074860d6e3ad4e683cbe3f768a3e86397fd9d654da6d4352073cc98d1",
+      "protocol": "trojan",
+      "label": "🇳🇱NL-193.169.239.160-0158",
+      "sources": [
+        "v2ray-aggregator-base64",
+        "v2ray-aggregator-uri"
+      ],
+      "latency_ms": 611,
+      "checked_at": "2026-08-22T01:54:20+00:00",
+      "uri": "trojan://AE62539071@thorough-falcon.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%B3%F0%9F%87%B1NL-193.169.239.160-0158"
+    },
+    {
+      "identity": "cc487b92c6b0c00afe1ce54e0babd55f0da0ac96083d24a967d6b0ccbd49aab0",
       "protocol": "vless",
       "label": "塞浦路斯/Cyprus",
       "sources": [
-        "awesome-vpn-base64"
-      ],
-      "latency_ms": 797,
-      "checked_at": "2026-08-21T22:44:24+00:00",
-      "uri": "vless://9f0baff8-bdee-4de9-9515-bcc4932b41fa@194.76.154.31:40443?security=reality&type=tcp&encryption=none&sni=deepl.com&fp=qq&pbk=MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ&sid=a8ae#%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%2FCyprus"
-    },
-    {
-      "identity": "068a1621f7a7dc0595a0b9b0699262c55ef91960044f92c9e0e88f4fa95b08c8",
-      "protocol": "vmess",
-      "label": "香港/香港/Hong Kong/Hong Kong-4",
-      "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 816,
-      "checked_at": "2026-08-21T22:44:25+00:00",
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi6aaZ5rivL-mmmea4ry9Ib25nIEtvbmcvSG9uZyBLb25nLTQiLCJhZGQiOiI0Ny4yNDQuMTIwLjE5NyIsInBvcnQiOiIzNjcwMyIsImlkIjoiNDViODM1MTktOWM0Zi00MDUyLWExMWItMDJlMDE3YjYzNmQ0IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6IiIsInBhdGgiOiIvYXJraSIsInRscyI6IiJ9"
+      "latency_ms": 615,
+      "checked_at": "2026-08-22T01:55:13+00:00",
+      "uri": "vless://9f0baff8-bdee-4de9-9515-bcc4932b41fa@194.76.154.31:40443?security=reality&type=tcp&encryption=none&sni=deepl.com&fp=chrome&pbk=MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ&sid=a8ae#%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%2FCyprus"
     },
     {
-      "identity": "1432497f0d65e1e826454e9bf3523004d75717e20f15ed235c15409e4002bd1f",
-      "protocol": "trojan",
-      "label": "香港/Hong Kong",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 826,
-      "checked_at": "2026-08-21T22:46:51+00:00",
-      "uri": "trojan://BxceQaOe@119.246.1.143:443?security=none&type=tcp&allowInsecure=1#%E9%A6%99%E6%B8%AF%2FHong%20Kong"
-    },
-    {
-      "identity": "5321e5597a30c80179c677f6ae9f4365d6d6367a1711a86c1d27f4436c50caa9",
+      "identity": "bb665be8e3121d4bae2e38e88fe1f4e8e98218807d8d0a0304cece8f55e55150",
       "protocol": "vless",
-      "label": "德国/Germany-3",
+      "label": "英国/伦敦/United Kingdom/London",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 844,
-      "checked_at": "2026-08-21T22:42:13+00:00",
-      "uri": "vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@81.95.4.189:443?security=tls&type=ws&encryption=none&sni=bab-6.site&path=%2Fvws%2F&host=bab-6.site#%E5%BE%B7%E5%9B%BD%2FGermany-3"
+      "latency_ms": 617,
+      "checked_at": "2026-08-22T01:53:20+00:00",
+      "uri": "vless://32ed7262-74d2-40ea-a038-6bf074bc463e@185.168.195.211:21527?security=reality&type=tcp&encryption=none&sni=www.apple.com&fp=chrome&pbk=SsIiRnSI27T6_EU71nUXgFfE0NmJhsA2UwhR5WC25UY&sid=823ec0b7b5084ffe#%E8%8B%B1%E5%9B%BD%2F%E4%BC%A6%E6%95%A6%2FUnited%20Kingdom%2FLondon"
     },
     {
-      "identity": "b1beb6d3e3b109b25da5a1b5f1c038e699a8fde3671c975b990902fa3d00ca9d",
+      "identity": "2e03db1bdc8adee0c23d26daa655873b3a83a628ffd46d55cb669674b2dba8c4",
       "protocol": "vless",
-      "label": "美国/水牛城/United States/Buffalo",
+      "label": "荷兰/The Netherlands-3",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 869,
-      "checked_at": "2026-08-21T22:44:12+00:00",
-      "uri": "vless://17d29827-7cf1-4115-b40d-548e10ec355d@billing.netraidly.ru:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=qq&pbk=bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM&sid=aa3c#%E7%BE%8E%E5%9B%BD%2F%E6%B0%B4%E7%89%9B%E5%9F%8E%2FUnited%20States%2FBuffalo"
+      "latency_ms": 619,
+      "checked_at": "2026-08-22T01:50:50+00:00",
+      "uri": "vless://39c42b0a-b823-4c93-bb99-74b4183e518d@85.155.226.140:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=getsavesafe.net&fp=chrome&pbk=5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs&sid=82f5d3a1e9c0b661#%E8%8D%B7%E5%85%B0%2FThe%20Netherlands-3"
     },
     {
-      "identity": "eb43cb95854f5212d1ce6e71d4753735d146f6fef5fb1b41d3aead7ab0da5019",
+      "identity": "f9e6fb7e8a646332e7f40e77f119762c3921d0c1a4eb42e06d4cb4114f422dcf",
       "protocol": "vless",
-      "label": "新加坡/新加坡/Singapore/Singapore-2",
+      "label": "法国/France",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 889,
-      "checked_at": "2026-08-21T22:46:43+00:00",
-      "uri": "vless://9206ae06-88ee-49b1-a558-531ade80fcaa@178.128.112.70:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.amazon.com&fp=chrome&pbk=-O8QFkqeMAc6TzQp6eY1s38my_8jhBd7HDHxNki6QlY&sid=7f7f#%E6%96%B0%E5%8A%A0%E5%9D%A1%2F%E6%96%B0%E5%8A%A0%E5%9D%A1%2FSingapore%2FSingapore-2"
+      "latency_ms": 625,
+      "checked_at": "2026-08-22T01:55:31+00:00",
+      "uri": "vless://e8b1500b-e9e8-5492-8312-f4eadf7d0767@162.19.10.99:443?security=tls&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=nasnet-162191099-direct.mbghalibaf.com#%E6%B3%95%E5%9B%BD%2FFrance"
     },
     {
-      "identity": "d37d685140e691ec647a5ca238fc04c2216c91c2a45c9f5b54a8c4be61894883",
+      "identity": "08d9bce3f48342fc96b72df4158d9d0f5d0b78a1f2e3bed7f0387aedcbccd1d7",
+      "protocol": "ss",
+      "label": "🇩🇪DE-209.46.102.22-0138",
+      "sources": [
+        "v2ray-aggregator-base64",
+        "v2ray-aggregator-uri"
+      ],
+      "latency_ms": 626,
+      "checked_at": "2026-08-22T01:55:39+00:00",
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxaGhycXJva2ozYWc@209.46.102.22:8388#%F0%9F%87%A9%F0%9F%87%AADE-209.46.102.22-0138"
+    },
+    {
+      "identity": "ca33882a255e1a92e2f9fe1dd51de57dd535722f33bcd4f1e95806dbd2f809fd",
       "protocol": "vless",
-      "label": "新加坡/新加坡/Singapore/Singapore-3",
+      "label": "德国/法兰克福/Germany/Frankfurt am Main-4",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 913,
-      "checked_at": "2026-08-21T22:46:34+00:00",
-      "uri": "vless://607801ac-dbdd-4938-a167-129015d9978e@91.192.81.214:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=bMcyxNueltQhz5Kuxcf8odDStWHowYfLhKNdCbUweDc&sid=d1742269#%E6%96%B0%E5%8A%A0%E5%9D%A1%2F%E6%96%B0%E5%8A%A0%E5%9D%A1%2FSingapore%2FSingapore-3"
+      "latency_ms": 629,
+      "checked_at": "2026-08-22T01:55:00+00:00",
+      "uri": "vless://56971dae-1974-4ebe-a903-00e310828dd5@163.53.244.247:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=firefox&pbk=KdveJDEjZkGpf3Ymw3Ptu0cjDQ9geOY3ueMniWuWa2E&sid=2694d28edfdd2c38#%E5%BE%B7%E5%9B%BD%2F%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8F%2FGermany%2FFrankfurt%20am%20Main-4"
     },
     {
-      "identity": "00579f0fa206a8d785114dfa999b70a68b60c4bd05bc319b882e19ac265b296b",
+      "identity": "925bef581e6e3f313367eb255eb854202a98fd8b4c0154f82164ddf48ba113a7",
       "protocol": "vless",
-      "label": "英国/United Kingdom",
+      "label": "香港/香港/Hong Kong/Hong Kong-2",
       "sources": [
-        "awesome-vpn-base64"
+        "awesome-vpn-clash"
       ],
-      "latency_ms": 916,
-      "checked_at": "2026-08-21T22:41:38+00:00",
-      "uri": "vless://4bc8ff7a-20b4-41b2-9751-dfca869f0553@gb1.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=gb1.wba-pn.ru&fp=qq&path=%2F&host=gb1.wba-pn.ru#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom"
+      "latency_ms": 640,
+      "checked_at": "2026-08-22T01:51:32+00:00",
+      "uri": "vless://daf0c4cb-3541-4f20-bc71-cc9d94bb17bc@hk10.levikogjgfdd.ir:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=chrome&pbk=BF9aCRIeWaFADnCRCeEKsX1SSRaqAPrXttdD9eFCl0k&sid=96b6483bfb4ac526#%E9%A6%99%E6%B8%AF%2F%E9%A6%99%E6%B8%AF%2FHong%20Kong%2FHong%20Kong-2"
     },
     {
       "identity": "083312fcc11413c34c5c9642f5f69959e6cbb8796c091b5b23c440295c192943",
@@ -1633,9 +1296,285 @@
         "v2ray-aggregator-base64",
         "v2ray-aggregator-uri"
       ],
-      "latency_ms": 932,
-      "checked_at": "2026-08-21T22:42:21+00:00",
+      "latency_ms": 660,
+      "checked_at": "2026-08-22T01:51:24+00:00",
       "uri": "trojan://AE62539071@together-dingo.rooster465.autos:443?security=tls&type=tcp#%F0%9F%87%A6%F0%9F%87%BAAU-87.121.33.162-1031"
+    },
+    {
+      "identity": "8b08be02c1346cd6324c4e305f996c6a4c0e9493461fa38ad3745ff3d3ececda",
+      "protocol": "vless",
+      "label": "德国/法兰克福/Germany/Frankfurt am Main-7",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 671,
+      "checked_at": "2026-08-22T01:51:32+00:00",
+      "uri": "vless://f82332b2-dc8c-eac4-ac12-f276e37e278a@s1.test.anti-zapret.com:8443?security=reality&type=tcp&encryption=none&sni=s1.test.anti-zapret.com&fp=chrome&pbk=0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY&sid=58fbcddfaae3ade9#%E5%BE%B7%E5%9B%BD%2F%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8F%2FGermany%2FFrankfurt%20am%20Main-7"
+    },
+    {
+      "identity": "eb43cb95854f5212d1ce6e71d4753735d146f6fef5fb1b41d3aead7ab0da5019",
+      "protocol": "vless",
+      "label": "新加坡/新加坡/Singapore/Singapore-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 692,
+      "checked_at": "2026-08-22T01:55:22+00:00",
+      "uri": "vless://9206ae06-88ee-49b1-a558-531ade80fcaa@178.128.112.70:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.amazon.com&fp=chrome&pbk=-O8QFkqeMAc6TzQp6eY1s38my_8jhBd7HDHxNki6QlY&sid=7f7f#%E6%96%B0%E5%8A%A0%E5%9D%A1%2F%E6%96%B0%E5%8A%A0%E5%9D%A1%2FSingapore%2FSingapore-2"
+    },
+    {
+      "identity": "af49baa4cea327b2853ab9a4835329867599958011228cd58762f3925565c116",
+      "protocol": "vless",
+      "label": "新加坡/新加坡/Singapore/Singapore-3",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 697,
+      "checked_at": "2026-08-22T01:52:33+00:00",
+      "uri": "vless://690ad3be-991b-4a2c-b351-42dd06789d03@162.128.71.118:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=chrome&pbk=3ZKNZEktRaPxt-XoWmx68EGsFwglnICVkvIl96973iA&sid=4014ce9b0d82ad9d#%E6%96%B0%E5%8A%A0%E5%9D%A1%2F%E6%96%B0%E5%8A%A0%E5%9D%A1%2FSingapore%2FSingapore-3"
+    },
+    {
+      "identity": "5da81e8da55134fffeeebaf698c38c911a669b28fa31b26fd3c96e660ce6301e",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 704,
+      "checked_at": "2026-08-22T01:51:07+00:00",
+      "uri": "vless://f6190ff2-864c-46cf-ac16-93908c069b75@129.121.95.159:443?security=tls&type=ws&encryption=none&sni=129.121.95.159&path=%2Fconnect&host=129.121.95.159#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-2"
+    },
+    {
+      "identity": "ee8fed0529a9ecadff8c4d5a4bf089118758e1f998068c96a4dcab48e93e5501",
+      "protocol": "vless",
+      "label": "芬兰/赫尔辛基/Finland/Helsinki",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 752,
+      "checked_at": "2026-08-22T01:55:22+00:00",
+      "uri": "vless://0b0915d7-6800-4580-a44b-77d84f105e6a@185.79.138.71:448?security=reality&type=tcp&encryption=none&sni=www.samsung.com&fp=chrome&pbk=CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8&sid=cd21e552537c7c0b#%E8%8A%AC%E5%85%B0%2F%E8%B5%AB%E5%B0%94%E8%BE%9B%E5%9F%BA%2FFinland%2FHelsinki"
+    },
+    {
+      "identity": "b925835961f4da7f7a0dd4bab87c102bc063ab5cb4b37214807b3e1040bf2661",
+      "protocol": "vless",
+      "label": "巴西/圣保罗/Brazil/São Paulo",
+      "sources": [
+        "awesome-vpn-base64"
+      ],
+      "latency_ms": 756,
+      "checked_at": "2026-08-22T01:53:20+00:00",
+      "uri": "vless://9638a83e-f1f7-4cc8-a602-924965d9534f@23.251.56.78:443?security=reality&type=raw&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=firefox&pbk=E6Y9lNizCXo8tJ6EXwLYQIjyIwmxIs4foyRlY2MgkjA&sid=59ccabb0a1483c4b#%E5%B7%B4%E8%A5%BF%2F%E5%9C%A3%E4%BF%9D%E7%BD%97%2FBrazil%2FS%C3%A3o%20Paulo"
+    },
+    {
+      "identity": "0c2f648c23136c09065960f0a689f345c0caa9b4cd3aaf0072bba11eeda9ca37",
+      "protocol": "trojan",
+      "label": "🇵🇱PL-202.78.163.132-0251",
+      "sources": [
+        "v2ray-aggregator-clash"
+      ],
+      "latency_ms": 759,
+      "checked_at": "2026-08-22T01:51:41+00:00",
+      "uri": "trojan://AE62539071@relative-locust.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.132-0251"
+    },
+    {
+      "identity": "6e9fa9068b2cfbe0b4ec7b6b85d35221187271da3c6b9fe1ef8905e378d2c2b1",
+      "protocol": "vless",
+      "label": "巴西/圣保罗/Brazil/São Paulo",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 763,
+      "checked_at": "2026-08-22T01:51:15+00:00",
+      "uri": "vless://9638a83e-f1f7-4cc8-a602-924965d9534f@23.251.56.78:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=firefox&pbk=E6Y9lNizCXo8tJ6EXwLYQIjyIwmxIs4foyRlY2MgkjA&sid=59ccabb0a1483c4b#%E5%B7%B4%E8%A5%BF%2F%E5%9C%A3%E4%BF%9D%E7%BD%97%2FBrazil%2FS%C3%A3o%20Paulo"
+    },
+    {
+      "identity": "15202758154ea5040baab26960e3c22b3b1fa23d7003564a3f3456592e7360d3",
+      "protocol": "trojan",
+      "label": "🇵🇱PL-202.78.163.248-0163",
+      "sources": [
+        "v2ray-aggregator-base64",
+        "v2ray-aggregator-uri"
+      ],
+      "latency_ms": 765,
+      "checked_at": "2026-08-22T01:55:39+00:00",
+      "uri": "trojan://ND91608427@relaxed-gull.rooster465.autos:443?security=tls&type=tcp&sni=relaxed-gull.rooster465.autos#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.248-0163"
+    },
+    {
+      "identity": "09468ddf536e3ed71bad4c1dc7c98698ca6c8eae824b2b1f4bfe013a75ae32c5",
+      "protocol": "trojan",
+      "label": "🇵🇱PL-202.78.163.164-0252",
+      "sources": [
+        "v2ray-aggregator-clash"
+      ],
+      "latency_ms": 767,
+      "checked_at": "2026-08-22T01:51:32+00:00",
+      "uri": "trojan://EQ30679154@pretty-mollusk.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1PL-202.78.163.164-0252"
+    },
+    {
+      "identity": "1517c19715f8f871ee22b635a0e554102ceb66a8aee32103ee88b7e68ce0d7c2",
+      "protocol": "trojan",
+      "label": "🇭🇰HK-185.14.47.238-4876",
+      "sources": [
+        "v2ray-aggregator-clash"
+      ],
+      "latency_ms": 791,
+      "checked_at": "2026-08-22T01:55:39+00:00",
+      "uri": "trojan://AE62539071@magical-kodiak.rooster465.autos:443?security=none&type=tcp#%F0%9F%87%AD%F0%9F%87%B0HK-185.14.47.238-4876"
+    },
+    {
+      "identity": "e76a3e08480b308019e3dae9b4df6c4047572fdbcbb084b0040dc23e24bcbf55",
+      "protocol": "vless",
+      "label": "香港/香港/Hong Kong/Hong Kong-4",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 796,
+      "checked_at": "2026-08-22T01:55:22+00:00",
+      "uri": "vless://cdc86ade-9bc3-41eb-a7b9-879130378820@hk11.levikogjgfdd.ir:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.bing.com&fp=chrome&pbk=-Ngz1wsLiTc5fP1MdkFMS2oor1jRoFLAYD8oOgybGFw&sid=e6d2c443d8f7702a#%E9%A6%99%E6%B8%AF%2F%E9%A6%99%E6%B8%AF%2FHong%20Kong%2FHong%20Kong-4"
+    },
+    {
+      "identity": "3c0721649717c25058561d8d8b8a1763a14abdef2270b23d56e979aa3bd5e387",
+      "protocol": "vless",
+      "label": "荷兰/The Netherlands-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 807,
+      "checked_at": "2026-08-22T01:50:58+00:00",
+      "uri": "vless://1f619326-cd93-4d6b-aebe-e0b5f8831d02@relay.meshbeat.online:8444?security=tls&type=ws&encryption=none&sni=relay.meshbeat.online&path=%2Fapi%2Fv1%2Fdevices%2F2545c190a7%2Ftelemetry&host=relay.meshbeat.online#%E8%8D%B7%E5%85%B0%2FThe%20Netherlands-2"
+    },
+    {
+      "identity": "6c041ebc4648e8e17e1cc05ce021b5cb833fe6f5641fc8fffb23841dd81aeb78",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-7",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 831,
+      "checked_at": "2026-08-22T01:51:15+00:00",
+      "uri": "vless://b052df40-d51c-456c-9bd6-57af01a87e4e@cdn.pinecloud.net:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=cdn.pinecloud.net&fp=chrome&pbk=vWSgdMDirb9aDZLWijSXXXl-NCTrtBgEe9MQqcgV6h8&sid=6a2e3af684799b19#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-7"
+    },
+    {
+      "identity": "45858f1db0c963ceab18a7aefe00b275b2cd655553985aeb577580327ed724b2",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-3",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 850,
+      "checked_at": "2026-08-22T01:50:58+00:00",
+      "uri": "vless://423b1d79-08c4-403f-9d5e-c541f791b55f@144.31.213.188:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=eu-west.cendora.ru&fp=chrome&pbk=m6RDw1b8R4lCaRUIzhHpy6TtX2Dhk6nyby8dWzeQqA0&sid=dd3ff38418d29d22#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-3"
+    },
+    {
+      "identity": "b8ea1be5495b83098892c838c3bbbea04b99991699f3a89a2883e8356722c21c",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-13",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 850,
+      "checked_at": "2026-08-22T01:53:20+00:00",
+      "uri": "vless://b2f6aa3a-2550-4a1c-b2c0-1c94b1207217@one-for-all.levikogjgfdd.ir:443?security=tls&type=ws&encryption=none&sni=terazhediii.info&path=%2Fhdgrbws&host=terazhediii.info#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-13"
+    },
+    {
+      "identity": "5aee90dc0b001e1f457a961c6dee6a2a0ee56595235d4eac8bc3ff4b6961d982",
+      "protocol": "vless",
+      "label": "荷兰/阿姆斯特丹/The Netherlands/Amsterdam-3",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 851,
+      "checked_at": "2026-08-22T01:51:07+00:00",
+      "uri": "vless://ae2e0637-5c9d-422b-93ac-70bd3fceeb81@hys40.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=hys40.wba-pn.ru&path=%2F&host=hys40.wba-pn.ru#%E8%8D%B7%E5%85%B0%2F%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9%2FThe%20Netherlands%2FAmsterdam-3"
+    },
+    {
+      "identity": "5321e5597a30c80179c677f6ae9f4365d6d6367a1711a86c1d27f4436c50caa9",
+      "protocol": "vless",
+      "label": "德国/Germany-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 864,
+      "checked_at": "2026-08-22T01:51:07+00:00",
+      "uri": "vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@81.95.4.189:443?security=tls&type=ws&encryption=none&sni=bab-6.site&path=%2Fvws%2F&host=bab-6.site#%E5%BE%B7%E5%9B%BD%2FGermany-2"
+    },
+    {
+      "identity": "422c97b6134b1d19bf3aa4dadb4173b303f51091537695d7c4221736f7a4378e",
+      "protocol": "vless",
+      "label": "德国/法兰克福/Germany/Frankfurt am Main-6",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 873,
+      "checked_at": "2026-08-22T01:50:58+00:00",
+      "uri": "vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@87.120.84.32:33843?security=tls&type=tcp&encryption=none&sni=deproxy2.lckdwn.ru#%E5%BE%B7%E5%9B%BD%2F%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8F%2FGermany%2FFrankfurt%20am%20Main-6"
+    },
+    {
+      "identity": "c102c4cc5586c876a8f3e6c7f84b4a63dc34897535dd6e9330440615186544dd",
+      "protocol": "vless",
+      "label": "塞浦路斯/Cyprus-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 898,
+      "checked_at": "2026-08-22T01:54:20+00:00",
+      "uri": "vless://511c1563-2cb6-4064-abc6-a59ee49818a8@in1.levikogjgfdd.ir:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=qq&pbk=cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0&sid=88b6#%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%2FCyprus-2"
+    },
+    {
+      "identity": "d28a114f85e638f3ced140ec329a33f891f6443ef53fa0658fa85b0e0987f334",
+      "protocol": "vless",
+      "label": "英国/United Kingdom-4",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 921,
+      "checked_at": "2026-08-22T01:55:14+00:00",
+      "uri": "vless://4bc8ff7a-20b4-41b2-9751-dfca869f0553@gb1.wba-pn.ru:443?security=tls&type=ws&encryption=none&sni=gb1.wba-pn.ru&path=%2F&host=gb1.wba-pn.ru#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-4"
+    },
+    {
+      "identity": "2bb12eed96d2371f97a80346be0081723cf10604f006b0eed1d66648e6a4bf13",
+      "protocol": "vless",
+      "label": "新加坡/Singapore-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 942,
+      "checked_at": "2026-08-22T01:50:50+00:00",
+      "uri": "vless://8d1e0577-bfcb-4cbd-91c0-1f8788d4ba44@sg10.levikogjgfdd.ir:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=rJ-aDop3jUC-FzyETfI2uDSXQ659PFlehr7XWm5Cm0A&sid=fe1a104caf309f5a#%E6%96%B0%E5%8A%A0%E5%9D%A1%2FSingapore-2"
+    },
+    {
+      "identity": "eb222ea9ecdc80f153ac0681cf91c9332608228588564f7cb64c7db9ccb6796a",
+      "protocol": "vless",
+      "label": "荷兰/哈勒姆/The Netherlands/Haarlem",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 992,
+      "checked_at": "2026-08-22T01:55:22+00:00",
+      "uri": "vless://c7e9c591-2764-423a-afca-efbd010fd396@51.15.127.20:2053?security=tls&type=ws&encryption=none&sni=forfreeuse.rtqa.ru&allowInsecure=1&path=%2F&host=forfreeuse.rtqa.ru#%E8%8D%B7%E5%85%B0%2F%E5%93%88%E5%8B%92%E5%A7%86%2FThe%20Netherlands%2FHaarlem"
+    },
+    {
+      "identity": "bd39d7ff2271fb6e45e698acf7b5722a041b6a3630172039de4a2e72a42a0cfd",
+      "protocol": "vless",
+      "label": "塞浦路斯/Cyprus",
+      "sources": [
+        "awesome-vpn-base64"
+      ],
+      "latency_ms": 1002,
+      "checked_at": "2026-08-22T01:53:40+00:00",
+      "uri": "vless://511c1563-2cb6-4064-abc6-a59ee49818a8@in1.levikogjgfdd.ir:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=qq&pbk=cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0&sid=88b6#%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%2FCyprus"
+    },
+    {
+      "identity": "52403d1c573e46f96ce93f4865d4b18a4c7e42eafffbdef95fbe32c5d3551af7",
+      "protocol": "vless",
+      "label": "阿联酋/United Arab Emirates",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 1019,
+      "checked_at": "2026-08-22T01:51:07+00:00",
+      "uri": "vless://9b18ccef-b9e0-41d1-8990-9d970569e142@185.112.249.201:8443?security=tls&type=ws&encryption=none&sni=web-socket.tgdaosheng.ggff.net&path=%2Fproxyip%3Dbpb.yousef.isegaro.comfp%3Dchrome&host=web-socket.tgdaosheng.ggff.net#%E9%98%BF%E8%81%94%E9%85%8B%2FUnited%20Arab%20Emirates"
     },
     {
       "identity": "d270e8aa379438bc6a99a2d693ff4c6c709a4952c55ad77f8149fb84dd07f9b3",
@@ -1644,163 +1583,130 @@
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 984,
-      "checked_at": "2026-08-21T22:46:26+00:00",
+      "latency_ms": 1044,
+      "checked_at": "2026-08-22T01:55:14+00:00",
       "uri": "vless://03707fb7-0990-440f-88f6-b0e0f7242a38@45.8.211.57:443?security=tls&type=ws&encryption=none&sni=de-new-1.ariyuz.org&path=%2F&host=de-new-1.ariyuz.org#%E4%BF%84%E7%BD%97%E6%96%AF%E8%81%94%E9%82%A6%2FRussia"
     },
     {
-      "identity": "a54357f10822afd9ff93d5f8a7d73403c54f4c3a0deb2e45e54264b4846d6a1b",
+      "identity": "533022bc7f4966d8a97a1eefbe2ffb66dedb8607c69bb05f09147c1afb8fff8e",
       "protocol": "vless",
-      "label": "美国/水牛城/United States/Buffalo",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "latency_ms": 1020,
-      "checked_at": "2026-08-21T22:42:39+00:00",
-      "uri": "vless://17d29827-7cf1-4115-b40d-548e10ec355d@billing.netraidly.ru:40443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=deepl.com&fp=qq&pbk=bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM&sid=aa3c#%E7%BE%8E%E5%9B%BD%2F%E6%B0%B4%E7%89%9B%E5%9F%8E%2FUnited%20States%2FBuffalo"
-    },
-    {
-      "identity": "5710c6e2934685324b496aa25569374aa8269b0d3139332d0b1ea380aa49c97a",
-      "protocol": "vless",
-      "label": "荷兰/哈勒姆/The Netherlands/Haarlem",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "latency_ms": 1028,
-      "checked_at": "2026-08-21T22:42:13+00:00",
-      "uri": "vless://05caca6c-9e97-4c0f-8edf-7b88a6e572c5@mypanel.unixzone.us:12068?security=none&type=ws&encryption=none&path=%2F&host=mypanel.unixzone.us#%E8%8D%B7%E5%85%B0%2F%E5%93%88%E5%8B%92%E5%A7%86%2FThe%20Netherlands%2FHaarlem"
-    },
-    {
-      "identity": "189d99b8bba78bb38afe12d93078f1f16c4a2f1126a8c7e906db82b51c533f85",
-      "protocol": "vless",
-      "label": "荷兰/哈勒姆/The Netherlands/Haarlem-2",
+      "label": "美国/San Francisco/United States/San Francisco-16",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 1060,
-      "checked_at": "2026-08-21T22:41:47+00:00",
-      "uri": "vless://05caca6c-9e97-4c0f-8edf-7b88a6e572c5@mypanel.unixzone.us:12068?security=none&type=ws&encryption=none&path=%2F&host=mypanel.unixzone.us#%E8%8D%B7%E5%85%B0%2F%E5%93%88%E5%8B%92%E5%A7%86%2FThe%20Netherlands%2FHaarlem-2"
+      "latency_ms": 1072,
+      "checked_at": "2026-08-22T01:51:07+00:00",
+      "uri": "vless://dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51@104.16.72.41:80?security=none&type=ws&encryption=none&path=%2Fhttp&host=de.vpnbase.net#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-16"
     },
     {
-      "identity": "e999189166b9a5712f4ed2608a33b7a35c41a726ce25fa51941ed5d8faf59feb",
+      "identity": "c053cc84fafe99562a5028b88aa9369530f365ebabc743c8ca4273b7a94c6874",
       "protocol": "vless",
-      "label": "美国/San Francisco/United States/San Francisco-12",
+      "label": "美国/San Francisco/United States/San Francisco-10",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 1133,
-      "checked_at": "2026-08-21T22:46:35+00:00",
-      "uri": "vless://65c56e1f-5c41-40bc-b0b5-9346772476ca@172.64.53.89:8443?security=tls&type=ws&encryption=none&sni=hongkong.11459178.xyz&path=%2Fcdn%2Fpackages%2Fruntime-core.tar.gz&host=hongkong.11459178.xyz#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-12"
+      "latency_ms": 1095,
+      "checked_at": "2026-08-22T01:53:40+00:00",
+      "uri": "vless://e7961655-9674-4cbd-a36f-ec0d5d7d660c@one-for-all.levikogjgfdd.ir:2053?security=tls&type=ws&encryption=none&sni=po.fastbrokencompony.com&path=%2F&host=po.fastbrokencompony.com#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-10"
     },
     {
-      "identity": "6c041ebc4648e8e17e1cc05ce021b5cb833fe6f5641fc8fffb23841dd81aeb78",
+      "identity": "983e467c7af3a21216b02084162364e2a3a9b495cc9ac670174c88ac41fd7032",
       "protocol": "vless",
-      "label": "英国/United Kingdom-6",
+      "label": "芬兰/赫尔辛基/Finland/Helsinki-2",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 1194,
-      "checked_at": "2026-08-21T22:42:21+00:00",
-      "uri": "vless://b052df40-d51c-456c-9bd6-57af01a87e4e@cdn.pinecloud.net:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=cdn.pinecloud.net&fp=chrome&pbk=vWSgdMDirb9aDZLWijSXXXl-NCTrtBgEe9MQqcgV6h8&sid=6a2e3af684799b19#%E8%8B%B1%E5%9B%BD%2FUnited%20Kingdom-6"
+      "latency_ms": 1113,
+      "checked_at": "2026-08-22T01:51:41+00:00",
+      "uri": "vless://fbb74aa8-b89a-4f20-9504-6b25aadf6681@fi1.levikogjgfdd.ir:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fin2.freeinternat.com&fp=firefox&pbk=bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk&sid=ff776ff77be48b88#%E8%8A%AC%E5%85%B0%2F%E8%B5%AB%E5%B0%94%E8%BE%9B%E5%9F%BA%2FFinland%2FHelsinki-2"
     },
     {
-      "identity": "8ba4cda7d9e8e5a02db915fa4a0ecb00914d31b91c5b9c35fcc45436cd3580d4",
+      "identity": "a98524d00087b2ccf13d94e1662adedd5c3d79337fbd14c69c13a4624a420eb1",
       "protocol": "vless",
-      "label": "塞浦路斯/Cyprus",
+      "label": "德国/法兰克福/Germany/Frankfurt am Main-8",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 1383,
-      "checked_at": "2026-08-21T22:42:30+00:00",
-      "uri": "vless://9f0baff8-bdee-4de9-9515-bcc4932b41fa@194.76.154.31:40443?security=reality&type=tcp&encryption=none&sni=deepl.com&fp=qq&pbk=MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ&sid=a8ae#%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%2FCyprus"
+      "latency_ms": 1165,
+      "checked_at": "2026-08-22T01:51:41+00:00",
+      "uri": "vless://70e20b2e-3b1f-4c25-9a3d-9240570391bb@derman.neobo-tooth.ru:2096?security=none&type=ws&encryption=none&path=%2F&host=derman.neobo-tooth.ru#%E5%BE%B7%E5%9B%BD%2F%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8F%2FGermany%2FFrankfurt%20am%20Main-8"
     },
     {
-      "identity": "35952e0ae4e56aed24a013592751945ce83d622db418a65b9006bba1860fafda",
+      "identity": "d24a638a03a4480ff76ece8538551b22e8a6552b8e294faf93c420de059ed528",
       "protocol": "vless",
-      "label": "瑞典/斯德哥尔摩/Sweden/Stockholm",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "latency_ms": 1603,
-      "checked_at": "2026-08-21T22:42:05+00:00",
-      "uri": "vless://423b1d79-08c4-403f-9d5e-c541f791b55f@2.26.101.64:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=nordic.cendora.ru&fp=firefox&pbk=YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU&sid=2186a755ed67b034#%E7%91%9E%E5%85%B8%2F%E6%96%AF%E5%BE%B7%E5%93%A5%E5%B0%94%E6%91%A9%2FSweden%2FStockholm"
-    },
-    {
-      "identity": "b577a2e3a52b51f58c758e634098a2df6726b73f725d39f1b423c6de03a11f03",
-      "protocol": "vless",
-      "label": "美国/洛杉矶/United States/Los Angeles-2",
+      "label": "美国/United States-6",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 1719,
-      "checked_at": "2026-08-21T22:44:33+00:00",
-      "uri": "vless://8212a50b-25bf-4739-bba1-aaffb5ffc84c@194.55.189.249:40443?security=reality&type=tcp&encryption=none&sni=deepl.com&fp=chrome&pbk=KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo&sid=aae8#%E7%BE%8E%E5%9B%BD%2F%E6%B4%9B%E6%9D%89%E7%9F%B6%2FUnited%20States%2FLos%20Angeles-2"
-    },
-    {
-      "identity": "4a72c6255e7052c3bd8bb8a243c2be185840fcd00bacf72e9606a365ce92c19f",
-      "protocol": "vless",
-      "label": "美国/San Francisco/United States/San Francisco-8",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 2098,
-      "checked_at": "2026-08-21T22:42:05+00:00",
-      "uri": "vless://05cf7b0e-ad1a-42bb-80e7-73ae45b1019a@104.21.66.61:8443?security=tls&type=ws&encryption=none&sni=france.io-com-de-dev.org&path=%2Fapi%2Fvoip%2Fupdates%2Fstatic%2Fx9i2&host=france.io-com-de-dev.org#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-8"
-    },
-    {
-      "identity": "d0c23c3404b17419f33f100073f3c30e51bd07c93aed172e8982e64fdcabad17",
-      "protocol": "vless",
-      "label": "加拿大/Canada-3",
-      "sources": [
-        "awesome-vpn-clash"
-      ],
-      "latency_ms": 2121,
-      "checked_at": "2026-08-21T22:46:28+00:00",
-      "uri": "vless://716426fa-bcb7-4eb9-b460-36399ebf740d@lizca2.footballfantasyforum.com:443?security=tls&type=tcp&encryption=none#%E5%8A%A0%E6%8B%BF%E5%A4%A7%2FCanada-3"
-    },
-    {
-      "identity": "f961b399a978669594e9985f6397bbbc342f696c52274c1b81571b10d9f85760",
-      "protocol": "vless",
-      "label": "台湾/Taiwan",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "latency_ms": 2285,
-      "checked_at": "2026-08-21T22:46:53+00:00",
-      "uri": "vless://47a97b7f-044d-43d6-86b0-8b256873d1b5@45.121.50.241:50159?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=E9gCs_C_mSDcHmlCZSMk1kSXpmua48DhgsT_aDpZ1WE&sid=4c3f80051030ba1b#%E5%8F%B0%E6%B9%BE%2FTaiwan"
+      "latency_ms": 1319,
+      "checked_at": "2026-08-22T01:55:14+00:00",
+      "uri": "vless://60cf6ea2-7a3c-4a97-b7db-92f4de0be0cc@198.62.62.171:443?security=tls&type=ws&encryption=none&sni=639222734213747055.forester-homaxe.info&path=%2Fafpmrsws&host=639222734213747055.forester-homaxe.info#%E7%BE%8E%E5%9B%BD%2FUnited%20States-6"
     },
     {
       "identity": "5e66b7072561cebefe3fa634f60d42b61c213bd5b4b4144d934e6bee46ea7d5c",
       "protocol": "vless",
-      "label": "香港/Hong Kong-2",
+      "label": "香港/Hong Kong",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 3069,
-      "checked_at": "2026-08-21T22:42:15+00:00",
-      "uri": "vless://928e6cce-8ced-4243-9a48-a6642edd09b0@103.149.183.198:13779?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=tesla.com&fp=chrome&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&sid=af1bdd293097b664#%E9%A6%99%E6%B8%AF%2FHong%20Kong-2"
+      "latency_ms": 1394,
+      "checked_at": "2026-08-22T01:51:16+00:00",
+      "uri": "vless://928e6cce-8ced-4243-9a48-a6642edd09b0@103.149.183.198:13779?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=tesla.com&fp=chrome&pbk=llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg&sid=af1bdd293097b664#%E9%A6%99%E6%B8%AF%2FHong%20Kong"
+    },
+    {
+      "identity": "71abcb2b165eb962b0b6f4c98dc6528f9ad64f9d48d659d082af3d4d7f4d9b24",
+      "protocol": "vless",
+      "label": "俄罗斯联邦/Russia-2",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 1457,
+      "checked_at": "2026-08-22T01:51:16+00:00",
+      "uri": "vless://2c634977-584e-4e1f-b501-1b70c77a6743@78.159.245.75:9002?security=reality&type=grpc&encryption=none&sni=api-maps.yandex.ru&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&serviceName=grpc-reality#%E4%BF%84%E7%BD%97%E6%96%AF%E8%81%94%E9%82%A6%2FRussia-2"
+    },
+    {
+      "identity": "b577a2e3a52b51f58c758e634098a2df6726b73f725d39f1b423c6de03a11f03",
+      "protocol": "vless",
+      "label": "美国/洛杉矶/United States/Los Angeles-3",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 1478,
+      "checked_at": "2026-08-22T01:53:07+00:00",
+      "uri": "vless://8212a50b-25bf-4739-bba1-aaffb5ffc84c@194.55.189.249:40443?security=reality&type=tcp&encryption=none&sni=deepl.com&fp=chrome&pbk=KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo&sid=aae8#%E7%BE%8E%E5%9B%BD%2F%E6%B4%9B%E6%9D%89%E7%9F%B6%2FUnited%20States%2FLos%20Angeles-3"
+    },
+    {
+      "identity": "967cfbaab8b39cf9c67da02f24849249d1fc1faa56b363ea8f6e7b566ad00456",
+      "protocol": "vless",
+      "label": "美国/San Francisco/United States/San Francisco-4",
+      "sources": [
+        "awesome-vpn-clash"
+      ],
+      "latency_ms": 1578,
+      "checked_at": "2026-08-22T01:51:33+00:00",
+      "uri": "vless://03707fb7-0990-440f-88f6-b0e0f7242a38@104.16.118.43:443?security=tls&type=ws&encryption=none&sni=de-new.ariyuz.org&path=%2F&host=de-new.ariyuz.org#%E7%BE%8E%E5%9B%BD%2FSan%20Francisco%2FUnited%20States%2FSan%20Francisco-4"
+    },
+    {
+      "identity": "a1a544ce53e364bc504c8f750722931d52f9c52796e335209dbb8cc55993b6ac",
+      "protocol": "vless",
+      "label": "芬兰/赫尔辛基/Finland/Helsinki",
+      "sources": [
+        "awesome-vpn-base64"
+      ],
+      "latency_ms": 2630,
+      "checked_at": "2026-08-22T01:51:43+00:00",
+      "uri": "vless://2c634977-584e-4e1f-b501-1b70c77a6743@78.159.245.75:9002?security=reality&type=grpc&encryption=none&sni=api-maps.yandex.ru&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&serviceName=grpc-reality#%E8%8A%AC%E5%85%B0%2F%E8%B5%AB%E5%B0%94%E8%BE%9B%E5%9F%BA%2FFinland%2FHelsinki"
     },
     {
       "identity": "1e2077f9704a32c7ade9d03b3bddcf3a51a2116787eefa2ee087f7b7a6aeb763",
       "protocol": "vless",
-      "label": "法国/France",
+      "label": "法国/France-2",
       "sources": [
         "awesome-vpn-clash"
       ],
-      "latency_ms": 4175,
-      "checked_at": "2026-08-21T22:41:50+00:00",
-      "uri": "vless://25f3beef-a4b6-40bc-aa74-17a0f89f683c@gr2.levikogjgfdd.ir:443?security=tls&type=ws&encryption=none&sni=finite-node.rtxconfigz.com&path=%2F&host=telegram.us#%E6%B3%95%E5%9B%BD%2FFrance"
-    },
-    {
-      "identity": "acd1e29fde971ac661a7e3fba9c73061b78f112a25d8a05f52b2050cda37dab8",
-      "protocol": "vless",
-      "label": "加拿大/Canada",
-      "sources": [
-        "awesome-vpn-base64"
-      ],
-      "latency_ms": 4697,
-      "checked_at": "2026-08-21T22:43:35+00:00",
-      "uri": "vless://716426fa-bcb7-4eb9-b460-36399ebf740d@lizca2.footballfantasyforum.com:443?security=tls&type=tcp&encryption=none#%E5%8A%A0%E6%8B%BF%E5%A4%A7%2FCanada"
+      "latency_ms": 3056,
+      "checked_at": "2026-08-22T01:50:44+00:00",
+      "uri": "vless://25f3beef-a4b6-40bc-aa74-17a0f89f683c@gr2.levikogjgfdd.ir:443?security=tls&type=ws&encryption=none&sni=finite-node.rtxconfigz.com&path=%2F&host=telegram.us#%E6%B3%95%E5%9B%BD%2FFrance-2"
     }
   ]
 }
