@@ -1,51 +1,13 @@
 mixed-port: 7890
 mode: rule
 proxies:
-- server: 108.181.0.177
-  port: 8388
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
-  name: 🇺🇸US-108.181.0.177-0055
-- type: vless
-  server: 104.16.80.73
+- type: ss
+  server: 37.19.198.160
   port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
-  network: ws
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-  tls: true
-  servername: josni.hoyes.cloudns.ch
-  ws-opts:
-    path: musiclovers85?ed
-    headers:
-      Host: josni.hoyes.cloudns.ch
-  name: '美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] #2'
-- type: vless
-  server: 185.193.30.94
-  port: 443
-  udp: true
-  network: ws
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-  tls: true
-  servername: josni.hoyes.cloudns.ch
-  client-fingerprint: chrome
-  ws-opts:
-    path: /musiclovers85
-    headers:
-      Host: josni.hoyes.cloudns.ch
-  name: 英国/United Kingdom [https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub]
-- type: vless
-  server: 104.16.117.43
-  port: 443
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-  tls: true
-  servername: josni.hoyes.cloudns.ch
-  network: ws
-  ws-opts:
-    path: musiclovers85
-    headers:
-      Host: josni.hoyes.cloudns.ch
-  name: 美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm]
+  name: 🇺🇸US-37.19.198.160-0129
 - type: vless
   server: 104.16.117.43
   port: 443
@@ -58,70 +20,46 @@ proxies:
     path: musiclovers85?ed=512
     headers:
       Host: josni.hoyes.cloudns.ch
-  name: 美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] 2
+  name: 美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm]
 - type: vless
-  server: 104.16.80.73
+  server: 172.64.150.28
+  port: 443
+  udp: true
+  network: ws
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  tls: true
+  servername: hhlfy.twiladaphne.ndjp.net
+  ws-opts:
+    path: /fp
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+  name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscri
+- type: vless
+  server: 104.16.117.43
   port: 443
   uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
   tls: true
   servername: josni.hoyes.cloudns.ch
   network: ws
   ws-opts:
-    path: musiclovers85?ed
+    path: musiclovers85
     headers:
       Host: josni.hoyes.cloudns.ch
-  name: '美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] #2
-    2'
+  name: 美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] 2
 - type: vless
-  server: 172.64.150.28
+  server: 185.193.30.94
   port: 443
   udp: true
   network: ws
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
   tls: true
-  servername: hhlfy.twiladaphne.ndjp.net
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscri
-- type: vless
-  server: 172.64.150.28
-  port: 443
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  tls: true
-  servername: hhlfy.twiladaphne.ndjp.net
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscri
-    2
-- type: vless
-  server: ed8d.wdz.de5.net
-  port: 443
-  udp: true
-  network: ws
-  uuid: 0b06f318-ab9d-4de7-8779-360bd5f7ea67
-  tls: true
-  servername: ed8d.wdz.de5.net
+  servername: josni.hoyes.cloudns.ch
   client-fingerprint: chrome
   ws-opts:
-    path: /fp=chrome
-  name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
-- type: vless
-  server: 51.81.223.225
-  port: 11094
-  uuid: f1fa0ad9-b122-4b7c-da82-4bea9edc48dd
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.yahoo.com
-  reality-opts:
-    public-key: 9dnXiXxP4xgvtTVRj9SBFdyO6mjGvVhWD8qVZZLCCCk
-    short-id: a356addf
-  client-fingerprint: chrome
-  name: 美国/希尔斯伯勒/United States/Hillsboro [https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt]
+    path: /musiclovers85
+    headers:
+      Host: josni.hoyes.cloudns.ch
+  name: 英国/United Kingdom [https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub]
 - type: vless
   server: 185.193.30.94
   port: 443
@@ -135,6 +73,99 @@ proxies:
       Host: josni.hoyes.cloudns.ch
   name: 英国/United Kingdom [https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub]
     2
+- type: vless
+  server: 104.16.80.73
+  port: 443
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  network: ws
+  ws-opts:
+    path: musiclovers85?ed
+    headers:
+      Host: josni.hoyes.cloudns.ch
+  name: '美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] #2'
+- type: vless
+  server: 104.16.80.73
+  port: 443
+  udp: true
+  network: ws
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  ws-opts:
+    path: musiclovers85?ed
+    headers:
+      Host: josni.hoyes.cloudns.ch
+  name: '美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] #2
+    2'
+- type: vless
+  server: 137.184.218.169
+  port: 36925
+  udp: true
+  network: tcp
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+  name: 美国/北伯根/United States/North Bergen [https://t.me/s/CUSTOMVPNSERVER]
+- type: vless
+  server: 137.184.218.169
+  port: 36925
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+  client-fingerprint: chrome
+  name: 美国/北伯根/United States/North Bergen [https://t.me/s/CUSTOMVPNSERVER] 2
+- type: vless
+  server: 172.64.150.28
+  port: 443
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  tls: true
+  servername: hhlfy.twiladaphne.ndjp.net
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+  name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscri
+    2
+- type: vless
+  server: cf.levikogjgfdd.ir
+  port: 443
+  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
+  tls: true
+  servername: josni.hoyes.cloudns.ch
+  network: ws
+  ws-opts:
+    path: /ed=512
+    headers:
+      Host: josni.hoyes.cloudns.ch
+  name: 美国/San Francisco/United States/San Francisco [https://t.me/s/V2rayCollector]
+- type: vless
+  server: ed8d.wdz.de5.net
+  port: 443
+  udp: true
+  network: ws
+  uuid: 0b06f318-ab9d-4de7-8779-360bd5f7ea67
+  tls: true
+  servername: ed8d.wdz.de5.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /fp=chrome
+  name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
+- server: 108.181.0.177
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: G5p6ww4o67HB
+  name: 🇺🇸US-108.181.0.177-0055
 - type: vless
   server: ed8d.wdz.de5.net
   port: 443
@@ -149,48 +180,42 @@ proxies:
   name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
     2
 - type: vless
+  server: www.fbi.gov
+  port: 2095
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: fuckingfangbinxing.pusytroller.cf
+  name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
+    3
+- type: vless
+  server: www.fbi.gov
+  port: 2095
+  udp: true
+  network: ws
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: fuckingfangbinxing.pusytroller.cf
+  name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
+    4
+- type: vless
   server: cf.levikogjgfdd.ir
   port: 443
+  udp: true
+  network: ws
   uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
   tls: true
   servername: josni.hoyes.cloudns.ch
-  network: ws
   ws-opts:
     path: /ed=512
     headers:
       Host: josni.hoyes.cloudns.ch
   name: 美国/San Francisco/United States/San Francisco [https://t.me/s/V2rayCollector]
-- type: ss
-  server: 37.19.198.160
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-  name: 🇺🇸US-37.19.198.160-0129
-- type: vless
-  server: 137.184.218.169
-  port: 36925
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-  client-fingerprint: chrome
-  name: 美国/北伯根/United States/North Bergen [https://t.me/s/CUSTOMVPNSERVER]
-- type: vless
-  server: 137.184.218.169
-  port: 36925
-  udp: true
-  network: tcp
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-  name: 美国/北伯根/United States/North Bergen [https://t.me/s/CUSTOMVPNSERVER] 2
+    2
 - type: vmess
   server: rush-w1niu.teeopp.online
   port: 443
@@ -206,32 +231,12 @@ proxies:
       Host: rush-w1niu.teeopp.online
   name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscri
     3
-- type: vless
-  server: cf.levikogjgfdd.ir
+- server: 82.38.31.57
   port: 443
-  udp: true
-  network: ws
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-  tls: true
-  servername: josni.hoyes.cloudns.ch
-  ws-opts:
-    path: /ed=512
-    headers:
-      Host: josni.hoyes.cloudns.ch
-  name: 美国/San Francisco/United States/San Francisco [https://t.me/s/V2rayCollector]
-    2
-- type: vless
-  server: www.fbi.gov
-  port: 2095
-  udp: true
-  network: ws
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  ws-opts:
-    path: /
-    headers:
-      Host: fuckingfangbinxing.pusytroller.cf
-  name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
-    3
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  name: 🇬🇧GB-82.38.31.57-0086
 - type: ss
   server: 82.38.31.2
   port: 8080
@@ -240,16 +245,17 @@ proxies:
   udp: true
   name: 🇬🇧GB-82.38.31.2-0134
 - type: vless
-  server: www.fbi.gov
-  port: 2095
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fuckingfangbinxing.pusytroller.cf
-  name: 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
-    4
+  server: 51.81.223.225
+  port: 11094
+  uuid: f1fa0ad9-b122-4b7c-da82-4bea9edc48dd
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.yahoo.com
+  reality-opts:
+    public-key: 9dnXiXxP4xgvtTVRj9SBFdyO6mjGvVhWD8qVZZLCCCk
+    short-id: a356addf
+  client-fingerprint: chrome
+  name: 美国/希尔斯伯勒/United States/Hillsboro [https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt]
 - type: ss
   server: 82.38.31.35
   port: 8080
@@ -257,6 +263,27 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
   name: 🇬🇧GB-82.38.31.35-0076
+- type: ss
+  server: 209.46.102.22
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: 1hhrqrokj3ag
+  udp: true
+  name: 🇩🇪DE-209.46.102.22-0099
+- type: vless
+  server: 31.76.91.138
+  port: 2087
+  uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44
+  tls: true
+  servername: ads.x5.ru
+  reality-opts:
+    public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4
+    short-id: c226283c4de5b1ad
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 日本/东京/Japan/Tokyo [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.
 - type: vless
   server: 31.76.91.138
   port: 2087
@@ -269,26 +296,6 @@ proxies:
   reality-opts:
     public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4
     short-id: c226283c4de5b1ad
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 日本/东京/Japan/Tokyo [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.
-- server: 82.38.31.57
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  name: 🇬🇧GB-82.38.31.57-0086
-- type: vless
-  server: 31.76.91.138
-  port: 2087
-  uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44
-  tls: true
-  servername: ads.x5.ru
-  reality-opts:
-    public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4
-    short-id: c226283c4de5b1ad
-  client-fingerprint: firefox
-  network: grpc
   grpc-opts:
     grpc-service-name: grpc
   name: 日本/东京/Japan/Tokyo [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.
@@ -299,50 +306,55 @@ proxies:
   cipher: aes-256-gcm
   password: Y6R9pAtvxxzmGC
   name: 🇨🇦CA-51.222.155.113-0134
-- type: ss
-  server: 209.46.102.22
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: 1hhrqrokj3ag
+- type: vmess
+  server: 156.245.232.239
+  port: 35043
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  alterId: 0
+  cipher: auto
   udp: true
-  name: 🇩🇪DE-209.46.102.22-0099
+  network: ws
+  ws-opts:
+    path: /
+  name: 🇭🇰HK-156.245.232.239-0152
 proxy-groups:
 - name: AUTO
   type: select
   proxies:
-  - 🇺🇸US-108.181.0.177-0055
-  - '美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] #2'
-  - 英国/United Kingdom [https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub]
-  - 美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm]
-  - 美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] 2
-  - '美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] #2 2'
-  - 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscri
-  - 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscri
-    2
-  - 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
-  - 美国/希尔斯伯勒/United States/Hillsboro [https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt]
-  - 英国/United Kingdom [https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub]
-    2
-  - 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
-    2
-  - 美国/San Francisco/United States/San Francisco [https://t.me/s/V2rayCollector]
   - 🇺🇸US-37.19.198.160-0129
+  - 美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm]
+  - 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscri
+  - 美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] 2
+  - 英国/United Kingdom [https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub]
+  - 英国/United Kingdom [https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub]
+    2
+  - '美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] #2'
+  - '美国/San Francisco/United States/San Francisco [https://t.me/s/proxy_mtm] #2 2'
   - 美国/北伯根/United States/North Bergen [https://t.me/s/CUSTOMVPNSERVER]
   - 美国/北伯根/United States/North Bergen [https://t.me/s/CUSTOMVPNSERVER] 2
   - 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscri
-    3
-  - 美国/San Francisco/United States/San Francisco [https://t.me/s/V2rayCollector] 2
+    2
+  - 美国/San Francisco/United States/San Francisco [https://t.me/s/V2rayCollector]
+  - 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
+  - 🇺🇸US-108.181.0.177-0055
+  - 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
+    2
   - 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
     3
-  - 🇬🇧GB-82.38.31.2-0134
   - 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main
     4
-  - 🇬🇧GB-82.38.31.35-0076
-  - 日本/东京/Japan/Tokyo [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.
+  - 美国/San Francisco/United States/San Francisco [https://t.me/s/V2rayCollector] 2
+  - 美国/San Francisco/United States/San Francisco [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscri
+    3
   - 🇬🇧GB-82.38.31.57-0086
+  - 🇬🇧GB-82.38.31.2-0134
+  - 美国/希尔斯伯勒/United States/Hillsboro [https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt]
+  - 🇬🇧GB-82.38.31.35-0076
+  - 🇩🇪DE-209.46.102.22-0099
+  - 日本/东京/Japan/Tokyo [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.
   - 日本/东京/Japan/Tokyo [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.
     2
   - 🇨🇦CA-51.222.155.113-0134
-  - 🇩🇪DE-209.46.102.22-0099
+  - 🇭🇰HK-156.245.232.239-0152
 rules:
 - MATCH,AUTO
