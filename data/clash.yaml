@@ -4,18 +4,6 @@ proxies:
 - type: vless
   server: 47.89.186.170
   port: 55861
-  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.intel.com
-  reality-opts:
-    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
-    short-id: 7551ed1b
-  client-fingerprint: chrome
-  name: 美国/United States [https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/mixed_iran.txt]
-- type: vless
-  server: 47.89.186.170
-  port: 55861
   udp: true
   network: tcp
   uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
@@ -26,22 +14,23 @@ proxies:
   reality-opts:
     public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
     short-id: 7551ed1b
+  name: 美国/United States [https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/mixed_iran.txt]
+- type: vless
+  server: 47.89.186.170
+  port: 55861
+  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.intel.com
+  reality-opts:
+    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
+    short-id: 7551ed1b
+  client-fingerprint: chrome
   name: 美国/United States [https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/mixed_iran.txt]
     2
 - type: vless
   server: 137.184.218.169
   port: 36925
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-  client-fingerprint: chrome
-  name: 美国/北伯根/United States/North Bergen [https://t.me/s/CUSTOMVPNSERVER]
-- type: vless
-  server: 137.184.218.169
-  port: 36925
   udp: true
   network: tcp
   uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
@@ -51,13 +40,18 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+  name: 美国/北伯根/United States/North Bergen [https://t.me/s/CUSTOMVPNSERVER]
+- type: vless
+  server: 137.184.218.169
+  port: 36925
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+  client-fingerprint: chrome
   name: 美国/北伯根/United States/North Bergen [https://t.me/s/CUSTOMVPNSERVER] 2
-- server: 108.181.0.177
-  port: 8388
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
-  name: 🇺🇸US-108.181.0.177-0136
 - type: vless
   server: 169.40.42.212
   port: 443
@@ -77,6 +71,13 @@ proxies:
   password: amazonskr05
   udp: true
   name: 🇬🇧GB-13.135.73.3-0139
+- type: ss
+  server: 82.38.31.35
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+  name: 🇬🇧GB-82.38.31.35-0120
 - type: vless
   server: 150.241.82.19
   port: 443
@@ -92,18 +93,6 @@ proxies:
     short-id: 065cf4f1c7d83e79
   name: 美国/United States [https://t.me/s/V2rayCollector]
 - type: vless
-  server: 150.241.82.19
-  port: 443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  flow: xtls-rprx-vision
-  tls: true
-  servername: america.cendora.ru
-  reality-opts:
-    public-key: v1hVg2Uc7Wsc_bhlLfKkML_HUGogQA9O9n9uZFwzQSM
-    short-id: 065cf4f1c7d83e79
-  client-fingerprint: firefox
-  name: 美国/United States [https://t.me/s/V2rayCollector] 2
-- type: vless
   server: 45.195.228.100
   port: 443
   udp: true
@@ -118,60 +107,17 @@ proxies:
     short-id: b0c58c398abb6842
   name: FI【机场推荐：https://a9a.xyz】34
 - type: vless
-  server: 31.76.61.232
+  server: 150.241.82.19
   port: 443
-  udp: true
-  network: tcp
-  uuid: 4829c2f5-f45a-4330-9b3c-d381b9efdbec
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
   flow: xtls-rprx-vision
   tls: true
-  servername: policies.google.com
-  client-fingerprint: chrome
+  servername: america.cendora.ru
   reality-opts:
-    public-key: CMTA5uuaIVIeqHslZMT3CbFwP8F5ysMLii72ybsTlyY
-    short-id: e2a4c6b8
-  name: NL【机场推荐：https://a9a.xyz】36
-- type: vless
-  server: 159.89.87.21
-  port: 28190
-  udp: true
-  network: tcp
-  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
-  flow: xtls-rprx-vision
-  tls: true
-  servername: aws.amazon.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
-  name: 美国/北伯根/United States/North Bergen [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/
-- type: vless
-  server: 31.76.91.138
-  port: 2087
-  udp: true
-  network: grpc
-  uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44
-  tls: true
-  servername: ads.x5.ru
+    public-key: v1hVg2Uc7Wsc_bhlLfKkML_HUGogQA9O9n9uZFwzQSM
+    short-id: 065cf4f1c7d83e79
   client-fingerprint: firefox
-  reality-opts:
-    public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4
-    short-id: c226283c4de5b1ad
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 日本/东京/Japan/Tokyo [https://t.me/s/V2rayCollector]
-- type: vless
-  server: ned.waldron.ir
-  port: 46142
-  udp: true
-  network: tcp
-  uuid: 255386a8-aec5-4425-bfe7-ca49b7448deb
-  tls: true
-  servername: www.yahoo.com
-  client-fingerprint: edge
-  reality-opts:
-    public-key: l-OE7EwER1Z_jAifGE_UZ3FqHDMGzaR0jQHFYj5RNAk
-    short-id: 39feeba3085c
-  name: NL【机场推荐：https://a9a.xyz】37
+  name: 美国/United States [https://t.me/s/V2rayCollector] 2
 - type: vless
   server: 31.76.70.32
   port: 443
@@ -200,12 +146,21 @@ proxies:
     public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
     short-id: a7f3c91b2e6d84c0
   name: NO【机场推荐：https://a9a.xyz】11
-- server: 51.222.155.113
-  port: 5601
-  type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  name: 🇨🇦CA-51.222.155.113-0172
+- type: vless
+  server: 31.76.91.138
+  port: 2087
+  udp: true
+  network: grpc
+  uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44
+  tls: true
+  servername: ads.x5.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4
+    short-id: c226283c4de5b1ad
+  grpc-opts:
+    grpc-service-name: grpc
+  name: 日本/东京/Japan/Tokyo [https://t.me/s/V2rayCollector]
 - type: vmess
   server: rush-t2tvv.ceeopp.site
   port: 443
@@ -233,13 +188,33 @@ proxies:
   grpc-opts:
     grpc-service-name: grpc
   name: 日本/东京/Japan/Tokyo [https://t.me/s/V2rayCollector] 2
-- type: ss
-  server: 82.38.31.35
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+- type: vless
+  server: 31.76.5.26
+  port: 443
   udp: true
-  name: 🇬🇧GB-82.38.31.35-0120
+  network: tcp
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: nordic.cendora.ru
+  client-fingerprint: qq
+  reality-opts:
+    public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
+    short-id: 2186a755ed67b034
+  name: NO【机场推荐：https://a9a.xyz】26
+- type: vless
+  server: ned.waldron.ir
+  port: 46142
+  udp: true
+  network: tcp
+  uuid: 255386a8-aec5-4425-bfe7-ca49b7448deb
+  tls: true
+  servername: www.yahoo.com
+  client-fingerprint: edge
+  reality-opts:
+    public-key: l-OE7EwER1Z_jAifGE_UZ3FqHDMGzaR0jQHFYj5RNAk
+    short-id: 39feeba3085c
+  name: NL【机场推荐：https://a9a.xyz】37
 proxy-groups:
 - name: AUTO
   type: select
@@ -249,21 +224,18 @@ proxy-groups:
     2
   - 美国/北伯根/United States/North Bergen [https://t.me/s/CUSTOMVPNSERVER]
   - 美国/北伯根/United States/North Bergen [https://t.me/s/CUSTOMVPNSERVER] 2
-  - 🇺🇸US-108.181.0.177-0136
   - 德国/Germany [https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt]
   - 🇬🇧GB-13.135.73.3-0139
+  - 🇬🇧GB-82.38.31.35-0120
   - 美国/United States [https://t.me/s/V2rayCollector]
-  - 美国/United States [https://t.me/s/V2rayCollector] 2
   - FI【机场推荐：https://a9a.xyz】34
-  - NL【机场推荐：https://a9a.xyz】36
-  - 美国/北伯根/United States/North Bergen [https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/
-  - 日本/东京/Japan/Tokyo [https://t.me/s/V2rayCollector]
-  - NL【机场推荐：https://a9a.xyz】37
+  - 美国/United States [https://t.me/s/V2rayCollector] 2
   - US【机场推荐：https://a9a.xyz】27
   - NO【机场推荐：https://a9a.xyz】11
-  - 🇨🇦CA-51.222.155.113-0172
+  - 日本/东京/Japan/Tokyo [https://t.me/s/V2rayCollector]
   - 🏁RELAY-172.67.195.180-1138 | clashnodefree.com
   - 日本/东京/Japan/Tokyo [https://t.me/s/V2rayCollector] 2
-  - 🇬🇧GB-82.38.31.35-0120
+  - NO【机场推荐：https://a9a.xyz】26
+  - NL【机场推荐：https://a9a.xyz】37
 rules:
 - MATCH,AUTO
