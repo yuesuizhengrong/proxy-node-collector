@@ -23,10 +23,21 @@ Shadowrocket is a client, not a protocol. Its subscription includes the supporte
 ## How It Works
 
 1. Downloads URI, Base64, and Clash YAML sources from `config/sources.yaml`.
-2. Parses `ss`, `ssr`, `vmess`, `vless`, and `trojan` nodes.
-3. Removes duplicate nodes and keeps source metadata.
-4. Launches Mihomo in small batches and calls its controller delay endpoint for every candidate.
-5. Writes only successful probes to `data/` and commits the updated subscriptions.
+2. Collects from both GitHub-hosted sources and public non-GitHub websites.
+3. Parses `ss`, `ssr`, `vmess`, `vless`, and `trojan` nodes.
+4. Removes duplicate nodes and keeps source metadata.
+5. Launches Mihomo in small batches and calls its controller delay endpoint for every candidate.
+6. Writes only successful probes to `data/` and commits the updated subscriptions.
+
+## External Websites
+
+The configured non-GitHub sources currently include:
+
+- ClashNodeFree: `https://clashnodefree.com/`
+- XrayVIP: `https://www.xrayvip.com/`
+- FreeDatiya: `https://free.datiya.com/` (the `page` source follows the latest article and discovers its subscription URLs)
+
+Their direct subscription endpoints are listed in `config/sources.yaml`. The collector does not trust a node merely because it came from a website: every parsed node still has to pass the Mihomo connectivity test before it is published.
 
 ## Schedule
 
@@ -53,11 +64,12 @@ python -m proxy_node_collector --config config/sources.yaml --out-dir data --ski
 
 ## Configuration
 
-`config/sources.yaml` supports source formats `uri`, `base64`, `clash`, and `auto`. The test controls are:
+`config/sources.yaml` supports source formats `uri`, `base64`, `clash`, `page`, and `auto`. The test controls are:
 
 - `max_tested_nodes`: maximum number of deduplicated candidates tested in a run.
 - `mihomo_batch_size`: candidates loaded into each temporary Mihomo process.
 - `test_timeout_seconds`: delay probe timeout for a single node.
 - `probe_concurrency`: simultaneous controller probe requests.
+- `page_link_limit` and `page_payload_limit`: limits for discovering same-site article pages and subscription files from a `page` source.
 
 If an upstream source becomes unreliable, disable it or replace its URL in `config/sources.yaml`.
