@@ -29,6 +29,8 @@ Shadowrocket is a client, not a protocol. Its subscription includes the supporte
 5. Launches Mihomo in small batches and calls its controller delay endpoint for every candidate.
 6. Writes only successful probes to `data/` and commits the updated subscriptions.
 
+If a run tests zero working nodes, it fails without overwriting the previous subscription files. This prevents a temporary source outage or Mihomo/network failure from publishing an empty subscription.
+
 ## External Websites
 
 The configured non-GitHub sources currently include:
