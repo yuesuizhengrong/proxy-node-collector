@@ -1,8 +1,10 @@
 import base64
 import importlib.util
 import unittest
+from pathlib import Path
 
-from proxy_node_collector.cli import OUTPUT_FILES, build_subscriptions
+from proxy_node_collector.cli import OUTPUT_FILES, build_subscriptions, extract_page_links
+from proxy_node_collector.cli import load_config
 from proxy_node_collector.formats import (
     parse_source_content,
     parse_uri,
@@ -39,6 +41,30 @@ VMESS_PROXY = {
 
 
 class SubscriptionFormatTest(unittest.TestCase):
+    def test_extracts_same_page_subscription_links(self):
+        html = """
+        <a href="/post/20260824/">latest</a>
+        <pre>https://free.datiya.com/uploads/20260824-clash.yaml</pre>
+        <a href="https://other.example.invalid/node.txt">external</a>
+        """
+
+        links = extract_page_links(html, "https://free.datiya.com/")
+
+        self.assertIn("https://free.datiya.com/post/20260824/", links)
+        self.assertIn("https://free.datiya.com/uploads/20260824-clash.yaml", links)
+
+    def test_config_includes_non_github_sources(self):
+        _, sources = load_config(Path(__file__).parents[1] / "config" / "sources.yaml")
+        external_hosts = {
+            source.url.split("/", 3)[2].lower()
+            for source in sources
+            if "github.com" not in source.url.lower()
+        }
+
+        self.assertIn("clashnodefree.com", external_hosts)
+        self.assertIn("www.xrayvip.com", external_hosts)
+        self.assertTrue(any(source.format == "page" for source in sources))
+
     def test_ssr_uri_round_trip(self):
         uri = ssr_uri_from_proxy(SSR_PROXY, "SSR test")
 
