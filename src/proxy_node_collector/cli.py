@@ -5,10 +5,13 @@ import asyncio
 import base64
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
 from .formats import (
     dedupe_nodes,
@@ -29,6 +32,8 @@ DEFAULT_SETTINGS: dict[str, Any] = {
     "max_candidates_per_source": 3000,
     "max_tested_nodes": 500,
     "probe_concurrency": 20,
+    "page_link_limit": 4,
+    "page_payload_limit": 8,
     "user_agent": "proxy-node-collector/0.2",
     "test_url": "https://www.gstatic.com/generate_204",
 }
@@ -119,20 +124,10 @@ async def fetch_source(
     source: Source,
     settings: dict[str, Any],
 ) -> tuple[SourceResult, list[Node]]:
-    attempts = int(settings["source_retry_count"]) + 1
-    response: Any | None = None
-    error: str | None = None
-    for attempt in range(attempts):
-        try:
-            response = await client.get(source.url)
-            response.raise_for_status()
-            break
-        except Exception as exc:
-            detail = str(exc).strip()
-            error = f"{type(exc).__name__}: {detail}" if detail else type(exc).__name__
-            response = None
-            if attempt + 1 < attempts:
-                await asyncio.sleep(1.5 * (attempt + 1))
+    if source.format == "page":
+        return await fetch_web_page_source(client, source, settings)
+
+    response, error = await fetch_url(client, source.url, settings)
     if response is None:
         return SourceResult(source=source, ok=False, error=error), []
 
@@ -147,6 +142,185 @@ async def fetch_source(
         return SourceResult(source=source, ok=False, error=str(exc)), []
 
     return SourceResult(source=source, ok=True, parsed=len(parsed)), parsed
+
+
+async def fetch_url(
+    client: Any,
+    url: str,
+    settings: dict[str, Any],
+) -> tuple[Any | None, str | None]:
+    attempts = int(settings["source_retry_count"]) + 1
+    response: Any | None = None
+    error: str | None = None
+    for attempt in range(attempts):
+        try:
+            response = await client.get(url)
+            response.raise_for_status()
+            break
+        except Exception as exc:
+            detail = str(exc).strip()
+            error = f"{type(exc).__name__}: {detail}" if detail else type(exc).__name__
+            response = None
+            if attempt + 1 < attempts:
+                await asyncio.sleep(1.5 * (attempt + 1))
+    if response is None:
+        return None, error
+
+    return response, None
+
+
+async def fetch_web_page_source(
+    client: Any,
+    source: Source,
+    settings: dict[str, Any],
+) -> tuple[SourceResult, list[Node]]:
+    root_response, error = await fetch_url(client, source.url, settings)
+    if root_response is None:
+        return SourceResult(source=source, ok=False, error=error), []
+
+    page_limit = max(1, int(settings["page_link_limit"]))
+    payload_limit = max(1, int(settings["page_payload_limit"]))
+    page_urls = [source.url]
+    page_contents = {source.url: root_response.text}
+    seen_pages = {canonical_http_url(source.url)}
+    payload_urls: list[str] = []
+    seen_payloads: set[str] = set()
+    errors: list[str] = []
+
+    page_index = 0
+    while page_index < len(page_urls) and len(page_urls) <= page_limit:
+        page_url = page_urls[page_index]
+        page_index += 1
+        page_content = page_contents[page_url]
+        for link in extract_page_links(page_content, page_url):
+            if not same_origin(source.url, link):
+                continue
+            canonical = canonical_http_url(link)
+            if is_subscription_link(link):
+                if canonical not in seen_payloads and len(payload_urls) < payload_limit:
+                    seen_payloads.add(canonical)
+                    payload_urls.append(link)
+                continue
+            if (
+                len(page_urls) < page_limit
+                and canonical not in seen_pages
+                and is_article_link(link)
+            ):
+                page_response, page_error = await fetch_url(client, link, settings)
+                seen_pages.add(canonical)
+                if page_response is None:
+                    if page_error:
+                        errors.append(f"{link}: {page_error}")
+                    continue
+                page_urls.append(link)
+                page_contents[link] = page_response.text
+
+    if not payload_urls:
+        detail = "; ".join(errors) or "No subscription links found on page"
+        return SourceResult(source=source, ok=False, error=detail), []
+
+    nodes: list[Node] = []
+    successful_payloads = 0
+    for payload_url in payload_urls:
+        payload_response, payload_error = await fetch_url(client, payload_url, settings)
+        if payload_response is None:
+            if payload_error:
+                errors.append(f"{payload_url}: {payload_error}")
+            continue
+        successful_payloads += 1
+        remaining = int(settings["max_candidates_per_source"]) - len(nodes)
+        if remaining <= 0:
+            break
+        try:
+            nodes.extend(parse_source_content(payload_response.text, source.name, "auto", remaining))
+        except Exception as exc:
+            errors.append(f"{payload_url}: {exc}")
+
+    return (
+        SourceResult(
+            source=source,
+            ok=successful_payloads > 0,
+            parsed=len(nodes),
+            error="; ".join(errors) or None,
+        ),
+        nodes,
+    )
+
+
+class PageLinkParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.hrefs: list[str] = []
+        self.text_parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.lower() != "a":
+            return
+        for key, value in attrs:
+            if key.lower() == "href" and value:
+                self.hrefs.append(value)
+                break
+
+    def handle_data(self, data: str) -> None:
+        self.text_parts.append(data)
+
+
+def extract_page_links(content: str, base_url: str) -> list[str]:
+    parser = PageLinkParser()
+    parser.feed(content)
+    raw_links = list(parser.hrefs)
+    text = " ".join(parser.text_parts)
+    raw_links.extend(re.findall(r"https?://[^\s<>'\"]+", text))
+
+    links: list[str] = []
+    seen: set[str] = set()
+    for raw_link in raw_links:
+        cleaned = raw_link.strip().rstrip(".,;:!?)]}")
+        if not cleaned:
+            continue
+        absolute = urljoin(base_url, cleaned)
+        if urlsplit(absolute).scheme not in {"http", "https"}:
+            continue
+        canonical = canonical_http_url(absolute)
+        if canonical in seen:
+            continue
+        seen.add(canonical)
+        links.append(absolute)
+    return links
+
+
+def canonical_http_url(url: str) -> str:
+    parsed = urlsplit(url)
+    return urlunsplit((parsed.scheme.lower(), parsed.netloc.lower(), parsed.path, parsed.query, ""))
+
+
+def same_origin(left: str, right: str) -> bool:
+    left_parts = urlsplit(left)
+    right_parts = urlsplit(right)
+    return (
+        left_parts.scheme.lower() == right_parts.scheme.lower()
+        and left_parts.hostname
+        and left_parts.hostname.lower() == (right_parts.hostname or "").lower()
+    )
+
+
+def is_subscription_link(url: str) -> bool:
+    parsed = urlsplit(url)
+    path = parsed.path.lower()
+    query = parsed.query.lower()
+    return (
+        path.endswith((".yaml", ".yml", ".txt"))
+        or "/sub/" in path
+        or "/subscribe" in path
+        or "/uploads/" in path
+        or "format=clash" in query
+        or "format=base64" in query
+    )
+
+
+def is_article_link(url: str) -> bool:
+    path = urlsplit(url).path.rstrip("/").lower()
+    return path in {"", "/"} or path.startswith(("/post/", "/article/", "/archives/"))
 
 
 def build_subscriptions(nodes: list[Node]) -> dict[str, str]:
