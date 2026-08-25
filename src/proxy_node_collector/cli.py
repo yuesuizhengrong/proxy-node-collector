@@ -505,9 +505,23 @@ async def run(argv: list[str] | None = None) -> int:
         tested_nodes = await test_nodes_with_mihomo(nodes, mihomo_bin, settings)
         print(f"Tested {len(tested_nodes)} working nodes", file=sys.stderr)
 
+    ensure_publishable_results(tested_nodes, all_nodes=nodes, skip_test=args.skip_test)
     write_outputs(Path(args.out_dir), tested_nodes, nodes, source_results, settings, args.skip_test)
     print(f"Wrote outputs to {args.out_dir}", file=sys.stderr)
     return 0
+
+
+def ensure_publishable_results(
+    tested_nodes: list[TestedNode],
+    all_nodes: list[Node],
+    skip_test: bool,
+) -> None:
+    if skip_test or tested_nodes:
+        return
+    raise RuntimeError(
+        "Refusing to overwrite subscriptions: Mihomo tested 0 working nodes "
+        f"from {len(all_nodes)} candidates. This may be a temporary source or network failure."
+    )
 
 
 def utc_now() -> str:
