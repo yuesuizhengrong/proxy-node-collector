@@ -3,7 +3,12 @@ import importlib.util
 import unittest
 from pathlib import Path
 
-from proxy_node_collector.cli import OUTPUT_FILES, build_subscriptions, extract_page_links
+from proxy_node_collector.cli import (
+    OUTPUT_FILES,
+    build_subscriptions,
+    ensure_publishable_results,
+    extract_page_links,
+)
 from proxy_node_collector.cli import load_config
 from proxy_node_collector.formats import (
     parse_source_content,
@@ -52,6 +57,12 @@ class SubscriptionFormatTest(unittest.TestCase):
 
         self.assertIn("https://free.datiya.com/post/20260824/", links)
         self.assertIn("https://free.datiya.com/uploads/20260824-clash.yaml", links)
+
+    def test_refuses_to_publish_empty_test_results(self):
+        with self.assertRaisesRegex(RuntimeError, "Refusing to overwrite subscriptions"):
+            ensure_publishable_results([], [], skip_test=False)
+
+        ensure_publishable_results([], [], skip_test=True)
 
     def test_config_includes_non_github_sources(self):
         _, sources = load_config(Path(__file__).parents[1] / "config" / "sources.yaml")
