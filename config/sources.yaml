@@ -8,6 +8,8 @@ settings:
   max_candidates_per_source: 3000
   max_tested_nodes: 500
   probe_concurrency: 20
+  page_link_limit: 4
+  page_payload_limit: 8
   user_agent: "proxy-node-collector/0.2"
   test_url: "https://www.gstatic.com/generate_204"
 
@@ -45,4 +47,35 @@ sources:
   - name: "vless-reality-clash"
     url: "https://raw.githubusercontent.com/vless-reality/vless-reality.github.io/main/.github/links/clash.yaml"
     format: "clash"
+    enabled: true
+
+  # Non-GitHub public websites. These endpoints are parsed and tested like every other source.
+  - name: "clashnodefree-clash"
+    url: "https://clashnodefree.com/sub/clash.yml"
+    format: "clash"
+    enabled: true
+
+  - name: "clashnodefree-v2ray"
+    url: "https://clashnodefree.com/sub/v2ray.txt"
+    format: "base64"
+    enabled: true
+
+  - name: "clashnodefree-shadowrocket"
+    url: "https://clashnodefree.com/sub/shadowrocket.txt"
+    format: "base64"
+    enabled: true
+
+  - name: "clashnodefree-ssr"
+    url: "https://clashnodefree.com/sub/ssr.txt"
+    format: "base64"
+    enabled: true
+
+  - name: "xrayvip-base64"
+    url: "https://www.xrayvip.com/free.txt"
+    format: "base64"
+    enabled: true
+
+  - name: "free-datiya-web"
+    url: "https://free.datiya.com/"
+    format: "page"
     enabled: true
