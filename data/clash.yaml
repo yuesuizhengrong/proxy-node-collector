@@ -2,49 +2,6 @@ mixed-port: 7890
 mode: rule
 proxies:
 - type: vless
-  server: 173.230.155.55
-  port: 50900
-  uuid: 2c082e78-bd9d-4960-b9f3-cde0040cb4f3
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amd.com
-  reality-opts:
-    public-key: vdE4t2bYhYun6fZ9Weu_f6MXtsmq8iJ7XQBUj62scR0
-    short-id: 12fa394e28d52011
-  client-fingerprint: chrome
-  name: 🇺🇸 United States/Fremont [TG]
-- type: vless
-  server: 108.162.198.178
-  port: 80
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  name: 🇺🇸 United States/San Francisco [GH:Pawdroid/Free-servers]
-- server: 108.181.0.177
-  port: 8388
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
-  name: 🇺🇸US-108.181.0.177-0084
-- type: vless
-  server: 172.64.53.74
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: 🇺🇸 United States/San Francisco [TG]
-- type: vless
   server: 108.162.198.178
   port: 80
   udp: true
@@ -68,19 +25,35 @@ proxies:
       Host: hhlfy.twiladaphne.ndjp.net
   name: '🇺🇸 United States/San Francisco [GH:MatinGhanbari/v2ray-conf] #3'
 - type: vless
-  server: 172.64.53.74
-  port: 2087
+  server: 108.162.198.178
+  port: 80
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: 🇺🇸 United States/San Francisco [GH:Pawdroid/Free-servers]
+- type: vless
+  server: 172.64.53.74
+  port: 2087
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
   tls: true
   servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
+  network: ws
   ws-opts:
     path: /
     headers:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: United States/San Francisco [TG]
+  name: 🇺🇸 United States/San Francisco [TG]
+- server: 108.181.0.177
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: G5p6ww4o67HB
+  name: 🇺🇸US-108.181.0.177-0098
 - type: vless
   server: 172.64.150.28
   port: 2082
@@ -95,17 +68,32 @@ proxies:
       Host: hhlfy.twiladaphne.ndjp.net
   name: 'United States/San Francisco [GH:MatinGhanbari/v2ray-conf] #3'
 - type: vless
-  server: 47.253.226.114
-  port: 443
-  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
+  server: 173.230.155.55
+  port: 50900
+  uuid: 2c082e78-bd9d-4960-b9f3-cde0040cb4f3
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: www.cloudflare.com
+  servername: www.amd.com
   reality-opts:
-    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
+    public-key: vdE4t2bYhYun6fZ9Weu_f6MXtsmq8iJ7XQBUj62scR0
+    short-id: 12fa394e28d52011
   client-fingerprint: chrome
-  name: 🇺🇸 United States [GH:MatinGhanbari/v2ray-conf]
+  name: 🇺🇸 United States/Fremont [TG]
+- type: vless
+  server: 172.64.53.74
+  port: 2087
+  udp: true
+  network: ws
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: United States/San Francisco [TG]
 - type: vless
   server: 47.89.186.170
   port: 55861
@@ -134,17 +122,18 @@ proxies:
   client-fingerprint: firefox
   name: 🇺🇸 United States [TG]
 - type: vless
-  server: 137.184.218.169
-  port: 36925
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  server: 169.40.42.212
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: www.cloudflare.com
+  servername: yahoo.com
   reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
   client-fingerprint: chrome
-  name: 🇺🇸 United States/North Bergen [TG]
+  name: 🇩🇪 Germany [TG]
 - type: vless
   server: 137.184.218.169
   port: 36925
@@ -159,18 +148,112 @@ proxies:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
   name: United States/North Bergen [TG]
 - type: vless
-  server: 169.40.42.212
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  server: 137.184.218.169
+  port: 36925
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: yahoo.com
+  servername: www.cloudflare.com
   reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
   client-fingerprint: chrome
-  name: 🇩🇪 Germany [TG]
+  name: 🇺🇸 United States/North Bergen [TG]
+- type: vless
+  server: 13.230.66.70
+  port: 23607
+  udp: true
+  network: tcp
+  uuid: babf64f8-f9ee-4564-a097-16433f2ebd46
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.tesla.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: liATkHCbR_IPjdgOhHK5nZO6fgCO091bTab3v2G8Lm4
+    short-id: 701b0c5c9dee514d
+  name: 'Japan/Tokyo [TG] #3'
+- type: vless
+  server: 18.177.61.231
+  port: 30203
+  udp: true
+  network: tcp
+  uuid: 0346a35f-8e11-4b33-852d-00fa9c642878
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.sony.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: dsJ2WwzENgTAgd8okJPXLpwzdsDjU67mBEnhUhgvvTk
+    short-id: 40150721499a92
+  name: Japan/Tokyo [GH:MatinGhanbari/v2ray-conf]
+- type: vless
+  server: 18.178.233.232
+  port: 16138
+  uuid: 3fd01721-c3e7-4205-9b2c-4eb1f8f8578d
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.sony.com
+  reality-opts:
+    public-key: WVECuhHY1uql8Rwwmo10t72L1s_l-03b23w0gY2PDkI
+    short-id: 6305d3c1a69dc2
+  client-fingerprint: chrome
+  name: '🇯🇵 Japan/Tokyo [TG] #2'
+- type: vless
+  server: 18.178.233.232
+  port: 16138
+  udp: true
+  network: tcp
+  uuid: 3fd01721-c3e7-4205-9b2c-4eb1f8f8578d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.sony.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: WVECuhHY1uql8Rwwmo10t72L1s_l-03b23w0gY2PDkI
+    short-id: 6305d3c1a69dc2
+  name: 'Japan/Tokyo [TG] #2'
+- type: vless
+  server: 13.230.66.70
+  port: 23607
+  uuid: babf64f8-f9ee-4564-a097-16433f2ebd46
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.tesla.com
+  reality-opts:
+    public-key: liATkHCbR_IPjdgOhHK5nZO6fgCO091bTab3v2G8Lm4
+    short-id: 701b0c5c9dee514d
+  client-fingerprint: chrome
+  name: '🇯🇵 Japan/Tokyo [TG] #3'
+- type: vless
+  server: 18.177.61.231
+  port: 30203
+  uuid: 0346a35f-8e11-4b33-852d-00fa9c642878
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.sony.com
+  reality-opts:
+    public-key: dsJ2WwzENgTAgd8okJPXLpwzdsDjU67mBEnhUhgvvTk
+    short-id: 40150721499a92
+  client-fingerprint: firefox
+  name: 🇯🇵 Japan/Tokyo [GH:MatinGhanbari/v2ray-conf]
+- type: vless
+  server: 57.180.21.90
+  port: 32114
+  udp: true
+  network: tcp
+  uuid: 8d644890-a8cd-46e5-a318-f2e64cce7a60
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amd.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: zsxQcqhGeGLxY7Y8PYZ0LyYvD3lJgRYd8FHp3WI9mSU
+    short-id: 9bdea8e40dba4c
+  name: 'Japan/Tokyo [TG] #4'
 - type: vless
   server: 13.114.124.85
   port: 18614
@@ -200,60 +283,6 @@ proxies:
     short-id: d5cd4778d2da33
   name: UN【机场推荐：https://a9a.xyz】92
 - type: vless
-  server: 18.178.233.232
-  port: 16138
-  uuid: 3fd01721-c3e7-4205-9b2c-4eb1f8f8578d
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.sony.com
-  reality-opts:
-    public-key: WVECuhHY1uql8Rwwmo10t72L1s_l-03b23w0gY2PDkI
-    short-id: 6305d3c1a69dc2
-  client-fingerprint: chrome
-  name: '🇯🇵 Japan/Tokyo [TG] #2'
-- type: vless
-  server: 13.230.66.70
-  port: 23607
-  udp: true
-  network: tcp
-  uuid: babf64f8-f9ee-4564-a097-16433f2ebd46
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.tesla.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: liATkHCbR_IPjdgOhHK5nZO6fgCO091bTab3v2G8Lm4
-    short-id: 701b0c5c9dee514d
-  name: 'Japan/Tokyo [TG] #3'
-- type: vless
-  server: 18.178.233.232
-  port: 16138
-  udp: true
-  network: tcp
-  uuid: 3fd01721-c3e7-4205-9b2c-4eb1f8f8578d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.sony.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: WVECuhHY1uql8Rwwmo10t72L1s_l-03b23w0gY2PDkI
-    short-id: 6305d3c1a69dc2
-  name: 'Japan/Tokyo [TG] #2'
-- type: vless
-  server: 13.230.66.70
-  port: 23607
-  uuid: babf64f8-f9ee-4564-a097-16433f2ebd46
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.tesla.com
-  reality-opts:
-    public-key: liATkHCbR_IPjdgOhHK5nZO6fgCO091bTab3v2G8Lm4
-    short-id: 701b0c5c9dee514d
-  client-fingerprint: chrome
-  name: '🇯🇵 Japan/Tokyo [TG] #3'
-- type: vless
   server: 57.180.21.90
   port: 32114
   uuid: 8d644890-a8cd-46e5-a318-f2e64cce7a60
@@ -266,56 +295,6 @@ proxies:
     short-id: 9bdea8e40dba4c
   client-fingerprint: firefox
   name: '🇯🇵 Japan/Tokyo [TG] #4'
-- type: vless
-  server: 57.180.21.90
-  port: 32114
-  udp: true
-  network: tcp
-  uuid: 8d644890-a8cd-46e5-a318-f2e64cce7a60
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amd.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: zsxQcqhGeGLxY7Y8PYZ0LyYvD3lJgRYd8FHp3WI9mSU
-    short-id: 9bdea8e40dba4c
-  name: 'Japan/Tokyo [TG] #4'
-- type: ss
-  server: 82.38.31.35
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-  name: 🇬🇧GB-82.38.31.35-0108
-- type: vless
-  server: 18.177.61.231
-  port: 30203
-  udp: true
-  network: tcp
-  uuid: 0346a35f-8e11-4b33-852d-00fa9c642878
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.sony.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: dsJ2WwzENgTAgd8okJPXLpwzdsDjU67mBEnhUhgvvTk
-    short-id: 40150721499a92
-  name: Japan/Tokyo [GH:MatinGhanbari/v2ray-conf]
-- type: vless
-  server: 31.76.91.72
-  port: 2087
-  udp: true
-  network: grpc
-  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
-  tls: true
-  servername: ads.x5.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
-    short-id: c226283c4de5b1ad
-  grpc-opts:
-    grpc-service-name: grpc
-  name: Japan/Tokyo [TG]
 - type: vless
   server: 52.221.220.242
   port: 22872
@@ -359,6 +338,18 @@ proxies:
     short-id: cc7a57d36b14c736
   name: UN【机场推荐：https://a9a.xyz】95
 - type: vless
+  server: hinet1.2yly.com
+  port: 24215
+  udp: true
+  network: tcp
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  name: TW【机场推荐：https://a9a.xyz】1
+- type: vless
   server: public-auth.savesafe.cc
   port: 443
   udp: true
@@ -373,18 +364,20 @@ proxies:
     short-id: c37c2ae6f6eb0d71
   name: UN【机场推荐：https://a9a.xyz】91
 - type: vless
-  server: 18.177.61.231
-  port: 30203
-  uuid: 0346a35f-8e11-4b33-852d-00fa9c642878
+  server: 31.76.91.72
+  port: 2087
   udp: true
-  flow: xtls-rprx-vision
+  network: grpc
+  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
   tls: true
-  servername: www.sony.com
+  servername: ads.x5.ru
+  client-fingerprint: chrome
   reality-opts:
-    public-key: dsJ2WwzENgTAgd8okJPXLpwzdsDjU67mBEnhUhgvvTk
-    short-id: 40150721499a92
-  client-fingerprint: firefox
-  name: 🇯🇵 Japan/Tokyo [GH:MatinGhanbari/v2ray-conf]
+    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
+    short-id: c226283c4de5b1ad
+  grpc-opts:
+    grpc-service-name: grpc
+  name: Japan/Tokyo [TG]
 - type: vless
   server: whatismyipaddress.com
   port: 443
@@ -397,24 +390,13 @@ proxies:
   - h2
   client-fingerprint: chrome
   name: UN【机场推荐：https://a9a.xyz】98
-- server: 194.87.47.204
-  port: 10901
-  type: ss
-  cipher: aes-256-gcm
-  password: d1fa2f4b98a38bc8
-  name: 🇮🇹IT-194.87.47.204-0172
-- type: vless
-  server: hinet1.2yly.com
-  port: 24215
+- type: ss
+  server: 82.38.31.35
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-  network: tcp
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-  tls: true
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
-  name: TW【机场推荐：https://a9a.xyz】1
+  name: 🇬🇧GB-82.38.31.35-0067
 - type: vless
   server: fin2.helper-internet.com
   port: 443
@@ -443,63 +425,42 @@ proxies:
     public-key: qVNutDFjEp3v2wjeUl_Yy6l9TXawXfSjAsFj3iktmRA
     short-id: 2c4d005b
   name: UN【机场推荐：https://a9a.xyz】100
-- server: 51.222.155.113
-  port: 5601
-  type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  name: 🇨🇦CA-51.222.155.113-0167
-- type: vless
-  server: 18.239.134.69
-  port: 80
-  udp: true
-  network: ws
-  uuid: de27291c-15a9-4256-9ba7-ad517569877e
-  ws-opts:
-    path: /
-    headers:
-      Host: d2e1v87ko56lyw.cloudfront.net:assets.opensignal.com
-  name: UN【机场推荐：https://a9a.xyz】89
 proxy-groups:
 - name: AUTO
   type: select
   proxies:
-  - 🇺🇸 United States/Fremont [TG]
-  - 🇺🇸 United States/San Francisco [GH:Pawdroid/Free-servers]
-  - 🇺🇸US-108.181.0.177-0084
-  - 🇺🇸 United States/San Francisco [TG]
   - United States/San Francisco [GH:Pawdroid/Free-servers]
   - '🇺🇸 United States/San Francisco [GH:MatinGhanbari/v2ray-conf] #3'
-  - United States/San Francisco [TG]
+  - 🇺🇸 United States/San Francisco [GH:Pawdroid/Free-servers]
+  - 🇺🇸 United States/San Francisco [TG]
+  - 🇺🇸US-108.181.0.177-0098
   - 'United States/San Francisco [GH:MatinGhanbari/v2ray-conf] #3'
-  - 🇺🇸 United States [GH:MatinGhanbari/v2ray-conf]
+  - 🇺🇸 United States/Fremont [TG]
+  - United States/San Francisco [TG]
   - United States [TG]
   - 🇺🇸 United States [TG]
-  - 🇺🇸 United States/North Bergen [TG]
-  - United States/North Bergen [TG]
   - 🇩🇪 Germany [TG]
-  - UN【机场推荐：https://a9a.xyz】93
-  - UN【机场推荐：https://a9a.xyz】92
-  - '🇯🇵 Japan/Tokyo [TG] #2'
+  - United States/North Bergen [TG]
+  - 🇺🇸 United States/North Bergen [TG]
   - 'Japan/Tokyo [TG] #3'
+  - Japan/Tokyo [GH:MatinGhanbari/v2ray-conf]
+  - '🇯🇵 Japan/Tokyo [TG] #2'
   - 'Japan/Tokyo [TG] #2'
   - '🇯🇵 Japan/Tokyo [TG] #3'
-  - '🇯🇵 Japan/Tokyo [TG] #4'
+  - 🇯🇵 Japan/Tokyo [GH:MatinGhanbari/v2ray-conf]
   - 'Japan/Tokyo [TG] #4'
-  - 🇬🇧GB-82.38.31.35-0108
-  - Japan/Tokyo [GH:MatinGhanbari/v2ray-conf]
-  - Japan/Tokyo [TG]
+  - UN【机场推荐：https://a9a.xyz】93
+  - UN【机场推荐：https://a9a.xyz】92
+  - '🇯🇵 Japan/Tokyo [TG] #4'
   - UN【机场推荐：https://a9a.xyz】94
   - UN【机场推荐：https://a9a.xyz】96
   - UN【机场推荐：https://a9a.xyz】95
-  - UN【机场推荐：https://a9a.xyz】91
-  - 🇯🇵 Japan/Tokyo [GH:MatinGhanbari/v2ray-conf]
-  - UN【机场推荐：https://a9a.xyz】98
-  - 🇮🇹IT-194.87.47.204-0172
   - TW【机场推荐：https://a9a.xyz】1
+  - UN【机场推荐：https://a9a.xyz】91
+  - Japan/Tokyo [TG]
+  - UN【机场推荐：https://a9a.xyz】98
+  - 🇬🇧GB-82.38.31.35-0067
   - UN【机场推荐：https://a9a.xyz】87
   - UN【机场推荐：https://a9a.xyz】100
-  - 🇨🇦CA-51.222.155.113-0167
-  - UN【机场推荐：https://a9a.xyz】89
 rules:
 - MATCH,AUTO
