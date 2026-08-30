@@ -2,6 +2,33 @@ mixed-port: 7890
 mode: rule
 proxies:
 - type: vless
+  server: 45.33.62.166
+  port: 43595
+  uuid: 2642f590-2bce-4031-8f93-7eed983621f5
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amd.com
+  reality-opts:
+    public-key: waNzNRIL_3TaF3UfgeAy1M5r8YVUeOA0nx3jPiXYZSE
+    short-id: e482c0320674c651
+  client-fingerprint: firefox
+  name: 🇺🇸 United States/Fremont [GH:4n0nymou3/multi-proxy-co]
+- type: vless
+  server: 45.33.62.166
+  port: 43595
+  udp: true
+  network: raw
+  uuid: 2642f590-2bce-4031-8f93-7eed983621f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amd.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: waNzNRIL_3TaF3UfgeAy1M5r8YVUeOA0nx3jPiXYZSE
+    short-id: e482c0320674c651
+  name: United States/Fremont [GH:4n0nymou3/multi-proxy-co]
+- type: vless
   server: 162.159.43.187
   port: 2082
   udp: true
@@ -12,6 +39,80 @@ proxies:
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   name: 'United States/San Francisco [TG] #2'
+- server: 108.181.0.177
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: G5p6ww4o67HB
+  name: 🇺🇸US-108.181.0.177-0139
+- type: vless
+  server: 172.233.156.42
+  port: 12668
+  uuid: 1990630e-c2cf-4d1f-bba0-a51423df89a9
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.tesla.com
+  reality-opts:
+    public-key: 3sM_YEGrVBcvVyTzs6wes0zYq3GSGYbDfgkseWaYFmU
+    short-id: 7403a0a9d45e89
+  client-fingerprint: firefox
+  name: 🇺🇸 United States/Los Angeles [GH:4n0nymou3/multi-proxy-co]
+- type: vless
+  server: 172.64.145.93
+  port: 2087
+  udp: true
+  network: ws
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: fx3h2kf8xn.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
+  name: United States/San Francisco [TG]
+- type: vless
+  server: 172.233.156.42
+  port: 12668
+  udp: true
+  network: raw
+  uuid: 1990630e-c2cf-4d1f-bba0-a51423df89a9
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.tesla.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 3sM_YEGrVBcvVyTzs6wes0zYq3GSGYbDfgkseWaYFmU
+    short-id: 7403a0a9d45e89
+  name: United States/Los Angeles [GH:4n0nymou3/multi-proxy-co]
+- type: vless
+  server: 172.64.52.230
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: 🇺🇸 United States/San Francisco [GH:Pawdroid/Free-servers]
+- type: vless
+  server: 172.64.52.230
+  port: 2087
+  udp: true
+  network: ws
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: United States/San Francisco [GH:Pawdroid/Free-servers]
 - type: vless
   server: 172.64.145.93
   port: 2087
@@ -26,18 +127,19 @@ proxies:
       Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
   name: 🇺🇸 United States/San Francisco [TG]
 - type: vless
-  server: 172.64.52.230
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  server: 47.89.186.170
+  port: 55861
   udp: true
+  network: tcp
+  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
+  flow: xtls-rprx-vision
   tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: 🇺🇸 United States/San Francisco [GH:Pawdroid/Free-servers]
+  servername: www.intel.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
+    short-id: 7551ed1b
+  name: United States [GH:youfoundamin/V2rayCollec]
 - type: vless
   server: 47.89.186.170
   port: 55861
@@ -65,20 +167,6 @@ proxies:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
   name: United States/North Bergen [TG]
 - type: vless
-  server: 172.64.145.93
-  port: 2087
-  udp: true
-  network: ws
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  tls: true
-  servername: fx3h2kf8xn.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
-  name: United States/San Francisco [TG]
-- type: vless
   server: 137.184.218.169
   port: 36925
   uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
@@ -90,34 +178,6 @@ proxies:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
   client-fingerprint: chrome
   name: 🇺🇸 United States/North Bergen [TG]
-- type: vless
-  server: 172.64.52.230
-  port: 2087
-  udp: true
-  network: ws
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: United States/San Francisco [GH:Pawdroid/Free-servers]
-- type: vless
-  server: 38.77.133.141
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 0eb057bc-f4b2-425b-80c9-1ed982916480
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: safari
-  reality-opts:
-    public-key: mdw878be71y6U91o8i8ZruIkVILhcKf43yO98TGXZgo
-    short-id: bcef3e3d8584fa99
-  name: UN【机场推荐：https://a9a.xyz】56
 - type: vless
   server: 169.40.42.212
   port: 443
@@ -132,81 +192,33 @@ proxies:
   client-fingerprint: chrome
   name: 🇩🇪 Germany [TG]
 - type: vless
-  server: 47.89.186.170
-  port: 55861
+  server: 13.114.124.85
+  port: 18614
   udp: true
   network: tcp
-  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.intel.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
-    short-id: 7551ed1b
-  name: United States [GH:youfoundamin/V2rayCollec]
-- server: 108.181.0.177
-  port: 8388
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
-  name: 🇺🇸US-108.181.0.177-0139
-- type: vless
-  server: 172.236.252.35
-  port: 46645
-  udp: true
-  network: tcp
-  uuid: 3b769a8b-1c42-4c1d-9113-f90e81019c42
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.sony.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: eKBdozYN5nEXV3nGPsKSjHkrzc4BsFrOntoq0QsD7hE
-    short-id: 257df5aa7bfbe5c2
-  name: UN【机场推荐：https://a9a.xyz】55
-- type: vless
-  server: 192.155.87.188
-  port: 10092
-  udp: true
-  network: tcp
-  uuid: a0b4d03b-b561-46aa-96f6-d03fa222a65e
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amd.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: EUpz9wKWgGn74jxYUKDbk87UwDGEYeCiaZg13m36ki0
-    short-id: e482c0320674c651
-  name: US【机场推荐：https://a9a.xyz】41
-- type: vless
-  server: 45.33.62.166
-  port: 43595
-  udp: true
-  network: raw
-  uuid: 2642f590-2bce-4031-8f93-7eed983621f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amd.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: waNzNRIL_3TaF3UfgeAy1M5r8YVUeOA0nx3jPiXYZSE
-    short-id: e482c0320674c651
-  name: United States/Fremont [GH:4n0nymou3/multi-proxy-co]
-- type: vless
-  server: 192.81.131.225
-  port: 11256
-  udp: true
-  network: tcp
-  uuid: 4817e138-8370-4fdd-aa59-36a6ec0247e2
+  uuid: 926912d3-1656-4e83-9971-411b283f7998
   flow: xtls-rprx-vision
   tls: true
   servername: www.tesla.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: TgKDlrMB3_LCRs_WBX4OMnt87rPc4XVqaPhEAtoXhDc
-    short-id: 352a7bbcc1ceeb
-  name: UN【机场推荐：https://a9a.xyz】57
+    public-key: w0jjW_RLHvQc2tk_7sbxfBawdMlJZfb7rKROwg051gA
+    short-id: c6966bed91ecd9
+  name: UN【机场推荐：https://a9a.xyz】93
+- type: vless
+  server: 35.77.87.249
+  port: 42263
+  udp: true
+  network: tcp
+  uuid: 37c00ed0-de07-4c7d-a4cf-049805c98713
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.sony.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: lLbzgXK1hx6K2J6rDUARlzZzjWqVXMjIhHsKmgEQI0U
+    short-id: d5cd4778d2da33
+  name: UN【机场推荐：https://a9a.xyz】92
 - type: ss
   server: 82.38.31.35
   port: 8080
@@ -221,6 +233,18 @@ proxies:
   udp: true
   name: 🇫🇮 Finland/Helsinki [TG]
 - type: vless
+  server: whatismyipaddress.com
+  port: 443
+  udp: true
+  network: xhttp
+  uuid: 903bb12e-ac86-414c-adf1-b9c41e213da8
+  tls: true
+  servername: Brackhollow.lacicasa.website
+  alpn:
+  - h2
+  client-fingerprint: chrome
+  name: UN【机场推荐：https://a9a.xyz】98
+- type: vless
   server: 65.109.215.50
   port: 39633
   udp: true
@@ -228,122 +252,114 @@ proxies:
   uuid: 845a492d-21e6-4cc0-abbb-b66813a163c0
   name: Finland/Helsinki [TG]
 - type: vless
-  server: 52.197.69.21
-  port: 16205
-  udp: true
-  network: tcp
-  uuid: 3927f763-dc90-4053-a912-318de0dc6c03
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.sony.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: antFLxN2FVR4W3xuriF20IyIy78Njg4W65kqlSxDqDg
-    short-id: 98697585244e
-  name: UN【机场推荐：https://a9a.xyz】45
-- type: vless
-  server: 43.206.235.72
-  port: 15476
-  udp: true
-  network: tcp
-  uuid: fa0286aa-e023-4f20-b634-e61e1e8c32aa
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.nvidia.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: PxNPEPC__Sfi1XH112Dj3H5kvFJZr3ckhi6oRwr4TmU
-    short-id: db1331e5c9c3f0
-  name: JP【机场推荐：https://a9a.xyz】46
-- type: vless
-  server: 47.129.204.35
-  port: 58335
-  udp: true
-  network: tcp
-  uuid: 0f4ce6d4-b4b4-41b9-b1e7-c109ad32b274
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.tesla.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 5uFce3cR8rT889d0IDLpENoFf9OnFXaOoO9B8mI8cWQ
-    short-id: 6ce3397cbd5ada
-  name: UN【机场推荐：https://a9a.xyz】51
-- type: vless
-  server: 18.136.125.3
-  port: 54618
-  udp: true
-  network: tcp
-  uuid: 5b314c69-b427-4648-a8aa-6c38bc87fdc7
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amd.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: BugMYB6c9k66FOr1dTMnkojMXH5OCYP2wDH2nntWGgk
-    short-id: 93ed34c8eea01f
-  name: UN【机场推荐：https://a9a.xyz】52
-- type: vless
-  server: 13.212.45.128
-  port: 12322
-  udp: true
-  network: tcp
-  uuid: a2d84cff-5a0f-4559-b793-355d363a4738
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.nvidia.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: AG7GDrwsSNOf3mXfGVRSKBwszQFJ_QDxqQPHlyN-HAw
-    short-id: 5b89483cf98148
-  name: UN【机场推荐：https://a9a.xyz】50
-- type: vless
-  server: 18.239.134.69
-  port: 80
-  udp: true
-  network: ws
-  uuid: de27291c-15a9-4256-9ba7-ad517569877e
-  ws-opts:
-    path: /
-    headers:
-      Host: d2e1v87ko56lyw.cloudfront.net:assets.opensignal.com
-  name: TH【机场推荐：https://a9a.xyz】36
-- type: vless
-  server: 51.158.236.122
-  port: 8080
-  udp: true
-  network: ws
-  uuid: 11af1c47-865a-47c6-92ff-118013655d78
-  ws-opts:
-    path: /?ed=2048
-  name: UN【机场推荐：https://a9a.xyz】49
-- type: vless
-  server: 31.76.70.32
+  server: public-auth.savesafe.cc
   port: 443
   udp: true
   network: tcp
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
   flow: xtls-rprx-vision
   tls: true
-  servername: baltic.cendora.ru
+  servername: public-auth.savesafe.cc
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: YULPgY4Knu4LVqKcc2uhzTcndqIWWKr74W1dVXcLQ0c
+    short-id: c37c2ae6f6eb0d71
+  name: UN【机场推荐：https://a9a.xyz】91
+- type: vless
+  server: hinet1.2yly.com
+  port: 24215
+  udp: true
+  network: tcp
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  servername: addons.mozilla.org
   client-fingerprint: chrome
   reality-opts:
-    public-key: t_qv0VOfWhKZJV_giGC55-ipgHYWo44Yfvik_B8T8ik
-    short-id: 4a46213c935e2ee4
-  name: US【机场推荐：https://a9a.xyz】20
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  name: TW【机场推荐：https://a9a.xyz】1
 - type: vless
-  server: 45.33.62.166
-  port: 43595
-  uuid: 2642f590-2bce-4031-8f93-7eed983621f5
+  server: 52.221.220.242
+  port: 22872
   udp: true
+  network: tcp
+  uuid: 8abb4009-5efe-4d27-aa56-d50c37d2b1b8
   flow: xtls-rprx-vision
   tls: true
-  servername: www.amd.com
-  reality-opts:
-    public-key: waNzNRIL_3TaF3UfgeAy1M5r8YVUeOA0nx3jPiXYZSE
-    short-id: e482c0320674c651
+  servername: www.intel.com
   client-fingerprint: firefox
-  name: 🇺🇸 United States/Fremont [GH:4n0nymou3/multi-proxy-co]
+  reality-opts:
+    public-key: RSikfX950b5w04iH_VvXYAkC5zku5qilSsSIJoXzyhc
+    short-id: 2798448b96fff0e0
+  name: UN【机场推荐：https://a9a.xyz】94
+- type: vless
+  server: fin2.helper-internet.com
+  port: 443
+  udp: true
+  network: tcp
+  uuid: ae8e0f7d-b661-41ca-b55d-d8c383adb2f8
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fin2.helper-internet.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE
+    short-id: ff776ff77be48b88
+  name: UN【机场推荐：https://a9a.xyz】87
+- type: vless
+  server: 47.128.81.182
+  port: 20859
+  udp: true
+  network: tcp
+  uuid: dc513ed7-87d0-4309-947a-30b3f89a51c6
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.amazon.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: y1neNdTfDZJDNmNAsexkDXyd8plDxbRr7TH5RBiAJA8
+    short-id: cc7a57d36b14c736
+  name: UN【机场推荐：https://a9a.xyz】95
+- type: vless
+  server: 47.128.248.109
+  port: 20440
+  udp: true
+  network: tcp
+  uuid: 127f98dc-cc3a-48d4-8224-9a9c80e13d5e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.nvidia.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: gt0qpR8MQY1hrYZDmHwtMcESvcDbFWtjKirUqSCoUwA
+    short-id: 816de7fe3de8b0
+  name: UN【机场推荐：https://a9a.xyz】96
+- server: 194.87.47.204
+  port: 10901
+  type: ss
+  cipher: aes-256-gcm
+  password: d1fa2f4b98a38bc8
+  name: 🇮🇹IT-194.87.47.204-0219
+- type: vless
+  server: hkayydswnnds.cfooov.xyz
+  port: 38218
+  udp: true
+  network: tcp
+  uuid: 0234cdd9-35ee-40a5-b698-9820f09a04f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 03hWBp-xwElEmilVxbhasf1Al0MZnvARUr4zclCV6S0
+    short-id: 30752ffd01a85649
+  name: HK【机场推荐：https://a9a.xyz】3
+- server: 5.180.21.146
+  port: 4443
+  type: trojan
+  password: owefv0_92Z540k2F_nx83245_J9130oS_tY
+  sni: borat-hopp.bumbleshrimp.com
+  skip-cert-verify: false
+  name: 🇰🇿KZ-5.180.21.146-0173
 - type: vless
   server: nian.001.url111.kcloud02.top
   port: 15007
@@ -357,39 +373,41 @@ proxies:
   reality-opts:
     public-key: qVNutDFjEp3v2wjeUl_Yy6l9TXawXfSjAsFj3iktmRA
     short-id: 2c4d005b
-  name: UN【机场推荐：https://a9a.xyz】59
+  name: UN【机场推荐：https://a9a.xyz】100
 proxy-groups:
 - name: AUTO
   type: select
   proxies:
+  - 🇺🇸 United States/Fremont [GH:4n0nymou3/multi-proxy-co]
+  - United States/Fremont [GH:4n0nymou3/multi-proxy-co]
   - 'United States/San Francisco [TG] #2'
-  - 🇺🇸 United States/San Francisco [TG]
+  - 🇺🇸US-108.181.0.177-0139
+  - 🇺🇸 United States/Los Angeles [GH:4n0nymou3/multi-proxy-co]
+  - United States/San Francisco [TG]
+  - United States/Los Angeles [GH:4n0nymou3/multi-proxy-co]
   - 🇺🇸 United States/San Francisco [GH:Pawdroid/Free-servers]
+  - United States/San Francisco [GH:Pawdroid/Free-servers]
+  - 🇺🇸 United States/San Francisco [TG]
+  - United States [GH:youfoundamin/V2rayCollec]
   - 🇺🇸 United States [GH:youfoundamin/V2rayCollec]
   - United States/North Bergen [TG]
-  - United States/San Francisco [TG]
   - 🇺🇸 United States/North Bergen [TG]
-  - United States/San Francisco [GH:Pawdroid/Free-servers]
-  - UN【机场推荐：https://a9a.xyz】56
   - 🇩🇪 Germany [TG]
-  - United States [GH:youfoundamin/V2rayCollec]
-  - 🇺🇸US-108.181.0.177-0139
-  - UN【机场推荐：https://a9a.xyz】55
-  - US【机场推荐：https://a9a.xyz】41
-  - United States/Fremont [GH:4n0nymou3/multi-proxy-co]
-  - UN【机场推荐：https://a9a.xyz】57
+  - UN【机场推荐：https://a9a.xyz】93
+  - UN【机场推荐：https://a9a.xyz】92
   - 🇬🇧GB-82.38.31.35-0125
   - 🇫🇮 Finland/Helsinki [TG]
+  - UN【机场推荐：https://a9a.xyz】98
   - Finland/Helsinki [TG]
-  - UN【机场推荐：https://a9a.xyz】45
-  - JP【机场推荐：https://a9a.xyz】46
-  - UN【机场推荐：https://a9a.xyz】51
-  - UN【机场推荐：https://a9a.xyz】52
-  - UN【机场推荐：https://a9a.xyz】50
-  - TH【机场推荐：https://a9a.xyz】36
-  - UN【机场推荐：https://a9a.xyz】49
-  - US【机场推荐：https://a9a.xyz】20
-  - 🇺🇸 United States/Fremont [GH:4n0nymou3/multi-proxy-co]
-  - UN【机场推荐：https://a9a.xyz】59
+  - UN【机场推荐：https://a9a.xyz】91
+  - TW【机场推荐：https://a9a.xyz】1
+  - UN【机场推荐：https://a9a.xyz】94
+  - UN【机场推荐：https://a9a.xyz】87
+  - UN【机场推荐：https://a9a.xyz】95
+  - UN【机场推荐：https://a9a.xyz】96
+  - 🇮🇹IT-194.87.47.204-0219
+  - HK【机场推荐：https://a9a.xyz】3
+  - 🇰🇿KZ-5.180.21.146-0173
+  - UN【机场推荐：https://a9a.xyz】100
 rules:
 - MATCH,AUTO
