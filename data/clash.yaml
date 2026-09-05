@@ -2,31 +2,24 @@ mixed-port: 7890
 mode: rule
 proxies:
 - type: vless
-  server: 47.253.226.114
-  port: 443
-  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
-  client-fingerprint: chrome
-  name: 🇺🇸 United States [GH:MatinGhanbari/v2ray-conf]
-- type: vless
-  server: 172.64.145.93
+  server: 172.64.145.166
   port: 2087
-  udp: true
-  network: ws
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
   tls: true
-  servername: fx3h2kf8xn.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  network: ws
   ws-opts:
     path: /
     headers:
-      Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
-  name: United States/San Francisco [TG]
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: '🇺🇸 United States/San Francisco [TG] #2'
+- server: 108.181.0.177
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: G5p6ww4o67HB
+  name: 🇺🇸US-108.181.0.177-0077
 - type: vless
   server: 172.64.145.93
   port: 2087
@@ -43,19 +36,6 @@ proxies:
 - type: vless
   server: 172.64.145.166
   port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: '🇺🇸 United States/San Francisco [TG] #2'
-- type: vless
-  server: 172.64.145.166
-  port: 2087
   udp: true
   network: ws
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
@@ -68,18 +48,38 @@ proxies:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   name: 'United States/San Francisco [TG] #2'
 - type: vless
-  server: 169.40.42.212
+  server: 172.64.145.93
+  port: 2087
+  udp: true
+  network: ws
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: fx3h2kf8xn.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
+  name: United States/San Francisco [TG]
+- type: ss
+  server: 3.96.144.93
   port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+  name: 🇨🇦CA-3.96.144.93-2119 | clashnodefree.com
+- type: vless
+  server: 47.253.226.114
+  port: 443
+  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: yahoo.com
+  servername: www.cloudflare.com
   reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
+    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
   client-fingerprint: chrome
-  name: 🇩🇪 Germany [TG]
+  name: 🇺🇸 United States [GH:MatinGhanbari/v2ray-conf]
 - type: vless
   server: 137.184.218.169
   port: 36925
@@ -93,18 +93,12 @@ proxies:
   client-fingerprint: chrome
   name: 🇺🇸 United States/North Bergen [TG]
 - type: ss
-  server: 3.96.144.93
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-  name: 🇨🇦CA-3.96.144.93-2119 | clashnodefree.com
-- server: 108.181.0.177
+  server: 176.97.73.215
   port: 8388
-  type: ss
   cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
-  name: 🇺🇸US-108.181.0.177-0077
+  password: ma6zc4JoLRJA
+  udp: true
+  name: 🇯🇵JP-176.97.73.215-0127
 - type: vless
   server: 130.107.73.148
   port: 41373
@@ -118,6 +112,19 @@ proxies:
     short-id: 0e
   client-fingerprint: chrome
   name: 🇨🇦 Canada/Toronto [TG]
+- type: vless
+  server: 169.40.42.212
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  client-fingerprint: chrome
+  name: 🇩🇪 Germany [TG]
 - type: ss
   server: 82.38.31.35
   port: 8080
@@ -151,34 +158,6 @@ proxies:
   client-fingerprint: firefox
   name: 🇬🇧 United Kingdom/London [GH:Mahdi0024/ProxyCollector]
 - type: vless
-  server: 78.129.184.117
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 59615ccc-fd9e-496c-be4b-0d223fea894c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: strapi.io
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: _8LiLlqEXJGXbg_G8KI1fXBlPnRoM3no-0oxxRRMcSw
-    short-id: efcfd3c41c1762b0
-  name: United Kingdom/Putney [GH:Mahdi0024/ProxyCollector]
-- type: vless
-  server: 95.154.237.50
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 9c0d8a49-4c47-4210-8f01-d251028d88d1
-  flow: xtls-rprx-vision
-  tls: true
-  servername: lanacion.com.ar
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  name: United Kingdom [GH:Mahdi0024/ProxyCollector]
-- type: vless
   server: 109.169.85.139
   port: 443
   uuid: 08a8b6c8-b668-4b83-97d5-02d4c974d222
@@ -192,44 +171,19 @@ proxies:
   client-fingerprint: chrome
   name: '🇬🇧 United Kingdom [GH:MatinGhanbari/v2ray-conf] #3'
 - type: vless
-  server: 95.154.237.50
+  server: 109.169.76.39
   port: 443
-  uuid: 9c0d8a49-4c47-4210-8f01-d251028d88d1
   udp: true
+  network: tcp
+  uuid: 0fcbc45d-acdc-40cf-9a66-961c00f5b4a5
   flow: xtls-rprx-vision
   tls: true
-  servername: lanacion.com.ar
+  servername: slashdot.org
+  client-fingerprint: firefox
   reality-opts:
     public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
     short-id: fd55b698ee8c3629
-  client-fingerprint: firefox
-  name: 🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector]
-- type: vless
-  server: 78.129.149.85
-  port: 443
-  uuid: 17095c75-d530-4090-a984-f0bd21b20fca
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: foodnetwork.com
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  client-fingerprint: firefox
-  name: '🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
-- type: vless
-  server: 78.129.150.210
-  port: 443
-  uuid: 3420b101-10af-49ff-b308-8d864b90e52d
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: strapi.io
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  client-fingerprint: firefox
-  name: '🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #4'
+  name: United Kingdom [TG]
 - type: vless
   server: 78.129.184.117
   port: 443
@@ -244,19 +198,72 @@ proxies:
   client-fingerprint: firefox
   name: 🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector]
 - type: vless
-  server: 78.129.149.85
+  server: 109.169.76.39
+  port: 443
+  uuid: 0fcbc45d-acdc-40cf-9a66-961c00f5b4a5
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: slashdot.org
+  reality-opts:
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
+  client-fingerprint: firefox
+  name: 🇬🇧 United Kingdom [TG]
+- type: vless
+  server: 78.129.150.210
+  port: 443
+  uuid: 3420b101-10af-49ff-b308-8d864b90e52d
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: strapi.io
+  reality-opts:
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
+  client-fingerprint: firefox
+  name: '🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #4'
+- type: vless
+  server: 45.154.96.35
+  port: 443
+  uuid: dabb9a19-03ab-4cdf-8963-d3c45eb0f80d
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fra3.freeinternat.com
+  reality-opts:
+    public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
+    short-id: ff776ff77be48b88
+  client-fingerprint: chrome
+  name: 🇫🇷 France/Paris [TG]
+- type: vless
+  server: 78.129.184.117
   port: 443
   udp: true
   network: tcp
-  uuid: 17095c75-d530-4090-a984-f0bd21b20fca
+  uuid: 59615ccc-fd9e-496c-be4b-0d223fea894c
   flow: xtls-rprx-vision
   tls: true
-  servername: foodnetwork.com
+  servername: strapi.io
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: _8LiLlqEXJGXbg_G8KI1fXBlPnRoM3no-0oxxRRMcSw
+    short-id: efcfd3c41c1762b0
+  name: United Kingdom/Putney [GH:Mahdi0024/ProxyCollector]
+- type: vless
+  server: 78.129.150.216
+  port: 443
+  udp: true
+  network: tcp
+  uuid: 8f92f942-f0e7-4ef3-941c-3f573424bd88
+  flow: xtls-rprx-vision
+  tls: true
+  servername: strapi.io
   client-fingerprint: firefox
   reality-opts:
     public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
     short-id: fd55b698ee8c3629
-  name: 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
+  name: 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #3'
 - type: vless
   server: 95.154.221.153
   port: 443
@@ -272,37 +279,23 @@ proxies:
     short-id: 42171a632f3b99ed
   name: 'United Kingdom [GH:Mahdi0024/ProxyCollector] #3'
 - type: vless
-  server: 78.129.150.210
+  server: 95.154.237.50
   port: 443
   udp: true
   network: tcp
-  uuid: 3420b101-10af-49ff-b308-8d864b90e52d
+  uuid: 9c0d8a49-4c47-4210-8f01-d251028d88d1
   flow: xtls-rprx-vision
   tls: true
-  servername: strapi.io
+  servername: lanacion.com.ar
   client-fingerprint: firefox
   reality-opts:
     public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
     short-id: fd55b698ee8c3629
-  name: 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #4'
+  name: United Kingdom [GH:Mahdi0024/ProxyCollector]
 - type: vless
-  server: 109.169.37.43
+  server: 78.129.149.85
   port: 443
-  udp: true
-  network: tcp
-  uuid: f54de82d-25d3-4fcc-a495-5c7eaee46ad6
-  flow: xtls-rprx-vision
-  tls: true
-  servername: foodnetwork.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  name: 'United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
-- type: vless
-  server: 109.169.37.43
-  port: 443
-  uuid: f54de82d-25d3-4fcc-a495-5c7eaee46ad6
+  uuid: 17095c75-d530-4090-a984-f0bd21b20fca
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -311,21 +304,34 @@ proxies:
     public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
     short-id: fd55b698ee8c3629
   client-fingerprint: firefox
-  name: '🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
+  name: '🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
 - type: vless
-  server: 78.129.150.216
+  server: 78.129.149.85
   port: 443
   udp: true
   network: tcp
-  uuid: 8f92f942-f0e7-4ef3-941c-3f573424bd88
+  uuid: 17095c75-d530-4090-a984-f0bd21b20fca
   flow: xtls-rprx-vision
   tls: true
-  servername: strapi.io
+  servername: foodnetwork.com
   client-fingerprint: firefox
   reality-opts:
     public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
     short-id: fd55b698ee8c3629
-  name: 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #3'
+  name: 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
+- type: vless
+  server: 95.154.237.50
+  port: 443
+  uuid: 9c0d8a49-4c47-4210-8f01-d251028d88d1
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: lanacion.com.ar
+  reality-opts:
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
+  client-fingerprint: firefox
+  name: 🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector]
 - type: vless
   server: 78.129.150.216
   port: 443
@@ -353,18 +359,59 @@ proxies:
   client-fingerprint: firefox
   name: '🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector] #3'
 - type: vless
-  server: 95.154.196.63
+  server: 78.129.150.210
   port: 443
-  uuid: bae47c97-9bc1-48f6-a133-a383ee71c12e
+  udp: true
+  network: tcp
+  uuid: 3420b101-10af-49ff-b308-8d864b90e52d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: strapi.io
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
+  name: 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #4'
+- type: vless
+  server: 109.169.37.43
+  port: 443
+  uuid: f54de82d-25d3-4fcc-a495-5c7eaee46ad6
   udp: true
   flow: xtls-rprx-vision
   tls: true
   servername: foodnetwork.com
   reality-opts:
-    public-key: o3OWFYnKad6q2C-eo6-rA74OCbjQoZfaUFYZsNqJJz0
-    short-id: 1e977d0b52eab755
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
   client-fingerprint: firefox
-  name: 🇬🇧 United Kingdom [GH:MatinGhanbari/v2ray-conf]
+  name: '🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
+- type: vless
+  server: 109.169.37.43
+  port: 443
+  udp: true
+  network: tcp
+  uuid: f54de82d-25d3-4fcc-a495-5c7eaee46ad6
+  flow: xtls-rprx-vision
+  tls: true
+  servername: foodnetwork.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
+  name: 'United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
+- type: vless
+  server: 5.152.223.193
+  port: 443
+  uuid: 9e6b8db1-da80-494f-bad7-7a0451f801a1
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: strapi.io
+  reality-opts:
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
+  client-fingerprint: chrome
+  name: '🇬🇧 United Kingdom [GH:MatinGhanbari/v2ray-conf] #2'
 - type: vless
   server: 95.154.196.63
   port: 443
@@ -379,6 +426,28 @@ proxies:
     public-key: o3OWFYnKad6q2C-eo6-rA74OCbjQoZfaUFYZsNqJJz0
     short-id: 1e977d0b52eab755
   name: United Kingdom [GH:MatinGhanbari/v2ray-conf]
+- type: vless
+  server: 95.154.196.63
+  port: 443
+  uuid: bae47c97-9bc1-48f6-a133-a383ee71c12e
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: foodnetwork.com
+  reality-opts:
+    public-key: o3OWFYnKad6q2C-eo6-rA74OCbjQoZfaUFYZsNqJJz0
+    short-id: 1e977d0b52eab755
+  client-fingerprint: firefox
+  name: 🇬🇧 United Kingdom [GH:MatinGhanbari/v2ray-conf]
+- type: vless
+  server: 188.220.67.245
+  port: 2087
+  udp: true
+  network: ws
+  uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee
+  ws-opts:
+    path: /8f2690e2d016
+  name: GB【机场推荐：https://a9a.xyz】26
 - type: vless
   server: 51.77.217.70
   port: 2053
@@ -405,32 +474,6 @@ proxies:
   client-fingerprint: chrome
   name: 🇬🇧 United Kingdom/Coventry [TG]
 - type: vless
-  server: 31.58.181.88
-  port: 8443
-  udp: true
-  network: tcp
-  uuid: d0da19f1-fb05-488e-99c2-262389b3537b
-  flow: xtls-rprx-vision
-  tls: true
-  servername: tradingview.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  name: United Arab Emirates [GH:Mahdi0024/ProxyCollector]
-- type: vless
-  server: 139.64.166.55
-  port: 443
-  uuid: c743b343-b1c9-4e44-98a9-274df2015727
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: cudJBi1zLMATgg_nlqMK5O6Lshlv8EQ2BBQjxbpF4AY
-    short-id: eedf31ed
-  client-fingerprint: chrome
-  name: 🇳🇱 The Netherlands/Amsterdam [GH:MatinGhanbari/v2ray-conf]
-- type: vless
   server: 104.167.24.227
   port: 18443
   uuid: 1c20357e-be52-4e5e-8eb6-6434adcb4b71
@@ -446,18 +489,17 @@ proxies:
     grpc-service-name: grpc
   name: '🇩🇪 Germany/Frankfurt am Main [TG] #2'
 - type: vless
-  server: 172.238.232.239
-  port: 32833
-  uuid: 167ed405-7de9-4bff-b1ea-6e3d49c76b0b
+  server: 31.58.181.88
+  port: 8443
+  uuid: d0da19f1-fb05-488e-99c2-262389b3537b
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: www.intel.com
+  servername: tradingview.com
   reality-opts:
-    public-key: PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20
-    short-id: a0a305ccc8e94aa8
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
   client-fingerprint: firefox
-  name: 🇮🇹 Italy/Milan [TG]
+  name: 🇦🇪 United Arab Emirates [GH:Mahdi0024/ProxyCollector]
 - type: vless
   server: 217.69.167.135
   port: 15392
@@ -485,6 +527,63 @@ proxies:
     public-key: R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU
   client-fingerprint: chrome
   name: 🇩🇪 Germany/Nuremberg [TG]
+- type: trojan
+  server: xn--1ugy405pdua.gayvibe.dpdns.org
+  port: 2174
+  udp: true
+  network: tcp
+  password: tripitropa444
+  tls: true
+  name: 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com
+- type: vless
+  server: 139.64.166.55
+  port: 443
+  uuid: c743b343-b1c9-4e44-98a9-274df2015727
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: cudJBi1zLMATgg_nlqMK5O6Lshlv8EQ2BBQjxbpF4AY
+    short-id: eedf31ed
+  client-fingerprint: chrome
+  name: 🇳🇱 The Netherlands/Amsterdam [GH:MatinGhanbari/v2ray-conf]
+- type: vless
+  server: 178.95.170.83
+  port: 2087
+  udp: true
+  network: ws
+  uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
+  ws-opts:
+    path: /4bc027a44532
+  name: PL【机场推荐：https://a9a.xyz】13
+- type: vless
+  server: 138.124.125.211
+  port: 443
+  udp: true
+  network: tcp
+  uuid: 1996007c-e7bc-464b-999b-cac28cec6c3e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: RVj8E6YuWeOq9XzIVLQCKM39qa-Cknp-GYvVAA1UPFo
+    short-id: 72cceb78
+  name: United Kingdom/Coventry [TG]
+- type: vless
+  server: 172.238.232.239
+  port: 32833
+  uuid: 167ed405-7de9-4bff-b1ea-6e3d49c76b0b
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.intel.com
+  reality-opts:
+    public-key: PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20
+    short-id: a0a305ccc8e94aa8
+  client-fingerprint: firefox
+  name: 🇮🇹 Italy/Milan [TG]
 - type: vless
   server: 172.238.232.239
   port: 32833
@@ -500,117 +599,110 @@ proxies:
     short-id: a0a305ccc8e94aa8
   name: Italy/Milan [TG]
 - type: vless
-  server: 188.220.67.245
-  port: 2087
-  udp: true
-  network: ws
-  uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee
-  client-fingerprint: chrome
-  ws-opts:
-    path: /8f2690e2d016
-  name: GB【机场推荐：https://a9a.xyz】11
-- type: vless
-  server: 163.8.195.241
-  port: 2087
-  udp: true
-  network: ws
-  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
-  ws-opts:
-    path: /29c8fed7ca22
-    headers:
-      Host: /?--v2rayNplus--v2rayNplus--v2rayNplus--
-  name: DE【机场推荐：https://a9a.xyz】24
-- type: vless
-  server: 178.95.170.83
-  port: 2087
-  udp: true
-  network: ws
-  uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
-  servername: 178.95.170.83
-  ws-opts:
-    path: /4bc027a44532
-  name: PL【机场推荐：https://a9a.xyz】20
-- type: vless
-  server: 138.124.125.211
+  server: 151.242.168.186
   port: 443
-  udp: true
-  network: tcp
-  uuid: 1996007c-e7bc-464b-999b-cac28cec6c3e
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: RVj8E6YuWeOq9XzIVLQCKM39qa-Cknp-GYvVAA1UPFo
-    short-id: 72cceb78
-  name: United Kingdom/Coventry [TG]
-- type: trojan
-  server: xn--1ugy405pdua.gayvibe.dpdns.org
-  port: 2174
-  udp: true
-  network: tcp
-  password: tripitropa444
-  tls: true
-  name: 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com
-- type: ss
-  server: 176.97.73.215
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: ma6zc4JoLRJA
-  udp: true
-  name: 🇯🇵JP-176.97.73.215-0127
-- type: vless
-  server: 45.154.96.35
-  port: 443
-  uuid: dabb9a19-03ab-4cdf-8963-d3c45eb0f80d
+  uuid: d6e76e7c-14ff-48a3-879c-81a257788059
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: fra3.freeinternat.com
+  servername: kibi-institut.de
   reality-opts:
-    public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk
-    short-id: ff776ff77be48b88
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
+  client-fingerprint: firefox
+  name: 🇳🇴 Norway/Sandefjord [GH:Mahdi0024/ProxyCollector]
+- type: vless
+  server: ip.kickfarsi.com
+  port: 8443
+  udp: true
+  network: xhttp
+  uuid: 412d7fbe-7474-4f1d-86c6-7eebdc628f72
+  tls: true
+  servername: sd39cz.utady.ir
   client-fingerprint: chrome
-  name: 🇫🇷 France/Paris [TG]
+  name: UN【机场推荐：https://a9a.xyz】92
 - type: vless
   server: 31.58.181.88
   port: 8443
-  uuid: d0da19f1-fb05-488e-99c2-262389b3537b
   udp: true
+  network: tcp
+  uuid: d0da19f1-fb05-488e-99c2-262389b3537b
   flow: xtls-rprx-vision
   tls: true
   servername: tradingview.com
+  client-fingerprint: firefox
   reality-opts:
     public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  client-fingerprint: firefox
-  name: 🇦🇪 United Arab Emirates [GH:Mahdi0024/ProxyCollector]
+  name: United Arab Emirates [GH:Mahdi0024/ProxyCollector]
 - type: vless
-  server: 109.169.76.39
+  server: 31.77.61.89
   port: 443
   udp: true
   network: tcp
-  uuid: 0fcbc45d-acdc-40cf-9a66-961c00f5b4a5
+  uuid: ef5f6054-61c7-4ce8-a35b-dbcec449f242
   flow: xtls-rprx-vision
   tls: true
-  servername: slashdot.org
+  servername: jobinvest.ru
   client-fingerprint: firefox
   reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  name: United Kingdom [TG]
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  name: UN【机场推荐：https://a9a.xyz】95
 - type: vless
-  server: 109.169.76.39
+  server: bridge.kolhoz.fuck-rkn.xyz
   port: 443
-  uuid: 0fcbc45d-acdc-40cf-9a66-961c00f5b4a5
+  udp: true
+  network: tcp
+  uuid: ef5f6054-61c7-4ce8-a35b-dbcec449f242
+  flow: xtls-rprx-vision
+  tls: true
+  servername: jobinvest.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  name: UN【机场推荐：https://a9a.xyz】96
+- type: vless
+  server: 147.189.141.106
+  port: 2087
+  udp: true
+  network: ws
+  uuid: 4a269a45-a9e3-4272-b04a-1d42d581150f
+  ws-opts:
+    path: /4de527ea5ed9
+  name: UN【机场推荐：https://a9a.xyz】93
+- type: vless
+  server: ru05.abvpn.ru
+  port: 443
+  udp: true
+  network: ws
+  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
+  tls: true
+  servername: ru05.abvpn.ru
+  client-fingerprint: edge
+  ws-opts:
+    path: /websocket
+  name: RU【机场推荐：https://a9a.xyz】46
+- type: vless
+  server: 45.95.184.90
+  port: 2087
+  udp: true
+  network: ws
+  uuid: 4a269a45-a9e3-4272-b04a-1d42d581150f
+  ws-opts:
+    path: /4de527ea5ed9
+  name: UN【机场推荐：https://a9a.xyz】94
+- type: vless
+  server: 109.169.84.94
+  port: 443
+  uuid: 3bcb31ef-840e-415d-abb3-28628add98d0
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: slashdot.org
+  servername: strapi.io
   reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
+    public-key: vvpu_ljhBuTWmM9w5Hl6jj8ZTiE_JYq29S77zNDeCjQ
+    short-id: ff6975658b6cefce
   client-fingerprint: firefox
-  name: 🇬🇧 United Kingdom [TG]
+  name: '🇬🇧 United Kingdom [TG] #2'
 - type: vless
   server: 109.169.84.94
   port: 443
@@ -626,6 +718,48 @@ proxies:
     short-id: ff6975658b6cefce
   name: 'United Kingdom [TG] #2'
 - type: vless
+  server: 47.89.186.170
+  port: 55861
+  udp: true
+  network: tcp
+  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.intel.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
+    short-id: 7551ed1b
+  name: United States [TG]
+- type: vless
+  server: rrr.windconnect.pro
+  port: 443
+  udp: true
+  network: tcp
+  uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
+  flow: xtls-rprx-vision
+  tls: true
+  servername: rrr.windconnect.pro
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: BsFRd4pZgH2hK2AmVf6Mv7z2QGmV2LPYbqkT1UqZX30
+    short-id: 4da5d1853f04af6d
+  name: RU【机场推荐：https://a9a.xyz】20
+- type: vless
+  server: 31.76.71.140
+  port: 443
+  udp: true
+  network: tcp
+  uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
+  flow: xtls-rprx-vision
+  tls: true
+  servername: rrr.windconnect.pro
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: BsFRd4pZgH2hK2AmVf6Mv7z2QGmV2LPYbqkT1UqZX30
+    short-id: 4da5d1853f04af6d
+  name: RU【机场推荐：https://a9a.xyz】19
+- type: vless
   server: 151.242.168.186
   port: 443
   udp: true
@@ -640,19 +774,6 @@ proxies:
     short-id: fd55b698ee8c3629
   name: Norway/Sandefjord [GH:Mahdi0024/ProxyCollector]
 - type: vless
-  server: 109.169.84.94
-  port: 443
-  uuid: 3bcb31ef-840e-415d-abb3-28628add98d0
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: strapi.io
-  reality-opts:
-    public-key: vvpu_ljhBuTWmM9w5Hl6jj8ZTiE_JYq29S77zNDeCjQ
-    short-id: ff6975658b6cefce
-  client-fingerprint: firefox
-  name: '🇬🇧 United Kingdom [TG] #2'
-- type: vless
   server: 47.89.186.170
   port: 55861
   uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
@@ -665,76 +786,72 @@ proxies:
     short-id: 7551ed1b
   client-fingerprint: firefox
   name: 🇺🇸 United States [TG]
-- type: vless
-  server: 5.152.223.193
-  port: 443
-  uuid: 9e6b8db1-da80-494f-bad7-7a0451f801a1
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: strapi.io
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  client-fingerprint: chrome
-  name: '🇬🇧 United Kingdom [GH:MatinGhanbari/v2ray-conf] #2'
 proxy-groups:
 - name: AUTO
   type: select
   proxies:
-  - 🇺🇸 United States [GH:MatinGhanbari/v2ray-conf]
-  - United States/San Francisco [TG]
-  - 🇺🇸 United States/San Francisco [TG]
   - '🇺🇸 United States/San Francisco [TG] #2'
-  - 'United States/San Francisco [TG] #2'
-  - 🇩🇪 Germany [TG]
-  - 🇺🇸 United States/North Bergen [TG]
-  - 🇨🇦CA-3.96.144.93-2119 | clashnodefree.com
   - 🇺🇸US-108.181.0.177-0077
+  - 🇺🇸 United States/San Francisco [TG]
+  - 'United States/San Francisco [TG] #2'
+  - United States/San Francisco [TG]
+  - 🇨🇦CA-3.96.144.93-2119 | clashnodefree.com
+  - 🇺🇸 United States [GH:MatinGhanbari/v2ray-conf]
+  - 🇺🇸 United States/North Bergen [TG]
+  - 🇯🇵JP-176.97.73.215-0127
   - 🇨🇦 Canada/Toronto [TG]
+  - 🇩🇪 Germany [TG]
   - 🇬🇧GB-82.38.31.35-0094
   - United Kingdom/London [GH:Mahdi0024/ProxyCollector]
   - 🇬🇧 United Kingdom/London [GH:Mahdi0024/ProxyCollector]
-  - United Kingdom/Putney [GH:Mahdi0024/ProxyCollector]
-  - United Kingdom [GH:Mahdi0024/ProxyCollector]
   - '🇬🇧 United Kingdom [GH:MatinGhanbari/v2ray-conf] #3'
-  - 🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector]
-  - '🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
-  - '🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #4'
+  - United Kingdom [TG]
   - 🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector]
-  - 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
-  - 'United Kingdom [GH:Mahdi0024/ProxyCollector] #3'
-  - 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #4'
-  - 'United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
-  - '🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
+  - 🇬🇧 United Kingdom [TG]
+  - '🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #4'
+  - 🇫🇷 France/Paris [TG]
+  - United Kingdom/Putney [GH:Mahdi0024/ProxyCollector]
   - 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #3'
+  - 'United Kingdom [GH:Mahdi0024/ProxyCollector] #3'
+  - United Kingdom [GH:Mahdi0024/ProxyCollector]
+  - '🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
+  - 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
+  - 🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector]
   - '🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #3'
   - '🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector] #3'
-  - 🇬🇧 United Kingdom [GH:MatinGhanbari/v2ray-conf]
+  - 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #4'
+  - '🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
+  - 'United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
+  - '🇬🇧 United Kingdom [GH:MatinGhanbari/v2ray-conf] #2'
   - United Kingdom [GH:MatinGhanbari/v2ray-conf]
+  - 🇬🇧 United Kingdom [GH:MatinGhanbari/v2ray-conf]
+  - GB【机场推荐：https://a9a.xyz】26
   - 🇫🇷 France [GH:MatinGhanbari/v2ray-conf]
   - 🇬🇧 United Kingdom/Coventry [TG]
-  - United Arab Emirates [GH:Mahdi0024/ProxyCollector]
-  - 🇳🇱 The Netherlands/Amsterdam [GH:MatinGhanbari/v2ray-conf]
   - '🇩🇪 Germany/Frankfurt am Main [TG] #2'
-  - 🇮🇹 Italy/Milan [TG]
+  - 🇦🇪 United Arab Emirates [GH:Mahdi0024/ProxyCollector]
   - 'Germany [TG] #2'
   - 🇩🇪 Germany/Nuremberg [TG]
-  - Italy/Milan [TG]
-  - GB【机场推荐：https://a9a.xyz】11
-  - DE【机场推荐：https://a9a.xyz】24
-  - PL【机场推荐：https://a9a.xyz】20
-  - United Kingdom/Coventry [TG]
   - 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com
-  - 🇯🇵JP-176.97.73.215-0127
-  - 🇫🇷 France/Paris [TG]
-  - 🇦🇪 United Arab Emirates [GH:Mahdi0024/ProxyCollector]
-  - United Kingdom [TG]
-  - 🇬🇧 United Kingdom [TG]
-  - 'United Kingdom [TG] #2'
-  - Norway/Sandefjord [GH:Mahdi0024/ProxyCollector]
+  - 🇳🇱 The Netherlands/Amsterdam [GH:MatinGhanbari/v2ray-conf]
+  - PL【机场推荐：https://a9a.xyz】13
+  - United Kingdom/Coventry [TG]
+  - 🇮🇹 Italy/Milan [TG]
+  - Italy/Milan [TG]
+  - 🇳🇴 Norway/Sandefjord [GH:Mahdi0024/ProxyCollector]
+  - UN【机场推荐：https://a9a.xyz】92
+  - United Arab Emirates [GH:Mahdi0024/ProxyCollector]
+  - UN【机场推荐：https://a9a.xyz】95
+  - UN【机场推荐：https://a9a.xyz】96
+  - UN【机场推荐：https://a9a.xyz】93
+  - RU【机场推荐：https://a9a.xyz】46
+  - UN【机场推荐：https://a9a.xyz】94
   - '🇬🇧 United Kingdom [TG] #2'
+  - 'United Kingdom [TG] #2'
+  - United States [TG]
+  - RU【机场推荐：https://a9a.xyz】20
+  - RU【机场推荐：https://a9a.xyz】19
+  - Norway/Sandefjord [GH:Mahdi0024/ProxyCollector]
   - 🇺🇸 United States [TG]
-  - '🇬🇧 United Kingdom [GH:MatinGhanbari/v2ray-conf] #2'
 rules:
 - MATCH,AUTO
