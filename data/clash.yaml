@@ -1,31 +1,13 @@
 mixed-port: 7890
 mode: rule
 proxies:
-- type: vless
-  server: 47.253.226.114
+- type: ss
+  server: 37.19.198.160
   port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
-  network: tcp
-  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
-  name: United States [GH:MatinGhanbari/v2ray-conf]
-- type: vless
-  server: 47.253.226.114
-  port: 443
-  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
-  client-fingerprint: chrome
-  name: 🇺🇸 United States [GH:MatinGhanbari/v2ray-conf]
+  name: 🇺🇸US-37.19.198.160-0073
 - type: ss
   server: 3.96.144.93
   port: 443
@@ -40,646 +22,35 @@ proxies:
   password: G5p6ww4o67HB
   name: 🇺🇸US-108.181.0.177-0068
 - type: vless
-  server: 188.114.97.6
-  port: 2086
-  udp: true
-  network: ws
-  uuid: 98b6cb05-b5ab-4c82-8683-07de28f796a9
-  ws-opts:
-    path: /eyJqdW5rIjoiRHF6VWU4SmYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0
-    headers:
-      Host: holy-glitter-39f9.wwewee2dasdds.workers.dev
-  name: 'United States/San Francisco [TG] #5'
-- type: vless
-  server: 172.64.52.175
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: '🇺🇸 United States/San Francisco [TG] #3'
-- type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  network: ws
-  uuid: 1c9daf90-3950-44ac-b06f-4cf9aec63170
-  tls: true
-  servername: FrEe.SeRVEr14peekCoNfIG.WoRKErS.dEV
-  client-fingerprint: chrome
-  ws-opts:
-    path: /eyJqdW5rIjoiQmFCblN3SmhXYTB3RzVoIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OjExOjY0OjpdIiwiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0=
-    headers:
-      Host: free.server14peekconfig.workers.dev
-  name: United States/San Francisco [TG]
-- type: vless
-  server: 172.66.170.172
-  port: 80
-  udp: true
-  network: ws
-  uuid: e081da45-9fae-4687-9376-f9a6a0dbbe83
-  ws-opts:
-    path: /id-amz
-    headers:
-      Host: e33xr.qzz.io
-  name: United States/San Francisco [GH:Pawdroid/Free-servers]
-- type: vless
-  server: 169.40.42.212
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  client-fingerprint: chrome
-  name: 🇩🇪 Germany [TG]
-- type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: 1c9daf90-3950-44ac-b06f-4cf9aec63170
-  udp: true
-  tls: true
-  servername: FrEe.SeRVEr14peekCoNfIG.WoRKErS.dEV
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiQmFCblN3SmhXYTB3RzVoIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OjExOjY0OjpdIiwiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0=
-    headers:
-      Host: free.server14peekconfig.workers.dev
-  name: 🇺🇸 United States/San Francisco [TG]
-- type: vless
-  server: 137.184.218.169
-  port: 36925
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-  client-fingerprint: chrome
-  name: 🇺🇸 United States/North Bergen [TG]
-- type: vless
-  server: 137.184.218.169
-  port: 36925
+  server: 15.188.177.61
+  port: 22224
   udp: true
   network: tcp
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-  name: United States/North Bergen [TG]
-- type: vless
-  server: 172.67.65.56
-  port: 2053
-  uuid: 099244b9-2168-4dbd-870e-cbbe9d6eb573
-  udp: true
-  tls: true
-  servername: whitecreeper.pages.dev
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.Net
-    headers:
-      Host: whitecreeper.pages.dev
-  name: '🇺🇸 United States/San Francisco [TG] #4'
-- type: vless
-  server: 104.16.150.246
-  port: 2087
-  udp: true
-  network: ws
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: United States/San Francisco [GH:MatinGhanbari/v2ray-conf]
-- type: vless
-  server: 47.89.186.170
-  port: 55861
-  udp: true
-  network: tcp
-  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.intel.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
-    short-id: 7551ed1b
-  name: 'United States [GH:MatinGhanbari/v2ray-conf] #2'
-- type: vless
-  server: 172.67.65.56
-  port: 2053
-  udp: true
-  network: ws
-  uuid: 099244b9-2168-4dbd-870e-cbbe9d6eb573
-  tls: true
-  servername: whitecreeper.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.Net
-    headers:
-      Host: whitecreeper.pages.dev
-  name: 'United States/San Francisco [TG] #4'
-- type: vless
-  server: 185.148.106.30
-  port: 8880
-  udp: true
-  network: ws
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime54.workers.dev
-  name: Russia [GH:Pawdroid/Free-servers]
-- type: vless
-  server: 130.107.73.148
-  port: 41373
-  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: google.com
-  reality-opts:
-    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
-    short-id: 0e
-  client-fingerprint: chrome
-  name: 🇨🇦 Canada/Toronto [TG]
-- type: vless
-  server: 172.64.52.175
-  port: 2087
-  udp: true
-  network: ws
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: 'United States/San Francisco [TG] #3'
-- type: vless
-  server: 50.62.195.50
-  port: 8880
-  udp: true
-  network: ws
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vms.lifetime38.workers.dev
-  name: United States [GH:Pawdroid/Free-servers]
-- type: vless
-  server: 50.62.195.50
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime38.workers.dev
-  name: 🇺🇸 United States [GH:Pawdroid/Free-servers]
-- type: vless
-  server: 92.53.189.40
-  port: 8880
-  udp: true
-  network: ws
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime19.workers.dev
-  name: Slovenia [GH:MatinGhanbari/v2ray-conf]
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  name: FR【机场推荐：https://a9a.xyz】15
 - type: ss
   server: 82.38.31.35
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-  name: 🇬🇧GB-82.38.31.35-0094
-- type: vless
-  server: 109.169.76.39
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 0fcbc45d-acdc-40cf-9a66-961c00f5b4a5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: slashdot.org
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  name: 'United Kingdom [TG] #2'
+  name: 🇬🇧GB-82.38.31.35-0096
 - type: ss
-  server: 176.97.73.215
+  server: 209.46.102.22
   port: 8388
   cipher: chacha20-ietf-poly1305
-  password: ma6zc4JoLRJA
+  password: 1hhrqrokj3ag
   udp: true
-  name: 🇯🇵JP-176.97.73.215-0127
+  name: 🇩🇪DE-209.46.102.22-0122
 - type: vless
-  server: 188.114.96.7
-  port: 8443
-  udp: true
-  network: ws
-  uuid: 362a79a2-ce89-8d2d-355c-f1f5071a445f
-  tls: true
-  servername: fragrant-unit-d662.mmammatrix770088.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /sync
-    headers:
-      Host: fragrant-unit-d662.mmammatrix770088.workers.dev
-  name: 'United States/San Francisco [TG] #2'
-- type: vless
-  server: 188.114.96.7
-  port: 8443
-  uuid: 362a79a2-ce89-8d2d-355c-f1f5071a445f
-  udp: true
-  tls: true
-  servername: fragrant-unit-d662.mmammatrix770088.workers.dev
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: fragrant-unit-d662.mmammatrix770088.workers.dev
-  name: '🇺🇸 United States/San Francisco [TG] #2'
-- type: vless
-  server: 78.129.150.216
-  port: 443
-  uuid: e339b1d4-b95c-4e0c-84e8-de35a680b165
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: strapi.io
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  client-fingerprint: firefox
-  name: 🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector]
-- type: vless
-  server: 194.55.189.249
-  port: 40443
-  uuid: 8212a50b-25bf-4739-bba1-aaffb5ffc84c
-  udp: true
-  tls: true
-  servername: deepl.com
-  reality-opts:
-    public-key: KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo
-    short-id: aae8
-  client-fingerprint: chrome
-  name: 🇺🇸 United States/Los Angeles [TG]
-- type: vless
-  server: 5.152.223.115
-  port: 443
-  uuid: 6b8fe542-f1d9-47cb-97d4-14aa52287879
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: strapi.io
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  client-fingerprint: chrome
-  name: '🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
-- type: vless
-  server: 95.154.237.50
-  port: 443
-  udp: true
-  network: tcp
-  uuid: de4d70f8-2156-45cd-b27e-187bcb7d4882
-  flow: xtls-rprx-vision
-  tls: true
-  servername: lanacion.com.ar
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  name: 'United Kingdom [GH:Mahdi0024/ProxyCollector] #3'
-- type: vless
-  server: 95.154.237.50
-  port: 443
-  uuid: de4d70f8-2156-45cd-b27e-187bcb7d4882
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: lanacion.com.ar
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  client-fingerprint: firefox
-  name: '🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector] #3'
-- type: vless
-  server: 72.56.92.177
-  port: 40443
-  udp: true
-  network: tcp
-  uuid: 4480161e-2c59-4d37-8736-675c9af32bf1
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y
-    short-id: 01d1bf2d4755d40c
-  name: The Netherlands/Amsterdam [TG]
-- type: vless
-  server: 72.56.92.177
-  port: 40443
-  uuid: 4480161e-2c59-4d37-8736-675c9af32bf1
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  reality-opts:
-    public-key: fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y
-    short-id: 01d1bf2d4755d40c
-  client-fingerprint: chrome
-  name: 🇳🇱 The Netherlands/Amsterdam [TG]
-- type: vless
-  server: 72.56.81.165
-  port: 40443
-  udp: true
-  network: tcp
-  uuid: 4bf5a71c-d726-4585-b095-7396675706d5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  client-fingerprint: qq
-  reality-opts:
-    public-key: D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU
-    short-id: c84f
-  name: 'The Netherlands/Amsterdam [TG] #2'
-- type: vless
-  server: 47.89.186.170
-  port: 55861
-  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.intel.com
-  reality-opts:
-    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
-    short-id: 7551ed1b
-  client-fingerprint: chrome
-  name: '🇺🇸 United States [GH:MatinGhanbari/v2ray-conf] #2'
-- type: vless
-  server: 72.56.81.165
-  port: 40443
-  uuid: 4bf5a71c-d726-4585-b095-7396675706d5
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  reality-opts:
-    public-key: D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU
-    short-id: c84f
-  client-fingerprint: qq
-  name: '🇳🇱 The Netherlands/Amsterdam [TG] #2'
-- type: vless
-  server: 212.118.40.187
-  port: 443
-  uuid: ee71862e-816b-4d26-97d2-f200898e385d
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cisco.com
-  reality-opts:
-    public-key: MfOXevYFoqnwIn6dUiPZvWYRfYHyb5lzBy3R1OSsrWg
-    short-id: f3e8b2b1
-  client-fingerprint: firefox
-  name: 🇳🇱 The Netherlands [TG]
-- type: vless
-  server: 212.118.40.187
-  port: 443
-  udp: true
-  network: tcp
-  uuid: ee71862e-816b-4d26-97d2-f200898e385d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cisco.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: MfOXevYFoqnwIn6dUiPZvWYRfYHyb5lzBy3R1OSsrWg
-    short-id: f3e8b2b1
-  name: The Netherlands [TG]
-- type: vless
-  server: 45.82.67.183
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 4ce3f49a-dd92-47b6-9ea6-8d4bb1f03538
-  flow: xtls-rprx-vision
-  tls: true
-  servername: northwaleswildlifetrust.org.uk
-  client-fingerprint: random
-  reality-opts:
-    public-key: daiJkQwpAcBk7oH1iZzRthMj-jAlqovX7vAiwVqfjTU
-    short-id: 8880a9f75eb46d91
-  name: The Netherlands/Naaldwijk [GH:Mahdi0024/ProxyCollector]
-- type: vless
-  server: 95.154.221.153
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 21a98c41-ed3e-4fe5-a15c-4f506ec2b284
-  flow: xtls-rprx-vision
-  tls: true
-  servername: strapi.io
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: tPyAWkalFM4yi9lYY0zLDRxQyfSwPDwiexAy9QOjrWI
-    short-id: 42171a632f3b99ed
-  name: United Kingdom [GH:Mahdi0024/ProxyCollector]
-- type: vless
-  server: 95.211.164.121
-  port: 443
-  udp: true
-  network: grpc
-  uuid: d7430ae7-320c-4658-808b-3006d0627d82
-  tls: true
-  servername: devua.nubuntuhosting.host
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: QJW15WZWLNjA8KEpe4GqSdOe4rfW8KgqjjVmKxPk-ng
-    short-id: 3fa234ea9feaa048
-  grpc-opts:
-    grpc-service-name: gun
-  name: The Netherlands [GH:MatinGhanbari/v2ray-conf]
-- type: vless
-  server: 45.82.67.183
-  port: 443
-  uuid: 4ce3f49a-dd92-47b6-9ea6-8d4bb1f03538
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: northwaleswildlifetrust.org.uk
-  reality-opts:
-    public-key: daiJkQwpAcBk7oH1iZzRthMj-jAlqovX7vAiwVqfjTU
-    short-id: 8880a9f75eb46d91
-  client-fingerprint: random
-  name: 🇳🇱 The Netherlands/Naaldwijk [GH:Mahdi0024/ProxyCollector]
-- type: vless
-  server: 78.129.150.216
-  port: 443
-  udp: true
-  network: tcp
-  uuid: e339b1d4-b95c-4e0c-84e8-de35a680b165
-  flow: xtls-rprx-vision
-  tls: true
-  servername: strapi.io
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  name: United Kingdom/Putney [GH:Mahdi0024/ProxyCollector]
-- type: vless
-  server: 78.129.150.110
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 671193bf-3203-487a-82bf-9a160ee30254
-  flow: xtls-rprx-vision
-  tls: true
-  servername: strapi.io
-  client-fingerprint: qq
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  name: 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
-- type: vless
-  server: 5.152.223.115
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 6b8fe542-f1d9-47cb-97d4-14aa52287879
-  flow: xtls-rprx-vision
-  tls: true
-  servername: strapi.io
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  name: 'United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
-- type: vless
-  server: 178.95.170.83
+  server: 188.220.67.245
   port: 2087
   udp: true
   network: ws
-  uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
+  uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee
   ws-opts:
-    path: /4bc027a44532
-  name: PL【机场推荐：https://a9a.xyz】13
-- type: vless
-  server: 31.76.76.28
-  port: 8443
-  udp: true
-  network: tcp
-  uuid: de5906f3-df38-4463-aa9d-2b01320cc6ea
-  tls: true
-  servername: neth4.lckdwn.ru
-  client-fingerprint: chrome
-  name: The Netherlands/Amsterdam [GH:Mahdi0024/ProxyCollector]
-- type: vless
-  server: 31.76.76.28
-  port: 8443
-  uuid: de5906f3-df38-4463-aa9d-2b01320cc6ea
-  udp: true
-  tls: true
-  servername: neth4.lckdwn.ru
-  name: 🇳🇱 The Netherlands/Amsterdam [GH:Mahdi0024/ProxyCollector]
-- type: vless
-  server: 78.129.150.110
-  port: 443
-  uuid: 671193bf-3203-487a-82bf-9a160ee30254
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: strapi.io
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  client-fingerprint: qq
-  name: '🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
-- type: vless
-  server: 95.154.196.63
-  port: 443
-  uuid: bae47c97-9bc1-48f6-a133-a383ee71c12e
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: foodnetwork.com
-  reality-opts:
-    public-key: o3OWFYnKad6q2C-eo6-rA74OCbjQoZfaUFYZsNqJJz0
-    short-id: 1e977d0b52eab755
-  client-fingerprint: chrome
-  name: 🇬🇧 United Kingdom [TG]
-- type: vless
-  server: 104.167.24.227
-  port: 18443
-  uuid: 1c20357e-be52-4e5e-8eb6-6434adcb4b71
-  udp: true
-  tls: true
-  servername: gp1.steptofsvo.com
-  reality-opts:
-    public-key: QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0
-    short-id: 5c766813929a1fdd
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🇩🇪 Germany/Frankfurt am Main [TG]
-- type: vless
-  server: 217.69.167.135
-  port: 15392
-  udp: true
-  network: grpc
-  uuid: 9e998501-eaae-4d7e-bbe5-6cecfaef8334
-  tls: true
-  servername: google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: O8yFUnhj9NOtJ2eUVQTwrGk8HrkHq94QAO090azV428
-    short-id: 6a326909
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 'Germany [TG] #2'
-- type: vless
-  server: 89.105.208.123
-  port: 443
-  uuid: 91d0fa43-e557-43e7-a731-f0c3d1fb306a
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: n1.cloudgaming.one
-  reality-opts:
-    public-key: ivgTfLR13A6xBsicIA28OPoav2tXlsstTTmGuETfnSk
-    short-id: 6d6f13013d3e1d0c
-  client-fingerprint: chrome
-  name: 🇳🇱 The Netherlands/Enschede [TG]
-- type: trojan
-  server: xn--1ugy405pdua.gayvibe.dpdns.org
-  port: 2174
-  udp: true
-  network: tcp
-  password: tripitropa444
-  tls: true
-  name: 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com
+    path: /8f2690e2d016
+  name: GB【机场推荐：https://a9a.xyz】26
 - type: vless
   server: eu-central-pl-1.hanvpn.biz
   port: 443
@@ -700,29 +71,22 @@ proxies:
   password: tripitropa444
   sni: xn--1ugy405pdua.gayvibe.dpdns.org
   skip-cert-verify: false
-  name: 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com 2
-- type: vless
-  server: 188.220.67.245
-  port: 2087
+  name: 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com
+- type: ss
+  server: 176.97.73.215
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: ma6zc4JoLRJA
   udp: true
-  network: ws
-  uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee
-  ws-opts:
-    path: /8f2690e2d016
-  name: GB【机场推荐：https://a9a.xyz】26
-- type: vless
-  server: 31.77.61.89
-  port: 443
+  name: 🇯🇵JP-176.97.73.215-0134
+- type: trojan
+  server: xn--1ugy405pdua.gayvibe.dpdns.org
+  port: 2174
   udp: true
   network: tcp
-  uuid: ef5f6054-61c7-4ce8-a35b-dbcec449f242
-  flow: xtls-rprx-vision
+  password: tripitropa444
   tls: true
-  servername: jobinvest.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  name: UN【机场推荐：https://a9a.xyz】95
+  name: 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com 2
 - type: vless
   server: bridge.kolhoz.fuck-rkn.xyz
   port: 443
@@ -736,6 +100,55 @@ proxies:
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   name: UN【机场推荐：https://a9a.xyz】96
+- type: vless
+  server: 13.212.211.73
+  port: 20221
+  udp: true
+  network: tcp
+  uuid: 9f752e03-411f-4df4-841f-a23c4c43d183
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.intel.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Fd3DtGiQyvw9IBKoMqKtgaKVkdvjnaErL_1ib-zXqxY
+    short-id: 85ae3d83d037b7
+  name: Singapore/Singapore [GH:Mahdi0024/Pro]
+- type: vless
+  server: 13.212.211.73
+  port: 20221
+  uuid: 9f752e03-411f-4df4-841f-a23c4c43d183
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.intel.com
+  reality-opts:
+    public-key: Fd3DtGiQyvw9IBKoMqKtgaKVkdvjnaErL_1ib-zXqxY
+    short-id: 85ae3d83d037b7
+  client-fingerprint: chrome
+  name: 🇸🇬 Singapore/Singapore [GH:Mahdi0024/Pro]
+- type: vless
+  server: 178.95.170.83
+  port: 2087
+  udp: true
+  network: ws
+  uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
+  ws-opts:
+    path: /4bc027a44532
+  name: PL【机场推荐：https://a9a.xyz】13
+- type: vless
+  server: 31.77.61.89
+  port: 443
+  udp: true
+  network: tcp
+  uuid: ef5f6054-61c7-4ce8-a35b-dbcec449f242
+  flow: xtls-rprx-vision
+  tls: true
+  servername: jobinvest.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  name: UN【机场推荐：https://a9a.xyz】95
 - type: vless
   server: rrr.windconnect.pro
   port: 443
@@ -751,110 +164,40 @@ proxies:
     short-id: 4da5d1853f04af6d
   name: RU【机场推荐：https://a9a.xyz】20
 - type: vless
-  server: ru05.abvpn.ru
+  server: 31.76.71.140
   port: 443
   udp: true
-  network: ws
-  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
-  tls: true
-  servername: ru05.abvpn.ru
-  client-fingerprint: edge
-  ws-opts:
-    path: /websocket
-  name: RU【机场推荐：https://a9a.xyz】46
-- type: vless
-  server: 95.154.221.153
-  port: 443
-  uuid: 21a98c41-ed3e-4fe5-a15c-4f506ec2b284
-  udp: true
+  network: tcp
+  uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
   flow: xtls-rprx-vision
   tls: true
-  servername: strapi.io
-  reality-opts:
-    public-key: tPyAWkalFM4yi9lYY0zLDRxQyfSwPDwiexAy9QOjrWI
-    short-id: 42171a632f3b99ed
+  servername: rrr.windconnect.pro
   client-fingerprint: firefox
-  name: 🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector]
-- type: vless
-  server: 109.169.76.39
-  port: 443
-  uuid: 0fcbc45d-acdc-40cf-9a66-961c00f5b4a5
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: slashdot.org
   reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  client-fingerprint: firefox
-  name: '🇬🇧 United Kingdom [TG] #2'
+    public-key: BsFRd4pZgH2hK2AmVf6Mv7z2QGmV2LPYbqkT1UqZX30
+    short-id: 4da5d1853f04af6d
+  name: RU【机场推荐：https://a9a.xyz】19
 proxy-groups:
 - name: AUTO
   type: select
   proxies:
-  - United States [GH:MatinGhanbari/v2ray-conf]
-  - 🇺🇸 United States [GH:MatinGhanbari/v2ray-conf]
+  - 🇺🇸US-37.19.198.160-0073
   - 🇨🇦CA-3.96.144.93-2119 | clashnodefree.com
   - 🇺🇸US-108.181.0.177-0068
-  - 'United States/San Francisco [TG] #5'
-  - '🇺🇸 United States/San Francisco [TG] #3'
-  - United States/San Francisco [TG]
-  - United States/San Francisco [GH:Pawdroid/Free-servers]
-  - 🇩🇪 Germany [TG]
-  - 🇺🇸 United States/San Francisco [TG]
-  - 🇺🇸 United States/North Bergen [TG]
-  - United States/North Bergen [TG]
-  - '🇺🇸 United States/San Francisco [TG] #4'
-  - United States/San Francisco [GH:MatinGhanbari/v2ray-conf]
-  - 'United States [GH:MatinGhanbari/v2ray-conf] #2'
-  - 'United States/San Francisco [TG] #4'
-  - Russia [GH:Pawdroid/Free-servers]
-  - 🇨🇦 Canada/Toronto [TG]
-  - 'United States/San Francisco [TG] #3'
-  - United States [GH:Pawdroid/Free-servers]
-  - 🇺🇸 United States [GH:Pawdroid/Free-servers]
-  - Slovenia [GH:MatinGhanbari/v2ray-conf]
-  - 🇬🇧GB-82.38.31.35-0094
-  - 'United Kingdom [TG] #2'
-  - 🇯🇵JP-176.97.73.215-0127
-  - 'United States/San Francisco [TG] #2'
-  - '🇺🇸 United States/San Francisco [TG] #2'
-  - 🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector]
-  - 🇺🇸 United States/Los Angeles [TG]
-  - '🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
-  - 'United Kingdom [GH:Mahdi0024/ProxyCollector] #3'
-  - '🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector] #3'
-  - The Netherlands/Amsterdam [TG]
-  - 🇳🇱 The Netherlands/Amsterdam [TG]
-  - 'The Netherlands/Amsterdam [TG] #2'
-  - '🇺🇸 United States [GH:MatinGhanbari/v2ray-conf] #2'
-  - '🇳🇱 The Netherlands/Amsterdam [TG] #2'
-  - 🇳🇱 The Netherlands [TG]
-  - The Netherlands [TG]
-  - The Netherlands/Naaldwijk [GH:Mahdi0024/ProxyCollector]
-  - United Kingdom [GH:Mahdi0024/ProxyCollector]
-  - The Netherlands [GH:MatinGhanbari/v2ray-conf]
-  - 🇳🇱 The Netherlands/Naaldwijk [GH:Mahdi0024/ProxyCollector]
-  - United Kingdom/Putney [GH:Mahdi0024/ProxyCollector]
-  - 'United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
-  - 'United Kingdom [GH:Mahdi0024/ProxyCollector] #2'
-  - PL【机场推荐：https://a9a.xyz】13
-  - The Netherlands/Amsterdam [GH:Mahdi0024/ProxyCollector]
-  - 🇳🇱 The Netherlands/Amsterdam [GH:Mahdi0024/ProxyCollector]
-  - '🇬🇧 United Kingdom/Putney [GH:Mahdi0024/ProxyCollector] #2'
-  - 🇬🇧 United Kingdom [TG]
-  - 🇩🇪 Germany/Frankfurt am Main [TG]
-  - 'Germany [TG] #2'
-  - 🇳🇱 The Netherlands/Enschede [TG]
-  - 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com
-  - UN【机场推荐：https://a9a.xyz】97
-  - 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com 2
+  - FR【机场推荐：https://a9a.xyz】15
+  - 🇬🇧GB-82.38.31.35-0096
+  - 🇩🇪DE-209.46.102.22-0122
   - GB【机场推荐：https://a9a.xyz】26
-  - UN【机场推荐：https://a9a.xyz】95
+  - UN【机场推荐：https://a9a.xyz】97
+  - 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com
+  - 🇯🇵JP-176.97.73.215-0134
+  - 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com 2
   - UN【机场推荐：https://a9a.xyz】96
+  - Singapore/Singapore [GH:Mahdi0024/Pro]
+  - 🇸🇬 Singapore/Singapore [GH:Mahdi0024/Pro]
+  - PL【机场推荐：https://a9a.xyz】13
+  - UN【机场推荐：https://a9a.xyz】95
   - RU【机场推荐：https://a9a.xyz】20
-  - RU【机场推荐：https://a9a.xyz】46
-  - 🇬🇧 United Kingdom [GH:Mahdi0024/ProxyCollector]
-  - '🇬🇧 United Kingdom [TG] #2'
+  - RU【机场推荐：https://a9a.xyz】19
 rules:
 - MATCH,AUTO
