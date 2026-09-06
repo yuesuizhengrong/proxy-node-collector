@@ -20,21 +20,7 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: G5p6ww4o67HB
-  name: 🇺🇸US-108.181.0.177-0068
-- type: vless
-  server: 15.188.177.61
-  port: 22224
-  udp: true
-  network: tcp
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  name: FR【机场推荐：https://a9a.xyz】15
-- type: ss
-  server: 82.38.31.35
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-  name: 🇬🇧GB-82.38.31.35-0096
+  name: 🇺🇸US-108.181.0.177-0069
 - type: ss
   server: 209.46.102.22
   port: 8388
@@ -52,26 +38,14 @@ proxies:
     path: /8f2690e2d016
   name: GB【机场推荐：https://a9a.xyz】26
 - type: vless
-  server: eu-central-pl-1.hanvpn.biz
-  port: 443
+  server: 178.95.170.83
+  port: 2087
   udp: true
-  network: tcp
-  uuid: d9d0f208-d582-41d5-bb7b-742671402810
-  flow: xtls-rprx-vision
-  tls: true
-  servername: eu-central-pl-1.hanvpn.biz
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: NjIuu35vz5MthSzqd6kt8PbXbZxCCL2Rb2GbpMCRTEY
-    short-id: 12e3b7681806bc97
-  name: UN【机场推荐：https://a9a.xyz】97
-- type: trojan
-  server: xn--1ugy405pdua.gayvibe.dpdns.org
-  port: 2174
-  password: tripitropa444
-  sni: xn--1ugy405pdua.gayvibe.dpdns.org
-  skip-cert-verify: false
-  name: 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com
+  network: ws
+  uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
+  ws-opts:
+    path: /4bc027a44532
+  name: PL【机场推荐：https://a9a.xyz】13
 - type: ss
   server: 176.97.73.215
   port: 8388
@@ -82,13 +56,20 @@ proxies:
 - type: trojan
   server: xn--1ugy405pdua.gayvibe.dpdns.org
   port: 2174
+  password: tripitropa444
+  sni: xn--1ugy405pdua.gayvibe.dpdns.org
+  skip-cert-verify: false
+  name: 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com
+- type: trojan
+  server: xn--1ugy405pdua.gayvibe.dpdns.org
+  port: 2174
   udp: true
   network: tcp
   password: tripitropa444
   tls: true
   name: 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com 2
 - type: vless
-  server: bridge.kolhoz.fuck-rkn.xyz
+  server: 31.77.61.89
   port: 443
   udp: true
   network: tcp
@@ -99,21 +80,7 @@ proxies:
   client-fingerprint: firefox
   reality-opts:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  name: UN【机场推荐：https://a9a.xyz】96
-- type: vless
-  server: 13.212.211.73
-  port: 20221
-  udp: true
-  network: tcp
-  uuid: 9f752e03-411f-4df4-841f-a23c4c43d183
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.intel.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Fd3DtGiQyvw9IBKoMqKtgaKVkdvjnaErL_1ib-zXqxY
-    short-id: 85ae3d83d037b7
-  name: Singapore/Singapore [GH:Mahdi0024/Pro]
+  name: UN【机场推荐：https://a9a.xyz】95
 - type: vless
   server: 13.212.211.73
   port: 20221
@@ -128,27 +95,19 @@ proxies:
   client-fingerprint: chrome
   name: 🇸🇬 Singapore/Singapore [GH:Mahdi0024/Pro]
 - type: vless
-  server: 178.95.170.83
-  port: 2087
-  udp: true
-  network: ws
-  uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
-  ws-opts:
-    path: /4bc027a44532
-  name: PL【机场推荐：https://a9a.xyz】13
-- type: vless
-  server: 31.77.61.89
-  port: 443
+  server: 13.212.211.73
+  port: 20221
   udp: true
   network: tcp
-  uuid: ef5f6054-61c7-4ce8-a35b-dbcec449f242
+  uuid: 9f752e03-411f-4df4-841f-a23c4c43d183
   flow: xtls-rprx-vision
   tls: true
-  servername: jobinvest.ru
-  client-fingerprint: firefox
+  servername: www.intel.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  name: UN【机场推荐：https://a9a.xyz】95
+    public-key: Fd3DtGiQyvw9IBKoMqKtgaKVkdvjnaErL_1ib-zXqxY
+    short-id: 85ae3d83d037b7
+  name: Singapore/Singapore [GH:Mahdi0024/Pro]
 - type: vless
   server: rrr.windconnect.pro
   port: 443
@@ -177,27 +136,60 @@ proxies:
     public-key: BsFRd4pZgH2hK2AmVf6Mv7z2QGmV2LPYbqkT1UqZX30
     short-id: 4da5d1853f04af6d
   name: RU【机场推荐：https://a9a.xyz】19
+- type: vless
+  server: 176.109.88.216
+  port: 443
+  udp: true
+  network: tcp
+  uuid: 2c7f1414-87ae-4a01-9796-a02c067891a6
+  flow: xtls-rprx-vision
+  tls: true
+  servername: api-maps.yandex.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: oqRus6Z_Q1jqJaTEPu7ENbRL0-XKOw54K0jwCCGLtEk
+    short-id: a9c4f17e3b62d8
+  name: UN【机场推荐：https://a9a.xyz】99
+- type: ss
+  server: 82.38.31.35
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+  name: 🇬🇧GB-82.38.31.35-0096
+- type: vless
+  server: bridge.kolhoz.fuck-rkn.xyz
+  port: 443
+  udp: true
+  network: tcp
+  uuid: ef5f6054-61c7-4ce8-a35b-dbcec449f242
+  flow: xtls-rprx-vision
+  tls: true
+  servername: jobinvest.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  name: UN【机场推荐：https://a9a.xyz】96
 proxy-groups:
 - name: AUTO
   type: select
   proxies:
   - 🇺🇸US-37.19.198.160-0073
   - 🇨🇦CA-3.96.144.93-2119 | clashnodefree.com
-  - 🇺🇸US-108.181.0.177-0068
-  - FR【机场推荐：https://a9a.xyz】15
-  - 🇬🇧GB-82.38.31.35-0096
+  - 🇺🇸US-108.181.0.177-0069
   - 🇩🇪DE-209.46.102.22-0122
   - GB【机场推荐：https://a9a.xyz】26
-  - UN【机场推荐：https://a9a.xyz】97
-  - 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com
-  - 🇯🇵JP-176.97.73.215-0134
-  - 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com 2
-  - UN【机场推荐：https://a9a.xyz】96
-  - Singapore/Singapore [GH:Mahdi0024/Pro]
-  - 🇸🇬 Singapore/Singapore [GH:Mahdi0024/Pro]
   - PL【机场推荐：https://a9a.xyz】13
+  - 🇯🇵JP-176.97.73.215-0134
+  - 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com
+  - 🇬🇧GB-45.85.88.194-2115 | clashnodefree.com 2
   - UN【机场推荐：https://a9a.xyz】95
+  - 🇸🇬 Singapore/Singapore [GH:Mahdi0024/Pro]
+  - Singapore/Singapore [GH:Mahdi0024/Pro]
   - RU【机场推荐：https://a9a.xyz】20
   - RU【机场推荐：https://a9a.xyz】19
+  - UN【机场推荐：https://a9a.xyz】99
+  - 🇬🇧GB-82.38.31.35-0096
+  - UN【机场推荐：https://a9a.xyz】96
 rules:
 - MATCH,AUTO
