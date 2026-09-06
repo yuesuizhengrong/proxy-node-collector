@@ -28,6 +28,13 @@ proxies:
   password: ma6zc4JoLRJA
   udp: true
   name: 🇯🇵JP-176.97.73.215-0134
+- type: ss
+  server: 13.40.94.70
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+  name: 🇬🇧GB-13.40.94.70-0131
 - type: vless
   server: 52.47.129.194
   port: 22223
@@ -44,6 +51,13 @@ proxies:
   name: UN【机场推荐：https://a9a.xyz】87
 - type: vless
   server: 13.36.74.87
+  port: 22223
+  udp: true
+  network: tcp
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  name: UN【机场推荐：https://a9a.xyz】85
+- type: vless
+  server: 13.36.74.87
   port: 22224
   udp: true
   network: tcp
@@ -57,6 +71,13 @@ proxies:
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   name: FR【机场推荐：https://a9a.xyz】18
 - type: ss
+  server: 209.46.102.22
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: 1hhrqrokj3ag
+  udp: true
+  name: 🇩🇪DE-209.46.102.22-0123
+- type: ss
   server: 82.38.31.35
   port: 8080
   cipher: chacha20-ietf-poly1305
@@ -64,12 +85,14 @@ proxies:
   udp: true
   name: 🇬🇧GB-82.38.31.35-0092
 - type: vless
-  server: 13.36.74.87
-  port: 22223
+  server: 178.95.170.83
+  port: 2087
   udp: true
-  network: tcp
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  name: UN【机场推荐：https://a9a.xyz】85
+  network: ws
+  uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
+  ws-opts:
+    path: /4bc027a44532
+  name: UN【机场推荐：https://a9a.xyz】62
 - type: vless
   server: 188.220.67.245
   port: 2087
@@ -81,34 +104,18 @@ proxies:
     path: /8f2690e2d016
   name: GB【机场推荐：https://a9a.xyz】17
 - type: vless
-  server: 178.95.170.83
-  port: 2087
+  server: 13.212.211.73
+  port: 20221
+  uuid: 9f752e03-411f-4df4-841f-a23c4c43d183
   udp: true
-  network: ws
-  uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
-  ws-opts:
-    path: /4bc027a44532
-  name: UN【机场推荐：https://a9a.xyz】62
-- type: ss
-  server: 209.46.102.22
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: 1hhrqrokj3ag
-  udp: true
-  name: 🇩🇪DE-209.46.102.22-0123
-- type: vless
-  server: spd-spd-spd.team-pluss.com
-  port: 8080
-  udp: true
-  network: tcp
-  uuid: 8d1fac7b-690b-420f-955e-d7e9900561a1
+  flow: xtls-rprx-vision
   tls: true
-  servername: the.world.of.the.champions.retrovip.net
-  client-fingerprint: firefox
+  servername: www.intel.com
   reality-opts:
-    public-key: a31ZnQOsnWUJq5bSLVWIeuGJZFPE52NidulBT5CV_z4
-    short-id: 8d9419e9
-  name: UN【机场推荐：https://a9a.xyz】88
+    public-key: Fd3DtGiQyvw9IBKoMqKtgaKVkdvjnaErL_1ib-zXqxY
+    short-id: 85ae3d83d037b7
+  client-fingerprint: chrome
+  name: 🇸🇬 Singapore/Singapore [GH:Mahdi0024/Pro]
 - type: vless
   server: 13.212.211.73
   port: 20221
@@ -124,18 +131,18 @@ proxies:
     short-id: 85ae3d83d037b7
   name: Singapore/Singapore [GH:Mahdi0024/Pro]
 - type: vless
-  server: 13.212.211.73
-  port: 20221
-  uuid: 9f752e03-411f-4df4-841f-a23c4c43d183
+  server: spd-spd-spd.team-pluss.com
+  port: 8080
   udp: true
-  flow: xtls-rprx-vision
+  network: tcp
+  uuid: 8d1fac7b-690b-420f-955e-d7e9900561a1
   tls: true
-  servername: www.intel.com
+  servername: the.world.of.the.champions.retrovip.net
+  client-fingerprint: firefox
   reality-opts:
-    public-key: Fd3DtGiQyvw9IBKoMqKtgaKVkdvjnaErL_1ib-zXqxY
-    short-id: 85ae3d83d037b7
-  client-fingerprint: chrome
-  name: 🇸🇬 Singapore/Singapore [GH:Mahdi0024/Pro]
+    public-key: a31ZnQOsnWUJq5bSLVWIeuGJZFPE52NidulBT5CV_z4
+    short-id: 8d9419e9
+  name: UN【机场推荐：https://a9a.xyz】88
 - type: vless
   server: 31.59.150.174
   port: 9443
@@ -162,20 +169,6 @@ proxies:
   ws-opts:
     path: /websocket
   name: UN【机场推荐：https://a9a.xyz】58
-- type: vless
-  server: 163.128.99.165
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 66d0024b-307a-4714-86f7-07d141a244bf
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: safari
-  reality-opts:
-    public-key: l_AILVmgCSrYUlKhoiFc6NYY-zjXE6FTGEDaG1MECQY
-    short-id: 635295c55ea6eda1
-  name: UN【机场推荐：https://a9a.xyz】80
 - type: vless
   server: rrr.windconnect.pro
   port: 443
@@ -205,6 +198,20 @@ proxies:
     short-id: 4da5d1853f04af6d
   name: UN【机场推荐：https://a9a.xyz】78
 - type: vless
+  server: 163.128.99.165
+  port: 443
+  udp: true
+  network: tcp
+  uuid: 66d0024b-307a-4714-86f7-07d141a244bf
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: l_AILVmgCSrYUlKhoiFc6NYY-zjXE6FTGEDaG1MECQY
+    short-id: 635295c55ea6eda1
+  name: UN【机场推荐：https://a9a.xyz】80
+- type: vless
   server: www.f.mobilesari.ir
   port: 12345
   udp: true
@@ -226,23 +233,24 @@ proxy-groups:
   - 🇺🇸US-37.19.198.160-0091
   - 🇨🇦CA-3.96.144.93-2119 | clashnodefree.com
   - 🇯🇵JP-176.97.73.215-0134
+  - 🇬🇧GB-13.40.94.70-0131
   - UN【机场推荐：https://a9a.xyz】84
   - UN【机场推荐：https://a9a.xyz】87
+  - UN【机场推荐：https://a9a.xyz】85
   - UN【机场推荐：https://a9a.xyz】89
   - FR【机场推荐：https://a9a.xyz】18
-  - 🇬🇧GB-82.38.31.35-0092
-  - UN【机场推荐：https://a9a.xyz】85
-  - GB【机场推荐：https://a9a.xyz】17
-  - UN【机场推荐：https://a9a.xyz】62
   - 🇩🇪DE-209.46.102.22-0123
-  - UN【机场推荐：https://a9a.xyz】88
-  - Singapore/Singapore [GH:Mahdi0024/Pro]
+  - 🇬🇧GB-82.38.31.35-0092
+  - UN【机场推荐：https://a9a.xyz】62
+  - GB【机场推荐：https://a9a.xyz】17
   - 🇸🇬 Singapore/Singapore [GH:Mahdi0024/Pro]
+  - Singapore/Singapore [GH:Mahdi0024/Pro]
+  - UN【机场推荐：https://a9a.xyz】88
   - UN【机场推荐：https://a9a.xyz】79
   - UN【机场推荐：https://a9a.xyz】58
-  - UN【机场推荐：https://a9a.xyz】80
   - RU【机场推荐：https://a9a.xyz】21
   - UN【机场推荐：https://a9a.xyz】78
+  - UN【机场推荐：https://a9a.xyz】80
   - UN【机场推荐：https://a9a.xyz】83
 rules:
 - MATCH,AUTO
