@@ -2,36 +2,6 @@ mixed-port: 7890
 mode: rule
 proxies:
 - type: vless
-  server: 172.64.150.28
-  port: 2082
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  udp: true
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  name: 🇺🇸 United States/San Francisco [GH:barry-far/V2r]
-- type: vless
-  server: 172.64.150.28
-  port: 2082
-  udp: true
-  network: ws
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  servername: hhlfy.twiladaphne.ndjp.net
-  client-fingerprint: chrome
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  name: United States/San Francisco [GH:barry-far/V2r]
-- server: 108.181.0.177
-  port: 8388
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
-  name: 🇺🇸US-108.181.0.177-0113
-- type: vless
   server: 104.16.150.130
   port: 2087
   udp: true
@@ -46,6 +16,30 @@ proxies:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   name: United States/San Francisco [TG]
 - type: vless
+  server: 172.64.150.28
+  port: 2082
+  udp: true
+  network: ws
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  servername: hhlfy.twiladaphne.ndjp.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /fp
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+  name: United States/San Francisco [GH:barry-far/V2r]
+- type: vless
+  server: 172.64.150.28
+  port: 2082
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+  name: 🇺🇸 United States/San Francisco [GH:barry-far/V2r]
+- type: vless
   server: 104.16.150.130
   port: 2087
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
@@ -59,59 +53,32 @@ proxies:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   name: 🇺🇸 United States/San Francisco [TG]
 - type: vless
-  server: 172.64.52.175
-  port: 2087
+  server: 169.40.42.212
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   udp: true
-  network: ws
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  flow: xtls-rprx-vision
   tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  servername: yahoo.com
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
   client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: 'United States/San Francisco [TG] #2'
+  name: 🇩🇪 Germany [TG]
 - type: vless
-  server: 172.64.52.175
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: '🇺🇸 United States/San Francisco [TG] #2'
-- type: vless
-  server: 185.47.254.251
+  server: 195.123.235.177
   port: 443
   udp: true
   network: tcp
-  uuid: 878fb7f7-fc65-465e-a352-17c7216c6f3d
+  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
   flow: xtls-rprx-vision
   tls: true
   servername: gateway.icloud.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 6-_ZidygR8PRt4gtHlGCAW-PPmjEIm7Wn7MZqJU1z1Q
-    short-id: 6c059ecfddf9b179
-  name: Guatemala/Guatemala City [TG]
-- type: vless
-  server: 137.184.218.169
-  port: 36925
-  udp: true
-  network: tcp
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-  name: United States/North Bergen [TG]
+    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
+    short-id: c85d029f5e8eb393
+  name: United States/Secaucus [TG]
 - type: vless
   server: 195.123.235.177
   port: 443
@@ -128,30 +95,15 @@ proxies:
 - type: vless
   server: 159.89.87.21
   port: 28190
-  udp: true
-  network: tcp
   uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  udp: true
   flow: xtls-rprx-vision
   tls: true
   servername: aws.amazon.com
-  client-fingerprint: chrome
   reality-opts:
     public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
-  name: 'United States/North Bergen [TG] #2'
-- type: vless
-  server: 195.123.235.177
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
-  flow: xtls-rprx-vision
-  tls: true
-  servername: gateway.icloud.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
-    short-id: c85d029f5e8eb393
-  name: United States/Secaucus [TG]
+  name: '🇺🇸 United States/North Bergen [TG] #2'
 - type: vless
   server: 137.184.218.169
   port: 36925
@@ -165,30 +117,18 @@ proxies:
   client-fingerprint: chrome
   name: 🇺🇸 United States/North Bergen [TG]
 - type: vless
-  server: 159.89.87.21
-  port: 28190
-  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  server: 137.184.218.169
+  port: 36925
   udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: aws.amazon.com
-  reality-opts:
-    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
-  client-fingerprint: chrome
-  name: '🇺🇸 United States/North Bergen [TG] #2'
-- type: vless
-  server: 167.17.69.171
-  port: 443
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-  udp: true
+  network: tcp
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
   flow: xtls-rprx-vision
   tls: true
   servername: www.cloudflare.com
-  reality-opts:
-    public-key: ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk
-    short-id: 0990d22f
   client-fingerprint: chrome
-  name: 🇺🇸 United States/New York [TG]
+  reality-opts:
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+  name: United States/North Bergen [TG]
 - type: vless
   server: 167.17.69.171
   port: 443
@@ -204,31 +144,58 @@ proxies:
     short-id: 0990d22f
   name: United States/New York [TG]
 - type: vless
-  server: 185.47.254.251
+  server: 167.17.69.171
   port: 443
-  uuid: 878fb7f7-fc65-465e-a352-17c7216c6f3d
+  uuid: 00144519-7e0d-476b-8d28-435576af9262
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: gateway.icloud.com
+  servername: www.cloudflare.com
   reality-opts:
-    public-key: 6-_ZidygR8PRt4gtHlGCAW-PPmjEIm7Wn7MZqJU1z1Q
-    short-id: 6c059ecfddf9b179
+    public-key: ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk
+    short-id: 0990d22f
   client-fingerprint: chrome
-  name: 🌍 Guatemala/Guatemala City [TG]
+  name: 🇺🇸 United States/New York [TG]
+- server: 108.181.0.177
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: G5p6ww4o67HB
+  name: 🇺🇸US-108.181.0.177-0113
 - type: vless
-  server: 169.40.42.212
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  server: 172.64.52.175
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
-  flow: xtls-rprx-vision
   tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: '🇺🇸 United States/San Francisco [TG] #2'
+- type: vless
+  server: 172.64.52.175
+  port: 2087
+  udp: true
+  network: ws
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   client-fingerprint: chrome
-  name: 🇩🇪 Germany [TG]
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: 'United States/San Francisco [TG] #2'
+- type: ss
+  server: 209.46.102.22
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: 1hhrqrokj3ag
+  udp: true
+  name: 🇩🇪DE-209.46.102.22-0133
 - type: ss
   server: 82.38.31.35
   port: 8080
@@ -243,13 +210,55 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
   name: 'United Kingdom [GH:Mahdi0024/Pro] #3'
-- type: ss
-  server: 209.46.102.22
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: 1hhrqrokj3ag
+- type: vless
+  server: 185.47.254.251
+  port: 443
+  uuid: 878fb7f7-fc65-465e-a352-17c7216c6f3d
   udp: true
-  name: 🇩🇪DE-209.46.102.22-0133
+  flow: xtls-rprx-vision
+  tls: true
+  servername: gateway.icloud.com
+  reality-opts:
+    public-key: 6-_ZidygR8PRt4gtHlGCAW-PPmjEIm7Wn7MZqJU1z1Q
+    short-id: 6c059ecfddf9b179
+  client-fingerprint: chrome
+  name: 🌍 Guatemala/Guatemala City [TG]
+- type: vless
+  server: 159.89.87.21
+  port: 28190
+  udp: true
+  network: tcp
+  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: aws.amazon.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
+  name: 'United States/North Bergen [TG] #2'
+- type: vless
+  server: 130.12.102.125
+  port: 443
+  udp: true
+  network: tcp
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  tls: true
+  servername: localhost
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+  name: HK【机场推荐：https://a9a.xyz】20
+- type: vless
+  server: 130.12.102.62
+  port: 443
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  udp: true
+  tls: true
+  servername: localhost
+  reality-opts:
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
+  client-fingerprint: chrome
+  name: 🇺🇸 United States [TG]
 - type: vless
   server: 130.12.102.62
   port: 443
@@ -263,18 +272,7 @@ proxies:
     public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
   name: United States [TG]
 - type: vless
-  server: 130.12.102.62
-  port: 443
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
-  udp: true
-  tls: true
-  servername: localhost
-  reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  client-fingerprint: chrome
-  name: 🇺🇸 United States [TG]
-- type: vless
-  server: 130.12.102.125
+  server: freshjuniper.download
   port: 443
   udp: true
   network: tcp
@@ -282,21 +280,10 @@ proxies:
   tls: true
   servername: localhost
   client-fingerprint: chrome
+  skip-cert-verify: true
   reality-opts:
     public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  name: HK【机场推荐：https://a9a.xyz】20
-- server: 212.183.88.136
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  name: 🇦🇹AT-212.183.88.136-0680
+  name: 节点日期：2026-09-09
 - type: vless
   server: eu-north-sw-1.hanvpn.biz
   port: 443
@@ -314,18 +301,19 @@ proxies:
     short-id: 0172b7681806bc97
   name: UN【机场推荐：https://a9a.xyz】64
 - type: vless
-  server: freshjuniper.download
+  server: 185.47.254.251
   port: 443
   udp: true
   network: tcp
-  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  uuid: 878fb7f7-fc65-465e-a352-17c7216c6f3d
+  flow: xtls-rprx-vision
   tls: true
-  servername: localhost
+  servername: gateway.icloud.com
   client-fingerprint: chrome
-  skip-cert-verify: true
   reality-opts:
-    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
-  name: 节点日期：2026-09-09
+    public-key: 6-_ZidygR8PRt4gtHlGCAW-PPmjEIm7Wn7MZqJU1z1Q
+    short-id: 6c059ecfddf9b179
+  name: Guatemala/Guatemala City [TG]
 - type: vless
   server: 31.76.91.72
   port: 2087
@@ -345,33 +333,32 @@ proxy-groups:
 - name: AUTO
   type: select
   proxies:
-  - 🇺🇸 United States/San Francisco [GH:barry-far/V2r]
-  - United States/San Francisco [GH:barry-far/V2r]
-  - 🇺🇸US-108.181.0.177-0113
   - United States/San Francisco [TG]
+  - United States/San Francisco [GH:barry-far/V2r]
+  - 🇺🇸 United States/San Francisco [GH:barry-far/V2r]
   - 🇺🇸 United States/San Francisco [TG]
-  - 'United States/San Francisco [TG] #2'
-  - '🇺🇸 United States/San Francisco [TG] #2'
-  - Guatemala/Guatemala City [TG]
-  - United States/North Bergen [TG]
-  - 🇺🇸 United States/Secaucus [TG]
-  - 'United States/North Bergen [TG] #2'
-  - United States/Secaucus [TG]
-  - 🇺🇸 United States/North Bergen [TG]
-  - '🇺🇸 United States/North Bergen [TG] #2'
-  - 🇺🇸 United States/New York [TG]
-  - United States/New York [TG]
-  - 🌍 Guatemala/Guatemala City [TG]
   - 🇩🇪 Germany [TG]
+  - United States/Secaucus [TG]
+  - 🇺🇸 United States/Secaucus [TG]
+  - '🇺🇸 United States/North Bergen [TG] #2'
+  - 🇺🇸 United States/North Bergen [TG]
+  - United States/North Bergen [TG]
+  - United States/New York [TG]
+  - 🇺🇸 United States/New York [TG]
+  - 🇺🇸US-108.181.0.177-0113
+  - '🇺🇸 United States/San Francisco [TG] #2'
+  - 'United States/San Francisco [TG] #2'
+  - 🇩🇪DE-209.46.102.22-0133
   - 🇬🇧GB-82.38.31.35-0120
   - 'United Kingdom [GH:Mahdi0024/Pro] #3'
-  - 🇩🇪DE-209.46.102.22-0133
-  - United States [TG]
-  - 🇺🇸 United States [TG]
+  - 🌍 Guatemala/Guatemala City [TG]
+  - 'United States/North Bergen [TG] #2'
   - HK【机场推荐：https://a9a.xyz】20
-  - 🇦🇹AT-212.183.88.136-0680
-  - UN【机场推荐：https://a9a.xyz】64
+  - 🇺🇸 United States [TG]
+  - United States [TG]
   - 节点日期：2026-09-09
+  - UN【机场推荐：https://a9a.xyz】64
+  - Guatemala/Guatemala City [TG]
   - Japan/Tokyo [TG]
 rules:
 - MATCH,AUTO
