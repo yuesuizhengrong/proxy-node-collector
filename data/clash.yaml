@@ -1,40 +1,136 @@
 mixed-port: 7890
 mode: rule
 proxies:
+- type: vless
+  server: 108.162.198.178
+  port: 2086
+  udp: true
+  network: ws
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: 'United States/San Francisco [TG] #12'
+- type: vless
+  server: 172.64.42.85
+  port: 2082
+  udp: true
+  network: ws
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: 'United States/San Francisco [TG] #15'
+- type: vless
+  server: 108.162.198.178
+  port: 8080
+  udp: true
+  network: ws
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: 'United States/San Francisco [TG] #11'
+- type: vless
+  server: 172.64.158.146
+  port: 8080
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: '🇺🇸 United States/San Francisco [TG] #13'
+- type: vless
+  server: 104.18.47.113
+  port: 2052
+  udp: true
+  network: ws
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: 'United States/San Francisco [TG] #10'
+- type: vless
+  server: 172.64.158.146
+  port: 8080
+  udp: true
+  network: ws
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: 'United States/San Francisco [TG] #13'
 - server: 108.181.0.177
   port: 8388
   type: ss
   cipher: chacha20-ietf-poly1305
   password: G5p6ww4o67HB
-  name: 🇺🇸US-108.181.0.177-0094
+  name: 🇺🇸US-108.181.0.177-0066
 - type: vless
-  server: 104.16.150.7
+  server: 104.19.214.146
   port: 2087
   udp: true
   network: ws
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   tls: true
   servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
   ws-opts:
-    path: /
+    path: /fp=chrome
     headers:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: 'United States/San Francisco [TG] #3'
+  name: 'United States/San Francisco [TG] #9'
 - type: vless
-  server: 104.21.96.56
-  port: 80
+  server: 188.114.97.6
+  port: 2087
   udp: true
   network: ws
-  uuid: 923e051a-f598-4ea5-9c6c-f7e37c438a60
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: fx3h2kf8xn.fx6hsv0.ccwu.cc
+  client-fingerprint: unsafe
   ws-opts:
-    path: /vl/D2pryqVs9LAgCYdTK76lsafWY?ed=2560
+    path: /?ed=2560
     headers:
-      Host: vkvd8bpskvxgjwdvcidxgoccr.javanbaghe.workers.dev
-  name: 'United States/San Francisco [TG] #6'
+      Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
+  name: 'United States/San Francisco [TG] #5'
 - type: vless
-  server: 104.16.150.7
-  port: 2087
+  server: 104.17.159.189
+  port: 443
+  udp: true
+  network: ws
+  uuid: 42c62a5a-cd31-4551-80ef-908732370287
+  tls: true
+  servername: fq.jp188.dpdns.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: /proxyip=154.17.22.207,69.63.210.157,134.195.211.13,172.236.245.153,209.146.115.209,64.186.224.194,149.28.94.52,107.151.188.57fp=chrome
+    headers:
+      Host: fq.jp188.dpdns.org
+  name: United States/San Francisco [TG]
+- type: vless
+  server: 104.17.159.189
+  port: 443
+  uuid: 42c62a5a-cd31-4551-80ef-908732370287
+  udp: true
+  tls: true
+  servername: fq.jp188.dpdns.org
+  network: ws
+  ws-opts:
+    path: /proxyip=154.17.22.207,69.63.210.157,134.195.211.13,172.236.245.153,209.146.115.209,64.186.224.194,149.28.94.52,107.151.188.57fp=chrome
+    headers:
+      Host: fq.jp188.dpdns.org
+  name: 🇺🇸 United States/San Francisco [TG]
+- type: vless
+  server: 104.19.215.97
+  port: 443
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
   tls: true
@@ -60,29 +156,98 @@ proxies:
       Host: mianfei-73q.pages.dev
   name: UN【机场推荐：https://a9a.xyz】96
 - type: vless
-  server: 172.64.150.28
-  port: 2082
+  server: 104.18.38.47
+  port: 2087
   udp: true
   network: ws
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   ws-opts:
-    path: /fp
+    path: /fp=chrome
     headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  name: 'United States/San Francisco [TG] #5'
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: 'United States/San Francisco [TG] #8'
 - type: vless
-  server: 104.21.96.56
-  port: 80
-  uuid: 923e051a-f598-4ea5-9c6c-f7e37c438a60
+  server: 188.114.97.6
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
+  tls: true
+  servername: fx3h2kf8xn.fx6hsv0.ccwu.cc
   network: ws
   ws-opts:
-    path: /vl/D2pryqVs9LAgCYdTK76lsafWY
+    path: /
     headers:
-      Host: vkvd8bpskvxgjwdvcidxgoccr.javanbaghe.workers.dev
-  name: '🇺🇸 United States/San Francisco [TG] #6'
+      Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
+  name: '🇺🇸 United States/San Francisco [TG] #5'
 - type: vless
-  server: 15.204.97.206
+  server: 104.19.214.98
+  port: 2087
+  udp: true
+  network: ws
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: 'United States/San Francisco [TG] #4'
+- type: vless
+  server: 104.17.156.230
+  port: 2053
+  uuid: 42c62a5a-cd31-4551-80ef-908732370287
+  udp: true
+  tls: true
+  servername: fq.jp188.dpdns.org
+  network: ws
+  ws-opts:
+    path: /proxyip=154.17.22.207,69.63.210.157,134.195.211.13,172.236.245.153,209.146.115.209,64.186.224.194,149.28.94.52,107.151.188.57
+    headers:
+      Host: fq.jp188.dpdns.org
+  name: '🇺🇸 United States/San Francisco [TG] #7'
+- type: vless
+  server: 104.19.215.97
+  port: 443
+  udp: true
+  network: ws
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: 'United States/San Francisco [TG] #3'
+- type: vless
+  server: 104.17.156.230
+  port: 2053
+  udp: true
+  network: ws
+  uuid: 42c62a5a-cd31-4551-80ef-908732370287
+  tls: true
+  servername: fq.jp188.dpdns.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: /proxyip=154.17.22.207,69.63.210.157,134.195.211.13,172.236.245.153,209.146.115.209,64.186.224.194,149.28.94.52,107.151.188.57
+    headers:
+      Host: fq.jp188.dpdns.org
+  name: 'United States/San Francisco [TG] #7'
+- type: vless
+  server: 172.64.52.6
+  port: 2095
+  udp: true
+  network: ws
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: 'United States/San Francisco [TG] #14'
+- type: vless
+  server: 15.204.97.216
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   udp: true
@@ -93,7 +258,7 @@ proxies:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
   client-fingerprint: chrome
-  name: 🇺🇸 United States/Hillsboro [TG]
+  name: '🇺🇸 United States/Hillsboro [TG] #2'
 - type: vless
   server: 15.204.97.206
   port: 23576
@@ -109,8 +274,49 @@ proxies:
     short-id: '01'
   name: United States/Hillsboro [TG]
 - type: vless
-  server: 172.64.52.175
-  port: 2087
+  server: 15.204.97.206
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  client-fingerprint: chrome
+  name: 🇺🇸 United States/Hillsboro [TG]
+- type: vless
+  server: 15.204.97.216
+  port: 23576
+  udp: true
+  network: tcp
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  name: 'United States/Hillsboro [TG] #2'
+- type: vless
+  server: 172.64.52.68
+  port: 8443
+  udp: true
+  network: ws
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: 'United States/San Francisco [TG] #6'
+- type: vless
+  server: 172.64.52.68
+  port: 443
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
   tls: true
@@ -122,8 +328,8 @@ proxies:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   name: '🇺🇸 United States/San Francisco [TG] #2'
 - type: vless
-  server: 172.64.53.215
-  port: 2087
+  server: 172.64.52.68
+  port: 8443
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
   tls: true
@@ -133,24 +339,10 @@ proxies:
     path: /
     headers:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: '🇺🇸 United States/San Francisco [TG] #4'
+  name: '🇺🇸 United States/San Francisco [TG] #6'
 - type: vless
-  server: 172.64.53.215
-  port: 2087
-  udp: true
-  network: ws
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: 'United States/San Francisco [TG] #4'
-- type: vless
-  server: 172.64.52.175
-  port: 2087
+  server: 172.64.52.68
+  port: 443
   udp: true
   network: ws
   uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
@@ -165,17 +357,16 @@ proxies:
 - type: vless
   server: 47.89.186.170
   port: 55861
-  udp: true
-  network: tcp
   uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
+  udp: true
   flow: xtls-rprx-vision
   tls: true
   servername: www.intel.com
-  client-fingerprint: chrome
   reality-opts:
     public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
     short-id: 7551ed1b
-  name: 'United States [TG] #2'
+  client-fingerprint: firefox
+  name: 🇺🇸 United States [TG]
 - type: vless
   server: 137.184.218.169
   port: 36925
@@ -190,6 +381,19 @@ proxies:
     public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
   name: United States/North Bergen [TG]
 - type: vless
+  server: 169.40.42.52
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  client-fingerprint: ios
+  name: '🇩🇪 Germany [TG] #3'
+- type: vless
   server: 137.184.218.169
   port: 36925
   uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
@@ -202,31 +406,18 @@ proxies:
   client-fingerprint: chrome
   name: 🇺🇸 United States/North Bergen [TG]
 - type: vless
-  server: 169.40.42.202
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  server: 159.89.87.21
+  port: 28190
   udp: true
+  network: tcp
+  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
   flow: xtls-rprx-vision
   tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  client-fingerprint: ios
-  name: 🇩🇪 Germany [TG]
-- type: vless
-  server: 47.89.186.170
-  port: 55861
-  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.intel.com
-  reality-opts:
-    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
-    short-id: 7551ed1b
+  servername: aws.amazon.com
   client-fingerprint: chrome
-  name: '🇺🇸 United States [TG] #2'
+  reality-opts:
+    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
+  name: 'United States/North Bergen [TG] #2'
 - type: vless
   server: 2.24.124.64
   port: 443
@@ -254,7 +445,7 @@ proxies:
   client-fingerprint: chrome
   name: '🇩🇪 Germany [TG] #2'
 - type: vless
-  server: 169.40.42.202
+  server: 169.40.42.52
   port: 443
   udp: true
   network: tcp
@@ -266,21 +457,34 @@ proxies:
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
-  name: Germany [TG]
-- type: ss
-  server: 18.170.35.229
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-  name: 🇬🇧GB-18.170.35.229-0177
+  name: 'Germany [TG] #3'
 - type: vless
-  server: 15.237.145.224
-  port: 22222
+  server: 169.40.42.89
+  port: 443
   udp: true
   network: tcp
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  name: UN【机场推荐：https://a9a.xyz】82
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  name: 'Germany [TG] #2'
+- type: vless
+  server: 169.40.42.212
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  client-fingerprint: chrome
+  name: 🇩🇪 Germany [TG]
 - type: vless
   server: 15.237.145.224
   port: 22224
@@ -290,254 +494,135 @@ proxies:
   name: UN【机场推荐：https://a9a.xyz】83
 - type: vless
   server: 15.237.145.224
+  port: 22222
+  udp: true
+  network: tcp
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  name: UN【机场推荐：https://a9a.xyz】82
+- type: vless
+  server: 15.237.145.224
   port: 22223
   udp: true
   network: tcp
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   name: UN【机场推荐：https://a9a.xyz】81
+- type: vless
+  server: 13.231.19.51
+  port: 11690
+  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.tesla.com
+  reality-opts:
+    public-key: Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg
+    short-id: 034885e346fd30
+  client-fingerprint: firefox
+  name: '🇯🇵 Japan/Tokyo [TG] #2'
+- type: vless
+  server: 15.236.172.122
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  name: 🇫🇷 France/Paris [TG]
+- type: vless
+  server: 15.236.172.122
+  port: 22222
+  udp: true
+  network: tcp
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  name: France/Paris [TG]
+- type: vless
+  server: 13.231.19.51
+  port: 11690
+  udp: true
+  network: tcp
+  uuid: e2b8b217-cffb-4d66-9b8b-eca6e4334032
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.tesla.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: Bv3z0_uFRabB9C4CFpNfqepZUyeO4YTh1duJdMBNLkg
+    short-id: 034885e346fd30
+  name: 'Japan/Tokyo [TG] #2'
+- type: vless
+  server: 66.90.104.42
+  port: 2083
+  udp: true
+  network: grpc
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  grpc-opts:
+    grpc-service-name: vless
+  name: United Kingdom/London [TG]
 - type: ss
   server: 82.38.31.35
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-  name: 🇬🇧GB-82.38.31.35-0052
+  name: 🇬🇧GB-82.38.31.35-0051
 - type: vless
-  server: 85.17.145.65
-  port: 12068
-  udp: true
-  network: ws
-  uuid: 05caca6c-9e97-4c0f-8edf-7b88a6e572c5
-  ws-opts:
-    path: /
-    headers:
-      Host: mypanel.unixzone.us
-  name: The Netherlands/Haarlem [GH:Surfboardv2ra]
-- type: vless
-  server: 51.158.206.26
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  server: 185.47.254.251
+  port: 443
+  uuid: 878fb7f7-fc65-465e-a352-17c7216c6f3d
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: fuck.rkn
+  servername: gateway.icloud.com
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
+    public-key: 6-_ZidygR8PRt4gtHlGCAW-PPmjEIm7Wn7MZqJU1z1Q
+    short-id: 6c059ecfddf9b179
   client-fingerprint: chrome
-  name: '🇳🇱 The Netherlands/Haarlem [TG] #2'
+  name: 🌍 Guatemala/Guatemala City [GH:Surfboardv2ra]
 - type: vless
-  server: 72.56.81.165
-  port: 40443
-  uuid: 4bf5a71c-d726-4585-b095-7396675706d5
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  reality-opts:
-    public-key: D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU
-    short-id: c84f
-  client-fingerprint: qq
-  name: 🇳🇱 The Netherlands/Amsterdam [TG]
-- type: vless
-  server: 51.158.206.26
-  port: 23576
+  server: 184.107.106.68
+  port: 443
   udp: true
   network: tcp
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
+  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
   tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  name: 'The Netherlands/Haarlem [TG] #2'
+  servername: lizca2.footballfantasyforum.com
+  skip-cert-verify: true
+  name: Canada [TG]
 - type: vless
-  server: 193.23.194.167
-  port: 8443
+  server: 47.89.186.170
+  port: 55861
   udp: true
   network: tcp
-  uuid: 32349ee8-8551-45fa-a265-8704cec72936
+  uuid: d51ed55c-d6dd-400b-aaf6-017c33969bfe
+  flow: xtls-rprx-vision
   tls: true
-  servername: neth.lckdwn.ru
+  servername: www.intel.com
   client-fingerprint: firefox
-  name: 'The Netherlands/Amsterdam [TG] #2'
-- type: vless
-  server: 72.56.81.165
-  port: 40443
-  udp: true
-  network: tcp
-  uuid: 4bf5a71c-d726-4585-b095-7396675706d5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  client-fingerprint: qq
   reality-opts:
-    public-key: D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU
-    short-id: c84f
-  name: The Netherlands/Amsterdam [TG]
+    public-key: t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs
+    short-id: 7551ed1b
+  name: United States [TG]
 - type: vless
-  server: 3.9.135.156
-  port: 51847
-  uuid: 391a01e9-b664-407b-9158-610fab3f5920
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.tesla.com
-  reality-opts:
-    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
-    short-id: 0eec442e7b34d2f2
-  client-fingerprint: chrome
-  name: 🇬🇧 United Kingdom/City of London [TG]
-- type: vless
-  server: 51.158.206.93
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  client-fingerprint: chrome
-  name: 🇳🇱 The Netherlands/Haarlem [TG]
-- type: vless
-  server: 193.23.194.167
-  port: 8443
-  uuid: 32349ee8-8551-45fa-a265-8704cec72936
-  udp: true
-  tls: true
-  servername: neth.lckdwn.ru
-  name: '🇳🇱 The Netherlands/Amsterdam [TG] #2'
-- type: vless
-  server: 193.57.9.120
+  server: 184.107.106.68
   port: 443
-  udp: true
-  network: tcp
-  uuid: e8dac4fa-295c-4232-8279-2fe14b312a42
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amazon.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: gX_OQ9oJNQCtWdQC4lnOEYatfYA-vvVrGvPAzh6Zbxw
-    short-id: a1b2c3d4e5f60718
-  name: The Netherlands/Amsterdam [GH:Surfboardv2ra]
-- type: vless
-  server: 193.57.9.120
-  port: 443
-  uuid: e8dac4fa-295c-4232-8279-2fe14b312a42
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amazon.com
-  reality-opts:
-    public-key: gX_OQ9oJNQCtWdQC4lnOEYatfYA-vvVrGvPAzh6Zbxw
-    short-id: a1b2c3d4e5f60718
-  client-fingerprint: chrome
-  name: 🇳🇱 The Netherlands/Amsterdam [GH:Surfboardv2ra]
-- type: vless
-  server: 51.158.206.93
-  port: 23576
-  udp: true
-  network: tcp
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  tls: true
-  servername: fuck.rkn
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-  name: The Netherlands/Haarlem [TG]
-- type: vless
-  server: 3.9.135.156
-  port: 51847
-  udp: true
-  network: tcp
-  uuid: 391a01e9-b664-407b-9158-610fab3f5920
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.tesla.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
-    short-id: 0eec442e7b34d2f2
-  name: United Kingdom/City of London [TG]
-- type: vless
-  server: neth9.lunariai.ru
-  port: 8443
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
+  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
   udp: true
   tls: true
-  name: 🌍 Bulgaria [TG]
+  servername: lizca2.footballfantasyforum.com
+  skip-cert-verify: true
+  name: 🇨🇦 Canada [TG]
 - type: vless
-  server: 178.95.170.115
+  server: 31.76.91.72
   port: 2087
   udp: true
-  network: ws
-  uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
-  ws-opts:
-    path: /4bc027a44532
-    headers:
-      Host: Telegram-Leviko_v2ray
-  name: Poland/Warsaw [TG]
-- type: vless
-  server: 2.27.205.59
-  port: 443
-  udp: true
-  network: ws
-  uuid: c21631d5-36c9-4664-b575-97eca17456be
-  ws-opts:
-    path: /
-    headers:
-      Host: neth8.lunariai.ru
-  name: 'United States [TG] #3'
-- type: vless
-  server: neth9.lunariai.ru
-  port: 8443
-  udp: true
-  network: tcp
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
+  network: grpc
+  uuid: 524e00ce-ed89-481d-b4a4-6d7017f884e3
   tls: true
-  name: Bulgaria [TG]
-- type: vless
-  server: 186.246.19.79
-  port: 40443
-  udp: true
-  network: tcp
-  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
+  servername: ads.x5.ru
   client-fingerprint: chrome
   reality-opts:
-    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
-    short-id: 2bc0
-  name: United States/Buffalo [TG]
-- type: vless
-  server: 186.246.19.79
-  port: 40443
-  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  reality-opts:
-    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
-    short-id: 2bc0
-  client-fingerprint: chrome
-  name: 🇺🇸 United States/Buffalo [TG]
-- type: vless
-  server: connect3.nyxserver.ir
-  port: 8444
-  udp: true
-  network: tcp
-  uuid: 0b39a009-2a2a-4035-ba87-cc82894f8e21
-  tls: true
-  name: 节点日期：2026-09-12
+    public-key: -ZTJcZ_UcqAB7LHgkUqhnlJsQs_oBafRgjsFtWZElmM
+    short-id: c226283c4de5b1ad
+  grpc-opts:
+    grpc-service-name: grpc
+  name: Japan/Tokyo [TG]
 - type: vless
   server: 171.22.129.56
   port: 2053
@@ -553,20 +638,6 @@ proxies:
     short-id: beff3ff061a64cfd
   name: UN【机场推荐：https://a9a.xyz】79
 - type: vless
-  server: 31.59.150.174
-  port: 9443
-  udp: true
-  network: tcp
-  uuid: 92089155-6602-4122-86d4-fe6de20e8c4d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: hotcoals.aeternavpn.space
-  client-fingerprint: safari
-  reality-opts:
-    public-key: RWu6ktBE4DFbUz_prmz-5KuolLhO53ehh19mNxhP-wI
-    short-id: a1b2c3d4
-  name: NL【机场推荐：https://a9a.xyz】14
-- type: vless
   server: 171.22.129.56
   port: 2083
   udp: true
@@ -580,6 +651,20 @@ proxies:
     public-key: 40eDnye2AHCQqgM2_ikKzRayZ4Vlu4rnnkHmLmNalQc
     short-id: 32a37218722f0081
   name: UN【机场推荐：https://a9a.xyz】80
+- type: vless
+  server: 31.59.150.174
+  port: 9443
+  udp: true
+  network: tcp
+  uuid: 92089155-6602-4122-86d4-fe6de20e8c4d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: hotcoals.aeternavpn.space
+  client-fingerprint: safari
+  reality-opts:
+    public-key: RWu6ktBE4DFbUz_prmz-5KuolLhO53ehh19mNxhP-wI
+    short-id: a1b2c3d4
+  name: NL【机场推荐：https://a9a.xyz】14
 - type: vless
   server: 171.22.129.56
   port: 8443
@@ -598,55 +683,61 @@ proxy-groups:
 - name: AUTO
   type: select
   proxies:
-  - 🇺🇸US-108.181.0.177-0094
-  - 'United States/San Francisco [TG] #3'
-  - 'United States/San Francisco [TG] #6'
+  - 'United States/San Francisco [TG] #12'
+  - 'United States/San Francisco [TG] #15'
+  - 'United States/San Francisco [TG] #11'
+  - '🇺🇸 United States/San Francisco [TG] #13'
+  - 'United States/San Francisco [TG] #10'
+  - 'United States/San Francisco [TG] #13'
+  - 🇺🇸US-108.181.0.177-0066
+  - 'United States/San Francisco [TG] #9'
+  - 'United States/San Francisco [TG] #5'
+  - United States/San Francisco [TG]
+  - 🇺🇸 United States/San Francisco [TG]
   - '🇺🇸 United States/San Francisco [TG] #3'
   - UN【机场推荐：https://a9a.xyz】96
-  - 'United States/San Francisco [TG] #5'
-  - '🇺🇸 United States/San Francisco [TG] #6'
-  - 🇺🇸 United States/Hillsboro [TG]
-  - United States/Hillsboro [TG]
-  - '🇺🇸 United States/San Francisco [TG] #2'
-  - '🇺🇸 United States/San Francisco [TG] #4'
+  - 'United States/San Francisco [TG] #8'
+  - '🇺🇸 United States/San Francisco [TG] #5'
   - 'United States/San Francisco [TG] #4'
+  - '🇺🇸 United States/San Francisco [TG] #7'
+  - 'United States/San Francisco [TG] #3'
+  - 'United States/San Francisco [TG] #7'
+  - 'United States/San Francisco [TG] #14'
+  - '🇺🇸 United States/Hillsboro [TG] #2'
+  - United States/Hillsboro [TG]
+  - 🇺🇸 United States/Hillsboro [TG]
+  - 'United States/Hillsboro [TG] #2'
+  - 'United States/San Francisco [TG] #6'
+  - '🇺🇸 United States/San Francisco [TG] #2'
+  - '🇺🇸 United States/San Francisco [TG] #6'
   - 'United States/San Francisco [TG] #2'
-  - 'United States [TG] #2'
+  - 🇺🇸 United States [TG]
   - United States/North Bergen [TG]
+  - '🇩🇪 Germany [TG] #3'
   - 🇺🇸 United States/North Bergen [TG]
-  - 🇩🇪 Germany [TG]
-  - '🇺🇸 United States [TG] #2'
+  - 'United States/North Bergen [TG] #2'
   - 🇺🇸 United States/Boston [TG]
   - '🇩🇪 Germany [TG] #2'
-  - Germany [TG]
-  - 🇬🇧GB-18.170.35.229-0177
-  - UN【机场推荐：https://a9a.xyz】82
+  - 'Germany [TG] #3'
+  - 'Germany [TG] #2'
+  - 🇩🇪 Germany [TG]
   - UN【机场推荐：https://a9a.xyz】83
+  - UN【机场推荐：https://a9a.xyz】82
   - UN【机场推荐：https://a9a.xyz】81
-  - 🇬🇧GB-82.38.31.35-0052
-  - The Netherlands/Haarlem [GH:Surfboardv2ra]
-  - '🇳🇱 The Netherlands/Haarlem [TG] #2'
-  - 🇳🇱 The Netherlands/Amsterdam [TG]
-  - 'The Netherlands/Haarlem [TG] #2'
-  - 'The Netherlands/Amsterdam [TG] #2'
-  - The Netherlands/Amsterdam [TG]
-  - 🇬🇧 United Kingdom/City of London [TG]
-  - 🇳🇱 The Netherlands/Haarlem [TG]
-  - '🇳🇱 The Netherlands/Amsterdam [TG] #2'
-  - The Netherlands/Amsterdam [GH:Surfboardv2ra]
-  - 🇳🇱 The Netherlands/Amsterdam [GH:Surfboardv2ra]
-  - The Netherlands/Haarlem [TG]
-  - United Kingdom/City of London [TG]
-  - 🌍 Bulgaria [TG]
-  - Poland/Warsaw [TG]
-  - 'United States [TG] #3'
-  - Bulgaria [TG]
-  - United States/Buffalo [TG]
-  - 🇺🇸 United States/Buffalo [TG]
-  - 节点日期：2026-09-12
+  - '🇯🇵 Japan/Tokyo [TG] #2'
+  - 🇫🇷 France/Paris [TG]
+  - France/Paris [TG]
+  - 'Japan/Tokyo [TG] #2'
+  - United Kingdom/London [TG]
+  - 🇬🇧GB-82.38.31.35-0051
+  - 🌍 Guatemala/Guatemala City [GH:Surfboardv2ra]
+  - Canada [TG]
+  - United States [TG]
+  - 🇨🇦 Canada [TG]
+  - Japan/Tokyo [TG]
   - UN【机场推荐：https://a9a.xyz】79
-  - NL【机场推荐：https://a9a.xyz】14
   - UN【机场推荐：https://a9a.xyz】80
+  - NL【机场推荐：https://a9a.xyz】14
   - UN【机场推荐：https://a9a.xyz】74
 rules:
 - MATCH,AUTO
