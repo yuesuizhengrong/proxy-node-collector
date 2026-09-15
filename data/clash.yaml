@@ -2,19 +2,27 @@ mixed-port: 7890
 mode: rule
 proxies:
 - type: vless
-  server: 104.16.150.130
-  port: 2087
+  server: 188.114.97.6
+  port: 8880
   udp: true
   network: ws
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   ws-opts:
-    path: /
+    path: /?ed=2560
     headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: 'United States/San Francisco [TG] #2'
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+  name: 'United States/San Francisco [TG] #15'
+- type: vless
+  server: 162.159.24.131
+  port: 8880
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: '🇺🇸 United States/San Francisco [TG] #16'
 - type: vless
   server: 104.18.39.218
   port: 2086
@@ -28,81 +36,6 @@ proxies:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   name: 'United States/San Francisco [TG] #14'
 - type: vless
-  server: 172.64.154.8
-  port: 2052
-  udp: true
-  network: ws
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  name: 'United States/San Francisco [TG] #11'
-- type: vless
-  server: 172.64.53.194
-  port: 443
-  udp: true
-  network: ws
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: United States/San Francisco [TG]
-- type: vless
-  server: 104.16.150.130
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: '🇺🇸 United States/San Francisco [TG] #2'
-- type: vless
-  server: 162.159.24.131
-  port: 8880
-  udp: true
-  network: ws
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  name: 'United States/San Francisco [TG] #16'
-- type: vless
-  server: 162.159.24.131
-  port: 8880
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  name: '🇺🇸 United States/San Francisco [TG] #16'
-- type: vless
-  server: 172.64.53.194
-  port: 443
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: 🇺🇸 United States/San Francisco [TG]
-- type: vless
   server: 104.18.39.218
   port: 2086
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -114,55 +47,30 @@ proxies:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   name: '🇺🇸 United States/San Francisco [TG] #14'
 - type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: 44eae030-290b-4083-8102-6f8bab05701b
+  server: 137.184.218.169
+  port: 36925
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
   udp: true
+  flow: xtls-rprx-vision
   tls: true
-  servername: cfvvv-ev1.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cfvvv-ev1.pages.dev
-  name: '🇺🇸 United States/San Francisco [TG] #4'
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+  client-fingerprint: chrome
+  name: 🇺🇸 United States/North Bergen [TG]
 - type: vless
-  server: 172.64.146.211
-  port: 8443
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  server: 137.184.218.169
+  port: 36925
   udp: true
+  network: tcp
+  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  flow: xtls-rprx-vision
   tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: '🇺🇸 United States/San Francisco [TG] #10'
-- type: vless
-  server: 172.64.154.8
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  name: '🇺🇸 United States/San Francisco [TG] #11'
-- type: vless
-  server: 104.16.10.185
-  port: 443
-  udp: true
-  network: ws
-  uuid: 44eae030-290b-4083-8102-6f8bab05701b
-  tls: true
-  servername: cfvvv-ev1.pages.dev
-  ws-opts:
-    path: /
-    headers:
-      Host: cfvvv-ev1.pages.dev
-  name: 'United States/San Francisco [TG] #5'
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
+  name: United States/North Bergen [TG]
 - type: vless
   server: 172.64.52.97
   port: 2053
@@ -177,18 +85,44 @@ proxies:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   name: '🇺🇸 United States/San Francisco [TG] #8'
 - type: vless
-  server: 137.184.218.169
-  port: 36925
+  server: 104.16.150.130
+  port: 2087
   udp: true
-  network: tcp
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
-  flow: xtls-rprx-vision
+  network: ws
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   tls: true
-  servername: www.cloudflare.com
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   client-fingerprint: chrome
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-  name: United States/North Bergen [TG]
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: 'United States/San Francisco [TG] #2'
+- type: vless
+  server: 172.64.146.211
+  port: 8443
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: '🇺🇸 United States/San Francisco [TG] #10'
+- type: vless
+  server: 162.159.24.131
+  port: 8880
+  udp: true
+  network: ws
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: 'United States/San Francisco [TG] #16'
 - type: vless
   server: 172.64.146.211
   port: 8443
@@ -204,68 +138,52 @@ proxies:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   name: 'United States/San Francisco [TG] #10'
 - type: vless
-  server: 188.114.97.6
-  port: 443
+  server: 104.16.150.130
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
-  network: ws
-  uuid: 44eae030-290b-4083-8102-6f8bab05701b
   tls: true
-  servername: cfvvv-ev1.pages.dev
-  client-fingerprint: unsafe
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  network: ws
   ws-opts:
     path: /
     headers:
-      Host: cfvvv-ev1.pages.dev
-  name: 'United States/San Francisco [TG] #4'
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: '🇺🇸 United States/San Francisco [TG] #2'
 - type: vless
-  server: 188.114.97.6
-  port: 8880
+  server: 172.64.154.8
+  port: 2052
+  udp: true
+  network: ws
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: 'United States/San Francisco [TG] #11'
+- type: vless
+  server: 172.64.154.8
+  port: 2052
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: '🇺🇸 United States/San Francisco [TG] #11'
+- type: vless
+  server: 108.162.198.178
+  port: 2086
   udp: true
   network: ws
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-  name: 'United States/San Francisco [TG] #15'
-- type: vless
-  server: 172.64.150.28
-  port: 2082
-  udp: true
-  network: ws
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  name: United States/San Francisco [GH:barry-far/V2r]
-- type: vless
-  server: 172.64.145.166
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  network: ws
-  ws-opts:
     path: /
     headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: '🇺🇸 United States/San Francisco [TG] #7'
-- type: vless
-  server: 172.64.145.166
-  port: 2087
-  udp: true
-  network: ws
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: 'United States/San Francisco [TG] #7'
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  name: 'United States/San Francisco [TG] #12'
 - type: vless
   server: 172.64.52.97
   port: 2053
@@ -281,41 +199,82 @@ proxies:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   name: 'United States/San Francisco [TG] #8'
 - type: vless
-  server: 137.184.218.169
-  port: 36925
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  server: 172.64.53.194
+  port: 443
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
-  flow: xtls-rprx-vision
   tls: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-  client-fingerprint: chrome
-  name: 🇺🇸 United States/North Bergen [TG]
-- type: vless
-  server: 108.162.198.178
-  port: 2086
-  udp: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   network: ws
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   ws-opts:
     path: /
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  name: 'United States/San Francisco [TG] #12'
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: 🇺🇸 United States/San Francisco [TG]
 - type: vless
-  server: 169.40.42.212
+  server: 188.114.97.6
   port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  uuid: 44eae030-290b-4083-8102-6f8bab05701b
   udp: true
-  flow: xtls-rprx-vision
   tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
+  servername: cfvvv-ev1.pages.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cfvvv-ev1.pages.dev
+  name: '🇺🇸 United States/San Francisco [TG] #4'
+- type: vless
+  server: 188.114.97.6
+  port: 8880
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+  name: '🇺🇸 United States/San Francisco [TG] #15'
+- type: vless
+  server: 172.64.145.166
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: '🇺🇸 United States/San Francisco [TG] #7'
+- type: vless
+  server: 172.64.53.194
+  port: 443
+  udp: true
+  network: ws
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   client-fingerprint: chrome
-  name: 🇩🇪 Germany [TG]
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: United States/San Francisco [TG]
+- type: vless
+  server: 104.21.33.59
+  port: 443
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: '🇺🇸 United States/San Francisco [TG] #6'
 - type: vless
   server: 104.21.33.59
   port: 443
@@ -330,17 +289,6 @@ proxies:
     headers:
       Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   name: 'United States/San Francisco [TG] #6'
-- type: vless
-  server: 188.114.97.6
-  port: 8880
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-  name: '🇺🇸 United States/San Francisco [TG] #15'
 - server: 108.181.0.177
   port: 8388
   type: ss
@@ -348,7 +296,59 @@ proxies:
   password: G5p6ww4o67HB
   name: 🇺🇸US-108.181.0.177-0129
 - type: vless
-  server: 169.40.42.223
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  network: ws
+  uuid: 44eae030-290b-4083-8102-6f8bab05701b
+  tls: true
+  servername: cfvvv-ev1.pages.dev
+  client-fingerprint: unsafe
+  ws-opts:
+    path: /
+    headers:
+      Host: cfvvv-ev1.pages.dev
+  name: 'United States/San Francisco [TG] #4'
+- type: vless
+  server: 172.64.150.28
+  port: 2082
+  udp: true
+  network: ws
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  ws-opts:
+    path: /fp
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+  name: United States/San Francisco [GH:barry-far/V2r]
+- type: vless
+  server: 104.16.10.185
+  port: 443
+  udp: true
+  network: ws
+  uuid: 44eae030-290b-4083-8102-6f8bab05701b
+  tls: true
+  servername: cfvvv-ev1.pages.dev
+  ws-opts:
+    path: /
+    headers:
+      Host: cfvvv-ev1.pages.dev
+  name: 'United States/San Francisco [TG] #5'
+- type: vless
+  server: 172.64.145.166
+  port: 2087
+  udp: true
+  network: ws
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  name: 'United States/San Francisco [TG] #7'
+- type: vless
+  server: 169.40.42.212
   port: 443
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   udp: true
@@ -359,7 +359,14 @@ proxies:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
   client-fingerprint: chrome
-  name: 🇩🇪 Germany [GH:Surfboardv2ra]
+  name: 🇩🇪 Germany [TG]
+- type: ss
+  server: 82.38.31.35
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+  name: 🇬🇧GB-82.38.31.35-0105
 - type: vless
   server: 66.90.105.210
   port: 2083
@@ -378,13 +385,76 @@ proxies:
   grpc-opts:
     grpc-service-name: vless
   name: United Kingdom/London [TG]
-- type: ss
-  server: 82.38.31.35
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+- type: vless
+  server: lizca2.footballfantasyforum.com
+  port: 443
   udp: true
-  name: 🇬🇧GB-82.38.31.35-0105
+  network: tcp
+  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
+  tls: true
+  servername: lizca2.footballfantasyforum.com
+  skip-cert-verify: true
+  name: Canada [TG]
+- type: vless
+  server: lizca2.footballfantasyforum.com
+  port: 443
+  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
+  udp: true
+  tls: true
+  servername: lizca2.footballfantasyforum.com
+  skip-cert-verify: true
+  name: 🇨🇦 Canada [TG]
+- type: vless
+  server: 184.107.106.68
+  port: 443
+  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
+  udp: true
+  tls: true
+  servername: lizca2.footballfantasyforum.com
+  skip-cert-verify: true
+  name: '🇨🇦 Canada [TG] #2'
+- type: vless
+  server: 91.98.96.59
+  port: 40017
+  udp: true
+  network: tcp
+  uuid: d005cde6-263f-48ac-8b13-74ebf7f3f8ef
+  name: Germany/Falkenstein [GH:barry-far/V2r]
+- type: vless
+  server: 91.98.96.59
+  port: 40017
+  uuid: d005cde6-263f-48ac-8b13-74ebf7f3f8ef
+  udp: true
+  name: 🇩🇪 Germany/Falkenstein [GH:barry-far/V2r]
+- type: vless
+  server: 91.98.102.240
+  port: 42718
+  uuid: b775630e-1386-44a6-9d89-61d029d4b5ab
+  udp: true
+  name: 🇩🇪 Germany/Falkenstein [TG]
+- type: vless
+  server: 169.40.42.223
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  client-fingerprint: chrome
+  name: 🇩🇪 Germany [GH:Surfboardv2ra]
+- type: vless
+  server: 184.107.106.68
+  port: 443
+  udp: true
+  network: tcp
+  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
+  tls: true
+  servername: lizca2.footballfantasyforum.com
+  skip-cert-verify: true
+  name: 'Canada [TG] #2'
 - type: vless
   server: 88.99.125.243
   port: 15036
@@ -398,69 +468,6 @@ proxies:
   network: tcp
   uuid: 783c7211-5349-4c26-8f8f-85f0f4c93ae8
   name: 'Germany/Falkenstein [GH:barry-far/V2r] #2'
-- type: vless
-  server: lizca2.footballfantasyforum.com
-  port: 443
-  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
-  udp: true
-  tls: true
-  servername: lizca2.footballfantasyforum.com
-  skip-cert-verify: true
-  name: 🇨🇦 Canada [TG]
-- type: vless
-  server: 91.98.102.240
-  port: 42718
-  uuid: b775630e-1386-44a6-9d89-61d029d4b5ab
-  udp: true
-  name: 🇩🇪 Germany/Falkenstein [TG]
-- type: vless
-  server: lizca2.footballfantasyforum.com
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
-  tls: true
-  servername: lizca2.footballfantasyforum.com
-  skip-cert-verify: true
-  name: Canada [TG]
-- type: vless
-  server: 184.107.106.68
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
-  tls: true
-  servername: lizca2.footballfantasyforum.com
-  skip-cert-verify: true
-  name: 'Canada [TG] #2'
-- type: vless
-  server: 104.21.33.59
-  port: 443
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: '🇺🇸 United States/San Francisco [TG] #6'
-- type: vless
-  server: 184.107.106.68
-  port: 443
-  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
-  udp: true
-  tls: true
-  servername: lizca2.footballfantasyforum.com
-  skip-cert-verify: true
-  name: '🇨🇦 Canada [TG] #2'
-- type: vless
-  server: 91.98.96.59
-  port: 40017
-  uuid: d005cde6-263f-48ac-8b13-74ebf7f3f8ef
-  udp: true
-  name: 🇩🇪 Germany/Falkenstein [GH:barry-far/V2r]
 - type: vless
   server: 31.76.91.72
   port: 2087
@@ -487,47 +494,48 @@ proxy-groups:
 - name: AUTO
   type: select
   proxies:
-  - 'United States/San Francisco [TG] #2'
-  - 'United States/San Francisco [TG] #14'
-  - 'United States/San Francisco [TG] #11'
-  - United States/San Francisco [TG]
-  - '🇺🇸 United States/San Francisco [TG] #2'
-  - 'United States/San Francisco [TG] #16'
-  - '🇺🇸 United States/San Francisco [TG] #16'
-  - 🇺🇸 United States/San Francisco [TG]
-  - '🇺🇸 United States/San Francisco [TG] #14'
-  - '🇺🇸 United States/San Francisco [TG] #4'
-  - '🇺🇸 United States/San Francisco [TG] #10'
-  - '🇺🇸 United States/San Francisco [TG] #11'
-  - 'United States/San Francisco [TG] #5'
-  - '🇺🇸 United States/San Francisco [TG] #8'
-  - United States/North Bergen [TG]
-  - 'United States/San Francisco [TG] #10'
-  - 'United States/San Francisco [TG] #4'
   - 'United States/San Francisco [TG] #15'
-  - United States/San Francisco [GH:barry-far/V2r]
-  - '🇺🇸 United States/San Francisco [TG] #7'
-  - 'United States/San Francisco [TG] #7'
-  - 'United States/San Francisco [TG] #8'
+  - '🇺🇸 United States/San Francisco [TG] #16'
+  - 'United States/San Francisco [TG] #14'
+  - '🇺🇸 United States/San Francisco [TG] #14'
   - 🇺🇸 United States/North Bergen [TG]
+  - United States/North Bergen [TG]
+  - '🇺🇸 United States/San Francisco [TG] #8'
+  - 'United States/San Francisco [TG] #2'
+  - '🇺🇸 United States/San Francisco [TG] #10'
+  - 'United States/San Francisco [TG] #16'
+  - 'United States/San Francisco [TG] #10'
+  - '🇺🇸 United States/San Francisco [TG] #2'
+  - 'United States/San Francisco [TG] #11'
+  - '🇺🇸 United States/San Francisco [TG] #11'
   - 'United States/San Francisco [TG] #12'
-  - 🇩🇪 Germany [TG]
-  - 'United States/San Francisco [TG] #6'
+  - 'United States/San Francisco [TG] #8'
+  - 🇺🇸 United States/San Francisco [TG]
+  - '🇺🇸 United States/San Francisco [TG] #4'
   - '🇺🇸 United States/San Francisco [TG] #15'
+  - '🇺🇸 United States/San Francisco [TG] #7'
+  - United States/San Francisco [TG]
+  - '🇺🇸 United States/San Francisco [TG] #6'
+  - 'United States/San Francisco [TG] #6'
   - 🇺🇸US-108.181.0.177-0129
-  - 🇩🇪 Germany [GH:Surfboardv2ra]
+  - 'United States/San Francisco [TG] #4'
+  - United States/San Francisco [GH:barry-far/V2r]
+  - 'United States/San Francisco [TG] #5'
+  - 'United States/San Francisco [TG] #7'
+  - 🇩🇪 Germany [TG]
+  - 🇬🇧GB-82.38.31.35-0105
   - 'United Kingdom/London [TG] #2'
   - United Kingdom/London [TG]
-  - 🇬🇧GB-82.38.31.35-0105
+  - Canada [TG]
+  - 🇨🇦 Canada [TG]
+  - '🇨🇦 Canada [TG] #2'
+  - Germany/Falkenstein [GH:barry-far/V2r]
+  - 🇩🇪 Germany/Falkenstein [GH:barry-far/V2r]
+  - 🇩🇪 Germany/Falkenstein [TG]
+  - 🇩🇪 Germany [GH:Surfboardv2ra]
+  - 'Canada [TG] #2'
   - '🇩🇪 Germany/Falkenstein [GH:barry-far/V2r] #2'
   - 'Germany/Falkenstein [GH:barry-far/V2r] #2'
-  - 🇨🇦 Canada [TG]
-  - 🇩🇪 Germany/Falkenstein [TG]
-  - Canada [TG]
-  - 'Canada [TG] #2'
-  - '🇺🇸 United States/San Francisco [TG] #6'
-  - '🇨🇦 Canada [TG] #2'
-  - 🇩🇪 Germany/Falkenstein [GH:barry-far/V2r]
   - Japan/Tokyo [TG]
   - Germany/Falkenstein [TG]
 rules:
