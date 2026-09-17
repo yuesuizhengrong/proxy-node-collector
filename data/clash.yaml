@@ -1,6 +1,12 @@
 mixed-port: 7890
 mode: rule
 proxies:
+- server: 108.181.0.177
+  port: 8388
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: G5p6ww4o67HB
+  name: 🇺🇸US-108.181.0.177-0177
 - type: vless
   server: 104.16.10.199
   port: 443
@@ -14,86 +20,34 @@ proxies:
     path: /
     headers:
       Host: cfvvv-ev1.pages.dev
-  name: 🇫🇷FR_410|461KB/s|B007-260618 01
-- client-fingerprint: chrome
-  encryption: none
-  network: ws
-  port: 2087
-  server: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  sub_tag: M003-260806
-  tls: true
-  type: vless
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  ws-opts:
-    headers:
-      Host: ''
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/47.0.2526.106 Safari/537.36
-    path: /
-  xudp: true
-  packet-encoding: xudp
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: ❓Other_117|633KB/s|M003-260806 01
-- cipher: aes-256-cfb
-  password: amazonskr05
+  name: 🇫🇷FR_987|310KB/s|B007-260618 01
+- type: vless
+  server: 104.16.10.2
   port: 443
-  server: 3.148.252.26
-  sub_tag: A004-260618
-  type: ss
   udp: true
-  name: 🇺🇸US_117|381KB/s|A004-260618 01
-- client-fingerprint: chrome
   network: ws
-  port: 2087
-  server: mfa.gov.ua
-  sub_tag: C002-260622
+  uuid: 8102891d-7b37-4dc5-8261-9474b59b5c63
   tls: true
-  type: vless
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  servername: vip.868068.xyz
+  client-fingerprint: chrome
   ws-opts:
+    path: /proxyip=us.xiabibi.cf
     headers:
-      Host: fx3l5i2wdfxln0.fx6hsv0.ccwu.cc
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/51.0.2704.103 Safari/537.36
-    path: /
-  xudp: true
-  packet-encoding: xudp
-  servername: fx3l5i2wdfxln0.fx6hsv0.ccwu.cc
-  name: ❓Other_93|208KB/s|C002-260622 01
-- server: 108.181.0.177
-  port: 8388
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
-  name: 🇺🇸US-108.181.0.177-0177
-- client-fingerprint: qq
-  network: ws
-  port: 2087
-  server: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  sub_tag: M003-260806
+      Host: vip.868068.xyz
+  name: 🇫🇷FR_1004|419KB/s|A004-260618 01
+- type: vless
+  server: 31.58.50.200
+  port: 8443
+  udp: true
+  network: raw
+  uuid: 00dda8ac-c263-4106-a740-1e4478a7dc44
+  flow: xtls-rprx-vision
   tls: true
-  type: vless
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  ws-opts:
-    headers:
-      Host: ''
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/51.0.2704.63 Safari/537.36
-    path: /
-  xudp: true
-  packet-encoding: xudp
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  name: 🇫🇷FR_41|452KB/s|M003-260806 01
-- type: ss
-  server: 82.38.31.42
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-  name: 未知 SS-504 | free-nodes
+  servername: tradingview.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
+  name: 🇺🇸US_80|898KB/s|A004-260618 01
 - type: vless
   server: 31.58.50.200
   port: 8443
@@ -106,7 +60,48 @@ proxies:
   client-fingerprint: firefox
   reality-opts:
     public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  name: 🇺🇸US_75|111KB/s|A004-260618 01
+  name: ❓Other_93|222KB/s|A004-260618 01
+- type: vless
+  server: 66.70.179.198
+  port: 2053
+  udp: true
+  network: raw
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+    short-id: 83f8317a948bb769
+  name: 🇨🇦CA_21|1.2MB/s|A004-260618 01
+- type: vless
+  server: 31.58.50.200
+  port: 8443
+  udp: true
+  network: tcp
+  uuid: 00dda8ac-c263-4106-a740-1e4478a7dc44
+  flow: xtls-rprx-vision
+  tls: true
+  servername: tradingview.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
+  name: 🇺🇸US_65|905KB/s|A004-260618 01
+- type: vless
+  server: 150.241.102.181
+  port: 443
+  udp: true
+  network: grpc
+  uuid: d7cad038-0c3f-4cce-8f8a-36464aaf66c0
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 6KP5Xi1ao0hD5M3FGmco7NgKxU8z5gQVHwsvrQJVFS0
+    short-id: 8f3e2b1a
+  grpc-opts:
+    grpc-service-name: speedtest-grpc
+  name: 🇺🇸US_365|456KB/s|A004-260618 01
 - type: ss
   server: 82.38.31.3
   port: 8080
@@ -120,33 +115,64 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-  name: 🇬🇧GB-82.38.31.35-0148
+  name: 🇬🇧GB-82.38.31.35-0134
 - type: vless
-  server: 31.58.50.200
+  server: 3.114.220.22
+  port: 19645
+  udp: true
+  network: tcp
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  name: 🇯🇵JP_6|180KB/s|C002-260622 01
+- type: ss
+  server: 82.38.31.42
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+  name: 未知 SS-514 | free-nodes
+- type: trojan
+  server: 119.246.1.143
+  port: 443
+  udp: true
+  network: tcp
+  password: BxceQaOe
+  servername: t.me/ripaojiedian
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  name: 香港 09
+- type: vless
+  server: 31.58.181.88
   port: 8443
   udp: true
   network: tcp
-  uuid: 00dda8ac-c263-4106-a740-1e4478a7dc44
+  uuid: cab0b9e0-3df1-4624-8c42-a9f140d778f2
   flow: xtls-rprx-vision
   tls: true
   servername: tradingview.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  name: 🇺🇸US_78|264KB/s|A004-260618 01
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  name: 🇦🇪AE_20|282KB/s|A004-260618 01
 - type: vless
-  server: 66.70.179.198
-  port: 2053
+  server: 31.58.181.88
+  port: 8443
   udp: true
-  network: raw
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
+  network: tcp
+  uuid: 0e83e0b6-cefa-4964-a8cf-2b43154cee01
+  flow: xtls-rprx-vision
   tls: true
-  servername: www.cloudflare.com
+  servername: tradingview.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-    short-id: 83f8317a948bb769
-  name: 🇨🇦CA_7|316KB/s|A004-260618 01
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  name: 🇦🇪AE_36|5.2MB/s|A004-260618 01
 - type: vless
   server: 31.58.181.88
   port: 8443
@@ -159,7 +185,98 @@ proxies:
   client-fingerprint: firefox
   reality-opts:
     public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  name: 🇳🇱NL_30|457KB/s|A004-260618 01
+  name: 🇦🇪AE_45|7.0MB/s|A004-260618 01
+- type: vless
+  server: 31.58.181.88
+  port: 8443
+  udp: true
+  network: tcp
+  uuid: 77d4bb66-82c8-4511-98e0-44edb2da8978
+  flow: xtls-rprx-vision
+  tls: true
+  servername: tradingview.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  name: 🇦🇪AE_6|4.4MB/s|A004-260618 01
+- type: vless
+  server: 31.58.181.88
+  port: 8443
+  udp: true
+  network: tcp
+  uuid: 05819bb1-2975-473c-a51f-0fbccf8d2cfa
+  flow: xtls-rprx-vision
+  tls: true
+  servername: tradingview.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  name: 🇦🇪AE_46|351KB/s|A004-260618 01
+- type: vless
+  server: 31.58.181.88
+  port: 8443
+  udp: true
+  network: tcp
+  uuid: b375bdc2-5a7d-4074-898e-030ad75e3503
+  flow: xtls-rprx-vision
+  tls: true
+  servername: tradingview.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  name: 🇦🇪AE_39|750KB/s|A004-260618 01
+- type: vless
+  server: 82.118.19.153
+  port: 443
+  udp: true
+  network: tcp
+  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  reality-opts:
+    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
+    short-id: 670ed9f350bd8ee0
+  name: 🇩🇪DE_46|777KB/s|R002-260618 01
+- type: vless
+  server: 51.158.206.98
+  port: 23576
+  udp: true
+  network: raw
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  name: 🇳🇱NL_54|899KB/s|V007-260618 01
+- type: vless
+  server: 94.183.170.135
+  port: 443
+  udp: true
+  network: ws
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  servername: 94.183.170.135
+  ws-opts:
+    path: /
+  name: ❓Other_98|358KB/s|A004-260618 01
+- type: vless
+  server: 217.217.254.126
+  port: 2053
+  udp: true
+  network: raw
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+    short-id: 87829de0e2bb82cb
+  name: 🇸🇬SG_37|391KB/s|A004-260618 01
 - type: vless
   server: 93.152.217.41
   port: 40443
@@ -172,53 +289,47 @@ proxies:
   reality-opts:
     public-key: VG-FwQBMFzPcemJ_JqtkbO-2WKLmQp2h0CmAj-DfLkA
     short-id: 5b97
-  name: ❓Other_130|316KB/s|A004-260618 01
+  name: 🇩🇪DE_7|1.7MB/s|A004-260618 01
 - type: vless
-  server: 94.183.170.135
-  port: 443
-  udp: true
-  network: ws
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  servername: 94.183.170.135
-  ws-opts:
-    path: /
-  name: ❓Other_40|171KB/s|A004-260618 01
-- type: vless
-  server: 138.124.125.211
-  port: 443
+  server: 212.227.235.66
+  port: 2053
   udp: true
   network: raw
-  uuid: 1996007c-e7bc-464b-999b-cac28cec6c3e
-  flow: xtls-rprx-vision
+  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
   tls: true
   servername: www.apple.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: RVj8E6YuWeOq9XzIVLQCKM39qa-Cknp-GYvVAA1UPFo
-    short-id: 72cceb78
-  name: 🇬🇧GB_2|1.6MB/s|A004-260618 01
-- encryption: none
-  network: tcp
-  port: 39244
-  server: 192.248.182.183
-  sub_tag: B007-260618
-  type: vless
-  udp: true
-  uuid: 5fc7563b-552d-417f-9409-08ef92284599
-  xudp: true
-  packet-encoding: xudp
-  name: 🇩🇪DE_18|499KB/s|B007-260618 01
+    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
+    short-id: 29e8dcd2b37aaa7f
+  name: 🇪🇸ES_18|1.5MB/s|A004-260618 01
 - type: vless
-  server: uae.unixzone.us
-  port: 22573
+  server: 31.58.181.88
+  port: 8443
   udp: true
-  network: ws
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-  name: 🇦🇪AE_22|288KB/s|A003-260618 01
+  network: tcp
+  uuid: 41a463f0-8c2d-4090-8456-e3278cab8fa2
+  flow: xtls-rprx-vision
+  tls: true
+  servername: tradingview.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  name: 🇦🇪AE_11|276KB/s|A004-260618 01
+- type: vless
+  server: 193.163.203.170
+  port: 443
+  udp: true
+  network: tcp
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yandex.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  name: 🇺🇸US_262|1.2MB/s|B007-260618 01
 - type: vmess
   server: 45.144.154.149
   port: 443
@@ -233,61 +344,38 @@ proxies:
       Host: renderer-stream-2-62.mirra.now
   tls: true
   servername: renderer-stream-2-62.mirra.now
-  name: 未知 VMESS-1131 | free-nodes
-- type: vless
-  server: 193.163.203.170
-  port: 443
-  udp: true
-  network: tcp
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yandex.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
-    short-id: b28db60d77c50b4f
-  name: 🇱🇻LV拉脱维亚丨yoyapai.com
-- client-fingerprint: chrome
-  network: ws
-  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
-  port: 443
-  server: edu.ruangguru.com
-  skip-cert-verify: true
-  sni: id1.nathaya.web.id
-  sub_tag: B007-260618
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
-        Chrome/70.0.3538.110 Safari/537.36
-    path: /trojan
-  name: ❓Other_20|118KB/s|B007-260618 01
+  name: 🇳🇱NL-45.144.154.149-0667 | clashnodefree.com
 proxy-groups:
 - name: AUTO
   type: select
   proxies:
-  - 🇫🇷FR_410|461KB/s|B007-260618 01
-  - ❓Other_117|633KB/s|M003-260806 01
-  - 🇺🇸US_117|381KB/s|A004-260618 01
-  - ❓Other_93|208KB/s|C002-260622 01
   - 🇺🇸US-108.181.0.177-0177
-  - 🇫🇷FR_41|452KB/s|M003-260806 01
-  - 未知 SS-504 | free-nodes
-  - 🇺🇸US_75|111KB/s|A004-260618 01
+  - 🇫🇷FR_987|310KB/s|B007-260618 01
+  - 🇫🇷FR_1004|419KB/s|A004-260618 01
+  - 🇺🇸US_80|898KB/s|A004-260618 01
+  - ❓Other_93|222KB/s|A004-260618 01
+  - 🇨🇦CA_21|1.2MB/s|A004-260618 01
+  - 🇺🇸US_65|905KB/s|A004-260618 01
+  - 🇺🇸US_365|456KB/s|A004-260618 01
   - 'United Kingdom [GH:Mahdi0024/Pro] #2'
-  - 🇬🇧GB-82.38.31.35-0148
-  - 🇺🇸US_78|264KB/s|A004-260618 01
-  - 🇨🇦CA_7|316KB/s|A004-260618 01
-  - 🇳🇱NL_30|457KB/s|A004-260618 01
-  - ❓Other_130|316KB/s|A004-260618 01
-  - ❓Other_40|171KB/s|A004-260618 01
-  - 🇬🇧GB_2|1.6MB/s|A004-260618 01
-  - 🇩🇪DE_18|499KB/s|B007-260618 01
-  - 🇦🇪AE_22|288KB/s|A003-260618 01
-  - 未知 VMESS-1131 | free-nodes
-  - 🇱🇻LV拉脱维亚丨yoyapai.com
-  - ❓Other_20|118KB/s|B007-260618 01
+  - 🇬🇧GB-82.38.31.35-0134
+  - 🇯🇵JP_6|180KB/s|C002-260622 01
+  - 未知 SS-514 | free-nodes
+  - 香港 09
+  - 🇦🇪AE_20|282KB/s|A004-260618 01
+  - 🇦🇪AE_36|5.2MB/s|A004-260618 01
+  - 🇦🇪AE_45|7.0MB/s|A004-260618 01
+  - 🇦🇪AE_6|4.4MB/s|A004-260618 01
+  - 🇦🇪AE_46|351KB/s|A004-260618 01
+  - 🇦🇪AE_39|750KB/s|A004-260618 01
+  - 🇩🇪DE_46|777KB/s|R002-260618 01
+  - 🇳🇱NL_54|899KB/s|V007-260618 01
+  - ❓Other_98|358KB/s|A004-260618 01
+  - 🇸🇬SG_37|391KB/s|A004-260618 01
+  - 🇩🇪DE_7|1.7MB/s|A004-260618 01
+  - 🇪🇸ES_18|1.5MB/s|A004-260618 01
+  - 🇦🇪AE_11|276KB/s|A004-260618 01
+  - 🇺🇸US_262|1.2MB/s|B007-260618 01
+  - 🇳🇱NL-45.144.154.149-0667 | clashnodefree.com
 rules:
 - MATCH,AUTO
