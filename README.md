@@ -50,8 +50,9 @@ The configured non-GitHub sources currently include:
 - Yoyapai: `https://yoyapai.com/`
 - FreeNode.biz: `https://freenode.biz/`
 - FreeV2rayNode: `https://www.freev2raynode.com/`
+- YouNeed: `https://www.youneed.win/category/nodeshare`
 
-Direct subscription endpoints and bounded website discovery sources are listed in `config/sources.yaml`. Website failures are isolated, so an unavailable or password-protected site does not stop other sources. The collector does not trust a node merely because it came from a website: every parsed node still has to pass the Mihomo connectivity test before it is published.
+Direct subscription endpoints and the website search batch are listed in `config/sources.yaml`. Every scheduled update scans each enabled `page` source, follows a bounded number of likely node articles, discovers subscription files, and extracts supported node URIs embedded in page markup. Website failures are isolated, so an unavailable, CAPTCHA-protected, or password-protected site does not stop other sources. The collector does not trust a node merely because it came from a website: every parsed node still has to pass the Mihomo connectivity test before it is published.
 
 ## Schedule
 

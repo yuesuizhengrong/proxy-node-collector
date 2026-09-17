@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
-from urllib.parse import urljoin, urlsplit, urlunsplit
+from urllib.parse import unquote, urljoin, urlsplit, urlunsplit
 
 from .formats import (
     dedupe_nodes,
@@ -249,11 +249,16 @@ async def fetch_web_page_source(
     payload_urls: list[str] = []
     seen_payloads: set[str] = set()
     errors: list[str] = []
+    nodes: list[Node] = []
 
     page_index = 0
     while page_index < len(page_urls):
         page_url, page_content = page_urls[page_index]
         page_index += 1
+        remaining = int(settings["max_candidates_per_source"]) - len(nodes)
+        if remaining > 0:
+            inline_uris = extract_page_node_uris(page_content)
+            nodes.extend(parse_source_content("\n".join(inline_uris), source.name, "uri", remaining))
         article_urls: list[str] = []
         links = extract_page_links(page_content, page_url)
         for link in links:
@@ -288,11 +293,10 @@ async def fetch_web_page_source(
                 continue
             page_urls.append((link, page_response.text))
 
-    if not payload_urls:
-        detail = "; ".join(errors) or "No subscription links found on page"
+    if not payload_urls and not nodes:
+        detail = "; ".join(errors) or "No subscription links or inline nodes found on page"
         return SourceResult(source=source, ok=False, error=detail), []
 
-    nodes: list[Node] = []
     successful_payloads = 0
     payload_results = await asyncio.gather(
         *(fetch_url(client, payload_url, settings, fetch_cache) for payload_url in payload_urls)
@@ -311,9 +315,9 @@ async def fetch_web_page_source(
         except Exception as exc:
             errors.append(f"{payload_url}: {exc}")
 
-    if successful_payloads == 0:
+    if payload_urls and successful_payloads == 0:
         errors.append("All discovered subscription files failed to download")
-    elif not nodes:
+    elif payload_urls and not nodes:
         errors.append("Subscription files contained no supported nodes")
 
     return (
@@ -331,15 +335,16 @@ class PageLinkParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.hrefs: list[str] = []
+        self.node_uris: list[str] = []
         self.text_parts: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        if tag.lower() != "a":
-            return
         for key, value in attrs:
-            if key.lower() == "href" and value:
+            normalized_key = key.lower()
+            if normalized_key == "data-raw" and value:
+                self.node_uris.append(value)
+            if tag.lower() == "a" and normalized_key == "href" and value:
                 self.hrefs.append(value)
-                break
 
     def handle_data(self, data: str) -> None:
         self.text_parts.append(data)
@@ -367,6 +372,27 @@ def extract_page_links(content: str, base_url: str) -> list[str]:
         seen.add(canonical)
         links.append(absolute)
     return links
+
+
+def extract_page_node_uris(content: str) -> list[str]:
+    parser = PageLinkParser()
+    parser.feed(content)
+    candidates = list(parser.node_uris)
+    candidates.extend(
+        re.findall(
+            r"(?i)(?:ssr?|vmess|vless|trojan)://[^\s<>\"']+",
+            " ".join(parser.text_parts),
+        )
+    )
+
+    uris: list[str] = []
+    seen: set[str] = set()
+    for candidate in candidates:
+        uri = candidate.strip().rstrip(".,;)]}")
+        if uri and uri not in seen:
+            seen.add(uri)
+            uris.append(uri)
+    return uris
 
 
 def canonical_http_url(url: str) -> str:
@@ -420,8 +446,19 @@ def is_article_link(url: str) -> bool:
 
 
 def article_link_priority(url: str) -> int:
-    path = urlsplit(url).path.lower()
-    node_hints = ("free-node", "free_node", "freenode", "clashnode", "free-nodes", "subscribe")
+    path = unquote(urlsplit(url).path).lower()
+    node_hints = (
+        "free-node",
+        "free_node",
+        "freenode",
+        "clashnode",
+        "free-nodes",
+        "subscribe",
+        "节点",
+        "vmess",
+        "vless",
+        "trojan",
+    )
     has_node_hint = any(hint in path for hint in node_hints)
     if has_node_hint and path.endswith((".html", ".htm")):
         return 0

@@ -12,6 +12,7 @@ from proxy_node_collector.cli import (
     build_subscriptions,
     ensure_publishable_results,
     extract_page_links,
+    extract_page_node_uris,
     fetch_web_page_source,
     fetch_url,
     is_article_link,
@@ -81,11 +82,26 @@ class SubscriptionFormatTest(unittest.TestCase):
         generic = "https://site.example/news/article-158079.htm"
         clashgithub = "https://clashgithub.com/clashnode-20260917.html"
         freeclash = "https://www.freeclashnode.com/free-node/2026-9-17-links.htm"
+        youneed = "https://www.youneed.win/2026-09-04%E6%9C%80%E6%96%B0%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9.html"
 
         self.assertTrue(is_article_link(generic))
         self.assertTrue(is_article_link(clashgithub))
         self.assertTrue(is_article_link(freeclash))
         self.assertLess(article_link_priority(freeclash), article_link_priority(generic))
+        self.assertLess(article_link_priority(youneed), article_link_priority(generic))
+
+    def test_extracts_inline_node_uris_from_page_markup(self):
+        html = """
+        <a data-raw="vless://id@node.example:443?security=tls&amp;sni=cdn.example">copy</a>
+        <pre>trojan://secret@trojan.example:443?security=tls</pre>
+        <a data-raw="vless://id@node.example:443?security=tls&amp;sni=cdn.example">duplicate</a>
+        """
+
+        uris = extract_page_node_uris(html)
+
+        self.assertEqual(len(uris), 2)
+        self.assertIn("vless://id@node.example:443?security=tls&sni=cdn.example", uris)
+        self.assertIn("trojan://secret@trojan.example:443?security=tls", uris)
 
     def test_subscription_payloads_may_use_a_same_site_subdomain(self):
         self.assertTrue(
@@ -123,6 +139,7 @@ class SubscriptionFormatTest(unittest.TestCase):
         self.assertIn("jcnode.com", external_hosts)
         self.assertIn("yoyapai.com", external_hosts)
         self.assertIn("freenode.biz", external_hosts)
+        self.assertIn("www.youneed.win", external_hosts)
         self.assertTrue(any(source.format == "page" for source in sources))
 
     def test_ssr_uri_round_trip(self):
@@ -182,6 +199,30 @@ class SubscriptionFormatTest(unittest.TestCase):
         self.assertEqual([node.label for node in nodes], ["node-0", "node-1"])
 
 class AsyncCollectorTest(unittest.IsolatedAsyncioTestCase):
+    async def test_page_inline_nodes_are_collected_without_subscription_file(self):
+        import httpx
+
+        uri = vmess_uri_from_proxy(VMESS_PROXY, "inline")
+
+        async def handler(request):
+            return httpx.Response(200, text=f'<a data-raw="{uri}">copy</a>', request=request)
+
+        settings = {
+            "source_retry_count": 0,
+            "max_source_bytes": 1024 * 1024,
+            "page_link_limit": 1,
+            "page_payload_limit": 1,
+            "max_candidates_per_source": 10,
+        }
+        source_type = load_config(Path(__file__).parents[1] / "config" / "sources.yaml")[1][-1].__class__
+        source = source_type("fixture", "https://site.example/", "page", True)
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+            result, nodes = await fetch_web_page_source(client, source, settings)
+
+        self.assertTrue(result.ok)
+        self.assertEqual(len(nodes), 1)
+        self.assertEqual(nodes[0].label, "inline")
+
     async def test_page_with_unparseable_payload_is_reported_as_failed(self):
         import httpx
 
