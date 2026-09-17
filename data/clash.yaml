@@ -2,60 +2,19 @@ mixed-port: 7890
 mode: rule
 proxies:
 - type: vless
-  server: 104.26.7.214
-  port: 8880
+  server: 104.16.10.199
+  port: 443
   udp: true
   network: ws
-  uuid: 4bf6fee9-d3c4-4a98-b83b-170bf37c669c
+  uuid: 44eae030-290b-4083-8102-6f8bab05701b
+  tls: true
+  servername: cfvvv-ev1.pages.dev
+  client-fingerprint: unsafe
   ws-opts:
     path: /
     headers:
-      Host: cold-water-945c.43-bc5.workers.dev
-  name: 🇫🇷FR_203|272KB/s|M003-260806 01
-- encryption: none
-  network: ws
-  port: 8880
-  server: 104.16.100.66
-  sub_tag: B007-260618
-  type: vless
-  udp: true
-  uuid: b4a18856-301d-4bb2-b729-6afcb700faf5
-  ws-opts:
-    headers:
-      Host: red-flower-a2bf.363.workers.dev
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/52.0.2743.116 Safari/537.36
-    path: /pyip=ProxyIP.JP.CMLiussss.net
-  xudp: true
-  packet-encoding: xudp
-  name: ❓Other_274|227KB/s|B007-260618 01
-- network: ws
-  port: 8880
-  server: 104.21.12.116
-  sub_tag: A004-260618
-  type: vless
-  udp: true
-  uuid: 7ed93ccf-6a54-4b19-a9b4-aedfc79bab7d
-  ws-opts:
-    headers:
-      Host: muddy-sky-4767.344-7a7.workers.dev
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/61.0.3163.100 Safari/537.36
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-  xudp: true
-  packet-encoding: xudp
-  name: 🇫🇷FR_24|148KB/s|A004-260618 01
-- type: vless
-  server: www.glassdoor.com
-  port: 8880
-  udp: true
-  network: ws
-  uuid: 3bf2781f-63a2-4c38-ad02-2cc337c2f7fa
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: silent-heart-175f.325-a85.workers.dev
-  name: 🇫🇷FR_133|248KB/s|C002-260622 01
+      Host: cfvvv-ev1.pages.dev
+  name: 🇫🇷FR_410|461KB/s|B007-260618 01
 - client-fingerprint: chrome
   encryption: none
   network: ws
@@ -76,122 +35,14 @@ proxies:
   packet-encoding: xudp
   servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
   name: ❓Other_117|633KB/s|M003-260806 01
-- network: ws
-  port: 8880
-  server: 172.67.152.71
-  sub_tag: B007-260618
-  type: vless
-  udp: true
-  uuid: ad85a1ce-3519-4634-9ea1-66c60d3694ba
-  ws-opts:
-    headers:
-      Host: little-pond-8731.81-68e.workers.dev
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/61.0.3163.79 Safari/537.36
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-  xudp: true
-  packet-encoding: xudp
-  name: 🇫🇷FR_221|357KB/s|B007-260618 01
-- type: vless
-  server: 104.21.12.116
-  port: 8880
-  udp: true
-  network: ws
-  uuid: 7ed93ccf-6a54-4b19-a9b4-aedfc79bab7d
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: muddy-sky-4767.344-7a7.workers.dev
-  name: 🇫🇷FR_24|148KB/s|A004-260618 01 2
-- type: vless
-  server: skk.moe
-  port: 8880
-  udp: true
-  network: ws
-  uuid: 3adac494-0eb1-4d89-a187-b2181691444d
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: tiny-lake-bbf1.369-766.workers.dev
-  name: 🇫🇷FR_225|297KB/s|F003-260618 01
-- type: vless
-  server: 104.16.10.199
+- cipher: aes-256-cfb
+  password: amazonskr05
   port: 443
+  server: 3.148.252.26
+  sub_tag: A004-260618
+  type: ss
   udp: true
-  network: ws
-  uuid: 44eae030-290b-4083-8102-6f8bab05701b
-  tls: true
-  servername: cfvvv-ev1.pages.dev
-  client-fingerprint: unsafe
-  ws-opts:
-    path: /
-    headers:
-      Host: cfvvv-ev1.pages.dev
-  name: 🇫🇷FR_410|461KB/s|B007-260618 01
-- type: vless
-  server: skk.moe
-  port: 8880
-  udp: true
-  network: ws
-  uuid: 2b5753cf-4d0a-4746-b63d-cd67a3de2ccc
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: crimson-hill-8061.166-dcf.workers.dev
-  name: 🇫🇷FR_327|185KB/s|C002-260622 01
-- type: vless
-  server: 104.21.23.72
-  port: 8880
-  udp: true
-  network: ws
-  uuid: a62a4c64-2270-4d41-828b-2591906c48ba
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: sweet-disk-a026.253-54b.workers.dev
-  name: 🇫🇷FR_346|295KB/s|B007-260618 01
-- network: ws
-  port: 8880
-  server: www.gov.ua
-  sub_tag: C002-260622
-  type: vless
-  udp: true
-  uuid: 486ebf01-0b45-4c38-9ef6-198aa0f9d2c3
-  ws-opts:
-    headers:
-      Host: quiet-feather-19f3.410-a69.workers.dev
-      User-Agent: Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/51.0.2704.106 Safari/537.36
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-  xudp: true
-  packet-encoding: xudp
-  name: 🇫🇷FR_324|347KB/s|C002-260622 01
-- type: vless
-  server: 91.193.58.93
-  port: 443
-  udp: true
-  network: ws
-  uuid: 9419f782-b18e-4c4b-ae95-a7a279fd021f
-  tls: true
-  servername: jamph131-1228.pages.dev
-  ws-opts:
-    path: Telegram-WangCai2🇨🇳
-    headers:
-      Host: jamph131-1228.pages.dev
-  name: 🇭🇰HK香港節點丨yoyapai.com
-- type: vless
-  server: 66.70.179.198
-  port: 2053
-  udp: true
-  network: raw
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-    short-id: 83f8317a948bb769
-  name: 🇨🇦CA_7|316KB/s|A004-260618 01
+  name: 🇺🇸US_117|381KB/s|A004-260618 01
 - client-fingerprint: chrome
   network: ws
   port: 2087
@@ -216,24 +67,7 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: G5p6ww4o67HB
-  name: 🇺🇸US-108.181.0.177-0167
-- encryption: none
-  network: ws
-  port: 8880
-  server: www.gov.ua
-  sub_tag: C002-260622
-  type: vless
-  udp: true
-  uuid: 73ae7d45-1046-4cc5-9741-199375b620f1
-  ws-opts:
-    headers:
-      Host: round-resonance-a84c.13-531.workers.dev
-      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/56.0.2924.87 Safari/537.36
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-  xudp: true
-  packet-encoding: xudp
-  name: 🇫🇷FR_147|291KB/s|C002-260622 01
+  name: 🇺🇸US-108.181.0.177-0177
 - client-fingerprint: qq
   network: ws
   port: 2087
@@ -260,6 +94,26 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
   name: 未知 SS-504 | free-nodes
+- type: vless
+  server: 31.58.50.200
+  port: 8443
+  udp: true
+  network: tcp
+  uuid: beed721d-73b6-47fc-a7b0-cac10e624b98
+  flow: xtls-rprx-vision
+  tls: true
+  servername: tradingview.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
+  name: 🇺🇸US_75|111KB/s|A004-260618 01
+- type: ss
+  server: 82.38.31.3
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+  name: 'United Kingdom [GH:Mahdi0024/Pro] #2'
 - type: ss
   server: 82.38.31.35
   port: 8080
@@ -280,40 +134,19 @@ proxies:
   reality-opts:
     public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
   name: 🇺🇸US_78|264KB/s|A004-260618 01
-- type: ss
-  server: 82.38.31.3
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-  name: 'United Kingdom [GH:Mahdi0024/Pro] #2'
 - type: vless
-  server: 31.58.50.200
-  port: 8443
-  udp: true
-  network: tcp
-  uuid: beed721d-73b6-47fc-a7b0-cac10e624b98
-  flow: xtls-rprx-vision
-  tls: true
-  servername: tradingview.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  name: 🇺🇸US_75|111KB/s|A004-260618 01
-- type: vless
-  server: 138.124.125.211
-  port: 443
+  server: 66.70.179.198
+  port: 2053
   udp: true
   network: raw
-  uuid: 1996007c-e7bc-464b-999b-cac28cec6c3e
-  flow: xtls-rprx-vision
+  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
   tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
   reality-opts:
-    public-key: RVj8E6YuWeOq9XzIVLQCKM39qa-Cknp-GYvVAA1UPFo
-    short-id: 72cceb78
-  name: 🇬🇧GB_2|1.6MB/s|A004-260618 01
+    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
+    short-id: 83f8317a948bb769
+  name: 🇨🇦CA_7|316KB/s|A004-260618 01
 - type: vless
   server: 31.58.181.88
   port: 8443
@@ -340,26 +173,30 @@ proxies:
     public-key: VG-FwQBMFzPcemJ_JqtkbO-2WKLmQp2h0CmAj-DfLkA
     short-id: 5b97
   name: ❓Other_130|316KB/s|A004-260618 01
-- client-fingerprint: chrome
-  encryption: none
-  network: ws
-  port: 2087
-  server: one-for-all.levikogjgfdd.ir
-  sub_tag: B007-260618
-  tls: true
-  type: vless
+- type: vless
+  server: 94.183.170.135
+  port: 443
   udp: true
-  uuid: 50414e45-4c5f-5a45-5553-6f51879c0594
+  network: ws
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  servername: 94.183.170.135
   ws-opts:
-    headers:
-      Host: levikoconfig.levikogjgfdd.ir
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/54.0.2840.71 Safari/537.36
     path: /
-  xudp: true
-  packet-encoding: xudp
-  servername: levikoconfig.levikogjgfdd.ir
-  name: ❓Other_309|523KB/s|B007-260618 01
+  name: ❓Other_40|171KB/s|A004-260618 01
+- type: vless
+  server: 138.124.125.211
+  port: 443
+  udp: true
+  network: raw
+  uuid: 1996007c-e7bc-464b-999b-cac28cec6c3e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: RVj8E6YuWeOq9XzIVLQCKM39qa-Cknp-GYvVAA1UPFo
+    short-id: 72cceb78
+  name: 🇬🇧GB_2|1.6MB/s|A004-260618 01
 - encryption: none
   network: tcp
   port: 39244
@@ -382,6 +219,21 @@ proxies:
     headers:
       Host: uae.unixzone.us
   name: 🇦🇪AE_22|288KB/s|A003-260618 01
+- type: vmess
+  server: 45.144.154.149
+  port: 443
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+  tls: true
+  servername: renderer-stream-2-62.mirra.now
+  name: 未知 VMESS-1131 | free-nodes
 - type: vless
   server: 193.163.203.170
   port: 443
@@ -396,30 +248,6 @@ proxies:
     public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
     short-id: b28db60d77c50b4f
   name: 🇱🇻LV拉脱维亚丨yoyapai.com
-- type: vless
-  server: 94.183.170.135
-  port: 443
-  udp: true
-  network: ws
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  servername: 94.183.170.135
-  ws-opts:
-    path: /
-  name: ❓Other_40|171KB/s|A004-260618 01
-- type: vmess
-  server: 82259754d625.oylfmxz.cn
-  port: 443
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 82259754d625.oylfmxz.cn
-  tls: true
-  name: TW【机场推荐：https://a9a.xyz】21
 - client-fingerprint: chrome
   network: ws
   password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
@@ -436,67 +264,30 @@ proxies:
         Chrome/70.0.3538.110 Safari/537.36
     path: /trojan
   name: ❓Other_20|118KB/s|B007-260618 01
-- cipher: aes-256-gcm
-  password: iOaIXNsQXVIxwmkY
-  port: 8388
-  server: 140.82.56.38
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-  name: 🇳🇱NL_46|1.6MB/s|M003-260806 01
-- type: vmess
-  server: 45.144.154.149
-  port: 443
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-  tls: true
-  servername: renderer-stream-2-62.mirra.now
-  name: 未知 VMESS-1131 | free-nodes
 proxy-groups:
 - name: AUTO
   type: select
   proxies:
-  - 🇫🇷FR_203|272KB/s|M003-260806 01
-  - ❓Other_274|227KB/s|B007-260618 01
-  - 🇫🇷FR_24|148KB/s|A004-260618 01
-  - 🇫🇷FR_133|248KB/s|C002-260622 01
-  - ❓Other_117|633KB/s|M003-260806 01
-  - 🇫🇷FR_221|357KB/s|B007-260618 01
-  - 🇫🇷FR_24|148KB/s|A004-260618 01 2
-  - 🇫🇷FR_225|297KB/s|F003-260618 01
   - 🇫🇷FR_410|461KB/s|B007-260618 01
-  - 🇫🇷FR_327|185KB/s|C002-260622 01
-  - 🇫🇷FR_346|295KB/s|B007-260618 01
-  - 🇫🇷FR_324|347KB/s|C002-260622 01
-  - 🇭🇰HK香港節點丨yoyapai.com
-  - 🇨🇦CA_7|316KB/s|A004-260618 01
+  - ❓Other_117|633KB/s|M003-260806 01
+  - 🇺🇸US_117|381KB/s|A004-260618 01
   - ❓Other_93|208KB/s|C002-260622 01
-  - 🇺🇸US-108.181.0.177-0167
-  - 🇫🇷FR_147|291KB/s|C002-260622 01
+  - 🇺🇸US-108.181.0.177-0177
   - 🇫🇷FR_41|452KB/s|M003-260806 01
   - 未知 SS-504 | free-nodes
+  - 🇺🇸US_75|111KB/s|A004-260618 01
+  - 'United Kingdom [GH:Mahdi0024/Pro] #2'
   - 🇬🇧GB-82.38.31.35-0148
   - 🇺🇸US_78|264KB/s|A004-260618 01
-  - 'United Kingdom [GH:Mahdi0024/Pro] #2'
-  - 🇺🇸US_75|111KB/s|A004-260618 01
-  - 🇬🇧GB_2|1.6MB/s|A004-260618 01
+  - 🇨🇦CA_7|316KB/s|A004-260618 01
   - 🇳🇱NL_30|457KB/s|A004-260618 01
   - ❓Other_130|316KB/s|A004-260618 01
-  - ❓Other_309|523KB/s|B007-260618 01
+  - ❓Other_40|171KB/s|A004-260618 01
+  - 🇬🇧GB_2|1.6MB/s|A004-260618 01
   - 🇩🇪DE_18|499KB/s|B007-260618 01
   - 🇦🇪AE_22|288KB/s|A003-260618 01
-  - 🇱🇻LV拉脱维亚丨yoyapai.com
-  - ❓Other_40|171KB/s|A004-260618 01
-  - TW【机场推荐：https://a9a.xyz】21
-  - ❓Other_20|118KB/s|B007-260618 01
-  - 🇳🇱NL_46|1.6MB/s|M003-260806 01
   - 未知 VMESS-1131 | free-nodes
+  - 🇱🇻LV拉脱维亚丨yoyapai.com
+  - ❓Other_20|118KB/s|B007-260618 01
 rules:
 - MATCH,AUTO
