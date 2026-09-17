@@ -6,6 +6,7 @@ import os
 import socket
 import subprocess
 import tempfile
+from collections import deque
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -30,15 +31,17 @@ async def test_nodes_with_mihomo(
 
     ordered = round_robin_protocol_order(nodes)
     max_tested = int(settings["max_tested_nodes"])
-    batch_size = int(settings["mihomo_batch_size"])
+    batch_size = max(1, int(settings["mihomo_batch_size"]))
     selected = ordered[:max_tested]
-    results: list[TestedNode] = []
+    batches = [selected[offset : offset + batch_size] for offset in range(0, len(selected), batch_size)]
+    batch_semaphore = asyncio.Semaphore(max(1, int(settings.get("mihomo_batch_concurrency", 1))))
 
-    for offset in range(0, len(selected), batch_size):
-        batch = selected[offset : offset + batch_size]
-        results.extend(
-            await test_batch_resilient(batch, mihomo_bin, settings, httpx, yaml)
-        )
+    async def run_batch(batch: list[Node]) -> list[TestedNode]:
+        async with batch_semaphore:
+            return await test_batch_resilient(batch, mihomo_bin, settings, httpx, yaml)
+
+    grouped_results = await asyncio.gather(*(run_batch(batch) for batch in batches))
+    results = [item for group in grouped_results for item in group]
 
     results.sort(key=lambda item: item.latency_ms)
     return results
@@ -122,6 +125,7 @@ async def test_single_batch(
                 controller_url,
                 float(settings["controller_start_timeout_seconds"]),
                 httpx,
+                process,
             )
             if not ready:
                 return None
@@ -139,10 +143,13 @@ async def wait_for_controller(
     controller_url: str,
     timeout_seconds: float,
     httpx: Any,
+    process: Any | None = None,
 ) -> bool:
     deadline = asyncio.get_running_loop().time() + timeout_seconds
     async with httpx.AsyncClient(timeout=2, trust_env=False) as client:
         while asyncio.get_running_loop().time() < deadline:
+            if process is not None and process.poll() is not None:
+                return False
             try:
                 response = await client.get(f"{controller_url}/version")
                 if response.status_code == 200:
@@ -214,9 +221,9 @@ async def probe_node(
 
 
 def round_robin_protocol_order(nodes: list[Node]) -> list[Node]:
-    by_protocol: dict[str, list[Node]] = {}
+    by_protocol: dict[str, deque[Node]] = {}
     for node in sorted(nodes, key=lambda item: (item.protocol, item.identity)):
-        by_protocol.setdefault(node.protocol, []).append(node)
+        by_protocol.setdefault(node.protocol, deque()).append(node)
 
     ordered: list[Node] = []
     protocols = sorted(by_protocol)
@@ -225,7 +232,7 @@ def round_robin_protocol_order(nodes: list[Node]) -> list[Node]:
         for protocol in protocols:
             queue = by_protocol[protocol]
             if queue:
-                ordered.append(queue.pop(0))
+                ordered.append(queue.popleft())
             if queue:
                 next_protocols.append(protocol)
         protocols = next_protocols
@@ -255,4 +262,3 @@ def creation_flags() -> int:
 
 def utc_now() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-

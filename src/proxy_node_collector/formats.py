@@ -22,12 +22,15 @@ def parse_source_content(
     source_format: str,
     max_nodes: int,
 ) -> list[Node]:
+    max_nodes = max(0, int(max_nodes))
+    if max_nodes == 0:
+        return []
     format_name = source_format.lower()
     if format_name not in {"auto", "uri", "base64", "clash"}:
         raise ValueError(f"Unsupported source format: {source_format}")
 
-    if format_name in {"auto", "clash"} and looks_like_clash(content):
-        nodes = parse_clash_document(content, source_name)
+    if format_name == "clash" or (format_name == "auto" and looks_like_clash(content)):
+        nodes = parse_clash_document(content, source_name, max_nodes)
         if nodes or format_name == "clash":
             return nodes[:max_nodes]
 
@@ -42,13 +45,19 @@ def parse_source_content(
 
 
 def parse_uri_lines(content: str, source_name: str, max_nodes: int) -> list[Node]:
+    max_nodes = max(0, int(max_nodes))
+    if max_nodes == 0:
+        return []
     nodes: list[Node] = []
     for line in content.splitlines():
         value = line.strip()
         if not value or value.startswith("#") or "://" not in value:
             continue
 
-        node = parse_uri(value, source_name)
+        try:
+            node = parse_uri(value, source_name)
+        except (AttributeError, TypeError, UnicodeError, ValueError):
+            continue
         if node is not None:
             nodes.append(node)
         if len(nodes) >= max_nodes:
@@ -239,14 +248,19 @@ def parse_xray_uri(uri: str, source_name: str, protocol: str) -> Node | None:
         return None
 
 
-def parse_clash_document(content: str, source_name: str) -> list[Node]:
+def parse_clash_document(
+    content: str,
+    source_name: str,
+    max_nodes: int | None = None,
+) -> list[Node]:
     try:
         import yaml
     except ImportError as exc:
         raise RuntimeError("PyYAML is required to parse Clash sources. Run: python -m pip install -e .") from exc
 
     try:
-        document = yaml.safe_load(content) or {}
+        loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+        document = yaml.load(content, Loader=loader) or {}
     except yaml.YAMLError:
         return []
     if not isinstance(document, dict) or not isinstance(document.get("proxies"), list):
@@ -256,7 +270,7 @@ def parse_clash_document(content: str, source_name: str) -> list[Node]:
     for entry in document["proxies"]:
         if not isinstance(entry, dict):
             continue
-        proxy = copy.deepcopy(entry)
+        proxy = dict(entry)
         protocol = str(proxy.get("type", "")).lower()
         if protocol not in SUPPORTED_PROTOCOLS:
             continue
@@ -264,6 +278,8 @@ def parse_clash_document(content: str, source_name: str) -> list[Node]:
         node = build_node(proxy, protocol, label, source_name)
         if node is not None:
             nodes.append(node)
+            if max_nodes is not None and len(nodes) >= max_nodes:
+                break
     return nodes
 
 
@@ -509,8 +525,7 @@ def apply_proxy_transport_to_xray_parameters(
 
 
 def looks_like_clash(content: str) -> bool:
-    sample = content.lstrip()[:2048]
-    return sample.startswith("proxies:") or "\nproxies:" in sample
+    return re.search(r"(?m)^\s*proxies\s*:", content) is not None
 
 
 def looks_like_base64_subscription(content: str) -> bool:
@@ -586,4 +601,3 @@ def canonicalize(value: Any) -> Any:
     if isinstance(value, str):
         return value.strip()
     return value
-

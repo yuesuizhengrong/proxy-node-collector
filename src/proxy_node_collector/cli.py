@@ -26,9 +26,11 @@ DEFAULT_SETTINGS: dict[str, Any] = {
     "source_timeout_seconds": 40,
     "source_concurrency": 3,
     "source_retry_count": 1,
+    "max_source_bytes": 8 * 1024 * 1024,
     "test_timeout_seconds": 8,
     "controller_start_timeout_seconds": 12,
     "mihomo_batch_size": 30,
+    "mihomo_batch_concurrency": 2,
     "max_candidates_per_source": 3000,
     "max_tested_nodes": 500,
     "probe_concurrency": 20,
@@ -74,6 +76,7 @@ def load_config(path: Path) -> tuple[dict[str, Any], list[Source]]:
         raw = yaml.safe_load(fp) or {}
 
     settings = DEFAULT_SETTINGS | (raw.get("settings") or {})
+    validate_settings(settings)
     sources = [
         Source(
             name=str(item["name"]),
@@ -90,6 +93,36 @@ def load_config(path: Path) -> tuple[dict[str, Any], list[Source]]:
     return settings, sources
 
 
+def validate_settings(settings: dict[str, Any]) -> None:
+    positive_keys = (
+        "source_timeout_seconds",
+        "source_concurrency",
+        "max_source_bytes",
+        "test_timeout_seconds",
+        "controller_start_timeout_seconds",
+        "mihomo_batch_size",
+        "mihomo_batch_concurrency",
+        "max_candidates_per_source",
+        "max_tested_nodes",
+        "probe_concurrency",
+        "page_link_limit",
+        "page_payload_limit",
+    )
+    for key in positive_keys:
+        try:
+            value = int(settings[key])
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ValueError(f"settings.{key} must be a positive integer") from exc
+        if value < 1:
+            raise ValueError(f"settings.{key} must be a positive integer")
+    try:
+        retry_count = int(settings["source_retry_count"])
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ValueError("settings.source_retry_count must be a non-negative integer") from exc
+    if retry_count < 0:
+        raise ValueError("settings.source_retry_count must be a non-negative integer")
+
+
 async def fetch_sources(
     sources: list[Source],
     settings: dict[str, Any],
@@ -103,11 +136,12 @@ async def fetch_sources(
     timeout = httpx.Timeout(float(settings["source_timeout_seconds"]))
     enabled_sources = [source for source in sources if source.enabled]
     semaphore = asyncio.Semaphore(int(settings["source_concurrency"]))
+    fetch_cache: dict[str, asyncio.Task[tuple[Any | None, str | None]]] = {}
 
     async with httpx.AsyncClient(headers=headers, timeout=timeout, follow_redirects=True, trust_env=False) as client:
         async def fetch_limited(source: Source) -> tuple[SourceResult, list[Node]]:
             async with semaphore:
-                return await fetch_source(client, source, settings)
+                return await fetch_source(client, source, settings, fetch_cache)
 
         results = await asyncio.gather(*(fetch_limited(source) for source in enabled_sources))
 
@@ -123,11 +157,12 @@ async def fetch_source(
     client: Any,
     source: Source,
     settings: dict[str, Any],
+    fetch_cache: dict[str, asyncio.Task[tuple[Any | None, str | None]]] | None = None,
 ) -> tuple[SourceResult, list[Node]]:
     if source.format == "page":
-        return await fetch_web_page_source(client, source, settings)
+        return await fetch_web_page_source(client, source, settings, fetch_cache)
 
-    response, error = await fetch_url(client, source.url, settings)
+    response, error = await fetch_url(client, source.url, settings, fetch_cache)
     if response is None:
         return SourceResult(source=source, ok=False, error=error), []
 
@@ -148,50 +183,78 @@ async def fetch_url(
     client: Any,
     url: str,
     settings: dict[str, Any],
+    fetch_cache: dict[str, asyncio.Task[tuple[Any | None, str | None]]] | None = None,
 ) -> tuple[Any | None, str | None]:
+    if fetch_cache is not None:
+        task = fetch_cache.get(url)
+        if task is None:
+            task = asyncio.create_task(fetch_url(client, url, settings))
+            fetch_cache[url] = task
+        return await asyncio.shield(task)
+
     attempts = int(settings["source_retry_count"]) + 1
-    response: Any | None = None
     error: str | None = None
     for attempt in range(attempts):
+        status_code: int | None = None
         try:
-            response = await client.get(url)
-            response.raise_for_status()
-            break
+            async with client.stream("GET", url) as response:
+                status_code = response.status_code
+                response.raise_for_status()
+                max_bytes = max(1, int(settings.get("max_source_bytes", 8 * 1024 * 1024)))
+                chunks: list[bytes] = []
+                total = 0
+                async for chunk in response.aiter_bytes():
+                    total += len(chunk)
+                    if total > max_bytes:
+                        raise ValueError(f"response exceeds {max_bytes} byte limit")
+                    chunks.append(chunk)
+                import httpx
+
+                decoded_headers = {
+                    key: value
+                    for key, value in response.headers.items()
+                    if key.lower() not in {"content-encoding", "content-length"}
+                }
+                return httpx.Response(
+                    response.status_code,
+                    headers=decoded_headers,
+                    content=b"".join(chunks),
+                    request=response.request,
+                ), None
         except Exception as exc:
             detail = str(exc).strip()
             error = f"{type(exc).__name__}: {detail}" if detail else type(exc).__name__
-            response = None
-            if attempt + 1 < attempts:
+            retryable = status_code is None or status_code == 429 or status_code >= 500
+            if retryable and attempt + 1 < attempts:
                 await asyncio.sleep(1.5 * (attempt + 1))
-    if response is None:
-        return None, error
-
-    return response, None
+            elif not retryable:
+                break
+    return None, error
 
 
 async def fetch_web_page_source(
     client: Any,
     source: Source,
     settings: dict[str, Any],
+    fetch_cache: dict[str, asyncio.Task[tuple[Any | None, str | None]]] | None = None,
 ) -> tuple[SourceResult, list[Node]]:
-    root_response, error = await fetch_url(client, source.url, settings)
+    root_response, error = await fetch_url(client, source.url, settings, fetch_cache)
     if root_response is None:
         return SourceResult(source=source, ok=False, error=error), []
 
     page_limit = max(1, int(settings["page_link_limit"]))
     payload_limit = max(1, int(settings["page_payload_limit"]))
-    page_urls = [source.url]
-    page_contents = {source.url: root_response.text}
+    page_urls = [(source.url, root_response.text)]
     seen_pages = {canonical_http_url(source.url)}
     payload_urls: list[str] = []
     seen_payloads: set[str] = set()
     errors: list[str] = []
 
     page_index = 0
-    while page_index < len(page_urls) and len(page_urls) <= page_limit:
-        page_url = page_urls[page_index]
+    while page_index < len(page_urls):
+        page_url, page_content = page_urls[page_index]
         page_index += 1
-        page_content = page_contents[page_url]
+        article_urls: list[str] = []
         for link in extract_page_links(page_content, page_url):
             if not same_origin(source.url, link):
                 continue
@@ -202,18 +265,22 @@ async def fetch_web_page_source(
                     payload_urls.append(link)
                 continue
             if (
-                len(page_urls) < page_limit
+                len(seen_pages) < page_limit
                 and canonical not in seen_pages
                 and is_article_link(link)
             ):
-                page_response, page_error = await fetch_url(client, link, settings)
                 seen_pages.add(canonical)
-                if page_response is None:
-                    if page_error:
-                        errors.append(f"{link}: {page_error}")
-                    continue
-                page_urls.append(link)
-                page_contents[link] = page_response.text
+                article_urls.append(link)
+
+        article_results = await asyncio.gather(
+            *(fetch_url(client, link, settings, fetch_cache) for link in article_urls)
+        )
+        for link, (page_response, page_error) in zip(article_urls, article_results):
+            if page_response is None:
+                if page_error:
+                    errors.append(f"{link}: {page_error}")
+                continue
+            page_urls.append((link, page_response.text))
 
     if not payload_urls:
         detail = "; ".join(errors) or "No subscription links found on page"
@@ -221,8 +288,10 @@ async def fetch_web_page_source(
 
     nodes: list[Node] = []
     successful_payloads = 0
-    for payload_url in payload_urls:
-        payload_response, payload_error = await fetch_url(client, payload_url, settings)
+    payload_results = await asyncio.gather(
+        *(fetch_url(client, payload_url, settings, fetch_cache) for payload_url in payload_urls)
+    )
+    for payload_url, (payload_response, payload_error) in zip(payload_urls, payload_results):
         if payload_response is None:
             if payload_error:
                 errors.append(f"{payload_url}: {payload_error}")

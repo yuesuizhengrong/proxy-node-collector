@@ -31,6 +31,9 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -e .
 
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
       - name: Install Mihomo
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -62,7 +65,8 @@ jobs:
 
           asset = candidates[0]
           print(f"Downloading {asset['name']}")
-          with urllib.request.urlopen(urllib.request.Request(asset["browser_download_url"], headers=headers), timeout=180) as response:
+          download_headers = {"User-Agent": "proxy-node-collector"}
+          with urllib.request.urlopen(urllib.request.Request(asset["browser_download_url"], headers=download_headers), timeout=180) as response:
               compressed = response.read()
 
           out = Path("mihomo")

@@ -2,9 +2,11 @@ settings:
   source_timeout_seconds: 40
   source_concurrency: 3
   source_retry_count: 1
+  max_source_bytes: 8388608
   test_timeout_seconds: 8
   controller_start_timeout_seconds: 12
   mihomo_batch_size: 30
+  mihomo_batch_concurrency: 2
   max_candidates_per_source: 3000
   max_tested_nodes: 500
   probe_concurrency: 20
