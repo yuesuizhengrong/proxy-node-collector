@@ -255,15 +255,21 @@ async def fetch_web_page_source(
         page_url, page_content = page_urls[page_index]
         page_index += 1
         article_urls: list[str] = []
-        for link in extract_page_links(page_content, page_url):
-            if not same_origin(source.url, link):
-                continue
+        links = extract_page_links(page_content, page_url)
+        for link in links:
             canonical = canonical_http_url(link)
             if is_subscription_link(link):
-                if canonical not in seen_payloads and len(payload_urls) < payload_limit:
+                if (
+                    same_site(source.url, link)
+                    and canonical not in seen_payloads
+                    and len(payload_urls) < payload_limit
+                ):
                     seen_payloads.add(canonical)
                     payload_urls.append(link)
+        for link in sorted(links, key=article_link_priority):
+            if not same_origin(source.url, link) or is_subscription_link(link):
                 continue
+            canonical = canonical_http_url(link)
             if (
                 len(seen_pages) < page_limit
                 and canonical not in seen_pages
@@ -305,10 +311,15 @@ async def fetch_web_page_source(
         except Exception as exc:
             errors.append(f"{payload_url}: {exc}")
 
+    if successful_payloads == 0:
+        errors.append("All discovered subscription files failed to download")
+    elif not nodes:
+        errors.append("Subscription files contained no supported nodes")
+
     return (
         SourceResult(
             source=source,
-            ok=successful_payloads > 0,
+            ok=bool(nodes),
             parsed=len(nodes),
             error="; ".join(errors) or None,
         ),
@@ -373,6 +384,18 @@ def same_origin(left: str, right: str) -> bool:
     )
 
 
+def same_site(left: str, right: str) -> bool:
+    left_host = (urlsplit(left).hostname or "").lower().removeprefix("www.")
+    right_host = (urlsplit(right).hostname or "").lower().removeprefix("www.")
+    if not left_host or not right_host:
+        return False
+    return (
+        left_host == right_host
+        or left_host.endswith(f".{right_host}")
+        or right_host.endswith(f".{left_host}")
+    )
+
+
 def is_subscription_link(url: str) -> bool:
     parsed = urlsplit(url)
     path = parsed.path.lower()
@@ -389,7 +412,20 @@ def is_subscription_link(url: str) -> bool:
 
 def is_article_link(url: str) -> bool:
     path = urlsplit(url).path.rstrip("/").lower()
-    return path in {"", "/"} or path.startswith(("/post/", "/article/", "/archives/"))
+    return (
+        path in {"", "/"}
+        or path.startswith(("/post/", "/posts/", "/article/", "/archives/", "/free-node/"))
+        or path.endswith((".html", ".htm"))
+    )
+
+
+def article_link_priority(url: str) -> int:
+    path = urlsplit(url).path.lower()
+    node_hints = ("free-node", "free_node", "freenode", "clashnode", "free-nodes", "subscribe")
+    has_node_hint = any(hint in path for hint in node_hints)
+    if has_node_hint and path.endswith((".html", ".htm")):
+        return 0
+    return 1 if has_node_hint else 2
 
 
 def build_subscriptions(nodes: list[Node]) -> dict[str, str]:

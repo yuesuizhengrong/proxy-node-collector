@@ -14,15 +14,15 @@ This file gives an AI coding assistant the context needed to continue this proje
 
 - Supported input formats: `uri`, `base64`, `clash`, and `auto`.
 - Supported node protocols: `ss`, `ssr`, `vmess`, `vless`, and `trojan`.
-- Sources include GitHub-hosted files plus public non-GitHub websites (`clashnodefree.com`, `xrayvip.com`, and `free.datiya.com`).
+- Sources include GitHub-hosted files plus public non-GitHub websites, including ClashNodeFree, ClashGitHub, FreeClashNode, JCNode, Yoyapai, FreeNode.biz, FreeV2rayNode, XrayVIP, and FreeDatiya.
 - Mihomo tests candidate nodes before publishing them.
-- GitHub Actions runs every two hours at 15 minutes past the hour in UTC:
-  `15 */2 * * *`.
+- GitHub Actions runs every three hours at 15 minutes past the hour in UTC:
+  `15 */3 * * *`.
 - The workflow downloads Mihomo, runs the collector, and commits changed files under `data/`.
 - The workflow authenticates the Mihomo release API with the Actions token to avoid GitHub API rate limits.
 - Publishing is refused when a tested run finds zero working nodes, so transient outages cannot erase the last good subscription.
 - Source downloads are cached per run, streamed with a configurable 8 MiB limit, and retried only for network, rate-limit, or server errors.
-- Website article and payload fetches run concurrently within bounded discovery limits. URI parsing skips malformed individual records, and Clash parsing stops at the per-source candidate cap.
+- Website article and payload fetches run concurrently within bounded discovery limits. Article pages stay on the configured host, while subscription files may use a sibling subdomain on the same site. URI parsing skips malformed individual records, and Clash parsing stops at the per-source candidate cap.
 - Mihomo runs at most `mihomo_batch_concurrency` temporary processes at once and stops waiting immediately when a process exits before its controller is ready.
 
 When adding sources, prefer stable direct subscription endpoints over scraping arbitrary HTML pages. The `page` source type is intentionally limited to same-origin article and subscription URLs. Keep source formats explicit when the endpoint is known (`base64` or `clash`), and verify that the URL is not a GitHub URL when the goal is to expand non-GitHub coverage.

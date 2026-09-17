@@ -2,8 +2,8 @@ name: Update tested subscriptions
 
 on:
   schedule:
-    # Runs every two hours at 15 minutes past the hour (UTC).
-    - cron: "15 */2 * * *"
+    # Runs every three hours at 15 minutes past the hour (UTC).
+    - cron: "15 */3 * * *"
   workflow_dispatch:
 
 permissions:

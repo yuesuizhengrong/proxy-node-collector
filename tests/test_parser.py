@@ -3,15 +3,19 @@ import gzip
 import importlib.util
 import unittest
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from proxy_node_collector.cli import (
     DEFAULT_SETTINGS,
     OUTPUT_FILES,
+    article_link_priority,
     build_subscriptions,
     ensure_publishable_results,
     extract_page_links,
     fetch_web_page_source,
     fetch_url,
+    is_article_link,
+    same_site,
     validate_settings,
 )
 from proxy_node_collector.cli import load_config
@@ -73,6 +77,30 @@ class SubscriptionFormatTest(unittest.TestCase):
         self.assertIn("https://free.datiya.com/post/20260824/", links)
         self.assertIn("https://free.datiya.com/uploads/20260824-clash.yaml", links)
 
+    def test_recognizes_dated_node_articles_and_prioritizes_them(self):
+        generic = "https://site.example/news/article-158079.htm"
+        clashgithub = "https://clashgithub.com/clashnode-20260917.html"
+        freeclash = "https://www.freeclashnode.com/free-node/2026-9-17-links.htm"
+
+        self.assertTrue(is_article_link(generic))
+        self.assertTrue(is_article_link(clashgithub))
+        self.assertTrue(is_article_link(freeclash))
+        self.assertLess(article_link_priority(freeclash), article_link_priority(generic))
+
+    def test_subscription_payloads_may_use_a_same_site_subdomain(self):
+        self.assertTrue(
+            same_site(
+                "https://www.freeclashnode.com/",
+                "https://node.freeclashnode.com/uploads/today.yaml",
+            )
+        )
+        self.assertFalse(
+            same_site(
+                "https://www.freeclashnode.com/",
+                "https://unrelated.example/uploads/today.yaml",
+            )
+        )
+
     def test_refuses_to_publish_empty_test_results(self):
         with self.assertRaisesRegex(RuntimeError, "Refusing to overwrite subscriptions"):
             ensure_publishable_results([], [], skip_test=False)
@@ -82,13 +110,19 @@ class SubscriptionFormatTest(unittest.TestCase):
     def test_config_includes_non_github_sources(self):
         _, sources = load_config(Path(__file__).parents[1] / "config" / "sources.yaml")
         external_hosts = {
-            source.url.split("/", 3)[2].lower()
+            (urlsplit(source.url).hostname or "").lower()
             for source in sources
-            if "github.com" not in source.url.lower()
+            if (urlsplit(source.url).hostname or "").lower()
+            not in {"github.com", "raw.githubusercontent.com"}
         }
 
         self.assertIn("clashnodefree.com", external_hosts)
         self.assertIn("www.xrayvip.com", external_hosts)
+        self.assertIn("clashgithub.com", external_hosts)
+        self.assertIn("www.freeclashnode.com", external_hosts)
+        self.assertIn("jcnode.com", external_hosts)
+        self.assertIn("yoyapai.com", external_hosts)
+        self.assertIn("freenode.biz", external_hosts)
         self.assertTrue(any(source.format == "page" for source in sources))
 
     def test_ssr_uri_round_trip(self):
@@ -148,6 +182,33 @@ class SubscriptionFormatTest(unittest.TestCase):
         self.assertEqual([node.label for node in nodes], ["node-0", "node-1"])
 
 class AsyncCollectorTest(unittest.IsolatedAsyncioTestCase):
+    async def test_page_with_unparseable_payload_is_reported_as_failed(self):
+        import httpx
+
+        responses = {
+            "https://site.example/": '<a href="/sub/empty.txt">empty</a>',
+            "https://site.example/sub/empty.txt": "not a subscription",
+        }
+
+        async def handler(request):
+            return httpx.Response(200, text=responses[str(request.url)], request=request)
+
+        settings = {
+            "source_retry_count": 0,
+            "max_source_bytes": 1024,
+            "page_link_limit": 1,
+            "page_payload_limit": 1,
+            "max_candidates_per_source": 10,
+        }
+        source_type = load_config(Path(__file__).parents[1] / "config" / "sources.yaml")[1][-1].__class__
+        source = source_type("fixture", "https://site.example/", "page", True)
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+            result, nodes = await fetch_web_page_source(client, source, settings)
+
+        self.assertFalse(result.ok)
+        self.assertEqual(nodes, [])
+        self.assertIn("no supported nodes", result.error)
+
     async def test_streamed_gzip_response_is_not_decoded_twice(self):
         import httpx
 

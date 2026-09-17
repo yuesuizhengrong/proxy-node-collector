@@ -81,3 +81,41 @@ sources:
     url: "https://free.datiya.com/"
     format: "page"
     enabled: true
+
+  # Website sources discover the newest article and then fetch its public
+  # subscription files. A failing website is isolated from all other sources.
+  - name: "clashgithub-web"
+    url: "https://clashgithub.com/"
+    format: "page"
+    enabled: true
+
+  - name: "freeclashnode-web"
+    url: "https://www.freeclashnode.com/"
+    format: "page"
+    enabled: true
+
+  - name: "jcnode-web"
+    url: "https://jcnode.com/"
+    format: "page"
+    enabled: true
+
+  - name: "yoyapai-web"
+    url: "https://yoyapai.com/"
+    format: "page"
+    enabled: true
+
+  # Additional non-GitHub sources found on the public web.
+  - name: "freenode-biz-base64"
+    url: "https://freenode.biz/api/featured?format=nsubscribe"
+    format: "base64"
+    enabled: true
+
+  - name: "freenode-biz-clash"
+    url: "https://freenode.biz/api/featured?format=clash"
+    format: "clash"
+    enabled: true
+
+  - name: "freev2raynode-web"
+    url: "https://www.freev2raynode.com/free-node-subscription/"
+    format: "page"
+    enabled: true

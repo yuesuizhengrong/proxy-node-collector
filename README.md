@@ -44,12 +44,18 @@ The configured non-GitHub sources currently include:
 - ClashNodeFree: `https://clashnodefree.com/`
 - XrayVIP: `https://www.xrayvip.com/`
 - FreeDatiya: `https://free.datiya.com/` (the `page` source follows the latest article and discovers its subscription URLs)
+- ClashGitHub: `https://clashgithub.com/`
+- FreeClashNode: `https://www.freeclashnode.com/`
+- JCNode: `https://jcnode.com/`
+- Yoyapai: `https://yoyapai.com/`
+- FreeNode.biz: `https://freenode.biz/`
+- FreeV2rayNode: `https://www.freev2raynode.com/`
 
-Their direct subscription endpoints are listed in `config/sources.yaml`. The collector does not trust a node merely because it came from a website: every parsed node still has to pass the Mihomo connectivity test before it is published.
+Direct subscription endpoints and bounded website discovery sources are listed in `config/sources.yaml`. Website failures are isolated, so an unavailable or password-protected site does not stop other sources. The collector does not trust a node merely because it came from a website: every parsed node still has to pass the Mihomo connectivity test before it is published.
 
 ## Schedule
 
-The workflow runs every two hours at 15 minutes past the hour in UTC (`00:15`, `02:15`, `04:15`, and so on). In China Standard Time (UTC+8), the schedule is also every two hours at 15 minutes past the hour, with the UTC day boundary shifted accordingly.
+The workflow runs every three hours at 15 minutes past the hour in UTC (`00:15`, `03:15`, `06:15`, and so on). In China Standard Time (UTC+8), it runs at `02:15`, `05:15`, `08:15`, `11:15`, `14:15`, `17:15`, `20:15`, and `23:15`.
 
 Manual updates are available from the repository Actions page under `Update tested subscriptions`.
 
