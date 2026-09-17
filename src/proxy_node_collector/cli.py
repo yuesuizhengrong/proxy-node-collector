@@ -426,11 +426,27 @@ def is_subscription_link(url: str) -> bool:
     parsed = urlsplit(url)
     path = parsed.path.lower()
     query = parsed.query.lower()
+    if path.endswith(
+        (
+            ".avif",
+            ".css",
+            ".gif",
+            ".ico",
+            ".jpeg",
+            ".jpg",
+            ".js",
+            ".png",
+            ".svg",
+            ".webp",
+            ".woff",
+            ".woff2",
+        )
+    ):
+        return False
     return (
         path.endswith((".yaml", ".yml", ".txt"))
         or "/sub/" in path
         or "/subscribe" in path
-        or "/uploads/" in path
         or "format=clash" in query
         or "format=base64" in query
     )

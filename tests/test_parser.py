@@ -16,6 +16,7 @@ from proxy_node_collector.cli import (
     fetch_web_page_source,
     fetch_url,
     is_article_link,
+    is_subscription_link,
     same_site,
     validate_settings,
 )
@@ -115,6 +116,14 @@ class SubscriptionFormatTest(unittest.TestCase):
                 "https://www.freeclashnode.com/",
                 "https://unrelated.example/uploads/today.yaml",
             )
+        )
+
+    def test_upload_images_are_not_treated_as_subscriptions(self):
+        self.assertFalse(
+            is_subscription_link("https://site.example/wp-content/uploads/free-node.jpg")
+        )
+        self.assertTrue(
+            is_subscription_link("https://site.example/wp-content/uploads/free-node.yaml")
         )
 
     def test_refuses_to_publish_empty_test_results(self):
