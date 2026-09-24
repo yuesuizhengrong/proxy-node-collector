@@ -5,7 +5,7 @@ proxies:
   server: 169.40.42.179
   port: 443
   udp: true
-  network: raw
+  network: tcp
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   flow: xtls-rprx-vision
   tls: true
@@ -14,7 +14,7 @@ proxies:
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
-  name: ❓Other_83|851KB/s|A004-260618 01
+  name: 'Germany [TG] #5'
 - type: vless
   server: 66.70.179.198
   port: 2053
@@ -27,28 +27,13 @@ proxies:
   reality-opts:
     public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
     short-id: 83f8317a948bb769
-  name: 🇨🇦CA_3|217KB/s|A004-260618 01
+  name: 🇨🇦CA_10|233KB/s|A004-260618 01
 - server: 108.181.0.177
   port: 8388
   type: ss
   cipher: chacha20-ietf-poly1305
   password: G5p6ww4o67HB
   name: 🇺🇸US-108.181.0.177-0102
-- alterId: 0
-  cipher: auto
-  network: tcp
-  port: 180
-  server: 82.198.246.97
-  skip-cert-verify: false
-  sub_tag: M002-260618
-  tls: false
-  type: vmess
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  xudp: true
-  packet-encoding: xudp
-  servername: joss.gpj4.web.id
-  name: ❓Other_69|252KB/s|M002-260618 01
 - type: ss
   server: 143.110.161.156
   port: 17000
@@ -57,98 +42,67 @@ proxies:
   udp: true
   name: United Kingdom/Slough [GH:barry-far/V2r]
 - type: ss
-  server: 82.38.31.35
+  server: 82.38.31.3
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-  name: 🇬🇧GB-82.38.31.35-0112
+  name: 🇬🇧GB-82.38.31.3-0088
 - type: ss
   server: 82.38.31.42
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-  name: 🇬🇧GB-82.38.31.42-0101
-- type: vless
-  server: 31.58.50.200
-  port: 8443
-  udp: true
-  network: tcp
-  uuid: beed721d-73b6-47fc-a7b0-cac10e624b98
-  flow: xtls-rprx-vision
-  tls: true
-  servername: tradingview.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  name: 🇺🇸US_204|883KB/s|A004-260618 01
+  name: 🇬🇧GB-82.38.31.42-0069
 - type: ss
-  server: 82.38.31.3
+  server: 82.38.31.35
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-  name: 🇬🇧GB-82.38.31.3-0067
-- type: vless
-  server: 31.58.50.200
-  port: 8443
-  udp: true
-  network: tcp
-  uuid: fbe3ec44-4c6e-49ff-9e1a-cc992a4e0bec
-  flow: xtls-rprx-vision
-  tls: true
-  servername: tradingview.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU
-  name: 🇺🇸US_127|890KB/s|T001-260618 01
-- type: vless
-  server: 51.81.203.63
-  port: 443
-  udp: true
-  network: tcp
-  uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
-    short-id: 4477382ff6d3d41c
-  name: 未知 VLESS-1032 | free-nodes
+  name: 🇬🇧GB-82.38.31.35-0098
 - server: 16.170.163.124
   port: 443
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
   name: 🇸🇪SE-16.170.163.124-4815
+- server: 82.38.31.203
+  port: 8080
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  name: 🇬🇧GB-82.38.31.203-0080
 - type: vless
-  server: 31.58.181.88
-  port: 8443
+  server: tomaz1337shellbuy.vvzzkontaktezzvv.garden
+  port: 443
   udp: true
   network: tcp
-  uuid: 0e83e0b6-cefa-4964-a8cf-2b43154cee01
+  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
   flow: xtls-rprx-vision
   tls: true
-  servername: tradingview.com
-  client-fingerprint: firefox
+  servername: tomaz1337shellbuy.vvzzkontaktezzvv.garden
+  client-fingerprint: safari
   reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  name: 🇳🇱NL_44|105KB/s|A004-260618 01
+    public-key: s0ypPx0AL3k2KOk74tbm-aE-i7eIR_MYVzfLHZeLaUk
+    short-id: 2e124af254a65e7c
+  name: 🇬🇧GB_16|880KB/s|A004-260618 01
 - type: vless
-  server: 31.58.181.88
-  port: 8443
+  server: 152.228.139.33
+  port: 35108
   udp: true
-  network: tcp
-  uuid: 77d4bb66-82c8-4511-98e0-44edb2da8978
-  flow: xtls-rprx-vision
+  network: grpc
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
   tls: true
-  servername: tradingview.com
+  servername: www.nvidia.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  name: 🇳🇱NL_39|228KB/s|A004-260618 01
+    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
+    short-id: 52add08b86a5ccea
+  grpc-opts:
+    grpc-service-name: grpc-common3
+  name: 🇫🇷FR_663|1.9MB/s|V003-260618 01
 - type: vless
   server: 94.183.170.135
   port: 443
@@ -158,178 +112,93 @@ proxies:
   servername: 94.183.170.135
   ws-opts:
     path: /
-  name: 🇪🇪EE_3|1.1MB/s|A004-260618 01
+  name: 🇪🇪EE_2|1.2MB/s|A004-260618 01
 - type: vless
-  server: 31.58.181.88
-  port: 8443
+  server: 146.70.124.85
+  port: 443
   udp: true
   network: tcp
-  uuid: b375bdc2-5a7d-4074-898e-030ad75e3503
+  uuid: 40abbe13-f02e-4da2-9b19-966c2c3eb4ee
   flow: xtls-rprx-vision
   tls: true
-  servername: tradingview.com
-  client-fingerprint: firefox
+  servername: www.datadoghq.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  name: 🇳🇱NL_137|1.1MB/s|A004-260618 01
-- type: vless
-  server: 31.58.181.88
-  port: 8443
-  udp: true
-  network: tcp
-  uuid: cab0b9e0-3df1-4624-8c42-a9f140d778f2
-  flow: xtls-rprx-vision
-  tls: true
-  servername: tradingview.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  name: 🇳🇱NL_51|103KB/s|A004-260618 01
-- alterId: '0'
+    public-key: byzvlw97wjAAAfHs5AZRV0P0H6_JKBEZ4yfLS0HNewE
+    short-id: fe24f8a0a560056e
+  name: 未知 VLESS-74 | free-nodes
+- alterId: 0
   cipher: auto
   network: tcp
   port: 18000
-  server: 149.88.23.207
+  server: 149.88.23.202
   skip-cert-verify: false
-  sub_tag: C002-260622
+  sub_tag: A004-260618
   tls: false
   type: vmess
   udp: true
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   xudp: true
   packet-encoding: xudp
-  name: 🇸🇬SG_7|463KB/s|C002-260622 01
+  servername: 149.88.23.202
+  name: 🇸🇬SG_4|695KB/s|A004-260618 01
 - type: vless
-  server: 31.58.181.88
-  port: 8443
-  udp: true
-  network: raw
-  uuid: d0da19f1-fb05-488e-99c2-262389b3537b
-  flow: xtls-rprx-vision
-  tls: true
-  servername: tradingview.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  name: 🇳🇱NL_111|672KB/s|A004-260618 01
-- type: vless
-  server: 3.114.220.22
-  port: 19645
-  udp: true
-  network: tcp
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  name: 🇯🇵JP_4|124KB/s|C002-260622 01
-- type: vless
-  server: 186.246.21.156
-  port: 40443
-  udp: true
-  network: raw
-  uuid: 17d29827-7cf1-4115-b40d-548e10ec355d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  client-fingerprint: qq
-  reality-opts:
-    public-key: bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM
-    short-id: aa3c
-  name: 🇺🇸US_137|366KB/s|A004-260618 01
-- password: BxceQaOe
-  port: 443
-  server: 100.42.228.109
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  sub_tag: R001-260618
-  type: trojan
-  udp: true
-  network: tcp
-  name: 🇺🇸US_59|513KB/s|R001-260618 01
-- type: vless
-  server: uae.unixzone.us
-  port: 22573
-  udp: true
-  network: ws
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-  name: 🇦🇪AE_2|484KB/s|A003-260618 01
-- type: vless
-  server: 31.58.181.88
-  port: 8443
-  udp: true
-  network: raw
-  uuid: beed721d-73b6-47fc-a7b0-cac10e624b98
-  flow: xtls-rprx-vision
-  tls: true
-  servername: tradingview.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  name: 🇳🇱NL_59|424KB/s|A004-260618 01
-- type: vless
-  server: 107.181.151.241
-  port: 443
-  udp: true
-  network: tcp
-  uuid: ee39fb11-56a3-4ee7-9e7c-35a4235bd30e
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.tradingview.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: b27ba098687b
-  name: ❓Other_142|184KB/s|M002-260618 01
-- type: vmess
-  server: 188.114.96.19
-  port: 80
-  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-  name: 🏁RELAY-188.114.96.19-0164 | clashnodefree.com
-- type: vmess
-  server: 66.163.113.176
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: tcp
-  name: 未知 VMESS-137 | free-nodes
-- server: 15.204.247.206
-  port: 4444
-  type: ss
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-  name: 🇺🇸US-15.204.247.206-0147
-- type: vless
-  server: 91.193.17.234
-  port: 9460
+  server: 176.123.162.100
+  port: 9880
   udp: true
   network: grpc
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
   tls: true
-  servername: www.google.com
+  servername: dl.google.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: aabb
   grpc-opts:
-    grpc-service-name: TunService
-  name: ❓Other_138|636KB/s|M002-260618 01
+    grpc-service-name: grpc-tunnel
+  name: 🇩🇪DE_35|298KB/s|M003-260806 01
+- type: vless
+  server: 45.95.96.236
+  port: 443
+  udp: true
+  network: tcp
+  uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
+  flow: xtls-rprx-vision
+  tls: true
+  servername: gesmankos.sadiepinki.com
+  client-fingerprint: firefox
+  skip-cert-verify: true
+  reality-opts:
+    public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs
+    short-id: 4fa44664f6a566d3
+  name: ❓Other_277|417KB/s|F002-260618 01
+- type: vless
+  server: 217.217.254.126
+  port: 2053
+  udp: true
+  network: raw
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+    short-id: 87829de0e2bb82cb
+  name: 🇸🇬SG_11|253KB/s|A004-260618 01
+- type: vless
+  server: 46.8.200.91
+  port: 443
+  udp: true
+  network: ws
+  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
+  tls: true
+  servername: cf3.rumedia-cdn.com
+  client-fingerprint: firefox
+  ws-opts:
+    path: /casc
+    headers:
+      Host: cf3.rumedia-cdn.com
+  name: 未知 VLESS-57 | free-nodes
 - type: vless
   server: 194.93.63.246
   port: 443
@@ -343,7 +212,71 @@ proxies:
     short-id: 9c2378562188c3cb
   skip-cert-verify: true
   udp: true
-  name: 🇵🇱PL波兰丨yoyapai.com
+  name: 土耳其(mibei77.com 米贝节点分享)_1
+- server: 15.204.247.206
+  port: 4444
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+  name: 🇺🇸US-15.204.247.206-0147
+- type: vless
+  server: 91.193.58.118
+  port: 2096
+  udp: true
+  network: ws
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  tls: true
+  servername: free-server.techsonic.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /free-server.techsonic.dev
+    headers:
+      Host: free-server.techsonic.dev
+  name: 🇸🇬SG_33|563KB/s|M002-260618 01
+- type: vless
+  server: 107.181.151.241
+  port: 443
+  udp: true
+  network: tcp
+  uuid: ee39fb11-56a3-4ee7-9e7c-35a4235bd30e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.tradingview.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
+    short-id: b27ba098687b
+  name: ❓Other_202|121KB/s|M002-260618 01
+- type: vless
+  server: 91.193.17.234
+  port: 9460
+  udp: true
+  network: grpc
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  tls: true
+  servername: www.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
+  grpc-opts:
+    grpc-service-name: TunService
+  name: 🇺🇸US_142|673KB/s|M002-260618 01
+- client-fingerprint: chrome
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.18.152.103
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  sub_tag: C002-260622
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/49.0.2623.110 Safari/537.36
+    path: /assignment
+  name: 🇫🇷FR_120|459KB/s|C002-260622 01
 - type: vless
   server: 193.163.203.170
   port: 443
@@ -357,52 +290,59 @@ proxies:
   reality-opts:
     public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
     short-id: b28db60d77c50b4f
-  name: 未知 VLESS-35 | free-nodes
-- type: trojan
-  server: 119.246.1.143
-  port: 443
+  name: 未知 VLESS-61 | free-nodes
+- type: vmess
+  server: 188.114.96.19
+  port: 80
+  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+  name: 🏁RELAY-188.114.96.19-0140 | clashnodefree.com
+- type: vmess
+  server: 66.163.113.176
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   udp: true
   network: tcp
-  password: BxceQaOe
-  servername: t.me/ripaojiedian
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  name: 香港 12
+  name: 未知 VMESS-155 | free-nodes
 proxy-groups:
 - name: AUTO
   type: select
   proxies:
-  - ❓Other_83|851KB/s|A004-260618 01
-  - 🇨🇦CA_3|217KB/s|A004-260618 01
+  - 'Germany [TG] #5'
+  - 🇨🇦CA_10|233KB/s|A004-260618 01
   - 🇺🇸US-108.181.0.177-0102
-  - ❓Other_69|252KB/s|M002-260618 01
   - United Kingdom/Slough [GH:barry-far/V2r]
-  - 🇬🇧GB-82.38.31.35-0112
-  - 🇬🇧GB-82.38.31.42-0101
-  - 🇺🇸US_204|883KB/s|A004-260618 01
-  - 🇬🇧GB-82.38.31.3-0067
-  - 🇺🇸US_127|890KB/s|T001-260618 01
-  - 未知 VLESS-1032 | free-nodes
+  - 🇬🇧GB-82.38.31.3-0088
+  - 🇬🇧GB-82.38.31.42-0069
+  - 🇬🇧GB-82.38.31.35-0098
   - 🇸🇪SE-16.170.163.124-4815
-  - 🇳🇱NL_44|105KB/s|A004-260618 01
-  - 🇳🇱NL_39|228KB/s|A004-260618 01
-  - 🇪🇪EE_3|1.1MB/s|A004-260618 01
-  - 🇳🇱NL_137|1.1MB/s|A004-260618 01
-  - 🇳🇱NL_51|103KB/s|A004-260618 01
-  - 🇸🇬SG_7|463KB/s|C002-260622 01
-  - 🇳🇱NL_111|672KB/s|A004-260618 01
-  - 🇯🇵JP_4|124KB/s|C002-260622 01
-  - 🇺🇸US_137|366KB/s|A004-260618 01
-  - 🇺🇸US_59|513KB/s|R001-260618 01
-  - 🇦🇪AE_2|484KB/s|A003-260618 01
-  - 🇳🇱NL_59|424KB/s|A004-260618 01
-  - ❓Other_142|184KB/s|M002-260618 01
-  - 🏁RELAY-188.114.96.19-0164 | clashnodefree.com
-  - 未知 VMESS-137 | free-nodes
+  - 🇬🇧GB-82.38.31.203-0080
+  - 🇬🇧GB_16|880KB/s|A004-260618 01
+  - 🇫🇷FR_663|1.9MB/s|V003-260618 01
+  - 🇪🇪EE_2|1.2MB/s|A004-260618 01
+  - 未知 VLESS-74 | free-nodes
+  - 🇸🇬SG_4|695KB/s|A004-260618 01
+  - 🇩🇪DE_35|298KB/s|M003-260806 01
+  - ❓Other_277|417KB/s|F002-260618 01
+  - 🇸🇬SG_11|253KB/s|A004-260618 01
+  - 未知 VLESS-57 | free-nodes
+  - 土耳其(mibei77.com 米贝节点分享)_1
   - 🇺🇸US-15.204.247.206-0147
-  - ❓Other_138|636KB/s|M002-260618 01
-  - 🇵🇱PL波兰丨yoyapai.com
-  - 未知 VLESS-35 | free-nodes
-  - 香港 12
+  - 🇸🇬SG_33|563KB/s|M002-260618 01
+  - ❓Other_202|121KB/s|M002-260618 01
+  - 🇺🇸US_142|673KB/s|M002-260618 01
+  - 🇫🇷FR_120|459KB/s|C002-260622 01
+  - 未知 VLESS-61 | free-nodes
+  - 🏁RELAY-188.114.96.19-0140 | clashnodefree.com
+  - 未知 VMESS-155 | free-nodes
 rules:
 - MATCH,AUTO
