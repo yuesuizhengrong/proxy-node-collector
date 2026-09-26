@@ -1,34 +1,8 @@
 mixed-port: 7890
 mode: rule
 proxies:
-- server: 54.227.186.25
-  port: 443
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-  name: 🇺🇸US-54.227.186.25-0421
 - type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  network: ws
-  uuid: a3cd0fea-482b-4b67-be46-de041690b657
-  tls: true
-  servername: solitary-firefly-e2dc.495-398.workers.dev
-  client-fingerprint: unsafe
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: solitary-firefly-e2dc.495-398.workers.dev
-  name: 🇫🇷FR_262|710KB/s|M003-260806 01
-- server: 15.204.247.206
-  port: 4444
-  type: ss
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-  name: 🇺🇸US-15.204.247.206-0118
-- type: vless
-  server: 169.40.42.179
+  server: 169.40.42.74
   port: 443
   udp: true
   network: raw
@@ -36,52 +10,11 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   servername: yahoo.com
-  client-fingerprint: ios
+  client-fingerprint: chrome
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
-  name: 🇺🇸US_176|1.3MB/s|A004-260618 01
-- type: vless
-  server: 172.64.88.168
-  port: 8880
-  udp: true
-  network: ws
-  uuid: b4883d27-3151-4adf-92b1-841c0dccd1ea
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: damp-surf-aacf.296-8ed.workers.dev
-  name: 🇫🇷FR_714|387KB/s|C002-260622 01
-- type: vless
-  server: 188.114.97.6
-  port: 443
-  udp: true
-  network: ws
-  uuid: d702b5e4-412d-4859-a528-3fc0b91f6fc0
-  tls: true
-  servername: wild-math-3ef2.439.workers.dev
-  client-fingerprint: unsafe
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: wild-math-3ef2.439.workers.dev
-  name: 🇫🇷FR_523|1004KB/s|M003-260806 01
-- type: vless
-  server: 104.17.29.89
-  port: 443
-  udp: true
-  network: ws
-  uuid: 33e6d4f8-5bd2-4b9c-8123-3c9d9d94514d
-  tls: true
-  servername: 6q7ur2wcmgu9hymh-xzqg140tdp86.pages.dev
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  ws-opts:
-    path: /vl/Oo7KuQEty2wqQDXCPlgaK8RdPqZflNY?ed=2560
-    headers:
-      Host: 6q7ur2wcmgu9hymh-xzqg140tdp86.pages.dev
-  name: 🇫🇷FR_233|613KB/s|A004-260618 01
+  name: 🇺🇸US_288|1.4MB/s|A004-260618 01
 - type: vless
   server: 66.70.179.198
   port: 2053
@@ -101,102 +34,6 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: G5p6ww4o67HB
   name: 🇺🇸US-108.181.0.177-0047
-- type: vless
-  server: cf10.466688.xyz
-  port: 8880
-  udp: true
-  network: ws
-  uuid: 7111212b-6bc3-459a-85b4-3b13038a19f8
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net@https://t.me/QiangLieTuiJian
-    headers:
-      Host: shrill-fog-67af.235-e6a.workers.dev
-  name: 🇫🇷FR_246|650KB/s|C002-260622 01
-- type: vless
-  server: cloudflare-ech.com
-  port: 8880
-  udp: true
-  network: ws
-  uuid: dd2952d5-2bc6-40c8-8a82-6dc00fe5105c
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: nameless-shape-271e.321-5f5.workers.dev
-  name: 🇫🇷FR_371|467KB/s|C002-260622 01
-- type: vless
-  server: cf8.466688.xyz
-  port: 8880
-  udp: true
-  network: ws
-  uuid: 9be3bb59-c281-4fee-ae3d-7cf6c4b47eb4
-  ws-opts:
-    path: /pyip=ProxyIP.JP.CMLiussss.net@https://t.me/QiangLieTuiJian
-    headers:
-      Host: late-mountain-6801.355.workers.dev
-  name: 🇫🇷FR_105|612KB/s|C002-260622 01
-- type: vless
-  server: cf2.466688.xyz
-  port: 8880
-  udp: true
-  network: ws
-  uuid: f989cbf4-40d2-41d2-8a00-1fe4e29b2192
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net@https://t.me/QiangLieTuiJian
-    headers:
-      Host: ancient-rice-c180.455-8ad.workers.dev
-  name: 🇫🇷FR_958|502KB/s|C002-260622 01
-- type: vless
-  server: 169.40.42.74
-  port: 443
-  udp: true
-  network: raw
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  name: 🇺🇸US_288|1.4MB/s|A004-260618 01
-- type: vless
-  server: 51.81.203.63
-  port: 443
-  udp: true
-  network: tcp
-  uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
-    short-id: 4477382ff6d3d41c
-  name: 🇺🇸US_285|683KB/s|A004-260618 01
-- server: 82.38.31.203
-  port: 8080
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  name: 🇬🇧GB-82.38.31.203-0057
-- type: ss
-  server: 82.38.31.3
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-  name: 🇬🇧GB-82.38.31.3-0102
-- type: vless
-  server: www.gov.ua
-  port: 8880
-  udp: true
-  network: ws
-  uuid: 25844c02-a1fe-43ec-a6b9-44e3bf375b83
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: dark-breeze-a59a.494.workers.dev
-  name: 🇫🇷FR_397|514KB/s|C002-260622 01
 - type: ss
   server: 82.38.31.42
   port: 8080
@@ -212,12 +49,65 @@ proxies:
   udp: true
   name: 🇬🇧GB-82.38.31.35-0060
 - type: ss
+  server: 82.38.31.3
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+  name: 🇬🇧GB-82.38.31.3-0102
+- server: 82.38.31.203
+  port: 8080
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  name: 🇬🇧GB-82.38.31.203-0057
+- server: 16.170.163.124
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+  name: 🇸🇪SE-16.170.163.124-0110
+- type: ss
   server: 16.170.214.108
   port: 443
   cipher: aes-256-cfb
   password: amazonskr05
   udp: true
   name: 🇸🇪SE-16.170.214.108-0112
+- type: vless
+  server: 51.81.203.63
+  port: 443
+  udp: true
+  network: tcp
+  uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
+    short-id: 4477382ff6d3d41c
+  name: 🇺🇸US_285|683KB/s|A004-260618 01
+- server: 15.204.247.206
+  port: 4444
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+  name: 🇺🇸US-15.204.247.206-0118
+- type: vless
+  server: 194.150.166.108
+  port: 9443
+  udp: true
+  network: tcp
+  uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa
+  flow: xtls-rprx-vision
+  tls: true
+  servername: storage.yandexcloud.net
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
+    short-id: ad20d2ba
+  name: 未知 VLESS-143 | free-nodes
 - type: vless
   server: 82.118.19.153
   port: 443
@@ -234,6 +124,16 @@ proxies:
     short-id: 670ed9f350bd8ee0
   name: 🇩🇪DE_91|799KB/s|R002-260618 01
 - type: vless
+  server: 94.183.170.135
+  port: 443
+  udp: true
+  network: ws
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  servername: 94.183.170.135
+  ws-opts:
+    path: /
+  name: 🇪🇪EE_2|1.2MB/s|A004-260618 01
+- type: vless
   server: 152.228.139.33
   port: 35108
   udp: true
@@ -249,46 +149,19 @@ proxies:
     grpc-service-name: grpc-common3
   name: 🇫🇷FR_663|1.9MB/s|V003-260618 01
 - type: vless
-  server: 94.183.170.135
+  server: 169.40.42.179
   port: 443
   udp: true
-  network: ws
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  servername: 94.183.170.135
-  ws-opts:
-    path: /
-  name: 🇪🇪EE_2|1.2MB/s|A004-260618 01
-- type: ss
-  server: 143.110.161.156
-  port: 17000
-  cipher: aes-256-gcm
-  password: pX0uhU3ZjUcLWYs0Vez55BO3JoQrRlL
-  udp: true
-  name: United Kingdom/Slough [GH:barry-far/V2r]
-- type: trojan
-  server: 119.246.1.143
-  port: 443
-  udp: true
-  network: tcp
-  password: BxceQaOe
-  servername: t.me/ripaojiedian
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  name: 香港 34
-- type: vless
-  server: 91.193.17.234
-  port: 9460
-  udp: true
-  network: grpc
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  network: raw
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
   tls: true
-  servername: www.google.com
-  client-fingerprint: chrome
+  servername: yahoo.com
+  client-fingerprint: ios
   reality-opts:
-    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
-  grpc-opts:
-    grpc-service-name: TunService
-  name: 🇺🇸US_142|673KB/s|M002-260618 01
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+  name: 🇺🇸US_176|1.3MB/s|A004-260618 01
 - type: vless
   server: 176.123.162.100
   port: 9880
@@ -305,20 +178,6 @@ proxies:
     grpc-service-name: grpc-tunnel
   name: 🇩🇪DE_35|298KB/s|M003-260806 01
 - type: vless
-  server: 186.246.21.156
-  port: 40443
-  udp: true
-  network: raw
-  uuid: 17d29827-7cf1-4115-b40d-548e10ec355d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  client-fingerprint: qq
-  reality-opts:
-    public-key: bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM
-    short-id: aa3c
-  name: 🇺🇸US_638|238KB/s|A004-260618 01
-- type: vless
   server: uae.unixzone.us
   port: 22573
   udp: true
@@ -330,31 +189,29 @@ proxies:
       Host: uae.unixzone.us
   name: 🇦🇪AE_1|542KB/s|A003-260618 01
 - type: vless
-  server: 217.217.254.126
-  port: 2053
+  server: 91.193.17.234
+  port: 9460
   udp: true
-  network: raw
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  network: grpc
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
   tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
+  servername: www.google.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-    short-id: 87829de0e2bb82cb
-  name: 🇸🇬SG_11|253KB/s|A004-260618 01
-- type: vmess
-  server: 188.114.96.19
-  port: 80
-  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-  name: 🏁RELAY-188.114.96.19-0148 | clashnodefree.com
+    public-key: rAHMmpeUJ6uOoGgk31dTF4-1RTtLZFnOEs_li2AYQWc
+  grpc-opts:
+    grpc-service-name: TunService
+  name: 🇺🇸US_142|673KB/s|M002-260618 01
+- type: trojan
+  server: 119.246.1.143
+  port: 443
+  udp: true
+  network: tcp
+  password: BxceQaOe
+  servername: t.me/ripaojiedian
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  name: 香港 34
 - type: vless
   server: 107.181.151.241
   port: 443
@@ -370,19 +227,18 @@ proxies:
     short-id: b27ba098687b
   name: ❓Other_202|121KB/s|M002-260618 01
 - type: vless
-  server: 193.163.203.170
-  port: 443
+  server: 217.217.254.126
+  port: 2053
   udp: true
-  network: tcp
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  flow: xtls-rprx-vision
+  network: raw
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
   tls: true
-  servername: yandex.ru
-  client-fingerprint: chrome
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
   reality-opts:
-    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
-    short-id: b28db60d77c50b4f
-  name: 未知 VLESS-63 | free-nodes
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+    short-id: 87829de0e2bb82cb
+  name: 🇸🇬SG_11|253KB/s|A004-260618 01
 - type: vmess
   server: 66.163.113.176
   port: 22324
@@ -392,44 +248,61 @@ proxies:
   udp: true
   network: tcp
   name: 未知 VMESS-162 | free-nodes
+- type: vmess
+  server: 188.114.96.19
+  port: 80
+  uuid: aed88e79-5762-4d2f-86fa-f438f32a7654
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+  name: 🏁RELAY-188.114.96.19-0148 | clashnodefree.com
+- type: vless
+  server: 186.246.21.156
+  port: 40443
+  udp: true
+  network: raw
+  uuid: 17d29827-7cf1-4115-b40d-548e10ec355d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: deepl.com
+  client-fingerprint: qq
+  reality-opts:
+    public-key: bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM
+    short-id: aa3c
+  name: 🇺🇸US_638|238KB/s|A004-260618 01
 proxy-groups:
 - name: AUTO
   type: select
   proxies:
-  - 🇺🇸US-54.227.186.25-0421
-  - 🇫🇷FR_262|710KB/s|M003-260806 01
-  - 🇺🇸US-15.204.247.206-0118
-  - 🇺🇸US_176|1.3MB/s|A004-260618 01
-  - 🇫🇷FR_714|387KB/s|C002-260622 01
-  - 🇫🇷FR_523|1004KB/s|M003-260806 01
-  - 🇫🇷FR_233|613KB/s|A004-260618 01
+  - 🇺🇸US_288|1.4MB/s|A004-260618 01
   - 🇨🇦CA_10|233KB/s|A004-260618 01
   - 🇺🇸US-108.181.0.177-0047
-  - 🇫🇷FR_246|650KB/s|C002-260622 01
-  - 🇫🇷FR_371|467KB/s|C002-260622 01
-  - 🇫🇷FR_105|612KB/s|C002-260622 01
-  - 🇫🇷FR_958|502KB/s|C002-260622 01
-  - 🇺🇸US_288|1.4MB/s|A004-260618 01
-  - 🇺🇸US_285|683KB/s|A004-260618 01
-  - 🇬🇧GB-82.38.31.203-0057
-  - 🇬🇧GB-82.38.31.3-0102
-  - 🇫🇷FR_397|514KB/s|C002-260622 01
   - 🇬🇧GB-82.38.31.42-0069
   - 🇬🇧GB-82.38.31.35-0060
+  - 🇬🇧GB-82.38.31.3-0102
+  - 🇬🇧GB-82.38.31.203-0057
+  - 🇸🇪SE-16.170.163.124-0110
   - 🇸🇪SE-16.170.214.108-0112
+  - 🇺🇸US_285|683KB/s|A004-260618 01
+  - 🇺🇸US-15.204.247.206-0118
+  - 未知 VLESS-143 | free-nodes
   - 🇩🇪DE_91|799KB/s|R002-260618 01
-  - 🇫🇷FR_663|1.9MB/s|V003-260618 01
   - 🇪🇪EE_2|1.2MB/s|A004-260618 01
-  - United Kingdom/Slough [GH:barry-far/V2r]
-  - 香港 34
-  - 🇺🇸US_142|673KB/s|M002-260618 01
+  - 🇫🇷FR_663|1.9MB/s|V003-260618 01
+  - 🇺🇸US_176|1.3MB/s|A004-260618 01
   - 🇩🇪DE_35|298KB/s|M003-260806 01
-  - 🇺🇸US_638|238KB/s|A004-260618 01
   - 🇦🇪AE_1|542KB/s|A003-260618 01
-  - 🇸🇬SG_11|253KB/s|A004-260618 01
-  - 🏁RELAY-188.114.96.19-0148 | clashnodefree.com
+  - 🇺🇸US_142|673KB/s|M002-260618 01
+  - 香港 34
   - ❓Other_202|121KB/s|M002-260618 01
-  - 未知 VLESS-63 | free-nodes
+  - 🇸🇬SG_11|253KB/s|A004-260618 01
   - 未知 VMESS-162 | free-nodes
+  - 🏁RELAY-188.114.96.19-0148 | clashnodefree.com
+  - 🇺🇸US_638|238KB/s|A004-260618 01
 rules:
 - MATCH,AUTO
