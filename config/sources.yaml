@@ -9,6 +9,12 @@ settings:
   mihomo_batch_concurrency: 2
   max_candidates_per_source: 3000
   max_tested_nodes: 500
+  minimum_working_nodes: 25
+  adaptive_search_rounds: 2
+  adaptive_candidate_multiplier: 2
+  adaptive_page_link_increment: 4
+  adaptive_page_payload_increment: 4
+  adaptive_max_candidates_per_source: 12000
   probe_concurrency: 20
   page_link_limit: 4
   page_payload_limit: 8

@@ -16,6 +16,7 @@ This file gives an AI coding assistant the context needed to continue this proje
 - Supported node protocols: `ss`, `ssr`, `vmess`, `vless`, and `trojan`.
 - Sources include GitHub-hosted files plus public non-GitHub websites, including ClashNodeFree, ClashGitHub, FreeClashNode, JCNode, Yoyapai, FreeNode.biz, FreeV2rayNode, YouNeed, XrayVIP, and FreeDatiya.
 - Mihomo tests candidate nodes before publishing them.
+- If the first test batch produces fewer than 25 working nodes, the collector expands source and webpage limits and tests new candidates for up to two additional rounds. Nodes already tested in the same run are skipped.
 - GitHub Actions runs every three hours at 15 minutes past the hour in UTC:
   `15 */3 * * *`.
 - The workflow downloads Mihomo, runs the collector, and commits changed files under `data/`.

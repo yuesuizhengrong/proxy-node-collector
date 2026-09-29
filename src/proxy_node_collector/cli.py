@@ -33,6 +33,12 @@ DEFAULT_SETTINGS: dict[str, Any] = {
     "mihomo_batch_concurrency": 2,
     "max_candidates_per_source": 3000,
     "max_tested_nodes": 500,
+    "minimum_working_nodes": 25,
+    "adaptive_search_rounds": 2,
+    "adaptive_candidate_multiplier": 2,
+    "adaptive_page_link_increment": 4,
+    "adaptive_page_payload_increment": 4,
+    "adaptive_max_candidates_per_source": 12000,
     "probe_concurrency": 20,
     "page_link_limit": 4,
     "page_payload_limit": 8,
@@ -104,6 +110,11 @@ def validate_settings(settings: dict[str, Any]) -> None:
         "mihomo_batch_concurrency",
         "max_candidates_per_source",
         "max_tested_nodes",
+        "minimum_working_nodes",
+        "adaptive_candidate_multiplier",
+        "adaptive_page_link_increment",
+        "adaptive_page_payload_increment",
+        "adaptive_max_candidates_per_source",
         "probe_concurrency",
         "page_link_limit",
         "page_payload_limit",
@@ -115,6 +126,12 @@ def validate_settings(settings: dict[str, Any]) -> None:
             raise ValueError(f"settings.{key} must be a positive integer") from exc
         if value < 1:
             raise ValueError(f"settings.{key} must be a positive integer")
+    try:
+        adaptive_rounds = int(settings["adaptive_search_rounds"])
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ValueError("settings.adaptive_search_rounds must be a non-negative integer") from exc
+    if adaptive_rounds < 0:
+        raise ValueError("settings.adaptive_search_rounds must be a non-negative integer")
     try:
         retry_count = int(settings["source_retry_count"])
     except (KeyError, TypeError, ValueError) as exc:
@@ -577,6 +594,10 @@ def write_outputs(
         "tested": not skip_test,
         "candidate_count": len(all_nodes),
         "tested_count": len(tested_nodes),
+        "adaptive_search": {
+            "minimum_working_nodes": int(settings["minimum_working_nodes"]),
+            "rounds_used": int(settings.get("_adaptive_rounds_used", 0)),
+        },
         "formats": OUTPUT_FORMATS,
         "sources": [
             {
@@ -645,22 +666,126 @@ def subscription_links_text() -> str:
     return "\n".join(lines) + "\n"
 
 
+async def collect_and_test_adaptively(
+    sources: list[Source],
+    settings: dict[str, Any],
+    mihomo_bin: Path,
+) -> tuple[list[Node], list[TestedNode], list[SourceResult]]:
+    all_nodes, source_results = await fetch_sources(sources, settings)
+    tested_nodes = await test_nodes_with_mihomo(all_nodes, mihomo_bin, settings)
+    target = int(settings["minimum_working_nodes"])
+    rounds_used = 0
+
+    tested_ids = {item.node.identity for item in tested_nodes}
+    base_candidate_limit = int(settings["max_candidates_per_source"])
+    candidate_cap = max(
+        base_candidate_limit,
+        int(settings["adaptive_max_candidates_per_source"]),
+    )
+    base_page_limit = int(settings["page_link_limit"])
+    base_payload_limit = int(settings["page_payload_limit"])
+    max_rounds = int(settings["adaptive_search_rounds"])
+
+    for round_number in range(1, max_rounds + 1):
+        if len(tested_nodes) >= target:
+            break
+
+        print(
+            f"Working nodes below {target}; expanding source search "
+            f"(round {round_number}/{max_rounds})",
+            file=sys.stderr,
+        )
+        expanded_settings = settings.copy()
+        multiplier = int(settings["adaptive_candidate_multiplier"])
+        expanded_settings["max_candidates_per_source"] = min(
+            candidate_cap,
+            base_candidate_limit * (multiplier**round_number),
+        )
+        expanded_settings["page_link_limit"] = base_page_limit + (
+            int(settings["adaptive_page_link_increment"]) * round_number
+        )
+        expanded_settings["page_payload_limit"] = base_payload_limit + (
+            int(settings["adaptive_page_payload_increment"]) * round_number
+        )
+
+        expanded_nodes, expanded_results = await fetch_sources(sources, expanded_settings)
+        all_nodes = dedupe_nodes(all_nodes + expanded_nodes)
+        source_results = merge_source_results(source_results, expanded_results)
+        new_nodes = [node for node in all_nodes if node.identity not in tested_ids]
+        if not new_nodes:
+            print("Adaptive search found no untested candidates", file=sys.stderr)
+            break
+
+        round_settings = settings.copy()
+        round_settings["max_tested_nodes"] = min(
+            int(settings["max_tested_nodes"]),
+            len(new_nodes),
+        )
+        additional_tested = await test_nodes_with_mihomo(new_nodes, mihomo_bin, round_settings)
+        tested_nodes.extend(additional_tested)
+        tested_ids.update(item.node.identity for item in additional_tested)
+        rounds_used = round_number
+        print(
+            f"Adaptive round {round_number}: parsed {len(expanded_nodes)} source nodes, "
+            f"tested {len(additional_tested)} additional working nodes",
+            file=sys.stderr,
+        )
+
+    final_nodes_by_id = {node.identity: node for node in all_nodes}
+    tested_nodes = [
+        TestedNode(
+            node=final_nodes_by_id[item.node.identity],
+            latency_ms=item.latency_ms,
+            checked_at=item.checked_at,
+        )
+        for item in tested_nodes
+        if item.node.identity in final_nodes_by_id
+    ]
+    tested_nodes.sort(key=lambda item: item.latency_ms)
+    settings["_adaptive_rounds_used"] = rounds_used
+    return all_nodes, tested_nodes, source_results
+
+
+def merge_source_results(
+    previous: list[SourceResult],
+    latest: list[SourceResult],
+) -> list[SourceResult]:
+    merged = {result.source.name: result for result in previous}
+    for result in latest:
+        prior = merged.get(result.source.name)
+        if prior is None:
+            merged[result.source.name] = result
+            continue
+        merged[result.source.name] = SourceResult(
+            source=result.source,
+            ok=prior.ok or result.ok,
+            parsed=max(prior.parsed, result.parsed),
+            error=None if prior.ok or result.ok else result.error or prior.error,
+        )
+    return list(merged.values())
+
+
 async def run(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     settings, sources = load_config(Path(args.config))
     max_nodes = int(args.limit if args.limit is not None else settings["max_tested_nodes"])
     settings["max_tested_nodes"] = max_nodes
     print(f"Loading sources from {args.config}", file=sys.stderr)
-    nodes, source_results = await fetch_sources(sources, settings)
-    print(f"Parsed {len(nodes)} unique nodes", file=sys.stderr)
 
     if args.skip_test:
+        nodes, source_results = await fetch_sources(sources, settings)
         tested_nodes: list[TestedNode] = []
     else:
         if not args.mihomo_bin:
             raise RuntimeError("mihomo binary path is required. Set --mihomo-bin or MIHOMO_BIN.")
         mihomo_bin = Path(args.mihomo_bin).expanduser()
-        tested_nodes = await test_nodes_with_mihomo(nodes, mihomo_bin, settings)
+        nodes, tested_nodes, source_results = await collect_and_test_adaptively(
+            sources,
+            settings,
+            mihomo_bin,
+        )
+    print(f"Parsed {len(nodes)} unique nodes", file=sys.stderr)
+    if not args.skip_test:
         print(f"Tested {len(tested_nodes)} working nodes", file=sys.stderr)
 
     ensure_publishable_results(tested_nodes, all_nodes=nodes, skip_test=args.skip_test)

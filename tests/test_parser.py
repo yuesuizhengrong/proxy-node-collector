@@ -3,6 +3,7 @@ import gzip
 import importlib.util
 import unittest
 from pathlib import Path
+from unittest.mock import AsyncMock, patch
 from urllib.parse import urlsplit
 
 from proxy_node_collector.cli import (
@@ -10,6 +11,7 @@ from proxy_node_collector.cli import (
     OUTPUT_FILES,
     article_link_priority,
     build_subscriptions,
+    collect_and_test_adaptively,
     ensure_publishable_results,
     extract_page_links,
     extract_page_node_uris,
@@ -28,6 +30,7 @@ from proxy_node_collector.formats import (
     uri_for_node,
     vmess_uri_from_proxy,
 )
+from proxy_node_collector.models import Source, SourceResult, TestedNode
 
 
 SSR_PROXY = {
@@ -66,6 +69,10 @@ class SubscriptionFormatTest(unittest.TestCase):
         settings["source_concurrency"] = 1
         settings["source_retry_count"] = 0
         validate_settings(settings)
+
+        settings["adaptive_search_rounds"] = -1
+        with self.assertRaisesRegex(ValueError, "adaptive_search_rounds"):
+            validate_settings(settings)
 
     def test_extracts_same_page_subscription_links(self):
         html = """
@@ -208,6 +215,43 @@ class SubscriptionFormatTest(unittest.TestCase):
         self.assertEqual([node.label for node in nodes], ["node-0", "node-1"])
 
 class AsyncCollectorTest(unittest.IsolatedAsyncioTestCase):
+    async def test_adaptive_search_tests_new_candidates_when_working_count_is_low(self):
+        first = parse_uri(vmess_uri_from_proxy(VMESS_PROXY, "first"), "fixture")
+        second = parse_uri(vmess_uri_from_proxy({**VMESS_PROXY, "server": "second.example.com"}, "second"), "fixture")
+        self.assertIsNotNone(first)
+        self.assertIsNotNone(second)
+        source = Source("fixture", "https://site.example/", "uri", True)
+        source_result = SourceResult(source=source, ok=True, parsed=1)
+        fetch_sources = AsyncMock(
+            side_effect=[
+                ([first], [source_result]),
+                ([first, second], [SourceResult(source=source, ok=True, parsed=2)]),
+            ]
+        )
+        test_nodes = AsyncMock(
+            side_effect=[
+                [TestedNode(first, 100, "2026-09-29T00:00:00+00:00")],
+                [TestedNode(second, 90, "2026-09-29T00:00:01+00:00")],
+            ]
+        )
+        settings = DEFAULT_SETTINGS.copy()
+        settings["minimum_working_nodes"] = 2
+        settings["adaptive_search_rounds"] = 1
+        settings["max_tested_nodes"] = 10
+
+        with patch("proxy_node_collector.cli.fetch_sources", fetch_sources), patch(
+            "proxy_node_collector.cli.test_nodes_with_mihomo", test_nodes
+        ):
+            nodes, tested, results = await collect_and_test_adaptively(
+                [source], settings, Path("unused-mihomo")
+            )
+
+        self.assertEqual(fetch_sources.await_count, 2)
+        self.assertEqual(test_nodes.await_count, 2)
+        self.assertEqual(len(nodes), 2)
+        self.assertEqual([item.node.label for item in tested], ["second", "first"])
+        self.assertEqual(results[0].parsed, 2)
+
     async def test_page_inline_nodes_are_collected_without_subscription_file(self):
         import httpx
 

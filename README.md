@@ -29,6 +29,8 @@ Shadowrocket is a client, not a protocol. Its subscription includes the supporte
 5. Launches Mihomo in small batches and calls its controller delay endpoint for every candidate.
 6. Writes only successful probes to `data/` and commits the updated subscriptions.
 
+When fewer than 25 working nodes pass the first test batch, the collector automatically expands the source search and tests additional candidates. It can perform up to two extra rounds, increases the per-source and webpage discovery limits each round, and never retests a node already checked in the same run.
+
 The collector caches URLs during a run, streams source responses with an 8 MiB
 limit, fetches discovered website pages and payloads concurrently, and stops
 parsing a source at its candidate limit. A malformed individual URI is skipped
@@ -82,6 +84,10 @@ python -m proxy_node_collector --config config/sources.yaml --out-dir data --ski
 `config/sources.yaml` supports source formats `uri`, `base64`, `clash`, `page`, and `auto`. The test controls are:
 
 - `max_tested_nodes`: maximum number of deduplicated candidates tested in a run.
+- `minimum_working_nodes`: trigger additional source searches when fewer working nodes pass; default `25`.
+- `adaptive_search_rounds`: maximum number of additional search and test rounds; default `2`.
+- `adaptive_candidate_multiplier`: multiplies the per-source candidate limit on each extra round.
+- `adaptive_max_candidates_per_source`: upper bound for per-source candidates during extra rounds.
 - `mihomo_batch_size`: candidates loaded into each temporary Mihomo process.
 - `mihomo_batch_concurrency`: maximum number of temporary Mihomo processes running at once.
 - `test_timeout_seconds`: delay probe timeout for a single node.
