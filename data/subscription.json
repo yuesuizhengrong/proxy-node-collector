@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-29T18:06:35+00:00",
+  "generated_at": "2026-09-29T22:12:55+00:00",
   "tested": true,
-  "candidate_count": 18893,
-  "tested_count": 38,
+  "candidate_count": 14368,
+  "tested_count": 27,
   "adaptive_search": {
     "minimum_working_nodes": 25,
-    "rounds_used": 1
+    "rounds_used": 0
   },
   "formats": [
     "ssr",
@@ -19,7 +19,7 @@
       "url": "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
       "format": "uri",
       "ok": true,
-      "parsed": 4182,
+      "parsed": 3000,
       "error": null
     },
     {
@@ -27,7 +27,7 @@
       "url": "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_base64.txt",
       "format": "base64",
       "ok": true,
-      "parsed": 4182,
+      "parsed": 3000,
       "error": null
     },
     {
@@ -35,7 +35,7 @@
       "url": "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_yaml.yml",
       "format": "clash",
       "ok": true,
-      "parsed": 4184,
+      "parsed": 3000,
       "error": null
     },
     {
@@ -75,7 +75,7 @@
       "url": "https://clashnodefree.com/sub/clash.yml",
       "format": "clash",
       "ok": true,
-      "parsed": 3655,
+      "parsed": 3000,
       "error": null
     },
     {
@@ -83,7 +83,7 @@
       "url": "https://clashnodefree.com/sub/v2ray.txt",
       "format": "base64",
       "ok": true,
-      "parsed": 3709,
+      "parsed": 3000,
       "error": null
     },
     {
@@ -91,7 +91,7 @@
       "url": "https://clashnodefree.com/sub/shadowrocket.txt",
       "format": "base64",
       "ok": true,
-      "parsed": 3709,
+      "parsed": 3000,
       "error": null
     },
     {
@@ -107,7 +107,7 @@
       "url": "https://www.xrayvip.com/free.txt",
       "format": "base64",
       "ok": true,
-      "parsed": 106,
+      "parsed": 95,
       "error": null
     },
     {
@@ -115,7 +115,7 @@
       "url": "https://free.datiya.com/",
       "format": "page",
       "ok": true,
-      "parsed": 84,
+      "parsed": 28,
       "error": null
     },
     {
@@ -123,7 +123,7 @@
       "url": "https://clashgithub.com/",
       "format": "page",
       "ok": true,
-      "parsed": 2014,
+      "parsed": 1286,
       "error": null
     },
     {
@@ -131,7 +131,7 @@
       "url": "https://www.freeclashnode.com/",
       "format": "page",
       "ok": true,
-      "parsed": 6000,
+      "parsed": 3000,
       "error": null
     },
     {
@@ -171,7 +171,7 @@
       "url": "https://www.freev2raynode.com/free-node-subscription/",
       "format": "page",
       "ok": true,
-      "parsed": 5583,
+      "parsed": 3000,
       "error": null
     },
     {
@@ -185,33 +185,41 @@
   ],
   "nodes": [
     {
-      "identity": "03dbd7a630585ffe4f2d96ffb5bc0ca529de277824f596fc4c9593e0eaef6a93",
-      "protocol": "vmess",
-      "label": "🇺🇸US_381|450KB/s|A004-260618 01",
+      "identity": "05af258c7ebc3071aa34197ecedc00e554a5cf0c22dfb935b93f05d8b7250efe",
+      "protocol": "ss",
+      "label": "🇺🇸US-108.181.0.177-0084",
       "sources": [
-        "freeclashnode-web"
+        "v2ray-aggregator-clash"
       ],
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi8J-HuvCfh7hVU18zODF8NDUwS0Ivc3xBMDA0LTI2MDYxOCAwMSIsImFkZCI6IjE2Ny44OC42My41OSIsInBvcnQiOiIyMjMyNCIsImlkIjoiMDQ2MjFiYWUtYWIzNi0xMWVjLWI5MDktMDI0MmFjMTIwMDAyIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJyYXciLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiIiwidGxzIjoiIn0"
-    },
-    {
-      "identity": "00df0ef2b1aa271b5597f4ceb05bc42749a13bc836004deacaf2891d3d437834",
-      "protocol": "vless",
-      "label": "🇺🇸US_83|1.0MB/s|A004-260618 01",
-      "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.179:443?security=reality&type=raw&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=ios&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%F0%9F%87%BA%F0%9F%87%B8US_83%7C1.0MB%2Fs%7CA004-260618%2001"
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHNXA2d3c0bzY3SEI@108.181.0.177:8388#%F0%9F%87%BA%F0%9F%87%B8US-108.181.0.177-0084"
     },
     {
       "identity": "06b052fe70776f8eb154b8069b9b9c66befa78d516423ded7de108ba28d46f67",
       "protocol": "vmess",
-      "label": "未知 VMESS-176 | free-nodes",
+      "label": "未知 VMESS-214 | free-nodes",
       "sources": [
-        "clashgithub-web",
+        "clashgithub-web"
+      ],
+      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi5pyq55-lIFZNRVNTLTIxNCB8IGZyZWUtbm9kZXMiLCJhZGQiOiI2Ni4xNjMuMTEzLjE3NiIsInBvcnQiOiIyMjMyNCIsImlkIjoiMDQ2MjFiYWUtYWIzNi0xMWVjLWI5MDktMDI0MmFjMTIwMDAyIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiIiwidGxzIjoiIn0"
+    },
+    {
+      "identity": "02535cb5e24be6f324003241fe5f9d2f823cf5e4b1648ea7bf889a87898711cd",
+      "protocol": "ss",
+      "label": "🇺🇸US-15.204.247.206-0115",
+      "sources": [
+        "clashnodefree-clash",
+        "v2ray-aggregator-clash"
+      ],
+      "uri": "ss://YWVzLTI1Ni1nY206cEtFVzhKUEJ5VFZUTHRN@15.204.247.206:4444#%F0%9F%87%BA%F0%9F%87%B8US-15.204.247.206-0115"
+    },
+    {
+      "identity": "0415b3aab0be4b8b4ed031bdd20a47ca7f63cc53f0a892bd83d0167a66147c80",
+      "protocol": "vless",
+      "label": "🇺🇸US_337|1.3MB/s|A004-260618 01",
+      "sources": [
         "freev2raynode-web"
       ],
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi5pyq55-lIFZNRVNTLTE3NiB8IGZyZWUtbm9kZXMiLCJhZGQiOiI2Ni4xNjMuMTEzLjE3NiIsInBvcnQiOiIyMjMyNCIsImlkIjoiMDQ2MjFiYWUtYWIzNi0xMWVjLWI5MDktMDI0MmFjMTIwMDAyIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiIiwidGxzIjoiIn0"
+      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.74:443?security=reality&type=raw&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=chrome&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%F0%9F%87%BA%F0%9F%87%B8US_337%7C1.3MB%2Fs%7CA004-260618%2001"
     },
     {
       "identity": "056d8e4a8bbae98c18a91f6f72a414611283109f34886fc7996cd850cf63a874",
@@ -223,40 +231,22 @@
       "uri": "vless://dc620cd6-a9d8-4a0f-8f18-006b895db77e@66.70.179.198:2053?security=reality&type=raw&encryption=none&sni=www.cloudflare.com&fp=firefox&pbk=k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU&sid=83f8317a948bb769#%F0%9F%87%A8%F0%9F%87%A6CA_19%7C930KB%2Fs%7CA004-260618%2001"
     },
     {
-      "identity": "0424b51aafe99a0c2ddceb7192f69b1530e0acf95b9ea249dfca82d238ead864",
+      "identity": "00df0ef2b1aa271b5597f4ceb05bc42749a13bc836004deacaf2891d3d437834",
       "protocol": "vless",
-      "label": "🇺🇸US_497|732KB/s|S004-260618 01",
-      "sources": [
-        "freeclashnode-web"
-      ],
-      "uri": "vless://9e3132b8-b595-444a-833a-2de44789f9d7@134.122.0.192:443?security=tls&type=ws&encryption=none&sni=shephe.dpdns.org&fp=chrome&path=%2F&host=shephe.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8US_497%7C732KB%2Fs%7CS004-260618%2001"
-    },
-    {
-      "identity": "02ac8d2fd795a9277f0306c7af35bfd0ba766d1c67612a384dfd63820c58ee75",
-      "protocol": "vmess",
-      "label": "🇨🇦CA_41|618KB/s|A004-260618 01",
-      "sources": [
-        "freeclashnode-web"
-      ],
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi8J-HqPCfh6ZDQV80MXw2MThLQi9zfEEwMDQtMjYwNjE4IDAxIiwiYWRkIjoiMTU4LjUxLjEyMS4xMjMiLCJwb3J0IjoiNDQzIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0IjoibXlncHRhZ2VudC5vcmciLCJwYXRoIjoiL2xpbmt2d3MiLCJ0bHMiOiJ0bHMiLCJzbmkiOiJteWdwdGFnZW50Lm9yZyJ9"
-    },
-    {
-      "identity": "05af258c7ebc3071aa34197ecedc00e554a5cf0c22dfb935b93f05d8b7250efe",
-      "protocol": "ss",
-      "label": "🇺🇸US-108.181.0.177-0035",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHNXA2d3c0bzY3SEI@108.181.0.177:8388#%F0%9F%87%BA%F0%9F%87%B8US-108.181.0.177-0035"
-    },
-    {
-      "identity": "0398aa900ab4ad907b7f38e546ff03e0a1327364b08f6510fca3d513f0ba5f65",
-      "protocol": "vless",
-      "label": "🇺🇸US_502|486KB/s|R002-260618 01",
+      "label": "🇺🇸US_83|1.0MB/s|A004-260618 01",
       "sources": [
         "freev2raynode-web"
       ],
-      "uri": "vless://1e6245c4-fb80-44fd-b354-c6b94a459203@38.180.146.40:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.apple.com&fp=chrome&pbk=-5fYyQrVTjiSxdsLpf6VzNaawYlZLqeU2_8ezyn3kBg&sid=eb26ce282d7ba399#%F0%9F%87%BA%F0%9F%87%B8US_502%7C486KB%2Fs%7CR002-260618%2001"
+      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.179:443?security=reality&type=raw&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=ios&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%F0%9F%87%BA%F0%9F%87%B8US_83%7C1.0MB%2Fs%7CA004-260618%2001"
+    },
+    {
+      "identity": "039650d821726730e63ab60b63b3231426b634a150e4502ef2b6779ad8a02949",
+      "protocol": "vless",
+      "label": "🇺🇸US_128|899KB/s|A004-260618 01",
+      "sources": [
+        "freev2raynode-web"
+      ],
+      "uri": "vless://cb2dbb6a-a1ea-4023-9ace-6466cee57241@51.81.203.63:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.icloud.com&fp=chrome&pbk=nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0&sid=4477382ff6d3d41c#%F0%9F%87%BA%F0%9F%87%B8US_128%7C899KB%2Fs%7CA004-260618%2001"
     },
     {
       "identity": "029b226b8795008f9a0c13c4d5de014139163ae140fe5979f952840ac45ce77e",
@@ -266,7 +256,6 @@
         "clashgithub-web",
         "clashnodefree-shadowrocket",
         "clashnodefree-v2ray",
-        "freeclashnode-web",
         "freev2raynode-web",
         "v2ray-aggregator-base64",
         "v2ray-aggregator-uri"
@@ -296,6 +285,25 @@
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.176:8080#%F0%9F%87%B3%F0%9F%87%B1NL_91%7C3.1MB%2Fs%7CA003-260618%2001"
     },
     {
+      "identity": "06a379efd00914d9a76fce93b2e7acb38c2cd316cbfcb733ca129ba8058b3b17",
+      "protocol": "ss",
+      "label": "🇬🇧GB-82.38.31.203-0057",
+      "sources": [
+        "clashnodefree-clash",
+        "v2ray-aggregator-clash"
+      ],
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.203:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.203-0057"
+    },
+    {
+      "identity": "8b79f7273e5844ba745481b0a851a0c71172b38dccb3c13d245037a61d85a276",
+      "protocol": "ssr",
+      "label": "🇳🇱NL_168|2.8MB/s|R002-260618 01",
+      "sources": [
+        "freeclashnode-web"
+      ],
+      "uri": "ssr://MTA5LjEwNC4xNTMuNDM6MzMzMzY6YXV0aF9jaGFpbl9hOmNoYWNoYTIwLWlldGY6dGxzMS4yX3RpY2tldF9hdXRoOlpHOXVaM1JoYVhkaGJtY3VZMjl0Lz9yZW1hcmtzPThKLUhzX0NmaDdGT1RGOHhOamg4TWk0NFRVSXZjM3hTTURBeUxUSTJNRFl4T0NBd01R"
+    },
+    {
       "identity": "067369cc79955ee3edcc49ca122b33abdef3ea029dfa271229ded7e758771f01",
       "protocol": "ss",
       "label": "🇬🇧GB-82.38.31.35-0077",
@@ -305,67 +313,9 @@
         "freeclashnode-web",
         "freev2raynode-web",
         "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri",
-        "xrayvip-base64"
+        "v2ray-aggregator-uri"
       ],
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.35:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.35-0077"
-    },
-    {
-      "identity": "039650d821726730e63ab60b63b3231426b634a150e4502ef2b6779ad8a02949",
-      "protocol": "vless",
-      "label": "🇺🇸US_128|899KB/s|A004-260618 01",
-      "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "uri": "vless://cb2dbb6a-a1ea-4023-9ace-6466cee57241@51.81.203.63:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.icloud.com&fp=chrome&pbk=nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0&sid=4477382ff6d3d41c#%F0%9F%87%BA%F0%9F%87%B8US_128%7C899KB%2Fs%7CA004-260618%2001"
-    },
-    {
-      "identity": "06a379efd00914d9a76fce93b2e7acb38c2cd316cbfcb733ca129ba8058b3b17",
-      "protocol": "ss",
-      "label": "🇬🇧GB-82.38.31.203-0071",
-      "sources": [
-        "clashnodefree-clash",
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.203:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.203-0071"
-    },
-    {
-      "identity": "016cbc472ff5118e58f554b2459c191f803f93a44da4b5b22fff106a252cdc37",
-      "protocol": "vless",
-      "label": "🇩🇪DE_53|937KB/s|R002-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "uri": "vless://adcaa148-7c66-4282-a81a-99ec8afa029d@82.118.19.153:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&allowInsecure=1&pbk=Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE&sid=670ed9f350bd8ee0#%F0%9F%87%A9%F0%9F%87%AADE_53%7C937KB%2Fs%7CR002-260618%2001"
-    },
-    {
-      "identity": "051e5b2f0bac67dc8c1a17f319d4e1d9fddebcf1b8fdf28745e91d9c2ea21f85",
-      "protocol": "vless",
-      "label": "🇪🇪EE_3|1.6MB/s|A004-260618 01",
-      "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "uri": "vless://06c4e938-2954-478f-a870-ca1b163e30e9@94.183.170.135:443?security=none&type=ws&encryption=none&sni=94.183.170.135&path=%2F#%F0%9F%87%AA%F0%9F%87%AAEE_3%7C1.6MB%2Fs%7CA004-260618%2001"
-    },
-    {
-      "identity": "034d6c444ab7004662b5479c40acbacd3a94738445bd4915c5b0c1a14425b451",
-      "protocol": "vless",
-      "label": "🇬🇧GB_57|1.5MB/s|A004-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "uri": "vless://4bdeee92-97e8-414d-bef6-ec1d5e2ab73b@tomaz1337shellbuy.vvzzkontaktezzvv.garden:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=tomaz1337shellbuy.vvzzkontaktezzvv.garden&fp=safari&pbk=s0ypPx0AL3k2KOk74tbm-aE-i7eIR_MYVzfLHZeLaUk&sid=2e124af254a65e7c#%F0%9F%87%AC%F0%9F%87%A7GB_57%7C1.5MB%2Fs%7CA004-260618%2001"
-    },
-    {
-      "identity": "012cf2ce6253804c9e03bacca66339708acf6a5b5b03caaf7d46c341d92de1e5",
-      "protocol": "vless",
-      "label": "🇪🇸ES_48|627KB/s|B007-260618 01",
-      "sources": [
-        "freeclashnode-web"
-      ],
-      "uri": "vless://9e3132b8-b595-444a-833a-2de44789f9d7@141.253.194.63:443?security=tls&type=ws&encryption=none&sni=shephe.dpdns.org&fp=chrome&path=%2F&host=shephe.dpdns.org#%F0%9F%87%AA%F0%9F%87%B8ES_48%7C627KB%2Fs%7CB007-260618%2001"
     },
     {
       "identity": "038a74a14e2abdab589ab3e688546177cd5862e8cdafd36b08b9493a947744d1",
@@ -377,22 +327,13 @@
       "uri": "vless://5fcdc9b7-e70f-4a5c-85c3-e018ad818326@82.24.203.20:2087?security=none&type=ws&encryption=none&path=%2Ffd5ba98a3970#%F0%9F%87%A9%F0%9F%87%AADE_34%7C1.2MB%2Fs%7CB007-260618%2001"
     },
     {
-      "identity": "03cccc5feb67006540a6d73aa7413548c0e9479d9bc95550defe9d0dcc5cc4bb",
+      "identity": "016cbc472ff5118e58f554b2459c191f803f93a44da4b5b22fff106a252cdc37",
       "protocol": "vless",
-      "label": "🇦🇹AT_6|3.4MB/s|V003-260618 01",
+      "label": "🇩🇪DE_53|937KB/s|R002-260618 01",
       "sources": [
-        "freeclashnode-web"
+        "freev2raynode-web"
       ],
-      "uri": "vless://9e3132b8-b595-444a-833a-2de44789f9d7@132.243.203.214:8443?security=tls&type=ws&encryption=none&sni=shephe.dpdns.org&fp=chrome&path=%2F&host=shephe.dpdns.org#%F0%9F%87%A6%F0%9F%87%B9AT_6%7C3.4MB%2Fs%7CV003-260618%2001"
-    },
-    {
-      "identity": "022f4569c3d4880ecc6c777f2cd09d268ddbe94dbfbe88dae94959c40c2e0953",
-      "protocol": "vmess",
-      "label": "🇯🇵JP_43|592KB/s|S004-260618 01",
-      "sources": [
-        "freeclashnode-web"
-      ],
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi8J-Hr_Cfh7VKUF80M3w1OTJLQi9zfFMwMDQtMjYwNjE4IDAxIiwiYWRkIjoiMTY4LjEzOC40My43NSIsInBvcnQiOiI4MCIsImlkIjoiMTFjMzYyN2YtMzFlOC00Njk1LWRmYmQtMzQwNzZlMmYxZjVkIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6Im5vbmUiLCJwYXRoIjoiL2NjdHYxMy5tM3U4IiwidGxzIjoiIiwic25pIjoibm9uZSJ9"
+      "uri": "vless://adcaa148-7c66-4282-a81a-99ec8afa029d@82.118.19.153:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&allowInsecure=1&pbk=Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE&sid=670ed9f350bd8ee0#%F0%9F%87%A9%F0%9F%87%AADE_53%7C937KB%2Fs%7CR002-260618%2001"
     },
     {
       "identity": "0078dd792eff9b96094858d9dca6cc4d9a728ade1ea8725a859f7d01e2b328b6",
@@ -404,90 +345,22 @@
       "uri": "vmess://eyJ2IjoiMiIsInBzIjoi8J-HuPCfh6xTR180fDk3OUtCL3N8QTAwNC0yNjA2MTggMDEiLCJhZGQiOiIxNDkuODguMjMuMjAyIiwicG9ydCI6IjE4MDAwIiwiaWQiOiJmOGM4ZGMzZC0wZDM3LTQ2YjAtOGIzNC1hNzIzMjg4MmZjZmUiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiJub25lIiwiaG9zdCI6IiIsInBhdGgiOiIiLCJ0bHMiOiIiLCJzbmkiOiIxNDkuODguMjMuMjAyIn0"
     },
     {
-      "identity": "00c91897ddfbd57a24e1159f94809d44e3c1b1d87b8a5231c12f396b43b875c0",
-      "protocol": "vless",
-      "label": "🇦🇪AE_1|607KB/s|A003-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "uri": "vless://39947382-3212-41c9-bc3a-589574ac8b23@uae.unixzone.us:22573?security=none&type=ws&encryption=none&path=%2F&host=uae.unixzone.us#%F0%9F%87%A6%F0%9F%87%AAAE_1%7C607KB%2Fs%7CA003-260618%2001"
-    },
-    {
-      "identity": "02535cb5e24be6f324003241fe5f9d2f823cf5e4b1648ea7bf889a87898711cd",
-      "protocol": "ss",
-      "label": "🇺🇸US-15.204.247.206-0133",
-      "sources": [
-        "clashnodefree-clash",
-        "v2ray-aggregator-clash"
-      ],
-      "uri": "ss://YWVzLTI1Ni1nY206cEtFVzhKUEJ5VFZUTHRN@15.204.247.206:4444#%F0%9F%87%BA%F0%9F%87%B8US-15.204.247.206-0133"
-    },
-    {
-      "identity": "077fdeb14a3ac2bae69b7dff4766d9eb7be9542393c663a2440dab66bb6d0db9",
-      "protocol": "vless",
-      "label": "🇸🇬SG_27|572KB/s|A004-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "uri": "vless://cb15cce9-73ed-4928-b38c-462f0732cbe9@217.217.254.126:2053?security=reality&type=raw&encryption=none&sni=www.cloudflare.com&fp=firefox&pbk=VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw&sid=87829de0e2bb82cb#%F0%9F%87%B8%F0%9F%87%ACSG_27%7C572KB%2Fs%7CA004-260618%2001"
-    },
-    {
       "identity": "04ca90652eb3c98223bd7eda2682d6cedf45ad38a3cc5b84bdd0587a6514047d",
       "protocol": "vless",
       "label": "🇯🇵JP_4|207KB/s|C002-260622 01",
       "sources": [
-        "freeclashnode-web",
         "freev2raynode-web"
       ],
       "uri": "vless://814bd064-544d-4255-a070-5705c03f6da9@3.114.220.22:19645?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.apple.com&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&sid=48050fab#%F0%9F%87%AF%F0%9F%87%B5JP_4%7C207KB%2Fs%7CC002-260622%2001"
     },
     {
-      "identity": "057335915e4dc6ba05150074197d82835d31e7079c3fdf756e3bf73c965b2f95",
+      "identity": "051e5b2f0bac67dc8c1a17f319d4e1d9fddebcf1b8fdf28745e91d9c2ea21f85",
       "protocol": "vless",
-      "label": "🇩🇪DE_91|697KB/s|M003-260806 01",
+      "label": "🇪🇪EE_3|1.6MB/s|A004-260618 01",
       "sources": [
         "freev2raynode-web"
       ],
-      "uri": "vless://5d16ac22-6eea-426f-b778-6f4c2961faef@176.123.162.100:9880?security=reality&type=grpc&encryption=none&sni=dl.google.com&fp=chrome&pbk=bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU&sid=aabb&serviceName=grpc-tunnel#%F0%9F%87%A9%F0%9F%87%AADE_91%7C697KB%2Fs%7CM003-260806%2001"
-    },
-    {
-      "identity": "07c20e90f3d272a0178e372b4c7bf26472af72d181a2319ab8204a31451ccce8",
-      "protocol": "trojan",
-      "label": "🇫🇷FR_104|995KB/s|R002-260618 01",
-      "sources": [
-        "freeclashnode-web"
-      ],
-      "uri": "trojan://humanity@104.18.15.230:443?security=none&type=ws&alpn=h2%2Chttp%2F1.1&fp=chrome&path=%2Fassignment#%F0%9F%87%AB%F0%9F%87%B7FR_104%7C995KB%2Fs%7CR002-260618%2001"
-    },
-    {
-      "identity": "03e89a7a039c1fbf1041f10f45edc44ff481816136b98d9f642d603f70df59bc",
-      "protocol": "vless",
-      "label": "🇱🇻LV拉脱维亚丨yoyapai.com",
-      "sources": [
-        "clashgithub-web",
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "uri": "vless://11aabba0-5fd1-4f15-8068-74c1a466cefc@193.163.203.170:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yandex.ru&fp=chrome&pbk=GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o&sid=b28db60d77c50b4f#%F0%9F%87%B1%F0%9F%87%BBLV%E6%8B%89%E8%84%B1%E7%BB%B4%E4%BA%9A%E4%B8%A8yoyapai.com"
-    },
-    {
-      "identity": "0415b3aab0be4b8b4ed031bdd20a47ca7f63cc53f0a892bd83d0167a66147c80",
-      "protocol": "vless",
-      "label": "🇺🇸US_337|1.3MB/s|A004-260618 01",
-      "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.74:443?security=reality&type=raw&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=chrome&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%F0%9F%87%BA%F0%9F%87%B8US_337%7C1.3MB%2Fs%7CA004-260618%2001"
-    },
-    {
-      "identity": "08ae676cda282fbfc3ddc6693414e34ea556874eea3335e0d633620f4d65990c",
-      "protocol": "vless",
-      "label": "🇳🇴NO_4|640KB/s|R002-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "uri": "vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@norw-mori-3.failspace.top:443?security=tls&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=norw-mori-3.failspace.top&fp=firefox&allowInsecure=1#%F0%9F%87%B3%F0%9F%87%B4NO_4%7C640KB%2Fs%7CR002-260618%2001"
+      "uri": "vless://06c4e938-2954-478f-a870-ca1b163e30e9@94.183.170.135:443?security=none&type=ws&encryption=none&sni=94.183.170.135&path=%2F#%F0%9F%87%AA%F0%9F%87%AAEE_3%7C1.6MB%2Fs%7CA004-260618%2001"
     },
     {
       "identity": "02fbc4af915ccaea836353113eaceb1636bc14aa98a1dbdae3b78330cb36569b",
@@ -499,25 +372,6 @@
       "uri": "vless://81dc0b61-f9fe-4ad6-8b4e-b8c067b73712@152.228.139.33:35108?security=reality&type=grpc&encryption=none&sni=www.nvidia.com&fp=firefox&pbk=X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg&sid=52add08b86a5ccea&serviceName=grpc-common3#%F0%9F%87%AB%F0%9F%87%B7FR_1751%7C1.1MB%2Fs%7CV003-260618%2001"
     },
     {
-      "identity": "0627688a77c6a03b54d681c62f4818f4a6d8d9a6f0114cbacda3717f24c13121",
-      "protocol": "vless",
-      "label": "🇫🇮FI_39|332KB/s|M002-260618 01",
-      "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "uri": "vless://ee39fb11-56a3-4ee7-9e7c-35a4235bd30e@107.181.151.241:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.tradingview.com&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=b27ba098687b#%F0%9F%87%AB%F0%9F%87%AEFI_39%7C332KB%2Fs%7CM002-260618%2001"
-    },
-    {
-      "identity": "0115f77449907fd686b91719593c9558bbcba8436eadca348afb8b0468517826",
-      "protocol": "vless",
-      "label": "🇸🇬SG_93|556KB/s|M002-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "uri": "vless://6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2@91.193.58.140:2096?security=tls&type=ws&encryption=none&sni=free-server.techsonic.dev&fp=chrome&path=%2Ffree-server.techsonic.dev&host=free-server.techsonic.dev#%F0%9F%87%B8%F0%9F%87%ACSG_93%7C556KB%2Fs%7CM002-260618%2001"
-    },
-    {
       "identity": "041225f40ab2a06ee0753e1af430980897d036b871e8495998feb74dac8417d2",
       "protocol": "trojan",
       "label": "🇫🇷FR_37|625KB/s|C002-260622 01",
@@ -527,24 +381,60 @@
       "uri": "trojan://humanity@104.18.152.103:443?security=none&type=ws&fp=chrome&path=%2Fassignment#%F0%9F%87%AB%F0%9F%87%B7FR_37%7C625KB%2Fs%7CC002-260622%2001"
     },
     {
+      "identity": "07c20e90f3d272a0178e372b4c7bf26472af72d181a2319ab8204a31451ccce8",
+      "protocol": "trojan",
+      "label": "🇫🇷FR_104|995KB/s|R002-260618 01",
+      "sources": [
+        "freeclashnode-web"
+      ],
+      "uri": "trojan://humanity@104.18.15.230:443?security=none&type=ws&alpn=h2%2Chttp%2F1.1&fp=chrome&path=%2Fassignment#%F0%9F%87%AB%F0%9F%87%B7FR_104%7C995KB%2Fs%7CR002-260618%2001"
+    },
+    {
+      "identity": "00c91897ddfbd57a24e1159f94809d44e3c1b1d87b8a5231c12f396b43b875c0",
+      "protocol": "vless",
+      "label": "🇦🇪AE_1|607KB/s|A003-260618 01",
+      "sources": [
+        "freev2raynode-web"
+      ],
+      "uri": "vless://39947382-3212-41c9-bc3a-589574ac8b23@uae.unixzone.us:22573?security=none&type=ws&encryption=none&path=%2F&host=uae.unixzone.us#%F0%9F%87%A6%F0%9F%87%AAAE_1%7C607KB%2Fs%7CA003-260618%2001"
+    },
+    {
+      "identity": "08d02667e388d3858774a06d3eb3544044b0f01d4c4fff68d561d3a5417f3333",
+      "protocol": "trojan",
+      "label": "🇮🇩ID_3|298KB/s|B007-260618 01",
+      "sources": [
+        "freeclashnode-web"
+      ],
+      "uri": "trojan://018b8e7b-7813-4dcb-84a5-3c98f1521e00@edu.ruangguru.com:443?security=none&type=ws&fp=chrome&allowInsecure=1&path=%2Ftrojan#%F0%9F%87%AE%F0%9F%87%A9ID_3%7C298KB%2Fs%7CB007-260618%2001"
+    },
+    {
+      "identity": "01751fb0ac057e3049bae0adf333b0a8f5132d309d47b942cef5c8329b86e399",
+      "protocol": "vmess",
+      "label": "🏁RELAY-188.114.96.19-0160 | clashnodefree.com",
+      "sources": [
+        "clashnodefree-clash"
+      ],
+      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi8J-PgVJFTEFZLTE4OC4xMTQuOTYuMTktMDE2MCB8IGNsYXNobm9kZWZyZWUuY29tIiwiYWRkIjoiMTg4LjExNC45Ni4xOSIsInBvcnQiOiI4MCIsImlkIjoiYWVkODhlNzktNTc2Mi00ZDJmLTg2ZmEtZjQzOGYzMmE3NjU0IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6Imdvb2dsZS53aGF0c2FwcC5zbmFwcC50b3JvYi5iYXNhbGFtLmhlc2FuaWQ4LmlyLiIsInBhdGgiOiIvIiwidGxzIjoiIn0"
+    },
+    {
       "identity": "03dc14663c5b0ee2db5e721a456a0a38d29833a9ccfdcfd010abd51b5a630d1c",
       "protocol": "vless",
       "label": "US美国(mibei77.com 米贝节点分享)_5",
       "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
+        "freeclashnode-web"
       ],
       "uri": "vless://365de9e9-ba29-4819-af2d-766f9638e3be@95.163.232.171:14443?security=tls&type=ws&encryption=none&sni=media-se.compressor.work&fp=chrome&allowInsecure=1&path=%2Fws#US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29_5"
     },
     {
-      "identity": "05c09918862e7548f7097be91f2ac02f56a634cb5848868a75cb182d9cbb4347",
+      "identity": "03e89a7a039c1fbf1041f10f45edc44ff481816136b98d9f642d603f70df59bc",
       "protocol": "vless",
-      "label": "UN【机场推荐：https://a9a.xyz】101",
+      "label": "未知 VLESS-94 | free-nodes",
       "sources": [
-        "freev2raynode-web",
-        "xrayvip-base64"
+        "clashgithub-web",
+        "freeclashnode-web",
+        "freev2raynode-web"
       ],
-      "uri": "vless://6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2@91.193.58.118:2096?security=tls&type=ws&encryption=none&sni=free-server.techsonic.dev&fp=chrome&path=%2Ffree-server.techsonic.dev&host=free-server.techsonic.dev#UN%E3%80%90%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90%EF%BC%9Ahttps%3A%2F%2Fa9a.xyz%E3%80%91101"
+      "uri": "vless://11aabba0-5fd1-4f15-8068-74c1a466cefc@193.163.203.170:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yandex.ru&fp=chrome&pbk=GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o&sid=b28db60d77c50b4f#%E6%9C%AA%E7%9F%A5%20VLESS-94%20%7C%20free-nodes"
     },
     {
       "identity": "03050e1ad039861a8303c6bd559a4a6036bf1d57afbc058730c26aa788f68e5b",
@@ -561,39 +451,49 @@
   ],
   "tested_nodes": [
     {
-      "identity": "03dbd7a630585ffe4f2d96ffb5bc0ca529de277824f596fc4c9593e0eaef6a93",
-      "protocol": "vmess",
-      "label": "🇺🇸US_381|450KB/s|A004-260618 01",
+      "identity": "05af258c7ebc3071aa34197ecedc00e554a5cf0c22dfb935b93f05d8b7250efe",
+      "protocol": "ss",
+      "label": "🇺🇸US-108.181.0.177-0084",
       "sources": [
-        "freeclashnode-web"
+        "v2ray-aggregator-clash"
       ],
-      "latency_ms": 53,
-      "checked_at": "2026-09-29T18:06:10+00:00",
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi8J-HuvCfh7hVU18zODF8NDUwS0Ivc3xBMDA0LTI2MDYxOCAwMSIsImFkZCI6IjE2Ny44OC42My41OSIsInBvcnQiOiIyMjMyNCIsImlkIjoiMDQ2MjFiYWUtYWIzNi0xMWVjLWI5MDktMDI0MmFjMTIwMDAyIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJyYXciLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiIiwidGxzIjoiIn0"
-    },
-    {
-      "identity": "00df0ef2b1aa271b5597f4ceb05bc42749a13bc836004deacaf2891d3d437834",
-      "protocol": "vless",
-      "label": "🇺🇸US_83|1.0MB/s|A004-260618 01",
-      "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "latency_ms": 93,
-      "checked_at": "2026-09-29T18:03:33+00:00",
-      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.179:443?security=reality&type=raw&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=ios&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%F0%9F%87%BA%F0%9F%87%B8US_83%7C1.0MB%2Fs%7CA004-260618%2001"
+      "latency_ms": 122,
+      "checked_at": "2026-09-29T22:12:23+00:00",
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHNXA2d3c0bzY3SEI@108.181.0.177:8388#%F0%9F%87%BA%F0%9F%87%B8US-108.181.0.177-0084"
     },
     {
       "identity": "06b052fe70776f8eb154b8069b9b9c66befa78d516423ded7de108ba28d46f67",
       "protocol": "vmess",
-      "label": "未知 VMESS-176 | free-nodes",
+      "label": "未知 VMESS-214 | free-nodes",
       "sources": [
-        "clashgithub-web",
+        "clashgithub-web"
+      ],
+      "latency_ms": 185,
+      "checked_at": "2026-09-29T22:12:31+00:00",
+      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi5pyq55-lIFZNRVNTLTIxNCB8IGZyZWUtbm9kZXMiLCJhZGQiOiI2Ni4xNjMuMTEzLjE3NiIsInBvcnQiOiIyMjMyNCIsImlkIjoiMDQ2MjFiYWUtYWIzNi0xMWVjLWI5MDktMDI0MmFjMTIwMDAyIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiIiwidGxzIjoiIn0"
+    },
+    {
+      "identity": "02535cb5e24be6f324003241fe5f9d2f823cf5e4b1648ea7bf889a87898711cd",
+      "protocol": "ss",
+      "label": "🇺🇸US-15.204.247.206-0115",
+      "sources": [
+        "clashnodefree-clash",
+        "v2ray-aggregator-clash"
+      ],
+      "latency_ms": 194,
+      "checked_at": "2026-09-29T22:11:50+00:00",
+      "uri": "ss://YWVzLTI1Ni1nY206cEtFVzhKUEJ5VFZUTHRN@15.204.247.206:4444#%F0%9F%87%BA%F0%9F%87%B8US-15.204.247.206-0115"
+    },
+    {
+      "identity": "0415b3aab0be4b8b4ed031bdd20a47ca7f63cc53f0a892bd83d0167a66147c80",
+      "protocol": "vless",
+      "label": "🇺🇸US_337|1.3MB/s|A004-260618 01",
+      "sources": [
         "freev2raynode-web"
       ],
-      "latency_ms": 126,
-      "checked_at": "2026-09-29T18:04:23+00:00",
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi5pyq55-lIFZNRVNTLTE3NiB8IGZyZWUtbm9kZXMiLCJhZGQiOiI2Ni4xNjMuMTEzLjE3NiIsInBvcnQiOiIyMjMyNCIsImlkIjoiMDQ2MjFiYWUtYWIzNi0xMWVjLWI5MDktMDI0MmFjMTIwMDAyIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiIiLCJwYXRoIjoiIiwidGxzIjoiIn0"
+      "latency_ms": 230,
+      "checked_at": "2026-09-29T22:12:15+00:00",
+      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.74:443?security=reality&type=raw&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=chrome&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%F0%9F%87%BA%F0%9F%87%B8US_337%7C1.3MB%2Fs%7CA004-260618%2001"
     },
     {
       "identity": "056d8e4a8bbae98c18a91f6f72a414611283109f34886fc7996cd850cf63a874",
@@ -602,53 +502,31 @@
       "sources": [
         "freev2raynode-web"
       ],
-      "latency_ms": 137,
-      "checked_at": "2026-09-29T18:04:07+00:00",
+      "latency_ms": 236,
+      "checked_at": "2026-09-29T22:12:47+00:00",
       "uri": "vless://dc620cd6-a9d8-4a0f-8f18-006b895db77e@66.70.179.198:2053?security=reality&type=raw&encryption=none&sni=www.cloudflare.com&fp=firefox&pbk=k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU&sid=83f8317a948bb769#%F0%9F%87%A8%F0%9F%87%A6CA_19%7C930KB%2Fs%7CA004-260618%2001"
     },
     {
-      "identity": "0424b51aafe99a0c2ddceb7192f69b1530e0acf95b9ea249dfca82d238ead864",
+      "identity": "00df0ef2b1aa271b5597f4ceb05bc42749a13bc836004deacaf2891d3d437834",
       "protocol": "vless",
-      "label": "🇺🇸US_497|732KB/s|S004-260618 01",
-      "sources": [
-        "freeclashnode-web"
-      ],
-      "latency_ms": 141,
-      "checked_at": "2026-09-29T18:06:19+00:00",
-      "uri": "vless://9e3132b8-b595-444a-833a-2de44789f9d7@134.122.0.192:443?security=tls&type=ws&encryption=none&sni=shephe.dpdns.org&fp=chrome&path=%2F&host=shephe.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8US_497%7C732KB%2Fs%7CS004-260618%2001"
-    },
-    {
-      "identity": "02ac8d2fd795a9277f0306c7af35bfd0ba766d1c67612a384dfd63820c58ee75",
-      "protocol": "vmess",
-      "label": "🇨🇦CA_41|618KB/s|A004-260618 01",
-      "sources": [
-        "freeclashnode-web"
-      ],
-      "latency_ms": 163,
-      "checked_at": "2026-09-29T18:05:55+00:00",
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi8J-HqPCfh6ZDQV80MXw2MThLQi9zfEEwMDQtMjYwNjE4IDAxIiwiYWRkIjoiMTU4LjUxLjEyMS4xMjMiLCJwb3J0IjoiNDQzIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0IjoibXlncHRhZ2VudC5vcmciLCJwYXRoIjoiL2xpbmt2d3MiLCJ0bHMiOiJ0bHMiLCJzbmkiOiJteWdwdGFnZW50Lm9yZyJ9"
-    },
-    {
-      "identity": "05af258c7ebc3071aa34197ecedc00e554a5cf0c22dfb935b93f05d8b7250efe",
-      "protocol": "ss",
-      "label": "🇺🇸US-108.181.0.177-0035",
-      "sources": [
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 173,
-      "checked_at": "2026-09-29T18:04:15+00:00",
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHNXA2d3c0bzY3SEI@108.181.0.177:8388#%F0%9F%87%BA%F0%9F%87%B8US-108.181.0.177-0035"
-    },
-    {
-      "identity": "0398aa900ab4ad907b7f38e546ff03e0a1327364b08f6510fca3d513f0ba5f65",
-      "protocol": "vless",
-      "label": "🇺🇸US_502|486KB/s|R002-260618 01",
+      "label": "🇺🇸US_83|1.0MB/s|A004-260618 01",
       "sources": [
         "freev2raynode-web"
       ],
-      "latency_ms": 214,
-      "checked_at": "2026-09-29T18:06:11+00:00",
-      "uri": "vless://1e6245c4-fb80-44fd-b354-c6b94a459203@38.180.146.40:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.apple.com&fp=chrome&pbk=-5fYyQrVTjiSxdsLpf6VzNaawYlZLqeU2_8ezyn3kBg&sid=eb26ce282d7ba399#%F0%9F%87%BA%F0%9F%87%B8US_502%7C486KB%2Fs%7CR002-260618%2001"
+      "latency_ms": 269,
+      "checked_at": "2026-09-29T22:11:42+00:00",
+      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.179:443?security=reality&type=raw&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=ios&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%F0%9F%87%BA%F0%9F%87%B8US_83%7C1.0MB%2Fs%7CA004-260618%2001"
+    },
+    {
+      "identity": "039650d821726730e63ab60b63b3231426b634a150e4502ef2b6779ad8a02949",
+      "protocol": "vless",
+      "label": "🇺🇸US_128|899KB/s|A004-260618 01",
+      "sources": [
+        "freev2raynode-web"
+      ],
+      "latency_ms": 279,
+      "checked_at": "2026-09-29T22:12:15+00:00",
+      "uri": "vless://cb2dbb6a-a1ea-4023-9ace-6466cee57241@51.81.203.63:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.icloud.com&fp=chrome&pbk=nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0&sid=4477382ff6d3d41c#%F0%9F%87%BA%F0%9F%87%B8US_128%7C899KB%2Fs%7CA004-260618%2001"
     },
     {
       "identity": "029b226b8795008f9a0c13c4d5de014139163ae140fe5979f952840ac45ce77e",
@@ -658,13 +536,12 @@
         "clashgithub-web",
         "clashnodefree-shadowrocket",
         "clashnodefree-v2ray",
-        "freeclashnode-web",
         "freev2raynode-web",
         "v2ray-aggregator-base64",
         "v2ray-aggregator-uri"
       ],
-      "latency_ms": 298,
-      "checked_at": "2026-09-29T18:03:42+00:00",
+      "latency_ms": 387,
+      "checked_at": "2026-09-29T22:11:50+00:00",
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.42:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.42-0042"
     },
     {
@@ -678,8 +555,8 @@
         "v2ray-aggregator-base64",
         "v2ray-aggregator-uri"
       ],
-      "latency_ms": 304,
-      "checked_at": "2026-09-29T18:04:16+00:00",
+      "latency_ms": 387,
+      "checked_at": "2026-09-29T22:12:40+00:00",
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.3:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.3-0062"
     },
     {
@@ -689,9 +566,32 @@
       "sources": [
         "freeclashnode-web"
       ],
-      "latency_ms": 308,
-      "checked_at": "2026-09-29T18:05:55+00:00",
+      "latency_ms": 389,
+      "checked_at": "2026-09-29T22:12:06+00:00",
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.176:8080#%F0%9F%87%B3%F0%9F%87%B1NL_91%7C3.1MB%2Fs%7CA003-260618%2001"
+    },
+    {
+      "identity": "06a379efd00914d9a76fce93b2e7acb38c2cd316cbfcb733ca129ba8058b3b17",
+      "protocol": "ss",
+      "label": "🇬🇧GB-82.38.31.203-0057",
+      "sources": [
+        "clashnodefree-clash",
+        "v2ray-aggregator-clash"
+      ],
+      "latency_ms": 392,
+      "checked_at": "2026-09-29T22:12:39+00:00",
+      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.203:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.203-0057"
+    },
+    {
+      "identity": "8b79f7273e5844ba745481b0a851a0c71172b38dccb3c13d245037a61d85a276",
+      "protocol": "ssr",
+      "label": "🇳🇱NL_168|2.8MB/s|R002-260618 01",
+      "sources": [
+        "freeclashnode-web"
+      ],
+      "latency_ms": 494,
+      "checked_at": "2026-09-29T22:12:15+00:00",
+      "uri": "ssr://MTA5LjEwNC4xNTMuNDM6MzMzMzY6YXV0aF9jaGFpbl9hOmNoYWNoYTIwLWlldGY6dGxzMS4yX3RpY2tldF9hdXRoOlpHOXVaM1JoYVhkaGJtY3VZMjl0Lz9yZW1hcmtzPThKLUhzX0NmaDdGT1RGOHhOamg4TWk0NFRVSXZjM3hTTURBeUxUSTJNRFl4T0NBd01R"
     },
     {
       "identity": "067369cc79955ee3edcc49ca122b33abdef3ea029dfa271229ded7e758771f01",
@@ -703,81 +603,11 @@
         "freeclashnode-web",
         "freev2raynode-web",
         "v2ray-aggregator-base64",
-        "v2ray-aggregator-uri",
-        "xrayvip-base64"
+        "v2ray-aggregator-uri"
       ],
-      "latency_ms": 314,
-      "checked_at": "2026-09-29T18:04:23+00:00",
+      "latency_ms": 525,
+      "checked_at": "2026-09-29T22:12:31+00:00",
       "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.35:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.35-0077"
-    },
-    {
-      "identity": "039650d821726730e63ab60b63b3231426b634a150e4502ef2b6779ad8a02949",
-      "protocol": "vless",
-      "label": "🇺🇸US_128|899KB/s|A004-260618 01",
-      "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "latency_ms": 330,
-      "checked_at": "2026-09-29T18:03:50+00:00",
-      "uri": "vless://cb2dbb6a-a1ea-4023-9ace-6466cee57241@51.81.203.63:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.icloud.com&fp=chrome&pbk=nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0&sid=4477382ff6d3d41c#%F0%9F%87%BA%F0%9F%87%B8US_128%7C899KB%2Fs%7CA004-260618%2001"
-    },
-    {
-      "identity": "06a379efd00914d9a76fce93b2e7acb38c2cd316cbfcb733ca129ba8058b3b17",
-      "protocol": "ss",
-      "label": "🇬🇧GB-82.38.31.203-0071",
-      "sources": [
-        "clashnodefree-clash",
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 348,
-      "checked_at": "2026-09-29T18:04:23+00:00",
-      "uri": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.203:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.203-0071"
-    },
-    {
-      "identity": "016cbc472ff5118e58f554b2459c191f803f93a44da4b5b22fff106a252cdc37",
-      "protocol": "vless",
-      "label": "🇩🇪DE_53|937KB/s|R002-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "latency_ms": 430,
-      "checked_at": "2026-09-29T18:03:34+00:00",
-      "uri": "vless://adcaa148-7c66-4282-a81a-99ec8afa029d@82.118.19.153:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&allowInsecure=1&pbk=Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE&sid=670ed9f350bd8ee0#%F0%9F%87%A9%F0%9F%87%AADE_53%7C937KB%2Fs%7CR002-260618%2001"
-    },
-    {
-      "identity": "051e5b2f0bac67dc8c1a17f319d4e1d9fddebcf1b8fdf28745e91d9c2ea21f85",
-      "protocol": "vless",
-      "label": "🇪🇪EE_3|1.6MB/s|A004-260618 01",
-      "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "latency_ms": 498,
-      "checked_at": "2026-09-29T18:04:07+00:00",
-      "uri": "vless://06c4e938-2954-478f-a870-ca1b163e30e9@94.183.170.135:443?security=none&type=ws&encryption=none&sni=94.183.170.135&path=%2F#%F0%9F%87%AA%F0%9F%87%AAEE_3%7C1.6MB%2Fs%7CA004-260618%2001"
-    },
-    {
-      "identity": "034d6c444ab7004662b5479c40acbacd3a94738445bd4915c5b0c1a14425b451",
-      "protocol": "vless",
-      "label": "🇬🇧GB_57|1.5MB/s|A004-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "latency_ms": 519,
-      "checked_at": "2026-09-29T18:06:03+00:00",
-      "uri": "vless://4bdeee92-97e8-414d-bef6-ec1d5e2ab73b@tomaz1337shellbuy.vvzzkontaktezzvv.garden:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=tomaz1337shellbuy.vvzzkontaktezzvv.garden&fp=safari&pbk=s0ypPx0AL3k2KOk74tbm-aE-i7eIR_MYVzfLHZeLaUk&sid=2e124af254a65e7c#%F0%9F%87%AC%F0%9F%87%A7GB_57%7C1.5MB%2Fs%7CA004-260618%2001"
-    },
-    {
-      "identity": "012cf2ce6253804c9e03bacca66339708acf6a5b5b03caaf7d46c341d92de1e5",
-      "protocol": "vless",
-      "label": "🇪🇸ES_48|627KB/s|B007-260618 01",
-      "sources": [
-        "freeclashnode-web"
-      ],
-      "latency_ms": 520,
-      "checked_at": "2026-09-29T18:05:38+00:00",
-      "uri": "vless://9e3132b8-b595-444a-833a-2de44789f9d7@141.253.194.63:443?security=tls&type=ws&encryption=none&sni=shephe.dpdns.org&fp=chrome&path=%2F&host=shephe.dpdns.org#%F0%9F%87%AA%F0%9F%87%B8ES_48%7C627KB%2Fs%7CB007-260618%2001"
     },
     {
       "identity": "038a74a14e2abdab589ab3e688546177cd5862e8cdafd36b08b9493a947744d1",
@@ -786,31 +616,20 @@
       "sources": [
         "freeclashnode-web"
       ],
-      "latency_ms": 544,
-      "checked_at": "2026-09-29T18:06:11+00:00",
+      "latency_ms": 528,
+      "checked_at": "2026-09-29T22:12:15+00:00",
       "uri": "vless://5fcdc9b7-e70f-4a5c-85c3-e018ad818326@82.24.203.20:2087?security=none&type=ws&encryption=none&path=%2Ffd5ba98a3970#%F0%9F%87%A9%F0%9F%87%AADE_34%7C1.2MB%2Fs%7CB007-260618%2001"
     },
     {
-      "identity": "03cccc5feb67006540a6d73aa7413548c0e9479d9bc95550defe9d0dcc5cc4bb",
+      "identity": "016cbc472ff5118e58f554b2459c191f803f93a44da4b5b22fff106a252cdc37",
       "protocol": "vless",
-      "label": "🇦🇹AT_6|3.4MB/s|V003-260618 01",
+      "label": "🇩🇪DE_53|937KB/s|R002-260618 01",
       "sources": [
-        "freeclashnode-web"
+        "freev2raynode-web"
       ],
-      "latency_ms": 621,
-      "checked_at": "2026-09-29T18:06:12+00:00",
-      "uri": "vless://9e3132b8-b595-444a-833a-2de44789f9d7@132.243.203.214:8443?security=tls&type=ws&encryption=none&sni=shephe.dpdns.org&fp=chrome&path=%2F&host=shephe.dpdns.org#%F0%9F%87%A6%F0%9F%87%B9AT_6%7C3.4MB%2Fs%7CV003-260618%2001"
-    },
-    {
-      "identity": "022f4569c3d4880ecc6c777f2cd09d268ddbe94dbfbe88dae94959c40c2e0953",
-      "protocol": "vmess",
-      "label": "🇯🇵JP_43|592KB/s|S004-260618 01",
-      "sources": [
-        "freeclashnode-web"
-      ],
-      "latency_ms": 670,
-      "checked_at": "2026-09-29T18:05:47+00:00",
-      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi8J-Hr_Cfh7VKUF80M3w1OTJLQi9zfFMwMDQtMjYwNjE4IDAxIiwiYWRkIjoiMTY4LjEzOC40My43NSIsInBvcnQiOiI4MCIsImlkIjoiMTFjMzYyN2YtMzFlOC00Njk1LWRmYmQtMzQwNzZlMmYxZjVkIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6Im5vbmUiLCJwYXRoIjoiL2NjdHYxMy5tM3U4IiwidGxzIjoiIiwic25pIjoibm9uZSJ9"
+      "latency_ms": 544,
+      "checked_at": "2026-09-29T22:11:42+00:00",
+      "uri": "vless://adcaa148-7c66-4282-a81a-99ec8afa029d@82.118.19.153:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&allowInsecure=1&pbk=Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE&sid=670ed9f350bd8ee0#%F0%9F%87%A9%F0%9F%87%AADE_53%7C937KB%2Fs%7CR002-260618%2001"
     },
     {
       "identity": "0078dd792eff9b96094858d9dca6cc4d9a728ade1ea8725a859f7d01e2b328b6",
@@ -819,113 +638,31 @@
       "sources": [
         "freeclashnode-web"
       ],
-      "latency_ms": 675,
-      "checked_at": "2026-09-29T18:05:22+00:00",
+      "latency_ms": 609,
+      "checked_at": "2026-09-29T22:11:34+00:00",
       "uri": "vmess://eyJ2IjoiMiIsInBzIjoi8J-HuPCfh6xTR180fDk3OUtCL3N8QTAwNC0yNjA2MTggMDEiLCJhZGQiOiIxNDkuODguMjMuMjAyIiwicG9ydCI6IjE4MDAwIiwiaWQiOiJmOGM4ZGMzZC0wZDM3LTQ2YjAtOGIzNC1hNzIzMjg4MmZjZmUiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiJub25lIiwiaG9zdCI6IiIsInBhdGgiOiIiLCJ0bHMiOiIiLCJzbmkiOiIxNDkuODguMjMuMjAyIn0"
-    },
-    {
-      "identity": "00c91897ddfbd57a24e1159f94809d44e3c1b1d87b8a5231c12f396b43b875c0",
-      "protocol": "vless",
-      "label": "🇦🇪AE_1|607KB/s|A003-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "latency_ms": 825,
-      "checked_at": "2026-09-29T18:03:34+00:00",
-      "uri": "vless://39947382-3212-41c9-bc3a-589574ac8b23@uae.unixzone.us:22573?security=none&type=ws&encryption=none&path=%2F&host=uae.unixzone.us#%F0%9F%87%A6%F0%9F%87%AAAE_1%7C607KB%2Fs%7CA003-260618%2001"
-    },
-    {
-      "identity": "02535cb5e24be6f324003241fe5f9d2f823cf5e4b1648ea7bf889a87898711cd",
-      "protocol": "ss",
-      "label": "🇺🇸US-15.204.247.206-0133",
-      "sources": [
-        "clashnodefree-clash",
-        "v2ray-aggregator-clash"
-      ],
-      "latency_ms": 826,
-      "checked_at": "2026-09-29T18:03:42+00:00",
-      "uri": "ss://YWVzLTI1Ni1nY206cEtFVzhKUEJ5VFZUTHRN@15.204.247.206:4444#%F0%9F%87%BA%F0%9F%87%B8US-15.204.247.206-0133"
-    },
-    {
-      "identity": "077fdeb14a3ac2bae69b7dff4766d9eb7be9542393c663a2440dab66bb6d0db9",
-      "protocol": "vless",
-      "label": "🇸🇬SG_27|572KB/s|A004-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "latency_ms": 1063,
-      "checked_at": "2026-09-29T18:04:24+00:00",
-      "uri": "vless://cb15cce9-73ed-4928-b38c-462f0732cbe9@217.217.254.126:2053?security=reality&type=raw&encryption=none&sni=www.cloudflare.com&fp=firefox&pbk=VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw&sid=87829de0e2bb82cb#%F0%9F%87%B8%F0%9F%87%ACSG_27%7C572KB%2Fs%7CA004-260618%2001"
     },
     {
       "identity": "04ca90652eb3c98223bd7eda2682d6cedf45ad38a3cc5b84bdd0587a6514047d",
       "protocol": "vless",
       "label": "🇯🇵JP_4|207KB/s|C002-260622 01",
       "sources": [
-        "freeclashnode-web",
         "freev2raynode-web"
       ],
-      "latency_ms": 1252,
-      "checked_at": "2026-09-29T18:04:00+00:00",
+      "latency_ms": 617,
+      "checked_at": "2026-09-29T22:12:31+00:00",
       "uri": "vless://814bd064-544d-4255-a070-5705c03f6da9@3.114.220.22:19645?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.apple.com&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&sid=48050fab#%F0%9F%87%AF%F0%9F%87%B5JP_4%7C207KB%2Fs%7CC002-260622%2001"
     },
     {
-      "identity": "057335915e4dc6ba05150074197d82835d31e7079c3fdf756e3bf73c965b2f95",
+      "identity": "051e5b2f0bac67dc8c1a17f319d4e1d9fddebcf1b8fdf28745e91d9c2ea21f85",
       "protocol": "vless",
-      "label": "🇩🇪DE_91|697KB/s|M003-260806 01",
+      "label": "🇪🇪EE_3|1.6MB/s|A004-260618 01",
       "sources": [
         "freev2raynode-web"
       ],
-      "latency_ms": 1311,
-      "checked_at": "2026-09-29T18:04:09+00:00",
-      "uri": "vless://5d16ac22-6eea-426f-b778-6f4c2961faef@176.123.162.100:9880?security=reality&type=grpc&encryption=none&sni=dl.google.com&fp=chrome&pbk=bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU&sid=aabb&serviceName=grpc-tunnel#%F0%9F%87%A9%F0%9F%87%AADE_91%7C697KB%2Fs%7CM003-260806%2001"
-    },
-    {
-      "identity": "07c20e90f3d272a0178e372b4c7bf26472af72d181a2319ab8204a31451ccce8",
-      "protocol": "trojan",
-      "label": "🇫🇷FR_104|995KB/s|R002-260618 01",
-      "sources": [
-        "freeclashnode-web"
-      ],
-      "latency_ms": 1709,
-      "checked_at": "2026-09-29T18:05:56+00:00",
-      "uri": "trojan://humanity@104.18.15.230:443?security=none&type=ws&alpn=h2%2Chttp%2F1.1&fp=chrome&path=%2Fassignment#%F0%9F%87%AB%F0%9F%87%B7FR_104%7C995KB%2Fs%7CR002-260618%2001"
-    },
-    {
-      "identity": "03e89a7a039c1fbf1041f10f45edc44ff481816136b98d9f642d603f70df59bc",
-      "protocol": "vless",
-      "label": "🇱🇻LV拉脱维亚丨yoyapai.com",
-      "sources": [
-        "clashgithub-web",
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "latency_ms": 2117,
-      "checked_at": "2026-09-29T18:03:52+00:00",
-      "uri": "vless://11aabba0-5fd1-4f15-8068-74c1a466cefc@193.163.203.170:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yandex.ru&fp=chrome&pbk=GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o&sid=b28db60d77c50b4f#%F0%9F%87%B1%F0%9F%87%BBLV%E6%8B%89%E8%84%B1%E7%BB%B4%E4%BA%9A%E4%B8%A8yoyapai.com"
-    },
-    {
-      "identity": "0415b3aab0be4b8b4ed031bdd20a47ca7f63cc53f0a892bd83d0167a66147c80",
-      "protocol": "vless",
-      "label": "🇺🇸US_337|1.3MB/s|A004-260618 01",
-      "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "latency_ms": 2482,
-      "checked_at": "2026-09-29T18:03:53+00:00",
-      "uri": "vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.74:443?security=reality&type=raw&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=chrome&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#%F0%9F%87%BA%F0%9F%87%B8US_337%7C1.3MB%2Fs%7CA004-260618%2001"
-    },
-    {
-      "identity": "08ae676cda282fbfc3ddc6693414e34ea556874eea3335e0d633620f4d65990c",
-      "protocol": "vless",
-      "label": "🇳🇴NO_4|640KB/s|R002-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "latency_ms": 2513,
-      "checked_at": "2026-09-29T18:04:51+00:00",
-      "uri": "vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@norw-mori-3.failspace.top:443?security=tls&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=norw-mori-3.failspace.top&fp=firefox&allowInsecure=1#%F0%9F%87%B3%F0%9F%87%B4NO_4%7C640KB%2Fs%7CR002-260618%2001"
+      "latency_ms": 628,
+      "checked_at": "2026-09-29T22:12:39+00:00",
+      "uri": "vless://06c4e938-2954-478f-a870-ca1b163e30e9@94.183.170.135:443?security=none&type=ws&encryption=none&sni=94.183.170.135&path=%2F#%F0%9F%87%AA%F0%9F%87%AAEE_3%7C1.6MB%2Fs%7CA004-260618%2001"
     },
     {
       "identity": "02fbc4af915ccaea836353113eaceb1636bc14aa98a1dbdae3b78330cb36569b",
@@ -934,32 +671,9 @@
       "sources": [
         "freev2raynode-web"
       ],
-      "latency_ms": 2574,
-      "checked_at": "2026-09-29T18:03:52+00:00",
+      "latency_ms": 682,
+      "checked_at": "2026-09-29T22:12:07+00:00",
       "uri": "vless://81dc0b61-f9fe-4ad6-8b4e-b8c067b73712@152.228.139.33:35108?security=reality&type=grpc&encryption=none&sni=www.nvidia.com&fp=firefox&pbk=X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg&sid=52add08b86a5ccea&serviceName=grpc-common3#%F0%9F%87%AB%F0%9F%87%B7FR_1751%7C1.1MB%2Fs%7CV003-260618%2001"
-    },
-    {
-      "identity": "0627688a77c6a03b54d681c62f4818f4a6d8d9a6f0114cbacda3717f24c13121",
-      "protocol": "vless",
-      "label": "🇫🇮FI_39|332KB/s|M002-260618 01",
-      "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
-      ],
-      "latency_ms": 3600,
-      "checked_at": "2026-09-29T18:04:11+00:00",
-      "uri": "vless://ee39fb11-56a3-4ee7-9e7c-35a4235bd30e@107.181.151.241:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.tradingview.com&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=b27ba098687b#%F0%9F%87%AB%F0%9F%87%AEFI_39%7C332KB%2Fs%7CM002-260618%2001"
-    },
-    {
-      "identity": "0115f77449907fd686b91719593c9558bbcba8436eadca348afb8b0468517826",
-      "protocol": "vless",
-      "label": "🇸🇬SG_93|556KB/s|M002-260618 01",
-      "sources": [
-        "freev2raynode-web"
-      ],
-      "latency_ms": 3712,
-      "checked_at": "2026-09-29T18:05:33+00:00",
-      "uri": "vless://6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2@91.193.58.140:2096?security=tls&type=ws&encryption=none&sni=free-server.techsonic.dev&fp=chrome&path=%2Ffree-server.techsonic.dev&host=free-server.techsonic.dev#%F0%9F%87%B8%F0%9F%87%ACSG_93%7C556KB%2Fs%7CM002-260618%2001"
     },
     {
       "identity": "041225f40ab2a06ee0753e1af430980897d036b871e8495998feb74dac8417d2",
@@ -968,33 +682,77 @@
       "sources": [
         "freeclashnode-web"
       ],
-      "latency_ms": 5006,
-      "checked_at": "2026-09-29T18:05:42+00:00",
+      "latency_ms": 689,
+      "checked_at": "2026-09-29T22:11:42+00:00",
       "uri": "trojan://humanity@104.18.152.103:443?security=none&type=ws&fp=chrome&path=%2Fassignment#%F0%9F%87%AB%F0%9F%87%B7FR_37%7C625KB%2Fs%7CC002-260622%2001"
+    },
+    {
+      "identity": "07c20e90f3d272a0178e372b4c7bf26472af72d181a2319ab8204a31451ccce8",
+      "protocol": "trojan",
+      "label": "🇫🇷FR_104|995KB/s|R002-260618 01",
+      "sources": [
+        "freeclashnode-web"
+      ],
+      "latency_ms": 750,
+      "checked_at": "2026-09-29T22:12:07+00:00",
+      "uri": "trojan://humanity@104.18.15.230:443?security=none&type=ws&alpn=h2%2Chttp%2F1.1&fp=chrome&path=%2Fassignment#%F0%9F%87%AB%F0%9F%87%B7FR_104%7C995KB%2Fs%7CR002-260618%2001"
+    },
+    {
+      "identity": "00c91897ddfbd57a24e1159f94809d44e3c1b1d87b8a5231c12f396b43b875c0",
+      "protocol": "vless",
+      "label": "🇦🇪AE_1|607KB/s|A003-260618 01",
+      "sources": [
+        "freev2raynode-web"
+      ],
+      "latency_ms": 1040,
+      "checked_at": "2026-09-29T22:11:42+00:00",
+      "uri": "vless://39947382-3212-41c9-bc3a-589574ac8b23@uae.unixzone.us:22573?security=none&type=ws&encryption=none&path=%2F&host=uae.unixzone.us#%F0%9F%87%A6%F0%9F%87%AAAE_1%7C607KB%2Fs%7CA003-260618%2001"
+    },
+    {
+      "identity": "08d02667e388d3858774a06d3eb3544044b0f01d4c4fff68d561d3a5417f3333",
+      "protocol": "trojan",
+      "label": "🇮🇩ID_3|298KB/s|B007-260618 01",
+      "sources": [
+        "freeclashnode-web"
+      ],
+      "latency_ms": 1299,
+      "checked_at": "2026-09-29T22:12:16+00:00",
+      "uri": "trojan://018b8e7b-7813-4dcb-84a5-3c98f1521e00@edu.ruangguru.com:443?security=none&type=ws&fp=chrome&allowInsecure=1&path=%2Ftrojan#%F0%9F%87%AE%F0%9F%87%A9ID_3%7C298KB%2Fs%7CB007-260618%2001"
+    },
+    {
+      "identity": "01751fb0ac057e3049bae0adf333b0a8f5132d309d47b942cef5c8329b86e399",
+      "protocol": "vmess",
+      "label": "🏁RELAY-188.114.96.19-0160 | clashnodefree.com",
+      "sources": [
+        "clashnodefree-clash"
+      ],
+      "latency_ms": 1306,
+      "checked_at": "2026-09-29T22:11:43+00:00",
+      "uri": "vmess://eyJ2IjoiMiIsInBzIjoi8J-PgVJFTEFZLTE4OC4xMTQuOTYuMTktMDE2MCB8IGNsYXNobm9kZWZyZWUuY29tIiwiYWRkIjoiMTg4LjExNC45Ni4xOSIsInBvcnQiOiI4MCIsImlkIjoiYWVkODhlNzktNTc2Mi00ZDJmLTg2ZmEtZjQzOGYzMmE3NjU0IiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6Imdvb2dsZS53aGF0c2FwcC5zbmFwcC50b3JvYi5iYXNhbGFtLmhlc2FuaWQ4LmlyLiIsInBhdGgiOiIvIiwidGxzIjoiIn0"
     },
     {
       "identity": "03dc14663c5b0ee2db5e721a456a0a38d29833a9ccfdcfd010abd51b5a630d1c",
       "protocol": "vless",
       "label": "US美国(mibei77.com 米贝节点分享)_5",
       "sources": [
-        "freeclashnode-web",
-        "freev2raynode-web"
+        "freeclashnode-web"
       ],
-      "latency_ms": 5332,
-      "checked_at": "2026-09-29T18:06:24+00:00",
+      "latency_ms": 1405,
+      "checked_at": "2026-09-29T22:12:16+00:00",
       "uri": "vless://365de9e9-ba29-4819-af2d-766f9638e3be@95.163.232.171:14443?security=tls&type=ws&encryption=none&sni=media-se.compressor.work&fp=chrome&allowInsecure=1&path=%2Fws#US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29_5"
     },
     {
-      "identity": "05c09918862e7548f7097be91f2ac02f56a634cb5848868a75cb182d9cbb4347",
+      "identity": "03e89a7a039c1fbf1041f10f45edc44ff481816136b98d9f642d603f70df59bc",
       "protocol": "vless",
-      "label": "UN【机场推荐：https://a9a.xyz】101",
+      "label": "未知 VLESS-94 | free-nodes",
       "sources": [
-        "freev2raynode-web",
-        "xrayvip-base64"
+        "clashgithub-web",
+        "freeclashnode-web",
+        "freev2raynode-web"
       ],
-      "latency_ms": 5486,
-      "checked_at": "2026-09-29T18:04:13+00:00",
-      "uri": "vless://6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2@91.193.58.118:2096?security=tls&type=ws&encryption=none&sni=free-server.techsonic.dev&fp=chrome&path=%2Ffree-server.techsonic.dev&host=free-server.techsonic.dev#UN%E3%80%90%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90%EF%BC%9Ahttps%3A%2F%2Fa9a.xyz%E3%80%91101"
+      "latency_ms": 1848,
+      "checked_at": "2026-09-29T22:12:17+00:00",
+      "uri": "vless://11aabba0-5fd1-4f15-8068-74c1a466cefc@193.163.203.170:443?security=reality&type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yandex.ru&fp=chrome&pbk=GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o&sid=b28db60d77c50b4f#%E6%9C%AA%E7%9F%A5%20VLESS-94%20%7C%20free-nodes"
     },
     {
       "identity": "03050e1ad039861a8303c6bd559a4a6036bf1d57afbc058730c26aa788f68e5b",
@@ -1006,8 +764,8 @@
         "v2ray-aggregator-base64",
         "v2ray-aggregator-uri"
       ],
-      "latency_ms": 5823,
-      "checked_at": "2026-09-29T18:03:56+00:00",
+      "latency_ms": 2035,
+      "checked_at": "2026-09-29T22:12:00+00:00",
       "uri": "vmess://eyJ2IjoiMiIsInBzIjoi8J-PgVJFTEFZLTE3Mi42Ny4xNjEuMTQ0LTA3NTYiLCJhZGQiOiIxNzIuNjcuMTYxLjE0NCIsInBvcnQiOiI4NDQzIiwiaWQiOiI2MDQ0MTU0OC1iNjhlLTQzYjItODE5MS1lM2I4ODRiZTRiM2MiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJob3N0IjoidjJyYXkxLmRvemFwcC54eXoiLCJwYXRoIjoiL2xNbnNaVU40LyIsInRscyI6InRscyJ9"
     }
   ]
